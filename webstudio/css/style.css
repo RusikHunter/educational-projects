@@ -90,7 +90,7 @@
 
 .header__nav-link:active {
     color: var(--ocean);
-    padding: 24px 0 20px 0;
+    padding: 20px 0 16px 0;
     border-bottom: 4px solid var(--ocean);
     border-radius: 2px;
 }
@@ -101,6 +101,7 @@
 
 .header__email,
 .header__phone-number {
+    display: flex;
     font-family: var(--roboto);
     font-weight: 400;
     font-size: 16px;
@@ -158,4 +159,268 @@
 .service__button:hover {
     background: var(--ocean);
     cursor: pointer;
+}
+
+.advantages__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.advantages__textbox {
+    display: flex;
+    width: 264px;
+    flex-direction: column;
+}
+
+.textbox__title {
+    font-family: var(--roboto);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+}
+
+.textbox__description {
+    font-family: var(--roboto);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+    margin-top: 8px;
+}
+
+.team {
+    background: var(--cloud);
+}
+
+.team__title {
+    margin: 120px auto 72px auto;
+    font-family: var(--roboto);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--navy-blue);
+}
+
+.team__people-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 120px;
+}
+
+.team__people-box {
+    display: flex;
+    flex-direction: column;
+    width: 264px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: var(--white);
+    transition: transform 1s, box-shadow 1s;
+}
+
+.team__people-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 2px 0 rgba(46, 47, 66, 0.08), 0 2px 2px 0 rgba(46, 47, 66, 0.16), 0 2px 10px 0 rgba(46, 47, 66, 0.08);
+}
+
+.team__image {
+    width: 100%;
+    max-height: 260px;
+}
+
+.team__name {
+    margin: 32px auto 8px auto;
+    font-family: var(--roboto);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--navy-blue);
+}
+
+.team__profession {
+    margin-bottom: 32px;
+    font-family: var(--roboto);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--slate);
+}
+
+.footer {
+    background: var(--navy-blue);
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.footer__description {
+    margin-top: 16px;
+    max-width: 264px;
+    font-family: var(--roboto);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--cloud);
+}
+
+@media (max-width: 1170px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .header__container {
+        justify-content: space-between;
+    }
+
+    .header__nav {
+        margin-left: 40px;
+        margin-right: 150px;
+    }
+
+    .header__email--right {
+        margin-right: 10px;
+    }
+
+    .team__people-box {
+        max-width: 23%;
+    }
+
+    .team__name {
+        margin-top: 14px;
+        font-size: 18px;
+    }
+
+    .team__profession {
+        margin-bottom: 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 930px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .header__nav {
+        max-width: 210px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 780px) {
+    .team__people-box {
+        max-width: 20%;
+    }
+
+    .footer__container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer__logo,
+    .footer__description {
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .advantages__container {
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .advantages__textbox {
+        max-width: 33%;
+        margin: 30px auto;
+    }
+
+    .textbox__title,
+    .textbox__description {
+        text-align: center;
+    }
+
+    .team__people-box {
+        max-width: 20%;
+    }
+
+    .team__people-container {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .team__people-box {
+        max-width: 500px;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 740px) {
+    .container {
+        width: 100%;
+    }
+
+    .header__container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .header__logo {
+        margin-top: 25px;
+    }
+
+    .header__email--right {
+        margin-right: 0;
+    }
+
+    .header__phone-number {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 580px) {
+    .service__title {
+        font-size: 40px;
+    }
+
+    .advantages__textbox {
+        max-width: 80%;
+    }
+
+    .textbox__description {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .service__title {
+        font-size: 24px;
+        max-width: 50%;
+        margin-top: 100px;
+    }
+
+    .service__button {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 450px) {
+    .team__title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
 }
