@@ -37,6 +37,22 @@
 
 /* todo -> .logo */
 
+.button {
+    display: block;
+    width: 200px;
+    height: 42px;
+    background: var(--gradient);
+    border-radius: 7px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--white);
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
 .header {
     background: var(--black);
     display: flex;
@@ -52,14 +68,13 @@
 }
 
 .header__container {
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .header__logo-image {
     display: block;
-    width: 139px;
+    width: 159px;
     height: 34px;
     margin-left: 16px;
     transition: transform 1s;
@@ -94,4 +109,107 @@
 
 .header__list-item:hover {
     transform: scale(1.05);
+}
+
+.introduction {
+    background: var(--black);
+}
+
+.introduction__container {
+    justify-content: space-between;
+}
+
+.introduction__textbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.introduction__title {
+    margin-top: 145px;
+    width: 442px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+}
+
+.introduction__description {
+    margin-top: 5px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+}
+
+.introduction__list {
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+.introduction__list-item {
+    margin-top: 5px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    list-style-image: url(../img/list-image.svg);
+}
+
+.introduction__button {
+    margin-top: 62px;
+    transition: transform 1s;
+}
+
+.introduction__button:hover {
+    transform: scale(1.05);
+}
+
+.introduction__background-image {
+    display: flex;
+    user-select: none;
+}
+
+.introduction__background-image--tools {
+    width: 541px;
+    height: 418px;
+    position: relative;
+    top: 129px;
+    right: 120px;
+}
+
+.introduction__background-image--phone {
+    width: 472px;
+    height: 553px;
+    position: relative;
+    top: 69px;
+    right: 180px;
+}
+
+.features__container {
+    justify-content: space-between;
+}
+
+.features__row {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.features__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+    margin: 100px auto 0 auto;
+}
+
+.features__description {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #000;
+    margin: 40px auto 56px auto;
+    max-width: 855px;
 }
