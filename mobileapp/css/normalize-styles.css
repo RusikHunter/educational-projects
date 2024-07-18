@@ -95,6 +95,9 @@ textarea,
 select,
 button {
     font: inherit;
+    border: none;
+    resize: none;
+    outline: none;
 }
 
 html {

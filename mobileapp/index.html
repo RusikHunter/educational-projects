@@ -66,7 +66,7 @@
                         </li>
                     </ul>
 
-                    <button class="introduction__button button">
+                    <button onclick="openModal()" id="modalButtonOpen" class="introduction__button button">
                         Download
                     </button>
                 </div>
@@ -75,6 +75,184 @@
                     class="introduction__background-image introduction__background-image--tools">
                 <img src="img/background/background-phone.png" alt="phone"
                     class="introduction__background-image introduction__background-image--phone">
+            </div>
+        </section>
+
+        <section class="modal">
+            <div class="modal__window">
+                <h6>Download</h6>
+
+                <div class="modal__planbox">
+                    <a href="#">
+                        <div class="modal__plan">
+                            <svg width="80" height="106" viewBox="0 0 80 106" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M46.6667 27.9068V0H5C2.22917 0 0 2.19561 0 4.92474V100.136C0 102.865 2.22917 105.061 5 105.061H75C77.7708 105.061 80 102.865 80 100.136V32.8316H51.6667C48.9167 32.8316 46.6667 30.6154 46.6667 27.9068ZM62.5938 71.2773L42.5062 90.9147C41.1208 92.2711 38.8833 92.2711 37.4979 90.9147L17.4104 71.2773C15.2958 69.211 16.7792 65.6631 19.7542 65.6631H33.3333V49.2474C33.3333 47.4334 34.825 45.9642 36.6667 45.9642H43.3333C45.175 45.9642 46.6667 47.4334 46.6667 49.2474V65.6631H60.2458C63.2208 65.6631 64.7042 69.211 62.5938 71.2773ZM78.5417 21.5457L58.1458 1.43638C57.2083 0.512993 55.9375 0 54.6042 0H53.3333V26.2653H80V25.0136C80 23.7208 79.4792 22.4691 78.5417 21.5457Z" />
+                            </svg>
+
+                            <p>Download free plan</p>
+
+                            <ul>
+                                <li>Basic functionality</li>
+                                <li>Limited access</li>
+                                <li>Community support</li>
+                            </ul>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="modal__plan">
+                            <svg width="80" height="106" viewBox="0 0 80 106" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M46.6667 27.9068V0H5C2.22917 0 0 2.19561 0 4.92474V100.136C0 102.865 2.22917 105.061 5 105.061H75C77.7708 105.061 80 102.865 80 100.136V32.8316H51.6667C48.9167 32.8316 46.6667 30.6154 46.6667 27.9068ZM62.5938 71.2773L42.5062 90.9147C41.1208 92.2711 38.8833 92.2711 37.4979 90.9147L17.4104 71.2773C15.2958 69.211 16.7792 65.6631 19.7542 65.6631H33.3333V49.2474C33.3333 47.4334 34.825 45.9642 36.6667 45.9642H43.3333C45.175 45.9642 46.6667 47.4334 46.6667 49.2474V65.6631H60.2458C63.2208 65.6631 64.7042 69.211 62.5938 71.2773ZM78.5417 21.5457L58.1458 1.43638C57.2083 0.512993 55.9375 0 54.6042 0H53.3333V26.2653H80V25.0136C80 23.7208 79.4792 22.4691 78.5417 21.5457Z" />
+                            </svg>
+
+                            <p>Download for 20$</p>
+
+                            <ul>
+                                <li>Ad-free experience</li>
+                                <li>Unlock exclusive features</li>
+                                <li>Content for the ultimate mobile experience</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+
+                <p>Nunc vulputate nibh sed congue facilisis. Curabitur posuere scelerisque neque. In sit amet lectus non
+                    lacus </p>
+
+                <div class="modal__info">
+                    <div class="modal__data">
+                        <div class="modal__parameter">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.368 7.89414C23.532 8.0582 23.625 8.27969 23.625 8.51211V25.375C23.625 25.859 23.234 26.25 22.75 26.25H5.25C4.76602 26.25 4.375 25.859 4.375 25.375V2.625C4.375 2.14102 4.76602 1.75 5.25 1.75H16.8629C17.0953 1.75 17.3195 1.84297 17.4836 2.00703L23.368 7.89414ZM21.607 8.91406L16.4609 3.76797V8.91406H21.607ZM8.75 13.1797C8.69198 13.1797 8.63634 13.2027 8.59532 13.2438C8.5543 13.2848 8.53125 13.3404 8.53125 13.3984V14.7109C8.53125 14.769 8.5543 14.8246 8.59532 14.8656C8.63634 14.9066 8.69198 14.9297 8.75 14.9297H19.25C19.308 14.9297 19.3637 14.9066 19.4047 14.8656C19.4457 14.8246 19.4688 14.769 19.4688 14.7109V13.3984C19.4688 13.3404 19.4457 13.2848 19.4047 13.2438C19.3637 13.2027 19.308 13.1797 19.25 13.1797H8.75ZM8.75 16.8984C8.69198 16.8984 8.63634 16.9215 8.59532 16.9625C8.5543 17.0035 8.53125 17.0592 8.53125 17.1172V18.4297C8.53125 18.4877 8.5543 18.5433 8.59532 18.5844C8.63634 18.6254 8.69198 18.6484 8.75 18.6484H13.7812C13.8393 18.6484 13.8949 18.6254 13.9359 18.5844C13.977 18.5433 14 18.4877 14 18.4297V17.1172C14 17.0592 13.977 17.0035 13.9359 16.9625C13.8949 16.9215 13.8393 16.8984 13.7812 16.8984H8.75Z" />
+                            </svg>
+
+                            <h6>App name</h6>
+
+                            <p>Mobileapp.layout</p>
+                        </div>
+
+                        <div class="modal__parameter">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_313_88)">
+                                    <path
+                                        d="M9.62506 16.5165V14.875H11.3751V16.5165C11.3751 16.6599 11.3927 16.8027 11.4276 16.9417L12.1276 19.7383L10.5001 20.8233L8.87256 19.7383L9.57256 16.9417C9.60741 16.8027 9.62504 16.6599 9.62506 16.5165Z"
+                                        fill="white" />
+                                    <path
+                                        d="M16.2628 0H7C6.07174 0 5.1815 0.368749 4.52513 1.02513C3.86875 1.6815 3.5 2.57174 3.5 3.5V24.5C3.5 25.4283 3.86875 26.3185 4.52513 26.9749C5.1815 27.6313 6.07174 28 7 28H21C21.9283 28 22.8185 27.6313 23.4749 26.9749C24.1313 26.3185 24.5 25.4283 24.5 24.5V8.23725C24.4999 7.77316 24.3155 7.32811 23.9872 7L17.5 0.51275C17.1719 0.184539 16.7268 9.91155e-05 16.2628 0V0ZM16.625 6.125V2.625L21.875 7.875H18.375C17.9109 7.875 17.4658 7.69063 17.1376 7.36244C16.8094 7.03425 16.625 6.58913 16.625 6.125ZM9.625 5.25V3.5H7.875V1.75H10.5V3.5H12.25V5.25H10.5V7H12.25V8.75H10.5V10.5H12.25V12.25H9.625V10.5H7.875V8.75H9.625V7H7.875V5.25H9.625ZM9.625 13.125H11.375C11.8391 13.125 12.2842 13.3094 12.6124 13.6376C12.9406 13.9658 13.125 14.4109 13.125 14.875V16.5165L13.825 19.3147C13.9122 19.6649 13.8891 20.0334 13.7588 20.3698C13.6284 20.7063 13.3973 20.9942 13.097 21.1943L11.4695 22.2792C11.1821 22.4707 10.8445 22.5729 10.4991 22.5729C10.1538 22.5729 9.81615 22.4707 9.52875 22.2792L7.90125 21.1943C7.60127 20.994 7.37049 20.7059 7.24048 20.3695C7.11048 20.0331 7.08761 19.6647 7.175 19.3147L7.875 16.5165V14.875C7.875 14.4109 8.05937 13.9658 8.38756 13.6376C8.71575 13.3094 9.16087 13.125 9.625 13.125Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_313_88">
+                                        <rect width="28" height="28" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            <h6>License</h6>
+
+                            <p>Free</p>
+                        </div>
+
+                        <div class="modal__parameter">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.4054 21.8138C24.662 20.3019 25.536 18.5095 25.9534 16.5884C26.3708 14.6673 26.3194 12.6739 25.8035 10.7769C25.2876 8.87985 24.3223 7.13497 22.9894 5.68986C21.6566 4.24476 19.9952 3.14193 18.146 2.47468C16.2967 1.80743 14.314 1.59539 12.3655 1.85649C10.4169 2.11759 8.55997 2.84415 6.95163 3.97471C5.34329 5.10527 4.0309 6.60657 3.12549 8.35161C2.22008 10.0966 1.74828 12.0341 1.75 14C1.75067 16.8579 2.75778 19.6243 4.59463 21.8138L4.57713 21.8286C4.63838 21.9021 4.70838 21.9651 4.77138 22.0378C4.85013 22.1279 4.935 22.2128 5.01638 22.3003C5.26138 22.5663 5.51338 22.8218 5.77763 23.0615C5.85813 23.135 5.94125 23.2033 6.02263 23.2733C6.30263 23.5148 6.5905 23.744 6.88888 23.9575C6.92738 23.9838 6.96238 24.0179 7.00088 24.045V24.0345C9.05022 25.4767 11.495 26.2507 14.0009 26.2507C16.5068 26.2507 18.9515 25.4767 21.0009 24.0345V24.045C21.0394 24.0179 21.0735 23.9838 21.1129 23.9575C21.4104 23.7431 21.6991 23.5148 21.9791 23.2733C22.0605 23.2033 22.1436 23.1341 22.2241 23.0615C22.4884 22.8209 22.7404 22.5663 22.9854 22.3003C23.0668 22.2128 23.1508 22.1279 23.2304 22.0378C23.2925 21.9651 23.3634 21.9021 23.4246 21.8278L23.4054 21.8138ZM14 7.00002C14.7788 7.00002 15.54 7.23095 16.1876 7.66361C16.8351 8.09627 17.3398 8.71122 17.6378 9.43071C17.9358 10.1502 18.0138 10.9419 17.8618 11.7057C17.7099 12.4695 17.3349 13.1711 16.7842 13.7218C16.2336 14.2724 15.532 14.6474 14.7682 14.7994C14.0044 14.9513 13.2127 14.8733 12.4932 14.5753C11.7737 14.2773 11.1588 13.7726 10.7261 13.1251C10.2934 12.4776 10.0625 11.7163 10.0625 10.9375C10.0625 9.89323 10.4773 8.89171 11.2158 8.15329C11.9542 7.41486 12.9557 7.00002 14 7.00002ZM7.00613 21.8138C7.02131 20.6649 7.48821 19.5681 8.30582 18.7608C9.12343 17.9535 10.226 17.5006 11.375 17.5H16.625C17.774 17.5006 18.8766 17.9535 19.6942 18.7608C20.5118 19.5681 20.9787 20.6649 20.9939 21.8138C19.0749 23.5431 16.5832 24.5001 14 24.5001C11.4168 24.5001 8.92514 23.5431 7.00613 21.8138Z"
+                                    fill="white" />
+                            </svg>
+
+                            <h6>Author</h6>
+
+                            <p>Mobile Marrket App.com</p>
+                        </div>
+
+                        <div class="modal__parameter">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24.5 23.3334V7.00004C24.5 5.71321 23.4535 4.66671 22.1667 4.66671H19.8333V2.33337H17.5V4.66671H10.5V2.33337H8.16667V4.66671H5.83333C4.5465 4.66671 3.5 5.71321 3.5 7.00004V23.3334C3.5 24.6202 4.5465 25.6667 5.83333 25.6667H22.1667C23.4535 25.6667 24.5 24.6202 24.5 23.3334ZM10.5 21H8.16667V18.6667H10.5V21ZM10.5 16.3334H8.16667V14H10.5V16.3334ZM15.1667 21H12.8333V18.6667H15.1667V21ZM15.1667 16.3334H12.8333V14H15.1667V16.3334ZM19.8333 21H17.5V18.6667H19.8333V21ZM19.8333 16.3334H17.5V14H19.8333V16.3334ZM22.1667 10.5H5.83333V8.16671H22.1667V10.5Z"
+                                    fill="white" />
+                            </svg>
+
+                            <h6>Data</h6>
+
+                            <p>21.02.2022</p>
+                        </div>
+                    </div>
+
+                    <div class="modal__border"></div>
+
+                    <div class="modal__data">
+                        <div class="modal__parameter">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24.5047 2.33801H3.50472C2.88645 2.33986 2.29403 2.58628 1.85684 3.02347C1.41966 3.46066 1.17323 4.05308 1.17139 4.67135V18.6713C1.17323 19.2896 1.41966 19.882 1.85684 20.3192C2.29403 20.7564 2.88645 21.0028 3.50472 21.0047H11.6714V23.338H9.33805V25.6713H18.6714V23.338H16.3381V21.0047H24.5047C25.123 21.0028 25.7154 20.7564 26.1526 20.3192C26.5898 19.882 26.8362 19.2896 26.8381 18.6713V4.67135C26.8362 4.05308 26.5898 3.46066 26.1526 3.02347C25.7154 2.58628 25.123 2.33986 24.5047 2.33801ZM12.5487 15.9483H12.5476L7.00589 10.4067L8.65672 8.75818L12.5487 12.6502L19.3562 5.84151L21.0071 7.49235L12.5487 15.9483Z"
+                                    fill="white" />
+                            </svg>
+
+                            <h6>OS</h6>
+
+                            <p>Windows</p>
+                        </div>
+
+                        <div class="modal__parameter">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.0002 25.6667C12.4057 25.6667 10.8988 25.3603 9.47933 24.7474C8.05989 24.1353 6.8205 23.2992 5.76116 22.239C4.70105 21.1797 3.86494 19.9403 3.25283 18.5209C2.63994 17.1014 2.3335 15.5945 2.3335 14C2.3335 12.3862 2.63994 10.8745 3.25283 9.46521C3.86494 8.0551 4.70105 6.82037 5.76116 5.76104C6.8205 4.70093 8.05989 3.86443 9.47933 3.25154C10.8988 2.63943 12.4057 2.33337 14.0002 2.33337C15.6141 2.33337 17.1257 2.63943 18.535 3.25154C19.9451 3.86443 21.1798 4.70093 22.2392 5.76104C23.2993 6.82037 24.1354 8.0551 24.7475 9.46521C25.3604 10.8745 25.6668 12.3862 25.6668 14C25.6668 15.5945 25.3604 17.1014 24.7475 18.5209C24.1354 19.9403 23.2993 21.1797 22.2392 22.239C21.1798 23.2992 19.9451 24.1353 18.535 24.7474C17.1257 25.3603 15.6141 25.6667 14.0002 25.6667ZM14.0002 23.275C14.5057 22.575 14.9432 21.8459 15.3127 21.0875C15.6821 20.3292 15.9835 19.5223 16.2168 18.6667H11.7835C12.0168 19.5223 12.3182 20.3292 12.6877 21.0875C13.0571 21.8459 13.4946 22.575 14.0002 23.275ZM10.9668 22.8084C10.6168 22.1667 10.3108 21.5005 10.0487 20.8099C9.78577 20.12 9.56683 19.4056 9.39183 18.6667H5.95016C6.51405 19.6389 7.21872 20.4848 8.06416 21.2042C8.91039 21.9237 9.87794 22.4584 10.9668 22.8084ZM17.0335 22.8084C18.1224 22.4584 19.0896 21.9237 19.935 21.2042C20.7812 20.4848 21.4863 19.6389 22.0502 18.6667H18.6085C18.4335 19.4056 18.2149 20.12 17.9528 20.8099C17.6899 21.5005 17.3835 22.1667 17.0335 22.8084ZM4.9585 16.3334H8.92516C8.86683 15.9445 8.82289 15.5603 8.79333 15.1807C8.76455 14.8019 8.75016 14.4084 8.75016 14C8.75016 13.5917 8.76455 13.1982 8.79333 12.8194C8.82289 12.4398 8.86683 12.0556 8.92516 11.6667H4.9585C4.86127 12.0556 4.78816 12.4398 4.73916 12.8194C4.69094 13.1982 4.66683 13.5917 4.66683 14C4.66683 14.4084 4.69094 14.8019 4.73916 15.1807C4.78816 15.5603 4.86127 15.9445 4.9585 16.3334ZM11.2585 16.3334H16.7418C16.8002 15.9445 16.8441 15.5603 16.8737 15.1807C16.9024 14.8019 16.9168 14.4084 16.9168 14C16.9168 13.5917 16.9024 13.1982 16.8737 12.8194C16.8441 12.4398 16.8002 12.0556 16.7418 11.6667H11.2585C11.2002 12.0556 11.1566 12.4398 11.1278 12.8194C11.0983 13.1982 11.0835 13.5917 11.0835 14C11.0835 14.4084 11.0983 14.8019 11.1278 15.1807C11.1566 15.5603 11.2002 15.9445 11.2585 16.3334ZM19.0752 16.3334H23.0418C23.1391 15.9445 23.2122 15.5603 23.2612 15.1807C23.3094 14.8019 23.3335 14.4084 23.3335 14C23.3335 13.5917 23.3094 13.1982 23.2612 12.8194C23.2122 12.4398 23.1391 12.0556 23.0418 11.6667H19.0752C19.1335 12.0556 19.1771 12.4398 19.2058 12.8194C19.2354 13.1982 19.2502 13.5917 19.2502 14C19.2502 14.4084 19.2354 14.8019 19.2058 15.1807C19.1771 15.5603 19.1335 15.9445 19.0752 16.3334ZM18.6085 9.33337H22.0502C21.4863 8.36115 20.7812 7.51532 19.935 6.79587C19.0896 6.07643 18.1224 5.54171 17.0335 5.19171C17.3835 5.83337 17.6899 6.49915 17.9528 7.18904C18.2149 7.87971 18.4335 8.59449 18.6085 9.33337ZM11.7835 9.33337H16.2168C15.9835 8.47782 15.6821 7.67087 15.3127 6.91254C14.9432 6.15421 14.5057 5.42504 14.0002 4.72504C13.4946 5.42504 13.0571 6.15421 12.6877 6.91254C12.3182 7.67087 12.0168 8.47782 11.7835 9.33337ZM5.95016 9.33337H9.39183C9.56683 8.59449 9.78577 7.87971 10.0487 7.18904C10.3108 6.49915 10.6168 5.83337 10.9668 5.19171C9.87794 5.54171 8.91039 6.07643 8.06416 6.79587C7.21872 7.51532 6.51405 8.36115 5.95016 9.33337Z"
+                                    fill="white" />
+                            </svg>
+
+                            <h6>Language</h6>
+
+                            <p>English</p>
+                        </div>
+
+                        <div class="modal__parameter">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M23.4556 22.2962C23.4225 22.8917 23.1626 23.4519 22.7294 23.8618C22.2961 24.2716 21.7222 24.5 21.1258 24.5H6.87381C6.27738 24.5 5.70357 24.2716 5.27028 23.8618C4.83698 23.4519 4.57708 22.8917 4.54398 22.2962L3.6369 5.96283C3.61929 5.64604 3.66647 5.32898 3.77557 5.03105C3.88466 4.73311 4.05337 4.46055 4.27138 4.23003C4.4894 3.99952 4.75213 3.81588 5.04353 3.69036C5.33493 3.56484 5.64886 3.50007 5.96615 3.5H22.0335C22.3508 3.49999 22.6648 3.5647 22.9563 3.69019C23.2477 3.81568 23.5105 3.9993 23.7286 4.22982C23.9467 4.46035 24.1155 4.73293 24.2246 5.03091C24.3337 5.32889 24.3809 5.64599 24.3633 5.96283L23.4556 22.2962ZM19.9755 10.3711C20.4538 10.0561 20.574 9.43133 20.1814 9.02475C19.5155 8.33759 18.7372 7.76905 17.8801 7.34358C16.6901 6.75331 15.3829 6.43699 14.0546 6.41783C12.7252 6.3958 11.4076 6.67123 10.1982 7.224C9.32633 7.62239 8.52845 8.16601 7.83865 8.83167C7.43206 9.226 7.52948 9.85367 7.99673 10.1838L10.5121 11.9607C10.9787 12.2908 11.6367 12.1841 12.1203 11.8761C12.2451 11.7969 12.3751 11.7264 12.5094 11.6649C12.9388 11.4685 13.4046 11.3646 13.8767 11.3598L15.856 9.08425C15.9575 8.96744 16.1012 8.89574 16.2556 8.88491C16.332 8.87955 16.4087 8.88929 16.4814 8.91358C16.5541 8.93788 16.6212 8.97625 16.6791 9.0265C16.7369 9.07675 16.7843 9.1379 16.8185 9.20646C16.8527 9.27503 16.873 9.34965 16.8784 9.42608C16.8838 9.50251 16.874 9.57925 16.8497 9.65191C16.8254 9.72458 16.7871 9.79175 16.7368 9.84958L15.2015 11.6142C15.4094 11.7002 15.608 11.8073 15.7941 11.9338C16.2666 12.2564 16.92 12.383 17.3983 12.068L19.9749 10.3705L19.9755 10.3711Z"
+                                    fill="white" />
+                            </svg>
+
+                            <h6>Size</h6>
+
+                            <p>4.16 MB</p>
+                        </div>
+
+                        <div class="modal__parameter">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.8125 0H16.1875C16.9148 0 17.5 0.585156 17.5 1.3125V10.5H22.2961C23.2695 10.5 23.7562 11.6758 23.0672 12.3648L14.7492 20.6883C14.3391 21.0984 13.6664 21.0984 13.2562 20.6883L4.92734 12.3648C4.23828 11.6758 4.725 10.5 5.69844 10.5H10.5V1.3125C10.5 0.585156 11.0852 0 11.8125 0ZM28 20.5625V26.6875C28 27.4148 27.4148 28 26.6875 28H1.3125C0.585156 28 0 27.4148 0 26.6875V20.5625C0 19.8352 0.585156 19.25 1.3125 19.25H9.33516L12.0148 21.9297C13.1141 23.0289 14.8859 23.0289 15.9852 21.9297L18.6648 19.25H26.6875C27.4148 19.25 28 19.8352 28 20.5625ZM21.2188 25.375C21.2188 24.7734 20.7266 24.2812 20.125 24.2812C19.5234 24.2812 19.0312 24.7734 19.0312 25.375C19.0312 25.9766 19.5234 26.4688 20.125 26.4688C20.7266 26.4688 21.2188 25.9766 21.2188 25.375ZM24.7188 25.375C24.7188 24.7734 24.2266 24.2812 23.625 24.2812C23.0234 24.2812 22.5312 24.7734 22.5312 25.375C22.5312 25.9766 23.0234 26.4688 23.625 26.4688C24.2266 26.4688 24.7188 25.9766 24.7188 25.375Z"
+                                    fill="white" />
+                            </svg>
+
+                            <h6>Downloads</h6>
+
+                            <p>964</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="modal__button button">Download</button>
+
+                <button class="modal__cross" id="modalButtonClose">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.09654 7.99995L15.5443 1.55218C15.6717 1.40339 15.7383 1.21199 15.7308 1.01625C15.7232 0.820498 15.642 0.634812 15.5035 0.496294C15.365 0.357776 15.1793 0.276629 14.9836 0.269068C14.7878 0.261507 14.5964 0.32809 14.4476 0.45551L7.99987 6.90329L1.55209 0.447732C1.40563 0.301274 1.20699 0.218994 0.999871 0.218994C0.792747 0.218994 0.594107 0.301274 0.447648 0.447732C0.30119 0.594191 0.21891 0.792831 0.21891 0.999954C0.21891 1.20708 0.30119 1.40572 0.447648 1.55218L6.9032 7.99995L0.447648 14.4477C0.366229 14.5175 0.300102 14.6033 0.253418 14.6998C0.206733 14.7963 0.180498 14.9014 0.176361 15.0085C0.172223 15.1156 0.190272 15.2224 0.229375 15.3222C0.268477 15.422 0.327789 15.5127 0.403587 15.5885C0.479385 15.6643 0.570033 15.7236 0.669842 15.7627C0.76965 15.8018 0.876464 15.8198 0.983579 15.8157C1.09069 15.8115 1.1958 15.7853 1.29229 15.7386C1.38879 15.6919 1.47459 15.6258 1.54431 15.5444L7.99987 9.09662L14.4476 15.5444C14.5964 15.6718 14.7878 15.7384 14.9836 15.7308C15.1793 15.7233 15.365 15.6421 15.5035 15.5036C15.642 15.3651 15.7232 15.1794 15.7308 14.9837C15.7383 14.7879 15.6717 14.5965 15.5443 14.4477L9.09654 7.99995Z" />
+                    </svg>
+                </button>
             </div>
         </section>
 
@@ -240,6 +418,10 @@
 
 
 
+
+
+
+
                 </div>
 
                 <img src="img/background/background-phone-2.png" alt="phone video" class="watch__image">
@@ -306,7 +488,262 @@
                 </div>
             </div>
         </section>
+
+        <section class="slider">
+
+            <div class="slider__container container middle">
+
+                <div class="slider__content">
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <input type="radio" name="r" id="r4">
+                    <input type="radio" name="r" id="r5">
+                    <input type="radio" name="r" id="r6">
+
+                    <div class="slider__slide s1">
+                        <h2>WHAT OUR COSTUMER’S SAY</h2>
+
+                        <img src="img/people/man-2.png" alt="Man">
+
+                        <h4>Jon Doe</h4>
+
+                        <pre>Company Inc.</pre>
+
+                        <p>I've been using this app for a few weeks now and I have to say, I'm really impressed. It's so
+                            easy to use and the personalized recommendations are spot-on. Plus, the transactions are
+                            secure
+                            and the updates are always timely. I would definitely recommend this app to anyone looking
+                            for a
+                            better mobile experience</p>
+                    </div>
+
+                    <div class="slider__slide">
+                        <h2>WHAT OUR COSTUMER’S SAY</h2>
+
+                        <img src="img/people/man-2.png" alt="Man">
+
+                        <h4>Jon Doe</h4>
+
+                        <pre>Company Inc.</pre>
+
+                        <p>I've been using this app for a few weeks now and I have to say, I'm really impressed. It's so
+                            easy to use and the personalized recommendations are spot-on. Plus, the transactions are
+                            secure
+                            and the updates are always timely. I would definitely recommend this app to anyone looking
+                            for a
+                            better mobile experience</p>
+                    </div>
+
+                    <div class="slider__slide">
+                        <h2>WHAT OUR COSTUMER’S SAY</h2>
+
+                        <img src="img/people/man-2.png" alt="Man">
+
+                        <h4>Jon Doe</h4>
+
+                        <pre>Company Inc.</pre>
+
+                        <p>I've been using this app for a few weeks now and I have to say, I'm really impressed. It's so
+                            easy to use and the personalized recommendations are spot-on. Plus, the transactions are
+                            secure
+                            and the updates are always timely. I would definitely recommend this app to anyone looking
+                            for a
+                            better mobile experience</p>
+                    </div>
+
+                    <div class="slider__slide">
+                        <h2>WHAT OUR COSTUMER’S SAY</h2>
+
+                        <img src="img/people/man-2.png" alt="Man">
+
+                        <h4>Jon Doe</h4>
+
+                        <pre>Company Inc.</pre>
+
+                        <p>I've been using this app for a few weeks now and I have to say, I'm really impressed. It's so
+                            easy to use and the personalized recommendations are spot-on. Plus, the transactions are
+                            secure
+                            and the updates are always timely. I would definitely recommend this app to anyone looking
+                            for a
+                            better mobile experience</p>
+                    </div>
+
+                    <div class="slider__slide">
+                        <h2>WHAT OUR COSTUMER’S SAY</h2>
+
+                        <img src="img/people/man-2.png" alt="Man">
+
+                        <h4>Jon Doe</h4>
+
+                        <pre>Company Inc.</pre>
+
+                        <p>I've been using this app for a few weeks now and I have to say, I'm really impressed. It's so
+                            easy to use and the personalized recommendations are spot-on. Plus, the transactions are
+                            secure
+                            and the updates are always timely. I would definitely recommend this app to anyone looking
+                            for a
+                            better mobile experience</p>
+                    </div>
+
+                    <div class="slider__slide">
+                        <h2>WHAT OUR COSTUMER’S SAY</h2>
+
+                        <img src="img/people/man-2.png" alt="Man">
+
+                        <h4>Jon Doe</h4>
+
+                        <pre>Company Inc.</pre>
+
+                        <p>I've been using this app for a few weeks now and I have to say, I'm really impressed. It's so
+                            easy to use and the personalized recommendations are spot-on. Plus, the transactions are
+                            secure
+                            and the updates are always timely. I would definitely recommend this app to anyone looking
+                            for a
+                            better mobile experience</p>
+                    </div>
+                </div>
+
+                <div class="slider__navigation">
+                    <label for="r1" class="slider__bar"></label>
+                    <label for="r2" class="slider__bar"></label>
+                    <label for="r3" class="slider__bar"></label>
+                    <label for="r4" class="slider__bar"></label>
+                    <label for="r5" class="slider__bar"></label>
+                    <label for="r6" class="slider__bar"></label>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="contact">
+            <div class="contact__container container">
+                <div class="contact__row">
+                    <h3>CONTACT US</h3>
+                </div>
+                <div class="contact__row contact__row--second">
+                    <div class="contact__textbox">
+                        <h5>Get in touch with us</h5>
+                        <p>Have a question or comment about our app? Get in touch with us using the contact form below
+                            and our team will respond shortly.</p>
+
+                        <a href="#">
+                            <svg id="iconFacebook" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                <style>
+                                    #iconFacebook circle {
+                                        fill: url(#gradient);
+                                        stroke: transparent;
+                                    }
+
+                                    #iconFacebook path {
+                                        fill: white;
+                                        stroke: transparent;
+                                    }
+
+                                    #iconFacebook:hover circle,
+                                    #iconFacebook:hover path {
+                                        fill: transparent;
+                                        stroke: url(#gradient);
+                                    }
+                                </style>
+                                <defs>
+                                    <linearGradient id="gradient">
+                                        <stop stop-color="#00C5EB" />
+                                        <stop offset="1" stop-color="#B544FE" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="20" cy="20" r="19.5" />
+                                <path
+                                    d="M24 11.667h-2.5a4.167 4.167 0 0 0-4.166 4.166v2.5h-2.5v3.334h2.5v6.666h3.333v-6.666h2.5L24 18.333h-3.333v-2.5A.833.833 0 0 1 21.5 15H24v-3.333Z" />
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg id="iconFacebook" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                <style>
+                                    #iconFacebook circle {
+                                        fill: url(#gradient);
+                                        stroke: transparent;
+                                    }
+
+                                    #iconFacebook path {
+                                        fill: white;
+                                        stroke: transparent;
+                                    }
+
+                                    #iconFacebook:hover circle,
+                                    #iconFacebook:hover path {
+                                        fill: transparent;
+                                        stroke: url(#gradient);
+                                    }
+                                </style>
+                                <defs>
+                                    <linearGradient id="gradient">
+                                        <stop stop-color="#00C5EB" />
+                                        <stop offset="1" stop-color="#B544FE" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="20" cy="20" r="19.5" />
+                                <path
+                                    d="M24 11.667h-2.5a4.167 4.167 0 0 0-4.166 4.166v2.5h-2.5v3.334h2.5v6.666h3.333v-6.666h2.5L24 18.333h-3.333v-2.5A.833.833 0 0 1 21.5 15H24v-3.333Z" />
+                            </svg>
+                        </a>
+
+                        <a href="#">
+                            <svg id="iconFacebook" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                <style>
+                                    #iconFacebook circle {
+                                        fill: url(#gradient);
+                                        stroke: transparent;
+                                    }
+
+                                    #iconFacebook path {
+                                        fill: white;
+                                        stroke: transparent;
+                                    }
+
+                                    #iconFacebook:hover circle,
+                                    #iconFacebook:hover path {
+                                        fill: transparent;
+                                        stroke: url(#gradient);
+                                    }
+                                </style>
+                                <defs>
+                                    <linearGradient id="gradient">
+                                        <stop stop-color="#00C5EB" />
+                                        <stop offset="1" stop-color="#B544FE" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="20" cy="20" r="19.5" />
+                                <path
+                                    d="M24 11.667h-2.5a4.167 4.167 0 0 0-4.166 4.166v2.5h-2.5v3.334h2.5v6.666h3.333v-6.666h2.5L24 18.333h-3.333v-2.5A.833.833 0 0 1 21.5 15H24v-3.333Z" />
+                            </svg>
+                        </a>
+
+                        <a class="contact__link" href="tel:0666666666">+380-66-666-66-66</a>
+
+                        <a class="contact__link" id="mailLink"
+                            href="mailto:funnymoments610@gmail.com">funnymoments610@gmail.com</a>
+                    </div>
+                    <div class="contact__inputbox">
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <input type="text" name="email" id="email" placeholder="Email">
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                        <button class="contact__button button">SUBMIT</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <p>© 2019 GoIteens Template. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="scripts/modal.js"></script>
 </body>
 
 </html>
