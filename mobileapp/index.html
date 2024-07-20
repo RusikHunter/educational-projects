@@ -41,9 +41,53 @@
                         </li>
                     </ul>
                 </nav>
+
+                <button class="header__burger" id="burgerButtonOpen">
+                    <svg width="26" height="16" viewBox="0 0 26 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1H25" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        <path d="M1 8H25" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        <path d="M1 15H25" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
+
+    <section class="burger">
+        <div class="burger__container container">
+            <a href="#" class="burger__logo">
+                <!--<img src="img/logo/logo.png" alt="Mobileapp" class="header__logo-image">-->
+
+                <h1>Mobileapp</h1>
+            </a>
+
+            <ul class="burger__navigation">
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#">FEATURES</a>
+                </li>
+                <li>
+                    <a href="#">TEAM</a>
+                </li>
+                <li>
+                    <a href="#">TESTIMONIALS</a>
+                </li>
+                <li>
+                    <a href="#">CONTACT</a>
+                </li>
+            </ul>
+
+            <button class="burger__cross" id="burgerButtonClose">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.09654 7.99995L15.5443 1.55218C15.6717 1.40339 15.7383 1.21199 15.7308 1.01625C15.7232 0.820498 15.642 0.634812 15.5035 0.496294C15.365 0.357776 15.1793 0.276629 14.9836 0.269068C14.7878 0.261507 14.5964 0.32809 14.4476 0.45551L7.99987 6.90329L1.55209 0.447732C1.40563 0.301274 1.20699 0.218994 0.999871 0.218994C0.792747 0.218994 0.594107 0.301274 0.447648 0.447732C0.30119 0.594191 0.21891 0.792831 0.21891 0.999954C0.21891 1.20708 0.30119 1.40572 0.447648 1.55218L6.9032 7.99995L0.447648 14.4477C0.366229 14.5175 0.300102 14.6033 0.253418 14.6998C0.206733 14.7963 0.180498 14.9014 0.176361 15.0085C0.172223 15.1156 0.190272 15.2224 0.229375 15.3222C0.268477 15.422 0.327789 15.5127 0.403587 15.5885C0.479385 15.6643 0.570033 15.7236 0.669842 15.7627C0.76965 15.8018 0.876464 15.8198 0.983579 15.8157C1.09069 15.8115 1.1958 15.7853 1.29229 15.7386C1.38879 15.6919 1.47459 15.6258 1.54431 15.5444L7.99987 9.09662L14.4476 15.5444C14.5964 15.6718 14.7878 15.7384 14.9836 15.7308C15.1793 15.7233 15.365 15.6421 15.5035 15.5036C15.642 15.3651 15.7232 15.1794 15.7308 14.9837C15.7383 14.7879 15.6717 14.5965 15.5443 14.4477L9.09654 7.99995Z" />
+                </svg>
+            </button>
+        </div>
+    </section>
 
     <main class="main">
         <section class="introduction">
@@ -71,10 +115,12 @@
                     </button>
                 </div>
 
-                <img src="img/background/background-tools.png" alt="Tools"
-                    class="introduction__background-image introduction__background-image--tools">
-                <img src="img/background/background-phone.png" alt="phone"
-                    class="introduction__background-image introduction__background-image--phone">
+                <div class="introduction__imagebox">
+                    <img src="img/background/background-tools.png" alt="Tools"
+                        class="introduction__background-image introduction__background-image--tools">
+                    <img src="img/background/background-phone.png" alt="phone"
+                        class="introduction__background-image introduction__background-image--phone">
+                </div>
             </div>
         </section>
 
