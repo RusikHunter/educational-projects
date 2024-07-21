@@ -232,7 +232,7 @@
     font-weight: 400;
     font-size: 14px;
     color: #fff;
-    background-image: url(../img/list-image.svg);
+    background-image: url(../img/icons/list-image.svg);
     background-repeat: no-repeat;
     background-position: center left;
     padding-top: 1px;
@@ -398,7 +398,7 @@
     color: #fff;
     margin-bottom: 14px;
     list-style: none;
-    background-image: url(../img/list-image.svg);
+    background-image: url(../img/icons/list-image.svg);
     background-repeat: no-repeat;
     background-position: center left;
     padding-top: 1px;
@@ -537,7 +537,7 @@
         "b i e"
         "c i f"
     ;
-    margin-bottom: 100px;
+    padding: 0 100px 100px 100px;
 }
 
 .features__textbox {
@@ -595,12 +595,6 @@
 
 .features__textbox--sixth {
     grid-area: f;
-}
-
-.features__textbox--first,
-.features__textbox--second,
-.features__textbox--third {
-    margin-left: 100px;
 }
 
 .features__image {
@@ -864,10 +858,15 @@ input[name="r"] {
     margin: 20px 0;
 }
 
+.contact__svg {
+    width: 148px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .contact__textbox svg {
     width: 40px;
     height: 40px;
-    margin-right: 14px;
 }
 
 .contact__link {
@@ -883,6 +882,12 @@ input[name="r"] {
     font-size: 14px;
 }
 
+.contact__input {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 .contact__inputbox input {
     border-radius: 5px;
     width: 288px;
@@ -890,10 +895,6 @@ input[name="r"] {
     background-color: #fff;
     outline: none;
     transition: transform 1s;
-}
-
-input#name {
-    margin-right: 27px;
 }
 
 .contact__inputbox input:checked {
@@ -942,17 +943,6 @@ input#name {
 /* todo-> @media grid */
 
 @media (max-width: 1312px) {
-    textarea {
-        display: none;
-
-    }
-
-    .team__row--second {
-        display: none;
-    }
-
-    /* temporarily */
-
     .header__container {
         max-height: 62px;
     }
@@ -987,6 +977,202 @@ input#name {
         right: 350px;
         top: 120px;
     }
+
+    .features__row {
+        padding: 0 32px;
+    }
+
+    .features__row--grid {
+        justify-items: center;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: repeat(5, 160px);
+        grid-auto-flow: column;
+        grid-template-areas: "i a"
+            "i b"
+            "i c"
+            "i d"
+            "f e"
+        ;
+        padding: 0 32px 32px 32px;
+    }
+
+    .features__textbox--first,
+    .features__textbox--second,
+    .features__textbox--third,
+    .features__textbox--fourth,
+    .features__textbox--fiveth {
+        position: relative;
+        right: 0px;
+    }
+
+    .features__image {
+        width: 467px;
+        height: 592px;
+        position: relative;
+        left: -25%;
+    }
+
+    .features__icon,
+    .features__text h1 {
+        margin-top: 0;
+    }
+
+    .features__text p {
+        line-height: 16px;
+    }
+
+    .watch__container {
+        flex-direction: column;
+    }
+
+    .watch__text {
+        padding: 0 32px;
+        width: 100%;
+    }
+
+    .watch__text h2 {
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    .watch__text p {
+        max-width: 704px;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .watch__svg {
+        display: flex;
+        justify-content: center;
+    }
+
+    #iconFacebookSecond {
+        margin-right: 0;
+    }
+
+    .watch__image {
+        width: 401px;
+        height: 258px;
+        margin: 40px auto;
+    }
+
+    .team__description {
+        max-width: 704px;
+    }
+
+    .team__row--second {
+        max-width: 704px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .team__row--second a {
+        margin-bottom: 20px;
+    }
+
+    .team__person-box {
+        width: 336px;
+    }
+
+    .slider__container {
+        justify-content: center;
+    }
+
+    .slider__slide {
+        display: none;
+        width: 100%;
+    }
+
+    .s1 {
+        max-width: 1280px;
+        display: flex;
+    }
+
+    .s1 h2,
+    .s1 h4 .s1 pre,
+    .s1 p {
+        width: 100%;
+        max-width: 704px;
+    }
+
+    .s1 h2 {
+        text-align: center;
+    }
+
+    #r1:checked~.s1,
+    #r2:checked~.s1,
+    #r3:checked~.s1,
+    #r4:checked~.s1,
+    #r5:checked~.s1,
+    #r6:checked~.s1 {
+        margin-left: 0;
+    }
+
+    .contact__row h3 {
+        margin-top: 74px;
+        margin-bottom: 38px;
+    }
+
+    .contact__row--second {
+        flex-direction: column-reverse;
+    }
+
+    .contact__textbox,
+    .contact__inputbox {
+        margin: 0 auto;
+    }
+
+    .contact__inputbox {
+        width: 100%;
+        padding-inline: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact__input input {
+        width: 48%;
+    }
+
+    .contact__inputbox textarea {
+        width: 100%;
+    }
+
+    .contact__button {
+        margin-inline: auto;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .contact__textbox {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .contact__textbox h5 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contact__textbox p {
+        max-width: 530px;
+        text-align: center;
+        margin: 0 auto 40px auto;
+        padding-inline: 20px;
+    }
+
+    .contact__svg {
+        margin: 0 auto 40px auto;
+    }
+
+    .contact__link {
+        text-align: center;
+    }
+
+    .contact__link--second {
+        display: block;
+        margin-bottom: 80px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -998,16 +1184,155 @@ input#name {
         display: block;
     }
 
+    .introduction__container {
+        background-image: url("../img/background/background-phone.png");
+        background-size: cover;
+    }
+
+    .introduction__textbox {
+        margin-top: 100px;
+        margin-left: 15px;
+        max-width: 270px;
+    }
+
+    .introduction__title {
+        font-size: 24px;
+        max-width: 270px;
+    }
+
+    .introduction__description {
+        font-size: 14px;
+    }
+
+    .introduction__list {
+        max-width: 270px;
+        font-size: 12px;
+    }
+
+    .introduction__imagebox {
+        display: none;
+    }
+
+    .introduction__button {
+        margin-bottom: 127px;
+    }
+
     .features__row--grid {
+        justify-items: center;
         display: grid;
-        grid-template-columns: 2fr 2fr;
-        grid-template-rows: repeat (5, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: 450px repeat(6, 180px);
         grid-auto-flow: column;
-        grid-template-areas: "i a"
-            "i b"
-            "i c"
-            "i d"
-            "f e"
+        grid-template-areas:
+            "i"
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+            "f"
         ;
+        padding: 0 32px 32px 32px;
+    }
+
+    .features__textbox {
+        width: 250px;
+    }
+
+    .features__image {
+        width: 280px;
+        height: 409px;
+        position: static;
+        margin: 0 auto;
+    }
+
+    .watch__image {
+        width: 280px;
+        height: 208px;
+    }
+
+    .team__person-box {
+        width: 280px;
+    }
+
+    .slider__container {
+        height: 700px;
+    }
+
+    .slider__navigation {
+        bottom: 50px;
+    }
+
+    .contact__row h3 {
+        margin: 40px auto;
+    }
+
+    .contact__input {
+        flex-direction: column;
+    }
+
+    .contact__input input {
+        width: 100%;
+    }
+
+    .contact__input input#name {
+        margin-bottom: 20px;
+    }
+
+    .contact__svg {
+        margin: 0 auto 14px auto;
+    }
+
+    .contact__link--second {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 375px) {
+    .slider__container {
+        height: 750px;
+    }
+
+    .footer__container p {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 355px) {
+    .slider__container {
+        height: 800px;
+    }
+}
+
+@media (max-width: 550px) {
+    .modal {
+        max-width: 550px;
+    }
+
+    .modal__planbox {
+        flex-direction: column;
+    }
+
+    .modal__plan {
+        margin: 0 auto 20px auto;
+    }
+
+    .modal__window p {
+        width: 270px;
+        margin: 0 auto 27px auto;
+    }
+
+    .modal__info {
+        flex-direction: column;
+        max-width: 232px;
+    }
+
+    .modal__border {
+        width: 100%;
+        height: 2px;
+    }
+
+    .modal__cross {
+        left: calc(80% - 48px);
     }
 }

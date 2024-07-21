@@ -21,12 +21,13 @@ function closeBurger() {
 }
 
 function openModal() {
-    modal.style.display = "block";
+    modal.style.display = "flex";
     all.style.overflow = "hidden";
 }
 
 function closeModal() {
     modal.style.display = "none";
+    all.style.overflow = "scroll";
 }
 
 //console.log(all)
