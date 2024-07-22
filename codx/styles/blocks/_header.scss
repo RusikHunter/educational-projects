@@ -1,0 +1,71 @@
+.header {
+
+    &__container {
+        justify-content: space-between;
+        padding: 19px 28px;
+        align-items: center;
+    }
+
+    &__column {
+        align-items: center;
+    }
+
+    &__column--first {
+        width: 400px;
+        @include spacebetween;
+    }
+
+    &__logo {
+        width: 94px;
+        height: 31px;
+    }
+
+    &__nav {
+        width: 256px;
+        @include spacebetween;
+
+        & ul {
+            width: 100%;
+            padding: 0;
+            @include spacebetween;
+
+            & li {
+                @include textDescriptionRegular (15);
+                /* вставка миксина со стилями для обычного текста 400regular с fz 15px */
+
+                & a {
+                    color: var(--color);
+                }
+            }
+        }
+    }
+
+    &__column--second {
+        width: 282px;
+        @include spacebetween
+    }
+
+    &__social-networks {
+        width: 90px;
+        @include spacebetween;
+
+        & ul {
+            width: 100%;
+            padding: 0;
+            @include spacebetween;
+
+            & li {
+                align-items: center;
+            }
+
+            & li a svg {
+                margin-top: 7px;
+                color: var(--color);
+            }
+        }
+    }
+
+    &__button {
+        padding-inline: 17px;
+    }
+}

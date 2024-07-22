@@ -1,0 +1,14 @@
+:root {
+    --font-family: "Outfit", sans-serif;
+    --color: #222;
+}
+
+.container {
+    @include container;
+}
+
+.button {
+    @include button;
+    @include textDescriptionRegular (13px);
+    /* вставка миксина со стилями для обычного текста 400regular с fz 13px */
+}
