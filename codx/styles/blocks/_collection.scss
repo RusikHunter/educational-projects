@@ -1,0 +1,34 @@
+.collection {
+
+    &__container {
+        flex-direction: column;
+        padding-top: 101px;
+
+        & h1 {
+            @include textRegular(64);
+            text-align: center;
+        }
+    }
+
+    &__nftbox {
+        margin-top: 56px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nft {
+        width: 358px;
+
+        & h6 {
+            padding: 30px 50px;
+            @include textRegular(26);
+        }
+    }
+
+    &__button {
+        margin-top: 64px;
+        margin-inline: auto;
+        padding-inline: 44px;
+        color: #fff;
+    }
+}

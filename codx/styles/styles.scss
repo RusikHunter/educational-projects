@@ -1,3 +1,15 @@
-@import 'normalize', 'mixins', 'global', 'fontface';
+@import 'normalize',
+'mixins',
+'global',
+'fontface';
 
-@import 'blocks/header';
+@import 'blocks/header',
+'blocks/experience',
+'blocks/swiper',
+'blocks/hey',
+'blocks/person',
+'blocks/about',
+'blocks/advantages',
+'blocks/view',
+'blocks/collection',
+'blocks/faq';

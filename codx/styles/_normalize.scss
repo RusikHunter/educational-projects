@@ -11,7 +11,7 @@
    Убираем внутренние отступы слева тегам списков,
    у которых есть атрибут class
   */
-:where(ul, ol):where([class]) {
+:where(ul, ol) {
     padding-left: 0;
 }
 
@@ -25,8 +25,7 @@ body,
 }
 
 /**
-   Убираем внешние отступы вертикали нужным тегам,
-   у которых есть атрибут class
+   Убираем внешние отступы
   */
 :where(h1,
     h2,
@@ -37,7 +36,7 @@ body,
     p,
     ul,
     ol,
-    dl):where([class]) {
+    dl) {
     margin-block: 0;
 }
 
@@ -68,14 +67,6 @@ p {
     --paragraphMarginBottom: 24px;
 
     margin-block: 0;
-}
-
-/**
-   Внешний отступ вниз для параграфа без атрибута class,
-   который расположен не последним среди своих соседних элементов
-  */
-p:where(:not([class]):not(:last-child)) {
-    margin-bottom: var(--paragraphMarginBottom);
 }
 
 
@@ -139,6 +130,11 @@ button {
 li {
     /* убираем все декорации для элементов списков */
     list-style: none;
+}
+
+blockquote {
+    /* убираем все отступы для цитат */
+    margin: 0;
 }
 
 /**

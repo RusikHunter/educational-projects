@@ -1,0 +1,111 @@
+.experience {
+
+    &__container {
+        padding-top: 15px;
+        max-height: 755px;
+    }
+
+    &__column--first {
+        padding-top: 180px;
+
+        & pre {
+            @include textRegular(13);
+            color: #82cbac;
+            max-width: 145px;
+            text-align: left;
+        }
+
+        & h1 {
+            @include textRegular(64);
+            max-width: 600px;
+            margin-bottom: 15px;
+        }
+
+        & p {
+            @include textRegular(17);
+            line-height: 153%;
+            max-width: 420px;
+        }
+    }
+
+    &__column--second {
+        padding-top: 70px;
+        padding-left: 21px;
+    }
+
+    &__image {
+        user-select: none;
+        pointer-events: none;
+    }
+
+    &__image--boy {
+        width: 325px;
+        height: 325px;
+    }
+
+    &__image--girl {
+        width: 410px;
+        height: 410px;
+        position: relative;
+        top: -22.5%;
+        right: -169px;
+    }
+
+    &__peoplebox {
+        @include peoplebox;
+    }
+
+    &__peoplebox--first {
+        width: 90px;
+        height: 33px;
+        top: -107%;
+        right: 20px;
+
+        & img {
+            width: 24px;
+            height: 24px;
+        }
+
+        & .experience__textbox {
+            width: 53px;
+            height: 22px;
+            margin-left: 5px;
+            margin-top: 3px;
+        }
+
+        & h6 {
+            @include textRegular(10);
+        }
+
+        & p {
+            @include textRegular(8);
+        }
+    }
+
+    &__peoplebox--second {
+        width: 145px;
+        height: 55px;
+        top: -35%;
+        right: -100px;
+
+        & img {
+            width: 41px;
+            height: 41px;
+        }
+
+        & .experience__textbox {
+            width: 82px;
+            height: 39px;
+            margin-top: 8px;
+            margin-left: 10px;
+        }
+
+        & h6 {
+            @include textRegular(15);
+        }
+
+        & p {
+            @include textRegular(10);
+        }
+    }
+}

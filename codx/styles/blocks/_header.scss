@@ -30,7 +30,8 @@
             @include spacebetween;
 
             & li {
-                @include textDescriptionRegular (15);
+                @include textRegular (15);
+                text-align: center;
                 /* вставка миксина со стилями для обычного текста 400regular с fz 15px */
 
                 & a {
@@ -67,5 +68,8 @@
 
     &__button {
         padding-inline: 17px;
+        color: #fff;
+        text-align: center;
+        border-radius: 50px;
     }
 }

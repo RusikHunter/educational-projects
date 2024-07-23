@@ -1,0 +1,44 @@
+.about {
+    &__container {
+        padding: 146px 0 84px 0;
+    }
+
+    &__column--first {
+        & img {
+            width: 585px;
+            height: 450px;
+        }
+    }
+
+    &__column--second {
+        padding: 57px 0 0 48px;
+
+        & h2 {
+            @include textRegular(35);
+            letter-spacing: 0.01em;
+        }
+
+        & blockquote {
+            @include textRegular(48);
+            letter-spacing: 0.01em;
+            margin-top: 2px;
+            margin-bottom: 38px;
+        }
+
+        & p {
+            @include textRegular(18);
+            margin-bottom: 32px;
+        }
+    }
+
+    &__buttonbox {
+        display: flex;
+        justify-content: right;
+    }
+
+    &__button {
+        padding-inline: 40px;
+        @include textBold(15);
+        color: #fff;
+    }
+}

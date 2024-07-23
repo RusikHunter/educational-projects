@@ -13,17 +13,47 @@
     cursor: pointer;
     height: 40px;
     background-color: var(--color);
-    border-radius: 50px;
     padding-top: 11px;
     padding-bottom: 11px;
 }
 
-@mixin textDescriptionRegular ($fz) {
+@mixin textRegular ($fz) {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: #{$fz};
+    font-size: #{$fz}px;
     line-height: 108%;
     letter-spacing: 0.04em;
-    text-align: center;
-    color: #fff;
+    color: var(--color);
+    margin: 0;
+}
+
+@mixin textBold ($fz) {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: #{$fz}px;
+    line-height: 108%;
+    letter-spacing: 0.04em;
+    color: var(--color);
+    margin: 0;
+}
+
+@mixin peoplebox {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -4px 19px 0 rgba(0, 0, 0, 0.03);
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 30px;
+    position: relative;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+@mixin nubmer {
+    border-radius: 30px;
+    width: 57px;
+    height: 35px;
 }

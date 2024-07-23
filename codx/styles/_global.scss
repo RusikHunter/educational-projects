@@ -7,8 +7,12 @@
     @include container;
 }
 
+.column {
+    @include column;
+}
+
 .button {
     @include button;
-    @include textDescriptionRegular (13px);
+    @include textRegular (13px);
     /* вставка миксина со стилями для обычного текста 400regular с fz 13px */
 }
