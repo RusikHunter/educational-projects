@@ -1,0 +1,22 @@
+.footer {
+
+    &__container {
+        justify-content: space-between;
+        padding-inline: 64px;
+        padding-bottom: 47px;
+    }
+
+    &__rights {
+        @include textRegular(14);
+    }
+
+    &__authors {
+        @include textRegular(16);
+
+        & span {
+            color: #ff7f96;
+        }
+    }
+}
+
+.container {}

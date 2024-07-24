@@ -3,6 +3,26 @@
     justify-content: space-between;
 }
 
+@mixin socialnetworks {
+    width: 90px;
+    @include spacebetween;
+
+    & ul {
+        width: 100%;
+        padding: 0;
+        @include spacebetween;
+
+        & li {
+            align-items: center;
+        }
+
+        & li a svg {
+            margin-top: 7px;
+            color: var(--color);
+        }
+    }
+}
+
 @mixin container {
     display: flex;
     max-width: 1200px;

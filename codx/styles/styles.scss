@@ -4,6 +4,7 @@
 'fontface';
 
 @import 'blocks/header',
+'blocks/burger',
 'blocks/experience',
 'blocks/swiper',
 'blocks/hey',
@@ -12,4 +13,8 @@
 'blocks/advantages',
 'blocks/view',
 'blocks/collection',
-'blocks/faq';
+'blocks/faq',
+'blocks/links',
+'blocks/footer';
+
+@import 'media';

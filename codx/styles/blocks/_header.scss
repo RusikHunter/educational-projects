@@ -4,6 +4,7 @@
         justify-content: space-between;
         padding: 19px 28px;
         align-items: center;
+        position: relative;
     }
 
     &__column {
@@ -46,30 +47,21 @@
         @include spacebetween
     }
 
-    &__social-networks {
-        width: 90px;
-        @include spacebetween;
-
-        & ul {
-            width: 100%;
-            padding: 0;
-            @include spacebetween;
-
-            & li {
-                align-items: center;
-            }
-
-            & li a svg {
-                margin-top: 7px;
-                color: var(--color);
-            }
-        }
-    }
-
     &__button {
         padding-inline: 17px;
         color: #fff;
         text-align: center;
         border-radius: 50px;
+    }
+
+    &__burger {
+        display: none;
+        background: none;
+        position: absolute;
+        right: 20px;
+
+        & svg {
+            color: var(--color);
+        }
     }
 }
