@@ -1,0 +1,167 @@
+.slider {
+
+    &__inner {}
+
+    &__body {
+        position: relative;
+    }
+
+    &__slide {
+        background: var(--color-gray-alt);
+        border-radius: var(--border-radius-big);
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    &__column--first {
+        padding-top: 145px;
+        padding-left: 56px;
+    }
+
+    &__title {
+        @include paragraph-text-readexpro(58, 24);
+    }
+
+    &__description {
+        margin-block: 19px 30px;
+        @include paragraph-text-inter(16, 12);
+        max-width: 565px;
+    }
+
+    &__button {
+        margin-bottom: 127px;
+    }
+
+    &__navigation {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    & input {
+        display: none;
+    }
+
+    &__navigation {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        column-gap: 34px;
+        top: 92%;
+        width: 100%;
+
+        & label {
+            display: block;
+            width: 194px;
+            height: 2px;
+            margin-right: 10px;
+            background: var(--color-black);
+            cursor: pointer;
+        }
+    }
+
+    &__arrows {
+        position: absolute;
+        top: 47%;
+        left: 1%;
+        display: flex;
+        width: 98%;
+        margin-inline: auto;
+        justify-content: space-between;
+
+        & img {
+            cursor: pointer;
+        }
+    }
+
+    @include desktop {
+        &__column--second {
+            align-self: flex-end;
+
+            & img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    @include mobile {
+        &__body {
+            width: 100%;
+        }
+
+        &__slide {
+            position: relative;
+            background-position: right;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 3;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 30px;
+                background-image: url(../images/phones-background.png);
+                opacity: 0.6;
+                z-index: -1;
+            }
+        }
+
+        &__column--second {
+            display: none;
+        }
+
+        &__column--first {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        &__title,
+        &__description {
+            width: 85%;
+            text-align: center;
+            margin-inline: auto;
+        }
+
+        &__button {
+            margin-inline: auto;
+        }
+
+        &__navigation,
+        &__arrows {
+            z-index: 3;
+        }
+
+        &__navigation {
+            & label {
+                max-width: 110px;
+            }
+        }
+
+        &__arrows {
+            width: 96%;
+            left: 2%;
+        }
+    }
+
+    @include mobile-s {
+        &__navigation {
+            column-gap: 10px;
+
+            & label {
+                max-width: 70px;
+            }
+        }
+    }
+}

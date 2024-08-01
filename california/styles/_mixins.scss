@@ -1,0 +1,37 @@
+@mixin flex-center($isInline: false) {
+    @if $isInline {
+        display: inline-flex;
+    }
+
+    @else {
+        display: flex;
+    }
+
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+@mixin paragraph-text-inter($max, $min) {
+    font-family: var(--font-family-inter);
+    font-size: clamp(#{$min}px, #{$max / 1294 * 100}vw, #{$max}px);
+    line-height: 120%;
+}
+
+@mixin paragraph-text-readexpro($max, $min) {
+    font-family: var(--font-family-readexpro);
+    font-size: clamp(#{$min}px, #{$max / 1294 * 100}vw, #{$max}px);
+    line-height: 120%;
+}

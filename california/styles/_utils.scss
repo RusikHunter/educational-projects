@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    max-width: var(--container-width);
+    margin-inline: auto;
+    margin-block: var(--section-distance);
+
+    @include desktop {
+        & {
+            padding-inline: 16px;
+        }
+    }
+}
+
+.button--big {
+    padding: var(--button-padding-big);
+    background: var(--color-transparent);
+    border: var(--border-black);
+    border-radius: var(--border-radius-big);
+    @include paragraph-text-inter(18, 18);
+    cursor: pointer;
+    max-width: 170px;
+}
+
+.button--small {
+    padding: var(--button-padding-small);
+    background: var(--color-transparent);
+    border: var(--border-gray);
+    border-radius: var(--border-radius-big);
+}
+
+.title {
+    @include paragraph-text-readexpro(42, 24);
+    text-align: center;
+    max-width: 780px;
+    margin-inline: auto;
+}
+
+.description {
+    margin-top: 9px;
+    @include paragraph-text-inter(14, 10);
+    text-align: center;
+    max-width: 628px;
+    margin-inline: auto;
+}

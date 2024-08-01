@@ -1,0 +1,37 @@
+:root {
+    --font-family-inter: "Inter", Arial, sans-serif;
+    --font-family-readexpro: "Readex Pro", Arial, sans-serif;
+
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-gray: #C5C5C5;
+    --color-lightgray: #F8F9FA;
+    --color-gray-alt: #DCE5E2;
+    --color-transparent: transparent;
+
+    --border-black: 1px solid var(--color-black);
+    --border-gray: 1px solid var(--color-gray);
+    --border-gray-alt: 1px solid var(--color-gray-alt);
+    --border-radius-big: 32px;
+    --border-radius-small: 16px;
+
+    --shadow: 0 4px 35px 0 rgba(0, 0, 0, 0.25);
+
+    /* применять к row-gap */
+    --section-distance: 28px;
+    --section-padding-top: 48px;
+    --section-padding-inline: 180px;
+
+    --container-width: 1294px;
+
+    --button-height-big: 50px;
+    --button-height-small: 42px;
+
+    --button-padding-big: 14px 53px;
+    --button-padding-small: 12px 22px;
+
+    --input-height-big: 50px;
+    --input-padding-block-big: 14px;
+
+    --transition-duration: 0.5s;
+}

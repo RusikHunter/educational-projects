@@ -1,0 +1,39 @@
+a,
+li,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*
+h1,
+.h1 {
+    @include fluid-text(58, 42);
+}
+
+h2,
+.h2 {
+    @include fluid-text(42, 36);
+}
+
+h3,
+.h3 {
+    @include fluid-text(32, 24);
+}
+
+h4,
+.h4 {
+    @include fluid-text(28, 20);
+}
+
+h5,
+.h5 {
+    @include fluid-text(22, 16);
+}*/

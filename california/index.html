@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>California</title>
+    <meta name="author" content="dmfshove">
+    <meta name="description"
+        content="CodX - Suspendisse sem neque, auctor a elementum ut, varius vel leo. Donec diam arcu, porta et magna at">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner container">
+            <a href="#" class="header__logo">
+                <img src="images/logo.svg" alt="California" class="header__logo-image" width="170" height="21">
+            </a>
+
+            <nav class="header__navigation">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="#">all products</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#">Solutions</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#">ABOUT</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#">Support</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__icons-wrap">
+                <a href="#">
+                    <img src="images/search.svg" alt="Search" width="24" height="24">
+                </a>
+                <a href="#">
+                    <img src="images/basket.svg" alt="Basket" width="40" height="24">
+                </a>
+            </div>
+
+            <button class="header__burger" id="burgerButtonOpen">
+                <svg width="26" height="16" viewBox="0 0 26 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1H25" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    <path d="M1 8H25" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    <path d="M1 15H25" stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="slider">
+                <div class="slider__inner container">
+                    <div class="slider__body">
+                        <div class="slider__slide">
+                            <div class="slider__row">
+                                <div class="slider__column slider__column--first">
+                                    <h1 class="slider__title">The new phones are here take a look.</h1>
+
+                                    <p class="slider__description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis.</p>
+
+                                    <button class="slider__button button--big">
+                                        Explore
+                                    </button>
+                                </div>
+                                <div class="slider__column slider__column--second">
+                                    <img src="images/phones-background.png" alt="iPhone" width="647" height="550">
+                                </div>
+                            </div>
+                        </div>
+
+                        <nav class="slider__navigation">
+                            <input type="radio" name="sliderNavigationRadio" id="sliderNavigationRadioFirst">
+                            <input type="radio" name="sliderNavigationRadio" id="sliderNavigationRadioSecond">
+                            <input type="radio" name="sliderNavigationRadio" id="sliderNavigationRadioThird">
+
+                            <label for="sliderNavigationRadioFirst"></label>
+                            <label for="sliderNavigationRadioSecond"></label>
+                            <label for="sliderNavigationRadioThird"></label>
+                        </nav>
+
+                        <nav class="slider__arrows">
+                            <img src="images/arrow-left.svg" alt="&#60;">
+                            <img src="images/arrow-right.svg" alt="&#62;">
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="categories">
+                <div class="categories__inner container">
+                    <div class="categories__body">
+                        <div class="categories__row categories__row--first">
+                            <div class="categories__column">
+                                <h2 class="categories__title title">Shop our latest offers and categories</h2>
+                                <p class="categories__decription description">Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing
+                                    elit. Scelerisque in est dui, aliquam, tempor. Faucibus morbi turpis. Lorem ipsum
+                                    dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+
+                        <div class="categories__row categories__row--second">
+                            <div class="categories__column categories__grid">
+                                <a href="#" class="categories__device categories__laptop">
+                                    <div class="categories__laptop-wrapper">
+                                        <img src="images/laptop.png" alt="Laptop">
+                                        <div class="categories__laptop--textbox">
+                                            <p>Laptops</p>
+                                            <h3>True Laptop Solution</h3>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="categories__device categories__watch">
+                                    <div class="categories__watch-wrapper">
+                                        <img src="images/watch.png" alt="Watch">
+                                        <div class="categories__watch--textbox">
+                                            <p>Watch</p>
+                                            <h3>Not just stylisht</h3>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="categories__device categories__phones">
+                                    <div class="categories__phones-wrapper">
+                                        <img src="images/phones.png" alt="Phones">
+                                        <div class="categories__phones--textbox">
+                                            <p>Phones</p>
+                                            <h3>Your day to day life</h3>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="categories__device categories__tablet">
+                                    <div class="categories__tablet-wrapper">
+                                        <img src="images/tablet.png" alt="Tablet">
+                                        <div class="categories__tablet--textbox">
+                                            <p>Tablet</p>
+                                            <h3>Empower your work</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="items">
+                <div class="items__inner container">
+                    <div class="items__row items__row--first">
+                        <h2 class="items__title title">Save on our most selled items.</h2>
+                        <p class="items__description description">Our new Limited Edition Winter Design BESPOKE 4-Door
+                            Flex™</p>
+                    </div>
+                    <div class="items__row items__row--second">
+                        <div class="items__item">
+                            <img src="images/macbook.png" alt="MacBook Pro 13" class="items__image" width="303"
+                                height="270">
+                            <div class="items__textbox">
+                                <div class="items__text">
+                                    <h5>MacBook Pro 13</h5>
+                                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+                                </div>
+                                <span class="items__price">
+                                    <p>$ 1,200.00 USD</p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="items__item">
+                            <img src="images/galaxy-watch.png" alt="Smart Galaxy Watch 3" class="items__image"
+                                width="303" height="270">
+                            <div class="items__textbox">
+                                <div class="items__text">
+                                    <h5>Smart Galaxy Watch 3</h5>
+                                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+                                        adipisci
+                                        velit...</p>
+                                </div>
+                                <span class="items__price">
+                                    <p>$ 199.00 USD</p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="items__item">
+                            <img src="images/macbook-air.png" alt="MacBook Air M1" class="items__image" width="303"
+                                height="270">
+                            <div class="items__textbox">
+                                <div class="items__text">
+                                    <h5>MacBook Air M1</h5>
+                                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+                                        adipisci
+                                        velit...</p>
+                                </div>
+                                <span class="items__price">
+                                    <p>$ 1,009.00 USD</p>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="items__item">
+                            <img src="images/ipad.png" alt="iPad" class="items__image" width="303" height="270">
+                            <div class="items__textbox">
+                                <div class="items__text">
+                                    <h5>iPad</h5>
+                                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+                                        adipisci
+                                        velit...</p>
+                                </div>
+
+                                <span class="items__price">
+                                    <p>$ 610.00 USD</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <dialog class="burger" id="burgerModalWindow">
+        <div class="burger__body">
+            <button class="burger__cross" id="burgerButtonClose">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.09654 7.99995L15.5443 1.55218C15.6717 1.40339 15.7383 1.21199 15.7308 1.01625C15.7232 0.820498 15.642 0.634812 15.5035 0.496294C15.365 0.357776 15.1793 0.276629 14.9836 0.269068C14.7878 0.261507 14.5964 0.32809 14.4476 0.45551L7.99987 6.90329L1.55209 0.447732C1.40563 0.301274 1.20699 0.218994 0.999871 0.218994C0.792747 0.218994 0.594107 0.301274 0.447648 0.447732C0.30119 0.594191 0.21891 0.792831 0.21891 0.999954C0.21891 1.20708 0.30119 1.40572 0.447648 1.55218L6.9032 7.99995L0.447648 14.4477C0.366229 14.5175 0.300102 14.6033 0.253418 14.6998C0.206733 14.7963 0.180498 14.9014 0.176361 15.0085C0.172223 15.1156 0.190272 15.2224 0.229375 15.3222C0.268477 15.422 0.327789 15.5127 0.403587 15.5885C0.479385 15.6643 0.570033 15.7236 0.669842 15.7627C0.76965 15.8018 0.876464 15.8198 0.983579 15.8157C1.09069 15.8115 1.1958 15.7853 1.29229 15.7386C1.38879 15.6919 1.47459 15.6258 1.54431 15.5444L7.99987 9.09662L14.4476 15.5444C14.5964 15.6718 14.7878 15.7384 14.9836 15.7308C15.1793 15.7233 15.365 15.6421 15.5035 15.5036C15.642 15.3651 15.7232 15.1794 15.7308 14.9837C15.7383 14.7879 15.6717 14.5965 15.5443 14.4477L9.09654 7.99995Z" />
+                </svg>
+            </button>
+
+            <a href="#" class="burger__logo">
+                <img src="images/logo.svg" alt="California" class="burger__logo-image" width="170" height="21">
+            </a>
+
+            <nav class="burger__navigation">
+                <ul class="burger__list">
+                    <li class="burger__item">
+                        <a href="#">all products</a>
+                    </li>
+                    <li class="burger__item">
+                        <a href="#">Solutions</a>
+                    </li>
+                    <li class="burger__item">
+                        <a href="#">ABOUT</a>
+                    </li>
+                    <li class="burger__item">
+                        <a href="#">Support</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="burger__icons-wrap">
+                <a href="#">
+                    <img src="images/search.svg" alt="Search" width="24" height="24">
+                </a>
+                <a href="#">
+                    <img src="images/basket.svg" alt="Basket" width="40" height="24">
+                </a>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="scripts/showBurger.js"></script>
+</body>
+
+
+</html>
