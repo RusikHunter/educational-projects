@@ -2,8 +2,6 @@
 
     &__inner {
         flex-direction: column;
-        padding-bottom: 200px;
-        /* temporarily */
     }
 
     &__row {
@@ -26,7 +24,7 @@
         display: block;
         width: 670px;
         margin-inline: auto;
-        padding: 22px 476px 22px 67px;
+        padding: 22px 67px;
         @include paragraph-text-inter(14, 10);
         background: var(--color-lightgray);
         border: 1px solid var(--color-gray);

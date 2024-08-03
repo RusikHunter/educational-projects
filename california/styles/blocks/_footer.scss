@@ -1,0 +1,133 @@
+.footer {
+    background: var(--color-lightgray);
+
+    &__wrap {
+        border-top: 1px solid var(--color-gray);
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__inner--first {
+        margin-bottom: 64px;
+    }
+
+    &__inner--second {
+        margin-top: 53px;
+        padding-right: 22px;
+    }
+
+    &__row {
+        width: 100%;
+    }
+
+    &__row--first {
+        display: flex;
+        column-gap: 28px;
+    }
+
+    &__column {}
+
+    &__column--text {
+        width: 394px;
+        padding-top: 28px;
+    }
+
+    &__logo {
+        margin-bottom: 18px;
+    }
+
+    &__description {
+        max-width: 304px;
+        @include paragraph-text-inter(16, 10);
+    }
+
+    &__column--list {
+        width: 197px;
+        padding-top: 15px;
+    }
+
+    &__title {
+        @include paragraph-text-readexpro(22, 16);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        margin-top: 15px;
+    }
+
+    &__item {
+        @include paragraph-text-inter(17, 10);
+    }
+
+    &__row--second {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__author {
+        @include paragraph-text-inter(18, 12);
+
+        & span {
+            @include paragraph-text-readexpro(18, 12);
+        }
+
+        &::after {
+            content: "";
+            width: 30px;
+            height: 28px;
+            position: absolute;
+            background: url(../images/arrow-top-right.svg) center center/cover no-repeat;
+        }
+    }
+
+    @include desktop {
+        &__inner--second {
+            padding-right: 44px;
+        }
+    }
+
+    @include mobile {
+        &__inner--second {
+            margin-top: 40px;
+        }
+    }
+
+    @include mobile-s {
+        &__row--first {
+            flex-wrap: wrap;
+        }
+
+        &__column--text {
+            padding-top: 10px;
+            width: 100%;
+        }
+
+        &__logo {
+            margin-inline: auto;
+        }
+
+        &__description {
+            text-align: center;
+            margin-inline: auto;
+            width: 70%;
+        }
+
+        &__column--list {
+            margin-inline: auto;
+            max-width: 150px;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__item {
+            text-align: center;
+        }
+    }
+}
