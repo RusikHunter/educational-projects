@@ -1,0 +1,156 @@
+.search {
+
+    &__inner {
+        flex-direction: column;
+        padding-bottom: 200px;
+        /* temporarily */
+    }
+
+    &__row {
+        width: 100%;
+    }
+
+    &__row--first {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__title {}
+
+    &__form {}
+
+    &__label {}
+
+    &__input {
+        display: block;
+        width: 670px;
+        margin-inline: auto;
+        padding: 22px 476px 22px 67px;
+        @include paragraph-text-inter(14, 10);
+        background: var(--color-lightgray);
+        border: 1px solid var(--color-gray);
+        border-radius: var(--border-radius-big);
+        background-image: url(../images/search.svg);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 9% 50%;
+
+        &::placeholder {
+            color: var(--color-black);
+        }
+
+        &::after {
+            content: "";
+            width: 30px;
+            height: 29px;
+            position: absolute;
+            background: url(../images/search.svg) center center/cover no-repeat;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        margin-inline: auto;
+        max-width: 540px;
+        flex-flow: row wrap;
+        gap: 7px;
+        justify-content: center;
+    }
+
+    &__row--second {
+        padding-top: 65px;
+    }
+
+    &__email-wrapper {
+        width: 935px;
+        background: var(--color-gray-alt);
+        border-radius: var(--border-radius-small);
+        margin-inline: auto;
+        padding: 47px 0 44px 0;
+    }
+
+    &__description {
+        margin-top: 9px;
+    }
+
+    &__image {
+        margin: 14px auto;
+    }
+
+    &__submit-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__input--email {
+        width: 290px;
+        background: var(--color-transparent);
+        border: 1px solid var(--color-black);
+        border-radius: var(--border-radius-big) 0 0 var(--border-radius-big);
+        padding: 17px 32px;
+        @include paragraph-text-inter(14, 10);
+
+        &::placeholder {
+            color: var(--color-black);
+        }
+    }
+
+    &__submit {
+        width: 115px;
+        background: var(--color-black);
+        padding: 16px 32px;
+        border: none;
+        border-radius: 0 var(--border-radius-big) var(--border-radius-big) 0;
+        @include paragraph-text-inter(14, 10);
+        color: var(--color-white);
+        cursor: pointer;
+    }
+
+    @include desktop {
+        &__email-wrapper {
+            width: 90%;
+        }
+    }
+
+    @include mobile {
+        &__input {
+            width: 90%;
+            background-size: 5% 35%;
+        }
+
+        &__submit-wrapper {
+            width: 75%;
+            margin-inline: auto;
+        }
+
+        &__form--submit {
+            width: 75%;
+        }
+
+        &__input--email {
+            width: 100%;
+            padding-inline: 32px;
+        }
+
+        &__submit {
+            width: 25%;
+            padding-inline: 0;
+        }
+    }
+
+    @include mobile-s {
+        &__input {
+            background-size: 10% 35%;
+        }
+
+        &__form--submit {
+            width: 60%;
+        }
+
+        &__submit {
+            width: 40%;
+        }
+    }
+
+}

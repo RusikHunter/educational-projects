@@ -7,6 +7,16 @@ svg * {
     transition-duration: var(--transition-duration);
 }
 
+input {
+
+    &:active,
+    &:hover,
+    &:focus {
+        outline: 0;
+        outline-offset: 0;
+    }
+}
+
 a {
     text-decoration: none;
     color: inherit;
