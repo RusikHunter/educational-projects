@@ -30,7 +30,7 @@ $mobile-s: 480px;
     }
 }
 
-/* mobile 320 - 480 */
+/* mobile small 320 - 480 */
 
 @mixin mobile-s {
     @media (max-width: $mobile-s) {
