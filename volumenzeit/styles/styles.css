@@ -244,7 +244,7 @@ keyframes - scss файл с анимациями, созданными дире
 */
 @keyframes headerLinkUnderlineShow {
   from {
-    opacity: 0.8;
+    opacity: 0.4;
     left: -400px;
   }
   to {
@@ -275,6 +275,11 @@ a:visited,
 a:active,
 a:focus {
   text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
 }
 
 dialog {
@@ -489,13 +494,13 @@ media - scss файл с миксинами медиа-запросов desktop,
   background: var(--color-lightgray);
 }
 .header__inner {
-  display: block;
   height: 86px;
   position: relative;
 }
 .header__row--first {
   align-items: center;
   height: 100%;
+  position: relative;
 }
 .header__column--first {
   padding-inline: var(--padding-inline-default) 195px;
@@ -597,4 +602,179 @@ media - scss файл с миксинами медиа-запросов desktop,
 }
 .header__modal-window-button {
   width: 100%;
+}
+.header__burger-button {
+  display: none;
+  position: absolute;
+  width: 28px;
+  height: 24px;
+  right: 4%;
+  background: none;
+  border: none;
+  color: var(--color-violet);
+}
+.header .burger {
+  display: none;
+  width: 100%;
+  height: 1000px;
+  z-index: 3;
+  margin: auto;
+  padding: 30px 32px;
+  background: var(--color-lightgray);
+}
+.header .burger__wrap {
+  display: flex;
+  width: 100%;
+  margin-inline: auto;
+}
+.header .burger__row--first {
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+}
+.header .burger__logo-image {
+  width: 170px;
+  height: 26px;
+}
+.header .burger__navigation {
+  width: auto;
+  margin-inline: auto;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+.header .burger__navigation-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+}
+.header .burger__item {
+  text-align: center;
+}
+.header .burger__link {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(14px, 0.9722222222vw, 14px);
+  line-height: 86%;
+  color: var(--color-gray);
+}
+.header .burger__link--profile {
+  position: relative;
+  padding-left: 17px;
+}
+.header .burger__link--profile::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 20px;
+  top: 0;
+  left: -10px;
+  background-image: url(../images/svg/profile-icon.svg);
+}
+.header .burger__link--cart {
+  position: relative;
+  padding-left: 17px;
+}
+.header .burger__link--cart::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 20px;
+  top: 0;
+  left: -15px;
+  background-image: url(../images/svg/cart-icon.svg);
+}
+.header .burger__button {
+  margin-inline: auto;
+  margin-bottom: 24px;
+  width: 208px;
+}
+.header .burger__button--transparent {
+  background: var(--color-white);
+  color: var(--color-gray);
+}
+.header .burger__close-button {
+  position: absolute;
+  top: 0.2%;
+  right: 0.2%;
+  width: 23px;
+  height: 23px;
+  color: var(--color-violet);
+}
+@media (max-width: 1440px) {
+  .header__row--first {
+    justify-content: space-between;
+    padding-inline: 48px;
+  }
+  .header__column {
+    padding: 0;
+  }
+  .header__column--second {
+    width: 400px;
+  }
+  .header__column--fourth {
+    flex-grow: 0;
+  }
+  .header__logo-image {
+    width: 150px;
+    height: auto;
+  }
+}
+@media (max-width: 920px) {
+  .header__row--first {
+    justify-content: space-between;
+    padding-inline: 32px;
+  }
+  .header__column--second {
+    width: 320px;
+  }
+  .header__button {
+    font-size: 10px;
+  }
+  .header__column--fourth {
+    flex-grow: 0;
+  }
+  .header__logo-image {
+    width: 170px;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .header__column--second, .header__column--third, .header__icon-button {
+    display: none;
+  }
+  .header__column--fourth {
+    position: relative;
+    right: 8%;
+  }
+  .header__burger-button {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .header__inner {
+    height: 62px;
+  }
+  .header__row--first {
+    padding-inline-start: 20px;
+  }
+  .header__logo-image {
+    width: 162px;
+    height: 20px;
+  }
+  .header__column--fourth {
+    right: 10%;
+  }
+  .header__burger-button {
+    right: 5%;
+  }
+  .header .burger {
+    padding: 21px 20px;
+  }
+  .header .burger__close-button {
+    top: -0.1%;
+    right: 1%;
+  }
+  .header .burger__logo-image {
+    width: 162px;
+    height: 20px;
+  }
 }

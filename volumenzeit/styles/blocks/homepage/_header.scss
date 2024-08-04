@@ -2,7 +2,6 @@
     background: var(--color-lightgray);
 
     &__inner {
-        display: block;
         height: 86px;
         position: relative;
     }
@@ -10,6 +9,7 @@
     &__row--first {
         align-items: center;
         height: 100%;
+        position: relative;
     }
 
     &__column--first {
@@ -126,5 +126,217 @@
 
     &__modal-window-button {
         width: 100%;
+    }
+
+    &__burger-button {
+        display: none;
+        position: absolute;
+        width: 28px;
+        height: 24px;
+        right: 4%;
+        background: none;
+        border: none;
+        color: var(--color-violet);
+    }
+
+    .burger {
+        display: none;
+        width: 100%;
+        height: 1000px;
+        z-index: 3;
+        margin: auto;
+        padding: 30px 32px;
+        background: var(--color-lightgray);
+
+        &__wrap {
+            display: flex;
+            width: 100%;
+            margin-inline: auto;
+        }
+
+        &__row--first {
+            position: relative;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__logo-image {
+            width: 170px;
+            height: 26px;
+        }
+
+        &__navigation {
+            width: auto;
+            margin-inline: auto;
+            padding-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        &__navigation-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 35px;
+        }
+
+        &__item {
+            text-align: center;
+        }
+
+        &__link {
+            @include text-poppins(14, 14, 86%, var(--color-gray));
+        }
+
+        &__link--profile {
+            position: relative;
+            padding-left: 17px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 18px;
+                height: 20px;
+                top: 0;
+                left: -10px;
+                background-image: url(../images/svg/profile-icon.svg);
+            }
+        }
+
+        &__link--cart {
+            position: relative;
+            padding-left: 17px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 23px;
+                height: 20px;
+                top: 0;
+                left: -15px;
+                background-image: url(../images/svg/cart-icon.svg);
+            }
+        }
+
+        &__button {
+            margin-inline: auto;
+            margin-bottom: 24px;
+            width: 208px;
+        }
+
+        &__button--transparent {
+            background: var(--color-white);
+            color: var(--color-gray);
+        }
+
+        &__close-button {
+            position: absolute;
+            top: 0.2%;
+            right: 0.2%;
+            width: 23px;
+            height: 23px;
+            color: var(--color-violet);
+        }
+    }
+
+    @include tablet {
+        &__row--first {
+            justify-content: space-between;
+            padding-inline: 48px;
+        }
+
+        &__column {
+            padding: 0;
+        }
+
+        &__column--second {
+            width: 400px;
+        }
+
+        &__column--fourth {
+            flex-grow: 0;
+        }
+
+        &__logo-image {
+            width: 150px;
+            height: auto;
+        }
+    }
+
+    @include tablet-small {
+        &__row--first {
+            justify-content: space-between;
+            padding-inline: 32px;
+        }
+
+        &__column--second {
+            width: 320px;
+        }
+
+        &__button {
+            font-size: 10px;
+        }
+
+        &__column--fourth {
+            flex-grow: 0;
+        }
+
+        &__logo-image {
+            width: 170px;
+            height: auto;
+        }
+    }
+
+    @include mobile {
+
+        &__column--second,
+        &__column--third,
+        &__icon-button {
+            display: none;
+        }
+
+        &__column--fourth {
+            position: relative;
+            right: 8%;
+        }
+
+        &__burger-button {
+            display: block;
+        }
+    }
+
+    @include mobile-small {
+        &__inner {
+            height: 62px;
+        }
+
+        &__row--first {
+            padding-inline-start: 20px;
+        }
+
+        &__logo-image {
+            width: 162px;
+            height: 20px;
+        }
+
+        &__column--fourth {
+            right: 10%;
+        }
+
+        &__burger-button {
+            right: 5%;
+        }
+
+        .burger {
+            padding: 21px 20px;
+
+            &__close-button {
+                top: -0.1%;
+                right: 1%;
+            }
+
+            &__logo-image {
+                width: 162px;
+                height: 20px;
+            }
+        }
     }
 }
