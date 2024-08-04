@@ -233,7 +233,7 @@ fonts- scss файл со шрифтами
 }
 
 .other {
-  font-family: var(--font-family-spaseage);
+  font-family: var(--font-family-spaceage);
   font-weight: 400;
 }
 
@@ -473,7 +473,7 @@ variables - scss файл с переменными для всего проек
   --padding-inline-default: 165px;
   /* шрифты */
   --font-family-poppins: "Poppins", Arial, sans-serif;
-  --font-family-spaseage: "SpaceAge", Arial, sans-serif;
+  --font-family-spaceage: "SpaceAge", Arial, sans-serif;
   /* локальные переменные */
   --header-modal-window-display: none;
 }
@@ -489,7 +489,7 @@ media - scss файл с миксинами медиа-запросов desktop,
 /* 480 - 320 */
 /* можно дописывать дополнительные значения */
 /* подключение файлов со стилями для блоков */
-/* homepage */
+/* globals */
 .header {
   background: var(--color-lightgray);
 }
@@ -540,7 +540,7 @@ media - scss файл с миксинами медиа-запросов desktop,
 }
 .header__link {
   font-family: var(--font-family-poppins);
-  font-size: clamp(12px, 0.9722222222vw, 14px);
+  font-size: clamp(14px, 0.9722222222vw, 12px);
   line-height: 86%;
   color: var(--color-gray);
 }
@@ -777,4 +777,54 @@ media - scss файл с миксинами медиа-запросов desktop,
     width: 162px;
     height: 20px;
   }
+}
+
+/* homepage */
+.dream {
+  background-image: url(../images/home/background-watch.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 50% 80%;
+}
+.dream__row {
+  padding-block: 120px 198px;
+}
+.dream__column--first {
+  padding-left: 60px;
+}
+.dream__social-networks {
+  display: flex;
+  flex-direction: column;
+}
+.dream__text {
+  font-family: var(--font-family-spaceage);
+  font-size: clamp(14px, 0.9722222222vw, 10px);
+  line-height: 86%;
+  color: var(--color-black);
+  writing-mode: vertical-lr;
+  transform: scaleX(-1);
+  transform: scaleY(-1);
+  margin-top: 20px;
+  margin-left: 7px;
+}
+.dream__column--second {
+  padding: 35px 0 0 81px;
+}
+.dream__title {
+  font-family: var(--font-family-spaceage);
+  font-size: clamp(60px, 4.1666666667vw, 40px);
+  line-height: 100%;
+  color: var(--color-black);
+  max-width: 560px;
+}
+.dream__description {
+  margin-block: 25px 30px;
+  font-family: var(--font-family-poppins);
+  font-size: clamp(14px, 0.9722222222vw, 10px);
+  line-height: 200%;
+  color: var(--color-gray);
+  max-width: 557px;
+}
+.dream__button {
+  width: 208px;
 }

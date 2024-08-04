@@ -1,0 +1,47 @@
+.dream {
+    background-image: url(../images/home/background-watch.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 50% 80%;
+
+    &__row {
+        padding-block: 120px 198px;
+    }
+
+    &__column--first {
+        padding-left: 60px;
+    }
+
+    &__social-networks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text {
+        @include text-spaceage(14, 10, 86%, var(--color-black));
+        writing-mode: vertical-lr;
+        transform: scaleX(-1);
+        transform: scaleY(-1);
+        margin-top: 20px;
+        margin-left: 7px;
+    }
+
+    &__column--second {
+        padding: 35px 0 0 81px;
+    }
+
+    &__title {
+        @include title-h1(var(--color-black));
+        max-width: 560px;
+    }
+
+    &__description {
+        margin-block: 25px 30px;
+        @include text-poppins(14, 10, 200%, var(--color-gray));
+        max-width: 557px;
+    }
+
+    &__button {
+        width: 208px;
+    }
+}

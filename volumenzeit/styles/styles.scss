@@ -25,6 +25,10 @@ powered by: github pages
 
 /* подключение файлов со стилями для блоков */
 
+/* globals */
+
+@import "blocks/globals/header";
+
 /* homepage */
 
-@import "blocks/homepage/header";
+@import "blocks/homepage/dream";
