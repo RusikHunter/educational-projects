@@ -1,0 +1,17 @@
+/*
+
+keyframes - scss файл с анимациями, созданными директивой keyframes
+
+*/
+
+@keyframes headerLinkUnderlineShow {
+    from {
+        opacity: 0.8;
+        left: -400px;
+    }
+
+    to {
+        opacity: 1;
+        left: 0px;
+    }
+}

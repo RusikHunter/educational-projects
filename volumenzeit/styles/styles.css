@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*
 
 главный scss файл, куда подключаются остальные общие файлы и файлы со стилями
@@ -13,6 +12,7 @@ telegram: dmfshove
 powered by: github pages
 
 */
+/* подключение глобальных файлов */
 /*
 
 normalize - файл с нормализацией стилей для стандартных селекторов
@@ -52,15 +52,15 @@ body,
    у которых есть атрибут class
   */
 :where(h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ul,
-  ol,
-  dl):where([class]) {
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
   margin-block: 0;
 }
 
@@ -172,7 +172,6 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
-
 /* 
 
 fonts- scss файл со шрифтами
@@ -185,7 +184,6 @@ fonts- scss файл со шрифтами
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-Medium.woff2") format("woff2");
@@ -193,7 +191,6 @@ fonts- scss файл со шрифтами
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-SemiBold.woff2") format("woff2");
@@ -201,7 +198,6 @@ fonts- scss файл со шрифтами
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-Bold.woff2") format("woff2");
@@ -209,7 +205,6 @@ fonts- scss файл со шрифтами
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "SpaceAge";
   src: url("../fonts/SpaceAge-Regular.woff2") format("woff2");
@@ -217,7 +212,6 @@ fonts- scss файл со шрифтами
   font-style: normal;
   font-display: swap;
 }
-
 .t400 {
   font-family: var(--font-family-poppins);
   font-weight: 400;
@@ -245,6 +239,50 @@ fonts- scss файл со шрифтами
 
 /*
 
+keyframes - scss файл с анимациями, созданными директивой keyframes
+
+*/
+@keyframes headerLinkUnderlineShow {
+  from {
+    opacity: 0.8;
+    left: -400px;
+  }
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+/* 
+
+globals - scss файл для конкретных селекторов-тегов, которые встречаются только в этом проекте
+(в отличие от файла normalize.scss, который можно использовать и в других проектах
+
+*/
+input[type=radio],
+input[type=checkbox] {
+  display: none;
+}
+
+input:hover,
+input:active,
+input:focus {
+  outline: 0;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+dialog {
+  border: none;
+}
+
+/*
+
 mixins - scss файл с миксинами - повторяющимися участками кода, которые можно вставлять в разные селекторы (шрифты, стили для кнопок, логотипов и т.д.)
 
 */
@@ -255,6 +293,33 @@ mixins - scss файл с миксинами - повторяющимися уч
 utils - scss файл с утилитарными классами, которые встречаются в проекте постоянно в одних и тех же вариантах (контейнеры, кнопки, инпуты)
 
 */
+/* container */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--container-width);
+  margin-inline: auto;
+}
+
+/* row */
+.row {
+  display: flex;
+  width: 100%;
+}
+
+/* column */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* все модальные окна */
+.modal-window {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /* стандартная фиолетовая кнопка */
 .button {
   cursor: pointer;
@@ -282,7 +347,6 @@ utils - scss файл с утилитарными классами, которы
   line-height: 86%;
   color: var(--color-black);
 }
-
 .button--black:hover {
   background: var(--color-black);
   color: var(--color-white);
@@ -301,7 +365,6 @@ utils - scss файл с утилитарными классами, которы
   line-height: 86%;
   color: var(--color-violet);
 }
-
 .button--violet:hover {
   background: var(--color-violet);
   color: var(--color-white);
@@ -314,7 +377,6 @@ utils - scss файл с утилитарными классами, которы
   border-radius: var(--border-radius);
   /* текст для плейсхолдера */
 }
-
 .input::placeholder {
   font-family: var(--font-family-poppins);
   font-size: clamp(14px, 0.9722222222vw, 14px);
@@ -351,13 +413,13 @@ utils - scss файл с утилитарными классами, которы
 }
 
 /* выделенный label с input type radio */
-input[type=radio]:checked+label.select-button {
+input[type=radio]:checked + label.select-button {
   background: var(--color-violet);
   color: var(--color-white);
 }
 
 /* выделенный label с input type ckechbox */
-input[type=checkbox]:checked+label.select-button {
+input[type=checkbox]:checked + label.select-button {
   background: var(--color-violet);
   color: var(--color-white);
 }
@@ -396,32 +458,19 @@ variables - scss файл с переменными для всего проек
   --border-violet: 1px solid var(--color-violet);
   /* border-radius */
   --border-radius: 5px;
+  --border-radius-big: 14px;
   --border-radius-image: 8px;
   /* тени */
   --icons-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
-  /* wrap width */
-  --wrap-width: 1440px;
+  --modal-box-shadow: 0 40px 40px 0 rgba(114, 117, 119, 0.25);
+  /* глобальные свойства блоков и позиционирования */
+  --container-width: 1440px;
   --padding-inline-default: 165px;
   /* шрифты */
   --font-family-poppins: "Poppins", Arial, sans-serif;
   --font-family-spaseage: "SpaceAge", Arial, sans-serif;
-}
-
-/* 
-
-globals - scss файл для конкретных селекторов-тегов, которые встречаются только в этом проекте
-(в отличие от файла normalize.scss, который можно использовать и в других проектах
-
-*/
-input[type=radio],
-input[type=checkbox] {
-  display: none;
-}
-
-input:hover,
-input:active,
-input:focus {
-  outline: 0;
+  /* локальные переменные */
+  --header-modal-window-display: none;
 }
 
 /*
@@ -434,3 +483,118 @@ media - scss файл с миксинами медиа-запросов desktop,
 /* 768 - 481 */
 /* 480 - 320 */
 /* можно дописывать дополнительные значения */
+/* подключение файлов со стилями для блоков */
+/* homepage */
+.header {
+  background: var(--color-lightgray);
+}
+.header__inner {
+  display: block;
+  height: 86px;
+  position: relative;
+}
+.header__row--first {
+  align-items: center;
+  height: 100%;
+}
+.header__column--first {
+  padding-inline: var(--padding-inline-default) 195px;
+}
+.header__column--second {
+  width: 445px;
+}
+.header__navigation {
+  width: 100%;
+}
+.header__navigation-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.header__list-item {
+  position: relative;
+}
+.header__list-item:hover a {
+  color: var(--color-black);
+  font-weight: 600;
+}
+.header__list-item::after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: -400px;
+  width: 21px;
+  height: 2px;
+  background: var(--color-violet);
+  border-radius: var(--border-radius);
+}
+.header__list-item:hover::after {
+  animation: headerLinkUnderlineShow 0.5s;
+  animation-fill-mode: forwards;
+}
+.header__link {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(12px, 0.9722222222vw, 14px);
+  line-height: 86%;
+  color: var(--color-gray);
+}
+.header__column--third {
+  padding-left: 32px;
+}
+.header__button {
+  padding-inline: 20px;
+}
+.header__column--fourth {
+  padding-left: 25px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  column-gap: 25px;
+}
+.header__icon-button--profile {
+  cursor: pointer;
+  width: 18px;
+  height: 20px;
+  border: none;
+  background: 0;
+  background-image: url(../images/svg/profile-icon.svg);
+}
+.header__icon-link--cart {
+  position: relative;
+}
+.header__icon-link--cart::after {
+  content: "3";
+  position: absolute;
+  top: -10px;
+  left: 22px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  padding: 3px 6px;
+  background: var(--color-lightred);
+  font-family: var(--font-family-poppins);
+  font-size: clamp(8px, 0.5555555556vw, 8px);
+  line-height: 150%;
+  color: var(--color-white);
+}
+.header__modal-window {
+  display: var(--header-modal-window-display);
+  top: 103px;
+  left: 69%;
+  width: 227px;
+  background: var(--color-white);
+  border-radius: var(--border-radius-big);
+  box-shadow: var(--modal-box-shadow);
+  padding: 24px 32px 32px 32px;
+}
+.header__modal-window-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 9px;
+  width: 100%;
+  height: 100%;
+}
+.header__modal-window-button {
+  width: 100%;
+}

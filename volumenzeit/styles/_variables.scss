@@ -35,19 +35,24 @@ variables - scss файл с переменными для всего проек
     /* border-radius */
 
     --border-radius: 5px;
+    --border-radius-big: 14px;
     --border-radius-image: 8px;
 
     /* тени */
 
     --icons-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+    --modal-box-shadow: 0 40px 40px 0 rgba(114, 117, 119, 0.25);
 
-    /* wrap width */
+    /* глобальные свойства блоков и позиционирования */
 
-    --wrap-width: 1440px;
+    --container-width: 1440px;
     --padding-inline-default: 165px;
 
     /* шрифты */
 
     --font-family-poppins: "Poppins", Arial, sans-serif;
     --font-family-spaseage: "SpaceAge", Arial, sans-serif;
+
+    /* локальные переменные */
+    --header-modal-window-display: none;
 }

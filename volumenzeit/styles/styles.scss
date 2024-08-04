@@ -12,10 +12,19 @@ powered by: github pages
 
 */
 
+/* подключение глобальных файлов */
+
 @import "normalize.scss",
 "fonts.scss",
+"keyframes.scss",
+"globals.scss",
 "mixins.scss",
 "utils.scss",
 "variables.scss",
-"globals.scss",
 "media.scss";
+
+/* подключение файлов со стилями для блоков */
+
+/* homepage */
+
+@import "blocks/homepage/header";
