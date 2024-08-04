@@ -1,0 +1,104 @@
+/* 
+
+utils - scss файл с утилитарными классами, которые встречаются в проекте постоянно в одних и тех же вариантах (контейнеры, кнопки, инпуты)
+
+*/
+
+
+/* стандартная фиолетовая кнопка */
+.button {
+    cursor: pointer;
+    background: var(--color-violet);
+    padding-block: 22px;
+    border: none;
+    border-radius: var(--border-radius);
+    /* цвет текста кнопки */
+    @include text-poppins(14, 14, 86%, var(--color-white));
+}
+
+/* та же кнопка, но черная */
+.button--black {
+    cursor: pointer;
+    background: var(--transparent);
+    padding-block: 22px;
+    border: var(--border-black);
+    border-radius: var(--border-radius);
+    /* цвет текста кнопки */
+    @include text-poppins(14, 14, 86%, var(--color-black));
+
+    &:hover {
+        background: var(--color-black);
+        color: var(--color-white);
+    }
+}
+
+/* та же кнопка, но фиолетовая */
+.button--violet {
+    cursor: pointer;
+    background: var(--transparent);
+    padding-block: 22px;
+    border: var(--border-violet);
+    border-radius: var(--border-radius);
+    /* цвет текста кнопки */
+    @include text-poppins(14, 14, 86%, var(--color-violet));
+
+    &:hover {
+        background: var(--color-violet);
+        color: var(--color-white);
+    }
+}
+
+/* стандартное поле ввода */
+.input {
+    background: var(--color-white);
+    border: var(--border-gray);
+    border-radius: var(--border-radius);
+
+    /* текст для плейсхолдера */
+    &::placeholder {
+        @include text-poppins(14, 14, 50%, var(--color-gray));
+    }
+}
+
+/* то же поле ввода, только без рамки */
+.input--without-border {
+    border: 0;
+}
+
+/* радиокнопка для переключения между страницами */
+.select-button {
+    top: 100px;
+    left: 100px;
+    cursor: pointer;
+    position: relative;
+    /* временно, паддинги задавать вручную */
+    padding: 6px 10px;
+    border-radius: var(--border-radius);
+    background: var(--color-lightgray);
+
+    /* текст внутри кнопок */
+    @include text-poppins(10, 10, 100%, var(--color-gray));
+}
+
+/* стиль для кнопки с type checkbox */
+.checkbox-button--white {
+    color: var(--color-white);
+    background: var(--color-gray-alt);
+}
+
+/* выделенный label с input type radio */
+input[type="radio"]:checked+label.select-button {
+    background: var(--color-violet);
+    color: var(--color-white);
+}
+
+/* выделенный label с input type ckechbox */
+input[type="checkbox"]:checked+label.select-button {
+    background: var(--color-violet);
+    color: var(--color-white);
+}
+
+/* временно */
+#sp {
+    margin-top: 200px;
+}

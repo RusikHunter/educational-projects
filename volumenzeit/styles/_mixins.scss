@@ -1,0 +1,21 @@
+/*
+
+mixins - scss файл с миксинами - повторяющимися участками кода, которые можно вставлять в разные селекторы (шрифты, стили для кнопок, логотипов и т.д.)
+
+*/
+
+/* миксин для текста со шрифтом poppins */
+@mixin text-poppins($max, $min, $lh, $color) {
+    font-family: var(--font-family-poppins);
+    font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+    line-height: #{$lh};
+    color: #{$color};
+}
+
+/* миксин для текста со шрифтом spaceage */
+@mixin text-spaceage($max, $min) {
+    font-family: var(--font-family-spaceage);
+    font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+    line-height: #{$lh};
+    color: #{$color};
+}

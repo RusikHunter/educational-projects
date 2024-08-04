@@ -1,0 +1,53 @@
+/* 
+
+variables - scss файл с переменными для всего проекта
+
+*/
+
+:root {
+    /* глобальные цвета */
+
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gray: #939393;
+    --color-lightgray: #F9FAFE;
+    --color-gray-alt: #DFE2EC;
+    --color-violet: #735CFF;
+    --color-lightred: #FF8585;
+    --transparent: transparent;
+
+    /* градиенты */
+
+    --gradient-black: linear-gradient(211deg, #555 0%, #0a0a0a 100%);
+    --gradient-lightgray: linear-gradient(211deg, #e3e3e3 0%, #7b838f 100%);
+    --gradient-blue: linear-gradient(211deg, #58b2ce 0%, #023c96 100%);
+    --gradient-orange: linear-gradient(211deg, #d39138 0%, #b95371 100%);
+    --gradient-tropical: linear-gradient(211deg, #2d9b87 0%, #af29cb 100%);
+    --gradient-sky: linear-gradient(211deg, #2184ce 0%, #9020ad 100%);
+    --gradient-gray: linear-gradient(211deg, #707885 0%, #363636 100%);
+
+    /* рамки */
+
+    --border-black: 1px solid var(--color-black);
+    --border-gray: 1px solid var(--color-gray);
+    --border-violet: 1px solid var(--color-violet);
+
+    /* border-radius */
+
+    --border-radius: 5px;
+    --border-radius-image: 8px;
+
+    /* тени */
+
+    --icons-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+
+    /* wrap width */
+
+    --wrap-width: 1440px;
+    --padding-inline-default: 165px;
+
+    /* шрифты */
+
+    --font-family-poppins: "Poppins", Arial, sans-serif;
+    --font-family-spaseage: "SpaceAge", Arial, sans-serif;
+}

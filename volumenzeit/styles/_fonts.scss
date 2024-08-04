@@ -1,0 +1,70 @@
+/* 
+
+fonts- scss файл со шрифтами
+
+*/
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SpaceAge";
+    src: url("../fonts/SpaceAge-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.t400 {
+    font-family: var(--font-family-poppins);
+    font-weight: 400;
+}
+
+.t500 {
+    font-family: var(--font-family-poppins);
+    font-weight: 500;
+}
+
+.t600 {
+    font-family: var(--font-family-poppins);
+    font-weight: 600;
+}
+
+.t700 {
+    font-family: var(--font-family-poppins);
+    font-weight: 700;
+}
+
+.other {
+    font-family: var(--font-family-spaseage);
+    font-weight: 400;
+}

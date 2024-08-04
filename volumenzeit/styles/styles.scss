@@ -1,0 +1,21 @@
+/*
+
+главный scss файл, куда подключаются остальные общие файлы и файлы со стилями
+этот файл превращается в css файл
+
+автор проекта - dmfshove
+https://github.com/RusikHunter
+https://www.instagram.com/dmfshove/
+telegram: dmfshove
+
+powered by: github pages
+
+*/
+
+@import "normalize.scss",
+"fonts.scss",
+"mixins.scss",
+"utils.scss",
+"variables.scss",
+"globals.scss",
+"media.scss";
