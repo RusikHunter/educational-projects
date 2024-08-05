@@ -18,7 +18,7 @@
     }
 
     &__text {
-        @include text-spaceage(14, 10, 86%, var(--color-black));
+        @include text-spaceage(14, 14, 86%, var(--color-black));
         writing-mode: vertical-lr;
         transform: scaleX(-1);
         transform: scaleY(-1);
@@ -37,11 +37,108 @@
 
     &__description {
         margin-block: 25px 30px;
-        @include text-poppins(14, 10, 200%, var(--color-gray));
+        @include text-poppins(14, 14, 200%, var(--color-gray));
         max-width: 557px;
     }
 
     &__button {
         width: 208px;
+    }
+
+    @include tablet {
+        & {
+            background-size: 70% 80%;
+        }
+    }
+
+    @include tablet-small {
+        &__row {
+            padding-top: 70px;
+        }
+
+        &__title {
+            max-width: 450px;
+        }
+
+        &__description {
+            max-width: 350px;
+        }
+
+        &__column--second {
+            padding-top: 10px;
+        }
+    }
+
+    @include mobile {
+        & {
+            background-size: 100% 45%;
+        }
+
+        &__row {
+            padding-block: 40px 374px;
+            flex-flow: column-reverse;
+        }
+
+        &__column--second {
+            padding: 0;
+        }
+
+        &__title {
+            max-width: 372px;
+            text-align: center;
+            margin-inline: auto;
+        }
+
+        &__description {
+            max-width: 388px;
+            text-align: center;
+            margin-inline: auto;
+            margin-bottom: 40px;
+        }
+
+        &__button {
+            margin-inline: auto;
+        }
+
+        &__column--first {
+            flex-direction: column-reverse;
+            padding: 0;
+        }
+
+        &__social-networks {
+            flex-direction: row;
+            margin-inline: auto;
+            margin-top: 20px;
+        }
+
+        &__text {
+            writing-mode: horizontal-tb;
+            transform: scaleX(1);
+            transform: scaleY(1);
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+
+    @include mobile-small {
+        & {
+            background-color: rgba(255, 255, 255, 0.5);
+            /* Смешивание фона и изображения */
+            background-blend-mode: overlay;
+        }
+
+        &__row {
+            padding-bottom: 170px;
+        }
+
+        &__title {
+            max-width: 80%;
+            font-size: 35px;
+        }
+
+        &__description {
+            max-width: 90%;
+            font-size: 12px;
+        }
     }
 }

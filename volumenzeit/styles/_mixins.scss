@@ -7,7 +7,7 @@ mixins - scss файл с миксинами - повторяющимися уч
 /* миксин для текста со шрифтом poppins */
 @mixin text-poppins($max, $min, $lh, $color) {
     font-family: var(--font-family-poppins);
-    font-size: clamp(#{$max}px, #{$max / 1440 * 100}vw, #{$min}px);
+    font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
     line-height: #{$lh};
     color: #{$color};
 }
@@ -15,21 +15,21 @@ mixins - scss файл с миксинами - повторяющимися уч
 /* миксин для текста со шрифтом spaceage */
 @mixin text-spaceage($max, $min, $lh, $color) {
     font-family: var(--font-family-spaceage);
-    font-size: clamp(#{$max}px, #{$max / 1440 * 100}vw, #{$min}px);
+    font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
     line-height: #{$lh};
     color: #{$color};
 }
 
 @mixin title-h1($color) {
     font-family: var(--font-family-spaceage);
-    font-size: clamp(60px, #{calc(60 / 1440) * 100}vw, 40px);
+    font-size: clamp(40px, #{calc(60 / 1440) * 100}vw, 60px);
     line-height: 100%;
     color: #{$color};
 }
 
 @mixin title-h2($color) {
     font-family: var(--font-family-spaceage);
-    font-size: clamp(42px, #{calc(42 / 1440) * 100}vw, 32px);
+    font-size: clamp(32px, #{calc(42 / 1440) * 100}vw, 42px);
     line-height: 100%;
     color: #{$color};
 }

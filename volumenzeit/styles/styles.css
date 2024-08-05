@@ -540,7 +540,7 @@ media - scss файл с миксинами медиа-запросов desktop,
 }
 .header__link {
   font-family: var(--font-family-poppins);
-  font-size: clamp(14px, 0.9722222222vw, 12px);
+  font-size: clamp(12px, 0.9722222222vw, 14px);
   line-height: 86%;
   color: var(--color-gray);
 }
@@ -798,7 +798,7 @@ media - scss файл с миксинами медиа-запросов desktop,
 }
 .dream__text {
   font-family: var(--font-family-spaceage);
-  font-size: clamp(14px, 0.9722222222vw, 10px);
+  font-size: clamp(14px, 0.9722222222vw, 14px);
   line-height: 86%;
   color: var(--color-black);
   writing-mode: vertical-lr;
@@ -812,7 +812,7 @@ media - scss файл с миксинами медиа-запросов desktop,
 }
 .dream__title {
   font-family: var(--font-family-spaceage);
-  font-size: clamp(60px, 4.1666666667vw, 40px);
+  font-size: clamp(40px, 4.1666666667vw, 60px);
   line-height: 100%;
   color: var(--color-black);
   max-width: 560px;
@@ -820,11 +820,90 @@ media - scss файл с миксинами медиа-запросов desktop,
 .dream__description {
   margin-block: 25px 30px;
   font-family: var(--font-family-poppins);
-  font-size: clamp(14px, 0.9722222222vw, 10px);
+  font-size: clamp(14px, 0.9722222222vw, 14px);
   line-height: 200%;
   color: var(--color-gray);
   max-width: 557px;
 }
 .dream__button {
   width: 208px;
+}
+@media (max-width: 1440px) {
+  .dream {
+    background-size: 70% 80%;
+  }
+}
+@media (max-width: 920px) {
+  .dream__row {
+    padding-top: 70px;
+  }
+  .dream__title {
+    max-width: 450px;
+  }
+  .dream__description {
+    max-width: 350px;
+  }
+  .dream__column--second {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .dream {
+    background-size: 100% 45%;
+  }
+  .dream__row {
+    padding-block: 40px 374px;
+    flex-flow: column-reverse;
+  }
+  .dream__column--second {
+    padding: 0;
+  }
+  .dream__title {
+    max-width: 372px;
+    text-align: center;
+    margin-inline: auto;
+  }
+  .dream__description {
+    max-width: 388px;
+    text-align: center;
+    margin-inline: auto;
+    margin-bottom: 40px;
+  }
+  .dream__button {
+    margin-inline: auto;
+  }
+  .dream__column--first {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .dream__social-networks {
+    flex-direction: row;
+    margin-inline: auto;
+    margin-top: 20px;
+  }
+  .dream__text {
+    writing-mode: horizontal-tb;
+    transform: scaleX(1);
+    transform: scaleY(1);
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .dream {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Смешивание фона и изображения */
+    background-blend-mode: overlay;
+  }
+  .dream__row {
+    padding-bottom: 170px;
+  }
+  .dream__title {
+    max-width: 80%;
+    font-size: 35px;
+  }
+  .dream__description {
+    max-width: 90%;
+    font-size: 12px;
+  }
 }
