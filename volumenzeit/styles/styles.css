@@ -291,6 +291,10 @@ dialog {
 mixins - scss файл с миксинами - повторяющимися участками кода, которые можно вставлять в разные селекторы (шрифты, стили для кнопок, логотипов и т.д.)
 
 */
+* {
+  utline: 1px solid green;
+}
+
 /* миксин для текста со шрифтом poppins */
 /* миксин для текста со шрифтом spaceage */
 /* 
@@ -905,5 +909,156 @@ media - scss файл с миксинами медиа-запросов desktop,
   .dream__description {
     max-width: 90%;
     font-size: 12px;
+  }
+}
+
+.features__row--first {
+  padding-top: 75px;
+}
+.features__title {
+  font-family: var(--font-family-spaceage);
+  font-size: clamp(28px, 2.9166666667vw, 42px);
+  line-height: 100%;
+  color: var(--color-black);
+  text-align: center;
+  margin-inline: auto;
+}
+.features__grid {
+  display: grid;
+  grid-template-rows: 670px;
+  grid-template-columns: 430px 580px 430px;
+  grid-template-areas: "a b c";
+}
+.features__column--first {
+  grid-area: a;
+  padding-top: 82px;
+}
+.features__textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 20px;
+}
+.features__textbox--first {
+  margin-right: 62px;
+}
+.features__textbox--second {
+  margin-top: 178px;
+}
+.features__textbox--third {
+  align-items: start;
+}
+.features__icon {
+  display: none;
+}
+.features__feature {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(18px, 1.25vw, 18px);
+  line-height: 150%;
+  color: var(--color-black);
+  width: 100%;
+  text-align: right;
+}
+.features__feature--third {
+  text-align: left;
+}
+.features__description {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(10px, 0.6944444444vw, 10px);
+  line-height: 240%;
+  color: var(--color-gray);
+  width: 100%;
+  text-align: right;
+}
+.features__description--first {
+  max-width: 174px;
+}
+.features__description--second {
+  max-width: 268px;
+}
+.features__description--third {
+  max-width: 254px;
+  text-align: left;
+}
+.features__column--second {
+  grid-area: b;
+  position: relative;
+}
+.features__image {
+  z-index: 3;
+  position: absolute;
+  top: -23px;
+  left: -45px;
+  min-width: 629px;
+  height: 629px;
+}
+.features__column--third {
+  grid-area: c;
+  padding-top: 156px;
+}
+@media (max-width: 1440px) {
+  .features__grid {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .features__column--second {
+    padding-top: 25%;
+  }
+  .features__image {
+    position: static;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 920px) {
+  .features__row {
+    padding-inline: 32px;
+  }
+  .features__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 530px minmax(530px, 550px) 400px;
+    grid-template-areas: "b" "a" "c";
+    grid-auto-flow: column;
+  }
+  .features__column {
+    width: 100%;
+  }
+  .features__column--first {
+    row-gap: 40px;
+  }
+  .features__column--second {
+    padding-top: 0;
+    align-items: center;
+    flex-direction: row;
+  }
+  .features__column--third {
+    padding: 0;
+  }
+  .features__image {
+    width: 100%;
+    height: auto;
+    margin-inline: auto;
+  }
+  .features__textbox {
+    margin: 0;
+    row-gap: 20px;
+  }
+  .features__icon {
+    display: block;
+    margin-inline: auto;
+  }
+  .features__feature {
+    text-align: center;
+  }
+  .features__description {
+    text-align: center;
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 480px) {
+  .features__grid {
+    grid-template-rows: 300px minmax(530px, 550px) 400px;
   }
 }

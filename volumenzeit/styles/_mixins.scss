@@ -3,6 +3,9 @@
 mixins - scss файл с миксинами - повторяющимися участками кода, которые можно вставлять в разные селекторы (шрифты, стили для кнопок, логотипов и т.д.)
 
 */
+* {
+    utline: 1px solid green;
+}
 
 /* миксин для текста со шрифтом poppins */
 @mixin text-poppins($max, $min, $lh, $color) {
@@ -29,7 +32,7 @@ mixins - scss файл с миксинами - повторяющимися уч
 
 @mixin title-h2($color) {
     font-family: var(--font-family-spaceage);
-    font-size: clamp(32px, #{calc(42 / 1440) * 100}vw, 42px);
+    font-size: clamp(28px, #{calc(42 / 1440) * 100}vw, 42px);
     line-height: 100%;
     color: #{$color};
 }
