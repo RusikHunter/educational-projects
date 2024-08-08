@@ -1,0 +1,117 @@
+.watches {
+
+    &__row {
+        padding-left: 165px;
+    }
+
+    &__row--first {
+        flex-direction: column;
+        padding-top: 116px;
+    }
+
+    &__title {
+        @include title-h2(var(--color-black));
+    }
+
+    &__description {
+        @include text-poppins(14, 14, 200%, var(--color-gray));
+        padding-block: 37px 40px;
+        max-width: 689px;
+    }
+
+    &__row--second {
+        width: 100%;
+        column-gap: 40px;
+        overflow-x: hidden;
+    }
+
+    &__watch-box {
+        flex: 0 0 334px;
+    }
+
+    &__watch-image {
+        border-radius: 10px;
+    }
+
+    &__watch-title {
+        @include text-poppins(16, 16, 200%, var(--color-gray));
+        width: 100%;
+        text-align: center;
+        margin-top: 26px;
+    }
+
+    &__watch-price {
+        @include text-poppins(26, 26, 200%, var(--color-black));
+        display: block;
+        margin-inline: auto;
+        text-align: center;
+        margin-top: 7px;
+    }
+
+    &__row--third {
+        padding-block: 80px 250px;
+        justify-content: space-between;
+        padding-right: 165px;
+    }
+
+    &__button-wrap {
+        width: 297px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include tablet {
+        &__row {
+            padding-left: 100px;
+        }
+
+        &__row--third {
+            padding-right: 100px;
+        }
+    }
+
+    @include mobile {
+        &__row {
+            padding: 0;
+        }
+
+        &__row--first {
+            padding-top: 78px;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__description {
+            margin-inline: auto;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        &__watch-box {
+            flex: 0 0 100%;
+        }
+
+        &__watch-image {
+            margin-inline: auto;
+        }
+
+        &__row--third {
+            flex-direction: column;
+            padding-bottom: 50px;
+        }
+
+        &__button-wrap {
+            margin-inline: auto;
+            margin-top: 25px;
+            width: 230px;
+        }
+
+        &__button {
+            margin-top: 45px;
+            width: 208px;
+            margin-inline: auto;
+        }
+    }
+}

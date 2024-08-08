@@ -1240,3 +1240,109 @@ media - scss файл с миксинами медиа-запросов desktop,
     width: 80%;
   }
 }
+
+.watches__row {
+  padding-left: 165px;
+}
+.watches__row--first {
+  flex-direction: column;
+  padding-top: 116px;
+}
+.watches__title {
+  font-family: var(--font-family-spaceage);
+  font-size: clamp(28px, 2.9166666667vw, 42px);
+  line-height: 100%;
+  color: var(--color-black);
+}
+.watches__description {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(14px, 0.9722222222vw, 14px);
+  line-height: 200%;
+  color: var(--color-gray);
+  padding-block: 37px 40px;
+  max-width: 689px;
+}
+.watches__row--second {
+  width: 100%;
+  column-gap: 40px;
+  overflow-x: hidden;
+}
+.watches__watch-box {
+  flex: 0 0 334px;
+}
+.watches__watch-image {
+  border-radius: 10px;
+}
+.watches__watch-title {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(16px, 1.1111111111vw, 16px);
+  line-height: 200%;
+  color: var(--color-gray);
+  width: 100%;
+  text-align: center;
+  margin-top: 26px;
+}
+.watches__watch-price {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(26px, 1.8055555556vw, 26px);
+  line-height: 200%;
+  color: var(--color-black);
+  display: block;
+  margin-inline: auto;
+  text-align: center;
+  margin-top: 7px;
+}
+.watches__row--third {
+  padding-block: 80px 250px;
+  justify-content: space-between;
+  padding-right: 165px;
+}
+.watches__button-wrap {
+  width: 297px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1440px) {
+  .watches__row {
+    padding-left: 100px;
+  }
+  .watches__row--third {
+    padding-right: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .watches__row {
+    padding: 0;
+  }
+  .watches__row--first {
+    padding-top: 78px;
+  }
+  .watches__title {
+    text-align: center;
+  }
+  .watches__description {
+    margin-inline: auto;
+    max-width: 80%;
+    text-align: center;
+  }
+  .watches__watch-box {
+    flex: 0 0 100%;
+  }
+  .watches__watch-image {
+    margin-inline: auto;
+  }
+  .watches__row--third {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  .watches__button-wrap {
+    margin-inline: auto;
+    margin-top: 25px;
+    width: 230px;
+  }
+  .watches__button {
+    margin-top: 45px;
+    width: 208px;
+    margin-inline: auto;
+  }
+}
