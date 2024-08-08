@@ -1,9 +1,5 @@
 .features {
 
-    &__inner {}
-
-    &__row {}
-
     &__row--first {
         padding-top: 75px;
     }
@@ -13,8 +9,6 @@
         text-align: center;
         margin-inline: auto;
     }
-
-    &__row--second {}
 
     &__grid {
         display: grid;
@@ -46,10 +40,6 @@
 
     &__textbox--third {
         align-items: start;
-    }
-
-    &__icon {
-        display: none;
     }
 
     &__feature {
@@ -163,7 +153,6 @@
         }
 
         &__icon {
-            display: block;
             margin-inline: auto;
         }
 

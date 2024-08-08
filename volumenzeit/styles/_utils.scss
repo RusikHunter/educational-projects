@@ -4,6 +4,7 @@ utils - scss файл с утилитарными классами, которы
 
 */
 
+@import "media.scss";
 
 /* container */
 
@@ -127,7 +128,24 @@ input[type="checkbox"]:checked+label.select-button {
     color: var(--color-white);
 }
 
-/* временно */
-#sp {
-    margin-top: 200px;
+/* видимый при ширине до 921px */
+
+.tablet-visible {
+    display: none;
+
+    @include tablet-small {
+        & {
+            display: block;
+        }
+    }
+}
+
+.mobile-visible {
+    display: none;
+
+    @include mobile {
+        & {
+            display: block;
+        }
+    }
 }

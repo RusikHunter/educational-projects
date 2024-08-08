@@ -1,0 +1,97 @@
+.design {
+    background: var(--color-violet);
+
+    &__inner {}
+
+    &__row {
+        padding-bottom: 81px;
+    }
+
+    &__column {
+        width: 100%;
+    }
+
+    &__decoration {
+        position: relative;
+        top: -5px;
+        margin-inline: auto;
+    }
+
+    &__title {
+        @include title-h2(var(--color-white));
+        text-align: center;
+        margin-top: 56px;
+    }
+
+    &__image {
+        max-width: 730px;
+        margin-top: 61px;
+        margin-inline: auto;
+    }
+
+    &__list {
+        display: flex;
+        width: 705px;
+        margin-top: 18px;
+        justify-content: space-between;
+        margin-inline: auto;
+    }
+
+    &__item {
+        @include text-poppins(12, 12, 100%, var(--color-white));
+    }
+
+    &__list--alt {}
+
+    &__button {
+        margin-top: 56px;
+        width: 208px;
+        background: var(--color-black);
+        color: var(--color-white);
+        margin-inline: auto;
+    }
+
+    @include tablet-small {
+        &__image {
+            max-width: 600px;
+        }
+
+        &__list {
+            width: 590px;
+        }
+    }
+
+    @include mobile {
+
+        &__row {
+            padding-bottom: 98px;
+        }
+
+        &__title {
+            max-width: 242px;
+            margin-top: 50px;
+            margin-inline: auto;
+        }
+
+        &__image,
+        &__list {
+            display: none;
+        }
+
+        &__image--alt {
+            margin-inline: auto;
+        }
+
+        &__list--alt {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            text-align: center;
+            margin-block: 30px;
+        }
+
+        &__button {
+            margin-top: 0;
+        }
+    }
+}
