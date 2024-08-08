@@ -1,8 +1,6 @@
 .design {
     background: var(--color-violet);
 
-    &__inner {}
-
     &__row {
         padding-bottom: 81px;
     }
@@ -40,8 +38,6 @@
     &__item {
         @include text-poppins(12, 12, 100%, var(--color-white));
     }
-
-    &__list--alt {}
 
     &__button {
         margin-top: 56px;

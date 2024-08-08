@@ -1,0 +1,98 @@
+.mission {
+    background: var(--color-black);
+
+    &__inner {
+        max-width: 100% !important;
+        width: 100% !important;
+        position: relative;
+    }
+
+    &__row {}
+
+    &__column {
+        width: 50%;
+    }
+
+    &__column--first {}
+
+    &__image {}
+
+    &__column--second {
+        padding: 140px 54px 174px 54px;
+        row-gap: 40px;
+    }
+
+    &__title {
+        @include title-h2(var(--color-white));
+    }
+
+    &__description {
+        @include text-poppins(14, 14, 200%, var(--color-gray));
+        max-width: 400px;
+    }
+
+    &__button {
+        width: 208px;
+    }
+
+    &__decoration {
+        position: absolute;
+    }
+
+    &__decoration--first {
+        right: 0;
+        top: -5px;
+    }
+
+    &__decoration--second {
+        bottom: -30px;
+    }
+
+    @include mobile {
+        &__row {
+            flex-direction: column;
+        }
+
+        &__column {
+            width: 100%;
+        }
+
+        &__column--second {
+            padding-block: 51px 84px;
+            row-gap: 30px;
+        }
+
+        &__image {
+            width: 100%;
+            height: auto;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__description {
+            text-align: center;
+            margin-inline: auto;
+        }
+
+        &__button {
+            margin-inline: auto;
+        }
+
+        &__decoration--first {
+            width: 80px;
+            height: 80px;
+        }
+
+        &__decoration--second {
+            display: none;
+        }
+    }
+
+    @include mobile-small {
+        &__button {
+            width: 80%;
+        }
+    }
+}

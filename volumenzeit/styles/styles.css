@@ -587,7 +587,7 @@ media - scss файл с миксинами медиа-запросов desktop,
   height: 20px;
   border: none;
   background: 0;
-  background-image: url(../images/svg/profile-icon.svg);
+  background-image: url(../images/globals/header/profile-icon.svg);
 }
 .header__icon-link--cart {
   position: relative;
@@ -691,7 +691,7 @@ media - scss файл с миксинами медиа-запросов desktop,
   height: 20px;
   top: 0;
   left: -10px;
-  background-image: url(../images/svg/profile-icon.svg);
+  background-image: url(../images/globals/header/profile-icon.svg);
 }
 .header .burger__link--cart {
   position: relative;
@@ -704,7 +704,7 @@ media - scss файл с миксинами медиа-запросов desktop,
   height: 20px;
   top: 0;
   left: -15px;
-  background-image: url(../images/svg/cart-icon.svg);
+  background-image: url(../images/globals/header/cart-icon.svg);
 }
 .header .burger__button {
   margin-inline: auto;
@@ -805,7 +805,7 @@ media - scss файл с миксинами медиа-запросов desktop,
 
 /* homepage */
 .dream {
-  background-image: url(../images/home/background-watch.png);
+  background-image: url(../images/homepage/dream/background-watch.png);
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 50% 80%;
@@ -1158,5 +1158,85 @@ media - scss файл с миксинами медиа-запросов desktop,
   }
   .design__button {
     margin-top: 0;
+  }
+}
+
+.mission {
+  background: var(--color-black);
+}
+.mission__inner {
+  max-width: 100% !important;
+  width: 100% !important;
+  position: relative;
+}
+.mission__column {
+  width: 50%;
+}
+.mission__column--second {
+  padding: 140px 54px 174px 54px;
+  row-gap: 40px;
+}
+.mission__title {
+  font-family: var(--font-family-spaceage);
+  font-size: clamp(28px, 2.9166666667vw, 42px);
+  line-height: 100%;
+  color: var(--color-white);
+}
+.mission__description {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(14px, 0.9722222222vw, 14px);
+  line-height: 200%;
+  color: var(--color-gray);
+  max-width: 400px;
+}
+.mission__button {
+  width: 208px;
+}
+.mission__decoration {
+  position: absolute;
+}
+.mission__decoration--first {
+  right: 0;
+  top: -5px;
+}
+.mission__decoration--second {
+  bottom: -30px;
+}
+@media (max-width: 768px) {
+  .mission__row {
+    flex-direction: column;
+  }
+  .mission__column {
+    width: 100%;
+  }
+  .mission__column--second {
+    padding-block: 51px 84px;
+    row-gap: 30px;
+  }
+  .mission__image {
+    width: 100%;
+    height: auto;
+  }
+  .mission__title {
+    text-align: center;
+  }
+  .mission__description {
+    text-align: center;
+    margin-inline: auto;
+  }
+  .mission__button {
+    margin-inline: auto;
+  }
+  .mission__decoration--first {
+    width: 80px;
+    height: 80px;
+  }
+  .mission__decoration--second {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .mission__button {
+    width: 80%;
   }
 }

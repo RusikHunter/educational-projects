@@ -85,7 +85,7 @@
         height: 20px;
         border: none;
         background: 0;
-        background-image: url(../images/svg/profile-icon.svg);
+        background-image: url(../images/globals/header/profile-icon.svg);
     }
 
     &__icon-link--cart {
@@ -197,7 +197,7 @@
                 height: 20px;
                 top: 0;
                 left: -10px;
-                background-image: url(../images/svg/profile-icon.svg);
+                background-image: url(../images/globals/header/profile-icon.svg);
             }
         }
 
@@ -212,7 +212,7 @@
                 height: 20px;
                 top: 0;
                 left: -15px;
-                background-image: url(../images/svg/cart-icon.svg);
+                background-image: url(../images/globals/header/cart-icon.svg);
             }
         }
 
