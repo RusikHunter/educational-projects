@@ -1293,7 +1293,7 @@ media - scss файл с миксинами медиа-запросов desktop,
   margin-top: 7px;
 }
 .watches__row--third {
-  padding-block: 80px 250px;
+  padding-block: 80px 225px;
   justify-content: space-between;
   padding-right: 165px;
 }
@@ -1345,4 +1345,47 @@ media - scss файл с миксинами медиа-запросов desktop,
     width: 208px;
     margin-inline: auto;
   }
+}
+
+.about__row {
+  padding-inline: 165px;
+  padding-bottom: 170px;
+}
+.about__column--first {
+  width: 42%;
+  padding-top: 78px;
+}
+.about__title {
+  font-family: var(--font-family-spaceage);
+  font-size: clamp(28px, 2.9166666667vw, 42px);
+  line-height: 100%;
+  color: var(--color-black);
+  margin-bottom: 47px;
+}
+.about__description {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(14px, 0.9722222222vw, 14px);
+  line-height: 200%;
+  color: var(--color-gray);
+  max-width: 396px;
+}
+.about__column--second {
+  width: 58%;
+  position: relative;
+}
+.about__video-wrap {
+  width: 100%;
+  padding: 27px;
+  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.about__video {
+  width: 100%;
+}
+.about__button--start {
+  width: 102px;
+  height: 102px;
+  position: absolute;
+  top: calc(50% - 51px);
+  left: calc(50% - 51px);
 }
