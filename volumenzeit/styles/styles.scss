@@ -25,11 +25,13 @@ powered by: github pages
 
 /* подключение файлов со стилями для блоков */
 
-/* globals */
+/* globals - стили для секций, которые используются на нескольких страницах */
 
-@import "blocks/globals/header";
+@import "blocks/globals/header",
+"blocks/globals/registration",
+"blocks/globals/footer";
 
-/* homepage */
+/* homepage - стили для секций страницы homepage */
 
 @import "blocks/homepage/dream",
 "blocks/homepage/features",
@@ -37,3 +39,7 @@ powered by: github pages
 "blocks/homepage/mission",
 "blocks/homepage/watches",
 "blocks/homepage/about";
+
+/* contact us - стили для секций страницы contact us */
+
+@import "blocks/contactus/contactus";

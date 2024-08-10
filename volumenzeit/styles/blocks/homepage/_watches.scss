@@ -70,6 +70,12 @@
         }
     }
 
+    @include tablet-small {
+        &__row--third {
+            padding-bottom: 50px;
+        }
+    }
+
     @include mobile {
         &__row {
             padding: 0;

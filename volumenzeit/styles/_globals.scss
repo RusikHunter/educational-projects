@@ -16,6 +16,12 @@ input:focus {
     outline: 0;
 }
 
+textarea:hover,
+textarea:active,
+textarea:focus {
+    outline: 0;
+}
+
 a:link,
 a:hover,
 a:visited,
@@ -31,4 +37,8 @@ button {
 
 dialog {
     border: none;
+}
+
+textarea {
+    resize: none;
 }

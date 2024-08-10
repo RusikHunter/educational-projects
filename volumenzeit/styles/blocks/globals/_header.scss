@@ -106,6 +106,7 @@
     }
 
     &__modal-window {
+        z-index: 9;
         display: var(--header-modal-window-display);
         top: 103px;
         left: 69%;

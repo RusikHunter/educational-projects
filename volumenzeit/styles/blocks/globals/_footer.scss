@@ -1,0 +1,46 @@
+.footer {
+
+    &__inner {
+        max-width: 100%;
+    }
+
+    &__row {
+        width: 100%;
+    }
+
+    &__row--first {
+        padding-block: 89px 62px;
+    }
+
+    &__logo {
+        margin-inline: auto;
+    }
+
+    &__row--second {
+        padding-block: 19px;
+        background: var(--color-lightgray);
+    }
+
+    &__rights {
+        @include text-poppins(12, 10, 100%, var(--color-gray));
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    @include mobile {
+        &__row--first {
+            padding-block: 60px 40px;
+        }
+    }
+
+    @include mobile-small {
+        &__row--first {
+            padding-block: 50px 30px;
+        }
+
+        &__logo-image {
+            width: 286px;
+            height: 35px;
+        }
+    }
+}
