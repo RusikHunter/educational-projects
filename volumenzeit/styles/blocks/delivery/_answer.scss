@@ -1,0 +1,56 @@
+.answer {
+    background: var(--color-violet) url(../images/delivery/answer/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 5;
+    margin-top: -305px;
+
+    &__row {
+        padding-block: 445px 124px;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include text-poppins(36, 28, 125%, var(--color-white));
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    &__description {
+        @include text-poppins(14, 10, 200%, var(--color-white));
+        text-align: center;
+        margin: 16px auto 39px auto;
+    }
+
+    &__link {
+        margin-inline: auto;
+    }
+
+    &__button {
+        width: 202px;
+        background: var(--color-black);
+        color: var(--color-white);
+    }
+
+    @include mobile {
+        &__row {
+            padding-block: 370px 90px;
+        }
+    }
+
+    @include mobile-small {
+        & {
+            margin-top: -216px;
+        }
+
+        &__row {
+            padding-block: 317px 100px;
+        }
+
+        &__description {
+            max-width: 60%;
+        }
+    }
+}

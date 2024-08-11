@@ -43,3 +43,8 @@ powered by: github pages
 /* contact us - стили для секций страницы contact us */
 
 @import "blocks/contactus/contactus";
+
+/* delivery - стили для секций страницы delivery */
+
+@import "blocks/delivery/delivery",
+"blocks/delivery/answer";
