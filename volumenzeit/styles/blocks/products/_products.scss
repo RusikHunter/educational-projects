@@ -1,0 +1,41 @@
+.products {
+    background: var(--color-violet);
+
+    &__row {
+        flex-direction: column;
+        padding-block: 88px 52px;
+        padding-inline: var(--padding-inline-default);
+        row-gap: 25px;
+    }
+
+    &__title {
+        @include title-h2(var(--color-white));
+    }
+
+    &__description {
+        @include text-poppins(14, 10, 100%, var(--color-white));
+    }
+
+    @include tablet-small {
+        &__row {
+            padding-block: 60px 40px;
+            padding-inline: 100px;
+        }
+    }
+
+    @include mobile {
+        &__row {
+            padding-block: 40px 30px;
+            padding-inline: 32px;
+            row-gap: 20px;
+        }
+    }
+
+    @include mobile-small {
+        &__row {
+            padding-block: 25px;
+            padding-inline: 20px;
+            row-gap: 15px;
+        }
+    }
+}

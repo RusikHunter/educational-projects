@@ -40,6 +40,11 @@ powered by: github pages
 "blocks/homepage/watches",
 "blocks/homepage/about";
 
+/* products - стили для секций страницы products */
+
+@import "blocks/products/products",
+"blocks/products/list";
+
 /* contact us - стили для секций страницы contact us */
 
 @import "blocks/contactus/contactus";

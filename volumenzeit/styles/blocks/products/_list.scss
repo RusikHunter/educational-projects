@@ -1,0 +1,80 @@
+.list {
+
+    &__inner {}
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 450px 1fr;
+        grid-template-rows: 1360px 55px;
+        grid-template-areas:
+            "a b"
+            "c c";
+    }
+
+    &__filters {
+        grid-area: a;
+        padding-left: var(--padding-inline-default);
+        padding-top: 45px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title--filters {
+        display: none;
+    }
+
+    &__button--close {
+        display: none;
+    }
+
+    &__filter-wrap {}
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title--filter {
+        @include text-poppins(10, 10, 100%, var(--color-black));
+        font-weight: 600;
+    }
+
+    &__input--text {
+        padding-block: 7px;
+        padding-left: 16px;
+        width: 204px;
+        border-radius: 3px;
+    }
+
+    &__input--radio {}
+
+    &__input--number {}
+
+    &__span {}
+
+    &__input--color {}
+
+    &__button {}
+
+    &__items {
+        grid-area: b;
+    }
+
+    &__buttons {}
+
+    &__watches {}
+
+    &__watches-wrap {}
+
+    &__watch-image {}
+
+    &__watch-title {}
+
+    &__watch-name {}
+
+    &__watch-price {}
+
+    &__pages {
+        grid-area: c;
+    }
+}
