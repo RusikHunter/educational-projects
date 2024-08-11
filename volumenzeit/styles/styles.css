@@ -296,6 +296,12 @@ textarea {
   resize: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /*
 
 mixins - scss файл с миксинами - повторяющимися участками кода, которые можно вставлять в разные селекторы (шрифты, стили для кнопок, логотипов и т.д.)
@@ -400,6 +406,10 @@ media - scss файл с миксинами медиа-запросов desktop,
   background: var(--color-white);
   border: var(--border-gray);
   border-radius: var(--border-radius);
+  font-family: var(--font-family-poppins);
+  font-size: clamp(14px, 0.9722222222vw, 14px);
+  line-height: 50%;
+  color: var(--color-gray);
   /* текст для плейсхолдера */
 }
 .input::placeholder {
@@ -417,8 +427,6 @@ media - scss файл с миксинами медиа-запросов desktop,
 /* радиокнопка для переключения между страницами */
 .select-button {
   margin-right: 2px;
-  top: 100px;
-  left: 100px;
   cursor: pointer;
   position: relative;
   /* временно, паддинги задавать вручную */
@@ -472,6 +480,8 @@ input[type=checkbox]:checked + label.select-button {
 
 /* выпадающий список Sort By */
 .dropdown {
+  position: absolute;
+  right: 0;
   width: 160px;
   background: var(--color-white);
   border: var(--border-gray);
@@ -527,6 +537,8 @@ input[type=checkbox]:checked + label.select-button {
 
 /* выпадающий список Country */
 .country {
+  position: absolute;
+  left: 23%;
   width: 445px;
   background: var(--color-white);
   border: var(--border-gray);
@@ -557,6 +569,7 @@ input[type=checkbox]:checked + label.select-button {
 }
 .country__button {
   margin-right: 0;
+  cursor: pointer;
 }
 .country__form {
   height: 180px;
@@ -1747,16 +1760,19 @@ media - scss файл с миксинами медиа-запросов desktop,
 
 .list__grid {
   display: grid;
-  grid-template-columns: 450px 1fr;
+  grid-template-columns: 420px 1fr;
   grid-template-rows: 1360px 55px;
   grid-template-areas: "a b" "c c";
 }
-.list__filters {
+.list .aside-a {
   grid-area: a;
+}
+.list__filters {
   padding-left: var(--padding-inline-default);
-  padding-top: 45px;
+  padding-block: 40px 93px;
   display: flex;
   flex-direction: column;
+  background: var(--color-lightgray);
 }
 .list__title--filters {
   display: none;
@@ -1764,28 +1780,230 @@ media - scss файл с миксинами медиа-запросов desktop,
 .list__button--close {
   display: none;
 }
+.list__filter-wrap {
+  width: 205px;
+  border-bottom: var(--border-gray);
+}
+.list__filter-wrap--second {
+  padding-bottom: 18px;
+}
+.list__filter-wrap--fiveth {
+  border: 0;
+}
 .list__form {
   display: flex;
   flex-direction: column;
 }
+.list__form--third {
+  flex-direction: row;
+  align-items: center;
+  margin-block: 7px 26px;
+}
+.list__form--fourth {
+  flex-direction: row;
+  column-gap: 10px;
+  margin-block: 7px 24px;
+}
+.list__form--fiveth {
+  flex-direction: row;
+  column-gap: 10px;
+  margin-block: 7px 27px;
+}
 .list__title--filter {
   font-family: var(--font-family-poppins);
   font-size: clamp(10px, 0.6944444444vw, 10px);
-  line-height: 100%;
+  line-height: 200%;
   color: var(--color-black);
   font-weight: 600;
+  margin-top: 10px;
 }
 .list__input--text {
   padding-block: 7px;
   padding-left: 16px;
   width: 204px;
+  border: none;
   border-radius: 3px;
+  margin-block: 12px 18px;
 }
-.list__items {
+.list__input--radio + label {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(12px, 0.8333333333vw, 12px);
+  line-height: 200%;
+  color: var(--color-gray);
+  margin-top: 4px;
+  cursor: pointer;
+}
+.list__input--radio:checked + label {
+  font-weight: 600;
+}
+.list__input--number {
+  padding-block: 7px;
+  padding-left: 30px;
+  width: 76px;
+  font-family: var(--font-family-poppins);
+  font-size: clamp(10px, 0.8333333333vw, 12px);
+  line-height: 100%;
+  color: var(--color-gray);
+}
+.list__input--number::placeholder {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(10px, 0.8333333333vw, 12px);
+  line-height: 100%;
+  color: var(--color-gray);
+}
+.list__span {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(10px, 0.8333333333vw, 12px);
+  line-height: 100%;
+  color: var(--color-gray);
+  padding-inline: 10px;
+}
+.list__span + input {
+  padding-inline: 23px;
+}
+.list__input--color + label {
+  width: 39px;
+  height: 39px;
+  background: var(--gradient-black);
+  border-radius: 7px;
+  cursor: pointer;
+}
+.list__input--color:checked + label {
+  transform: scale(1.05);
+}
+.list__input--color#listInputRadioColorSecond + label {
+  background: var(--gradient-lightgray);
+}
+.list__input--color#listInputRadioColorThird + label {
+  background: var(--gradient-blue);
+}
+.list__input--color#listInputCheckboxFirst + label {
+  background: var(--gradient-orange);
+}
+.list__input--color#listInputCheckboxSecond + label {
+  background: var(--gradient-tropical);
+}
+.list__input--color#listInputCheckboxThird + label {
+  background: var(--gradient-sky);
+}
+.list__input--color#listInputCheckboxFourth + label {
+  background: var(--gradient-gray);
+}
+.list__button {
+  padding-inline: 50px;
+  width: 193px;
+}
+.list .article-b {
   grid-area: b;
 }
-.list__pages {
+.list__buttons {
+  z-index: 20;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 55px;
+  overflow: visible;
+  column-gap: 30px;
+  margin-right: var(--padding-inline-default);
+  margin-block: 43px 32px;
+}
+.list__watches {
+  padding-left: 29px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-right: var(--padding-inline-default);
+}
+.list__watches-wrap {
+  width: 254px;
+  height: 390px;
+  position: relative;
+}
+.list__watch-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 299px;
+  cursor: pointer;
+}
+.list__watch-image-wrap:hover::after {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color-violet);
+  border-radius: var(--border-radius-image);
+  opacity: 0.8;
+}
+.list__watch-image-wrap:hover .list__watch-span {
+  display: block;
+}
+.list__watch-image {
+  cursor: pointer;
+}
+.list__watch-span {
+  display: none;
+  z-index: 11;
+  position: absolute;
+  top: 37%;
+  left: 32%;
+}
+.list__watch-cart {
+  margin-inline: auto;
+}
+.list__watch-order {
+  display: block;
+  font-family: var(--font-family-poppins);
+  font-size: clamp(14px, 0.9722222222vw, 14px);
+  line-height: 100%;
+  color: var(--color-white);
+  text-align: center;
+  margin-inline: auto;
+  margin-top: 15px;
+}
+.list__watch-title {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(10px, 0.9722222222vw, 14px);
+  line-height: 100%;
+  color: var(--color-black);
+  font-weight: 500;
+  text-align: center;
+  margin: 16px auto 0 auto;
+}
+.list__watch-name {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(10px, 0.6944444444vw, 10px);
+  line-height: 190%;
+  color: var(--color-gray);
+  text-align: center;
+  margin: 6px auto;
+}
+.list__watch-price {
+  display: block;
+  font-family: var(--font-family-poppins);
+  font-size: clamp(12px, 1.25vw, 18px);
+  line-height: 100%;
+  color: var(--color-black);
+  text-align: center;
+  margin: 0 auto;
+}
+.list .article-c {
   grid-area: c;
+}
+.list__pages {
+  padding-left: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.list__form-pages {
+  display: flex;
+  align-items: center;
+}
+.list__button-pages {
+  width: 300px;
 }
 
 /* contact us - стили для секций страницы contact us */

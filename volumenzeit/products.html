@@ -153,7 +153,7 @@
             <div class="list">
                 <div class="list__inner container">
                     <div class="list__grid">
-                        <aside class="aside">
+                        <aside class="aside aside-a">
                             <div class="list__filters">
                                 <h2 class="list__title--filters">filters</h2>
 
@@ -168,9 +168,9 @@
                                     </form>
                                 </div>
 
-                                <div class="list__filter-wrap">
+                                <div class="list__filter-wrap list__filter-wrap--second">
                                     <form class="list__form">
-                                        <h6 class="list__title--filter">Select Product</h6>
+                                        <h6 class="list__title--filter list__title--filter--second">Select Product</h6>
 
                                         <input type="radio" id="listInputRadioFirst" name="listInputRadio"
                                             class="list__input--radio">
@@ -183,23 +183,23 @@
                                 </div>
 
                                 <div class="list__filter-wrap">
-                                    <form class="list__form">
-                                        <h6 class="list__title--filter">Price Range</h6>
+                                    <h6 class="list__title--filter">Price Range</h6>
 
+                                    <form class="list__form list__form--third">
                                         <input type="number" id="listInputNumberFirst" name="listInputNumber"
-                                            class="list__input--number">
+                                            class="list__input--number input" placeholder="$0">
 
                                         <span class="list__span">to</span>
 
                                         <input type="number" id="listInputNumberSecond" name="listInputNumber"
-                                            class="list__input--number">
+                                            class="list__input--number input" placeholder="$150">
                                     </form>
                                 </div>
 
                                 <div class="list__filter-wrap">
-                                    <form class="list__form">
-                                        <h6 class="list__title--filter">Case Color</h6>
+                                    <h6 class="list__title--filter">Case Color</h6>
 
+                                    <form class="list__form list__form--fourth">
                                         <input type="radio" id="listInputRadioColorFirst" name="listInputRadioColor"
                                             class="list__input--color">
                                         <label for="listInputRadioColorFirst"></label>
@@ -212,14 +212,14 @@
                                     </form>
                                 </div>
 
-                                <div class="list__filter-wrap">
-                                    <form class="list__form">
-                                        <h6 class="list__title--filter">Filter By Strap Colors</h6>
+                                <div class="list__filter-wrap list__filter-wrap--fiveth">
+                                    <h6 class="list__title--filter">Filter By Strap Colors</h6>
 
+                                    <form class="list__form list__form--fiveth">
                                         <input type="checkbox" id="listInputCheckboxFirst" name="listInputCheckbox"
                                             class="list__input--color">
                                         <label for="listInputCheckboxFirst"></label>
-                                        <input type="checkbox" id="listInputRadioColorSecond" name="listInputCheckbox"
+                                        <input type="checkbox" id="listInputCheckboxSecond" name="listInputCheckbox"
                                             class="list__input--color">
                                         <label for="listInputCheckboxSecond"></label>
                                         <input type="checkbox" id="listInputCheckboxThird" name="listInputCheckbox"
@@ -231,12 +231,12 @@
                                     </form>
                                 </div>
 
-                                <input type="sumbit" id="listFiltersSubmit" class="list__button button"
-                                    value="Apply Filters">
+                                <input type="submit" id="listFiltersSubmit" name="listInputCheckbox"
+                                    class="list__button button" value="Apply Filters">
                             </div>
                         </aside>
 
-                        <article class="article">
+                        <article class="article article-b">
                             <div class="list__items">
                                 <div class="list__buttons">
                                     <div class="dropdown">
@@ -277,11 +277,10 @@
 
                                     <div class="country">
                                         <div class="country__wrap">
-                                            <h6 class="country__title">Sort By</h6>
+                                            <h6 class="country__title">Country</h6>
 
                                             <button class="country__button">
-                                                <img src="images/products/list/arrow-violet.svg" alt="V" width="13"
-                                                    height="8">
+                                                <img src="images/products/list/arrow.svg" alt="V" width="13" height="8">
                                             </button>
                                         </div>
 
@@ -334,8 +333,17 @@
 
                                 <div class="list__watches">
                                     <div class="list__watches-wrap">
-                                        <img src="images/products/list/watch-1.png" alt="Watch" width="254" height="299"
-                                            class="list__watch-image">
+                                        <div class="list__watch-image-wrap">
+                                            <img src="images/products/list/watch-1.png" alt="Watch" width="254"
+                                                height="299" class="list__watch-image">
+
+                                            <div class="list__watch-span">
+                                                <img src="images/products/list/cart.svg" alt="Cart"
+                                                    class="list__watch-cart" width="45" height="44">
+
+                                                <span class="list__watch-order">Order Watch</span>
+                                            </div>
+                                        </div>
 
                                         <h6 class="list__watch-title">Urban Eagle</h6>
 
@@ -345,8 +353,17 @@
                                     </div>
 
                                     <div class="list__watches-wrap">
-                                        <img src="images/products/list/watch-1.png" alt="Watch" width="254" height="299"
-                                            class="list__watch-image">
+                                        <div class="list__watch-image-wrap">
+                                            <img src="images/products/list/watch-1.png" alt="Watch" width="254"
+                                                height="299" class="list__watch-image">
+
+                                            <div class="list__watch-span">
+                                                <img src="images/products/list/cart.svg" alt="Cart"
+                                                    class="list__watch-cart" width="45" height="44">
+
+                                                <span class="list__watch-order">Order Watch</span>
+                                            </div>
+                                        </div>
 
                                         <h6 class="list__watch-title">Urban Eagle</h6>
 
@@ -356,8 +373,17 @@
                                     </div>
 
                                     <div class="list__watches-wrap">
-                                        <img src="images/products/list/watch-1.png" alt="Watch" width="254" height="299"
-                                            class="list__watch-image">
+                                        <div class="list__watch-image-wrap">
+                                            <img src="images/products/list/watch-1.png" alt="Watch" width="254"
+                                                height="299" class="list__watch-image">
+
+                                            <div class="list__watch-span">
+                                                <img src="images/products/list/cart.svg" alt="Cart"
+                                                    class="list__watch-cart" width="45" height="44">
+
+                                                <span class="list__watch-order">Order Watch</span>
+                                            </div>
+                                        </div>
 
                                         <h6 class="list__watch-title">Urban Eagle</h6>
 
@@ -367,8 +393,17 @@
                                     </div>
 
                                     <div class="list__watches-wrap">
-                                        <img src="images/products/list/watch-1.png" alt="Watch" width="254" height="299"
-                                            class="list__watch-image">
+                                        <div class="list__watch-image-wrap">
+                                            <img src="images/products/list/watch-1.png" alt="Watch" width="254"
+                                                height="299" class="list__watch-image">
+
+                                            <div class="list__watch-span">
+                                                <img src="images/products/list/cart.svg" alt="Cart"
+                                                    class="list__watch-cart" width="45" height="44">
+
+                                                <span class="list__watch-order">Order Watch</span>
+                                            </div>
+                                        </div>
 
                                         <h6 class="list__watch-title">Urban Eagle</h6>
 
@@ -378,8 +413,17 @@
                                     </div>
 
                                     <div class="list__watches-wrap">
-                                        <img src="images/products/list/watch-1.png" alt="Watch" width="254" height="299"
-                                            class="list__watch-image">
+                                        <div class="list__watch-image-wrap">
+                                            <img src="images/products/list/watch-1.png" alt="Watch" width="254"
+                                                height="299" class="list__watch-image">
+
+                                            <div class="list__watch-span">
+                                                <img src="images/products/list/cart.svg" alt="Cart"
+                                                    class="list__watch-cart" width="45" height="44">
+
+                                                <span class="list__watch-order">Order Watch</span>
+                                            </div>
+                                        </div>
 
                                         <h6 class="list__watch-title">Urban Eagle</h6>
 
@@ -389,8 +433,17 @@
                                     </div>
 
                                     <div class="list__watches-wrap">
-                                        <img src="images/products/list/watch-1.png" alt="Watch" width="254" height="299"
-                                            class="list__watch-image">
+                                        <div class="list__watch-image-wrap">
+                                            <img src="images/products/list/watch-1.png" alt="Watch" width="254"
+                                                height="299" class="list__watch-image">
+
+                                            <div class="list__watch-span">
+                                                <img src="images/products/list/cart.svg" alt="Cart"
+                                                    class="list__watch-cart" width="45" height="44">
+
+                                                <span class="list__watch-order">Order Watch</span>
+                                            </div>
+                                        </div>
 
                                         <h6 class="list__watch-title">Urban Eagle</h6>
 
@@ -400,8 +453,17 @@
                                     </div>
 
                                     <div class="list__watches-wrap">
-                                        <img src="images/products/list/watch-1.png" alt="Watch" width="254" height="299"
-                                            class="list__watch-image">
+                                        <div class="list__watch-image-wrap">
+                                            <img src="images/products/list/watch-1.png" alt="Watch" width="254"
+                                                height="299" class="list__watch-image">
+
+                                            <div class="list__watch-span">
+                                                <img src="images/products/list/cart.svg" alt="Cart"
+                                                    class="list__watch-cart" width="45" height="44">
+
+                                                <span class="list__watch-order">Order Watch</span>
+                                            </div>
+                                        </div>
 
                                         <h6 class="list__watch-title">Urban Eagle</h6>
 
@@ -411,8 +473,17 @@
                                     </div>
 
                                     <div class="list__watches-wrap">
-                                        <img src="images/products/list/watch-1.png" alt="Watch" width="254" height="299"
-                                            class="list__watch-image">
+                                        <div class="list__watch-image-wrap">
+                                            <img src="images/products/list/watch-1.png" alt="Watch" width="254"
+                                                height="299" class="list__watch-image">
+
+                                            <div class="list__watch-span">
+                                                <img src="images/products/list/cart.svg" alt="Cart"
+                                                    class="list__watch-cart" width="45" height="44">
+
+                                                <span class="list__watch-order">Order Watch</span>
+                                            </div>
+                                        </div>
 
                                         <h6 class="list__watch-title">Urban Eagle</h6>
 
@@ -422,8 +493,17 @@
                                     </div>
 
                                     <div class="list__watches-wrap">
-                                        <img src="images/products/list/watch-1.png" alt="Watch" width="254" height="299"
-                                            class="list__watch-image">
+                                        <div class="list__watch-image-wrap">
+                                            <img src="images/products/list/watch-1.png" alt="Watch" width="254"
+                                                height="299" class="list__watch-image">
+
+                                            <div class="list__watch-span">
+                                                <img src="images/products/list/cart.svg" alt="Cart"
+                                                    class="list__watch-cart" width="45" height="44">
+
+                                                <span class="list__watch-order">Order Watch</span>
+                                            </div>
+                                        </div>
 
                                         <h6 class="list__watch-title">Urban Eagle</h6>
 
@@ -435,9 +515,9 @@
                             </div>
                         </article>
 
-                        <article class="article">
+                        <article class="article article-c">
                             <div class="list__pages">
-                                <form action="">
+                                <form class="list__form-pages">
                                     <input type="radio" name="site" id="first" value="1">
                                     <label class="select-button" for="first">1</label>
 
@@ -448,7 +528,7 @@
                                     <label class="select-button" for="third">3</label>
                                 </form>
 
-                                <button class="list__button button">Design Your Watch</button>
+                                <button class="list__button-pages button">Design Your Watch</button>
                             </div>
                         </article>
                     </div>
@@ -457,8 +537,23 @@
         </section>
     </main>
 
+    <footer class="footer">
+        <div class="footer__inner container">
+            <div class="footer__row footer__row--first row">
+                <a href="#" class="footer__logo">
+                    <img src="images/globals/footer/logo.svg" alt="Volumenzeit Volumetric Wrist Watches" width="384"
+                        height="48" class="footer__logo-image">
+                </a>
+            </div>
+            <div class="footer__row footer__row--second row">
+                <p class="footer__rights">© Copyright 2022 Volumenzeit - All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="scripts/dropdown.js"></script>
     <script src="scripts/dropdownCountry.js"></script>
+    <script src="scripts/showModalWindowHeader.js"></script>
 </body>
 
 </html>

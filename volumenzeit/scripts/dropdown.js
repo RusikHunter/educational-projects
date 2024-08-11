@@ -1,17 +1,17 @@
-let dropdown = document.querySelector(".dropdown__wrap");
-let decoration = document.querySelector(".dropdown__decoration")
-let content = document.querySelector(".dropdown__form")
-let isOpen = false;
+let dropdownD = document.querySelector(".dropdown__wrap");
+let decorationD = document.querySelector(".dropdown__decoration")
+let contentD = document.querySelector(".dropdown__form")
+let isOpenD = false;
 
-dropdown.onclick = () => {
-    if (isOpen === false) {
-        decoration.style.display = "block";
-        content.style.display = "flex";
-        isOpen = true;
+dropdownD.onclick = () => {
+    if (isOpenD === false) {
+        decorationD.style.display = "block";
+        contentD.style.display = "flex";
+        isOpenD = true;
     }
     else {
-        decoration.style.display = "none";
-        content.style.display = "none";
-        isOpen = false;
+        decorationD.style.display = "none";
+        contentD.style.display = "none";
+        isOpenD = false;
     }
 }
