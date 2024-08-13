@@ -157,82 +157,86 @@
                             <div class="list__filters">
                                 <h2 class="list__title--filters">filters</h2>
 
-                                <button class="list__button--close">X</button>
+                                <button class="list__button--close">
+                                    <img src="images/products/list/arrow-hide.svg" alt="X" width="55" height="55">
+                                </button>
 
-                                <div class="list__filter-wrap">
-                                    <form class="list__form">
-                                        <label class="list__title--filter">Search</label>
+                                <div class="list__filter-content">
+                                    <div class="list__filter-wrap">
+                                        <form class="list__form">
+                                            <label class="list__title--filter list__title--filter--first">Search</label>
 
-                                        <input type="text" class="list__input--text input" id="listInputText"
-                                            placeholder="Type Here">
-                                    </form>
-                                </div>
+                                            <input type="text" class="list__input--text input" id="listInputText"
+                                                placeholder="Type Here">
+                                        </form>
+                                    </div>
 
-                                <div class="list__filter-wrap list__filter-wrap--second">
-                                    <form class="list__form">
+                                    <div class="list__filter-wrap list__filter-wrap--second">
                                         <h6 class="list__title--filter list__title--filter--second">Select Product</h6>
 
-                                        <input type="radio" id="listInputRadioFirst" name="listInputRadio"
-                                            class="list__input--radio">
-                                        <label for="listInputRadioFirst">Watches</label>
+                                        <form class="list__form list__form--second">
+                                            <input type="radio" id="listInputRadioFirst" name="listInputRadio"
+                                                class="list__input--radio">
+                                            <label for="listInputRadioFirst">Watches</label>
 
-                                        <input type="radio" id="listInputRadioSecond" name="listInputRadio"
-                                            class="list__input--radio">
-                                        <label for="listInputRadioSecond">Straps</label>
-                                    </form>
+                                            <input type="radio" id="listInputRadioSecond" name="listInputRadio"
+                                                class="list__input--radio">
+                                            <label for="listInputRadioSecond">Straps</label>
+                                        </form>
+                                    </div>
+
+                                    <div class="list__filter-wrap">
+                                        <h6 class="list__title--filter">Price Range</h6>
+
+                                        <form class="list__form list__form--third">
+                                            <input type="number" id="listInputNumberFirst" name="listInputNumber"
+                                                class="list__input--number input" placeholder="$0">
+
+                                            <span class="list__span">to</span>
+
+                                            <input type="number" id="listInputNumberSecond" name="listInputNumber"
+                                                class="list__input--number input" placeholder="$150">
+                                        </form>
+                                    </div>
+
+                                    <div class="list__filter-wrap">
+                                        <h6 class="list__title--filter">Case Color</h6>
+
+                                        <form class="list__form list__form--fourth">
+                                            <input type="radio" id="listInputRadioColorFirst" name="listInputRadioColor"
+                                                class="list__input--color">
+                                            <label for="listInputRadioColorFirst"></label>
+                                            <input type="radio" id="listInputRadioColorSecond"
+                                                name="listInputRadioColor" class="list__input--color">
+                                            <label for="listInputRadioColorSecond"></label>
+                                            <input type="radio" id="listInputRadioColorThird" name="listInputRadioColor"
+                                                class="list__input--color">
+                                            <label for="listInputRadioColorThird"></label>
+                                        </form>
+                                    </div>
+
+                                    <div class="list__filter-wrap list__filter-wrap--fiveth">
+                                        <h6 class="list__title--filter">Filter By Strap Colors</h6>
+
+                                        <form class="list__form list__form--fiveth">
+                                            <input type="checkbox" id="listInputCheckboxFirst" name="listInputCheckbox"
+                                                class="list__input--color">
+                                            <label for="listInputCheckboxFirst"></label>
+                                            <input type="checkbox" id="listInputCheckboxSecond" name="listInputCheckbox"
+                                                class="list__input--color">
+                                            <label for="listInputCheckboxSecond"></label>
+                                            <input type="checkbox" id="listInputCheckboxThird" name="listInputCheckbox"
+                                                class="list__input--color">
+                                            <label for="listInputCheckboxThird"></label>
+                                            <input type="checkbox" id="listInputCheckboxFourth" name="listInputCheckbox"
+                                                class="list__input--color">
+                                            <label for="listInputCheckboxFourth"></label>
+                                        </form>
+                                    </div>
+
+                                    <input type="submit" id="listFiltersSubmit" name="listInputCheckbox"
+                                        class="list__button button" value="Apply Filters">
                                 </div>
-
-                                <div class="list__filter-wrap">
-                                    <h6 class="list__title--filter">Price Range</h6>
-
-                                    <form class="list__form list__form--third">
-                                        <input type="number" id="listInputNumberFirst" name="listInputNumber"
-                                            class="list__input--number input" placeholder="$0">
-
-                                        <span class="list__span">to</span>
-
-                                        <input type="number" id="listInputNumberSecond" name="listInputNumber"
-                                            class="list__input--number input" placeholder="$150">
-                                    </form>
-                                </div>
-
-                                <div class="list__filter-wrap">
-                                    <h6 class="list__title--filter">Case Color</h6>
-
-                                    <form class="list__form list__form--fourth">
-                                        <input type="radio" id="listInputRadioColorFirst" name="listInputRadioColor"
-                                            class="list__input--color">
-                                        <label for="listInputRadioColorFirst"></label>
-                                        <input type="radio" id="listInputRadioColorSecond" name="listInputRadioColor"
-                                            class="list__input--color">
-                                        <label for="listInputRadioColorSecond"></label>
-                                        <input type="radio" id="listInputRadioColorThird" name="listInputRadioColor"
-                                            class="list__input--color">
-                                        <label for="listInputRadioColorThird"></label>
-                                    </form>
-                                </div>
-
-                                <div class="list__filter-wrap list__filter-wrap--fiveth">
-                                    <h6 class="list__title--filter">Filter By Strap Colors</h6>
-
-                                    <form class="list__form list__form--fiveth">
-                                        <input type="checkbox" id="listInputCheckboxFirst" name="listInputCheckbox"
-                                            class="list__input--color">
-                                        <label for="listInputCheckboxFirst"></label>
-                                        <input type="checkbox" id="listInputCheckboxSecond" name="listInputCheckbox"
-                                            class="list__input--color">
-                                        <label for="listInputCheckboxSecond"></label>
-                                        <input type="checkbox" id="listInputCheckboxThird" name="listInputCheckbox"
-                                            class="list__input--color">
-                                        <label for="listInputCheckboxThird"></label>
-                                        <input type="checkbox" id="listInputCheckboxFourth" name="listInputCheckbox"
-                                            class="list__input--color">
-                                        <label for="listInputCheckboxFourth"></label>
-                                    </form>
-                                </div>
-
-                                <input type="submit" id="listFiltersSubmit" name="listInputCheckbox"
-                                    class="list__button button" value="Apply Filters">
                             </div>
                         </aside>
 
@@ -554,6 +558,7 @@
     <script src="scripts/dropdown.js"></script>
     <script src="scripts/dropdownCountry.js"></script>
     <script src="scripts/showModalWindowHeader.js"></script>
+    <script src="scripts/showFilters.js"></script>
 </body>
 
 </html>

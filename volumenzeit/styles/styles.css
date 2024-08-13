@@ -2005,6 +2005,142 @@ media - scss файл с миксинами медиа-запросов desktop,
 .list__button-pages {
   width: 300px;
 }
+@media (max-width: 1440px) {
+  .list .country {
+    left: 29px;
+    width: 200px;
+  }
+  .list__filters {
+    padding-left: 120px;
+  }
+  .list__items {
+    max-height: 100%;
+  }
+  .list__items::-webkit-scrollbar {
+    position: relative;
+  }
+  .list__buttons {
+    margin-right: 80px;
+  }
+  .list__watches {
+    padding-right: 0;
+    margin-right: 80px;
+    justify-content: space-around;
+    column-gap: 10px;
+    height: 1160px;
+    overflow: scroll;
+  }
+  .list__pages {
+    padding-left: 300px;
+  }
+  .list__button-pages {
+    width: 250px;
+    margin-right: 40px;
+  }
+}
+@media (max-width: 920px) {
+  .list__grid {
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 1000px 55px;
+  }
+  .list__filters {
+    padding-left: 40px;
+  }
+  .list__watches {
+    height: 725px;
+    padding-left: 0;
+    margin-right: 40px;
+  }
+  .list__buttons {
+    height: 130px;
+    margin-right: 40px;
+  }
+  .list__buttons .dropdown {
+    z-index: 20;
+    top: 0;
+    left: calc(50% - 80px);
+  }
+  .list__buttons .country {
+    width: 160px;
+    top: 75px;
+    left: calc(50% - 80px);
+  }
+}
+@media (max-width: 768px) {
+  .list__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px minmax(2165px, auto) 200px;
+    grid-template-areas: "a" "b" "c";
+  }
+  .list__filters {
+    position: relative;
+    padding: 36px 20px;
+    width: 60%;
+    margin-inline: auto;
+  }
+  .list__title--filters {
+    display: block;
+    font-family: var(--font-family-spaceage);
+    font-size: clamp(28px, 1.9444444444vw, 28px);
+    line-height: 100%;
+    color: var(--color-black);
+    font-weight: 400;
+  }
+  .list__title--filter--first {
+    margin-top: 0;
+  }
+  .list__button--close {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+  }
+  .list__filter-content {
+    display: none;
+  }
+  .list__filter-wrap {
+    width: 100%;
+  }
+  .list__form--second {
+    flex-direction: row;
+  }
+  .list__input--radio + label {
+    background: var(--color-white);
+    padding: 14px 55px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 3px;
+  }
+  .list__input--radio:checked + label {
+    background: var(--color-violet);
+    color: var(--color-white);
+  }
+  .list__buttons {
+    margin-right: 0;
+  }
+  .list__watches {
+    margin-right: 0;
+    height: 100%;
+  }
+  .list__pages {
+    padding: 0;
+    flex-direction: column;
+  }
+  .list__form-pages {
+    margin: 24px auto 44px auto;
+  }
+  .list__button-pages {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 480px) {
+  .list__filters {
+    width: 100%;
+  }
+  .list__input--radio + label {
+    padding-inline: 20px;
+  }
+}
 
 /* contact us - стили для секций страницы contact us */
 .contactus {
