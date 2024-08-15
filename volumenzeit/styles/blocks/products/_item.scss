@@ -14,6 +14,10 @@
         row-gap: 28px;
     }
 
+    &__slider {
+        display: none;
+    }
+
     &__column--second {
         width: 350px;
     }
@@ -29,7 +33,7 @@
 
     &__model {
         @include text-poppins(14, 14, 100%, var(--color-gray));
-        margin-block: 7px 17px;
+        margin-block: 10px 17px;
     }
 
     &__description {
@@ -70,7 +74,7 @@
     }
 
     &__button--small {
-        width: 208px;
+        width: 208px !important;
         margin-top: 0;
     }
 
@@ -90,5 +94,113 @@
     &__price {
         @include text-poppins(20, 20, 100%, var(--color-black));
         margin-left: 40px;
+    }
+
+    @include tablet {
+        &__row {
+            padding-inline: 48px;
+        }
+
+        &__image {
+            width: 48%;
+            height: auto;
+        }
+    }
+
+    @include tablet-small {
+        &__column--first {
+            height: 818px;
+            overflow: scroll;
+        }
+
+        &__image {
+            width: 100%;
+        }
+    }
+
+    @include mobile {
+        &__row {
+            flex-direction: column;
+            padding-inline: 40px;
+            padding-top: 40px;
+        }
+
+        &__image {
+            display: none;
+        }
+
+        &__slider {
+            width: 100%;
+            display: block;
+        }
+
+        &__image--slider {
+            width: 80%;
+            height: auto;
+            margin-inline: auto;
+        }
+
+        &__arrow-wrap {
+            display: flex;
+            width: 230px;
+            margin-inline: auto;
+            justify-content: space-between;
+            margin-block: 30px;
+        }
+
+        &__column--second {
+            margin-inline: auto;
+        }
+
+        &__title,
+        &__model,
+        &__description {
+            text-align: center;
+        }
+
+        &__watch-info {
+            border: none;
+            padding-bottom: 0;
+        }
+
+        &__list {
+            order: 9;
+            border: none;
+        }
+    }
+
+    @include mobile-small {
+        &__row {
+            padding-top: 25px;
+        }
+
+        &__image--slider {
+            width: 100%;
+        }
+
+        &__arrow-wrap {
+            margin-block: 20px;
+        }
+
+        &__column--second {
+            width: 100%;
+        }
+
+        &__price {
+            margin-left: 20px;
+        }
+
+        &__list-title,
+        &__list-details {
+            font-size: 8px;
+        }
+
+        &__button--decoration {
+            background-position: 15% center;
+
+            &:hover {
+                background-position: 15% center;
+            }
+        }
     }
 }

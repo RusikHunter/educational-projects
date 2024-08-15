@@ -1,0 +1,26 @@
+.error {
+    &__row {
+        flex-direction: column;
+        padding-top: 93px;
+    }
+
+    &__title,
+    &__image,
+    &__link {
+        margin-inline: auto;
+    }
+
+    &__title {
+        text-align: center;
+        @include title-h2(--color-black);
+        max-width: 510px;
+    }
+
+    &__image {
+        margin-block: 24px 50px;
+    }
+
+    &__button {
+        width: 208px;
+    }
+}
