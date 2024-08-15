@@ -7,12 +7,18 @@
     &__title,
     &__image,
     &__link {
+        display: block;
         margin-inline: auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
     }
 
     &__title {
         text-align: center;
-        @include title-h2(--color-black);
+        @include text-spaceage(42, 28, 86%, var(--color-black));
         max-width: 510px;
     }
 
@@ -27,6 +33,14 @@
     @include tablet {
         &__row {
             padding-inline: 48px;
+        }
+
+        &__content {
+            height: 440px;
+        }
+
+        &__title {
+            max-width: 440px;
         }
     }
 }

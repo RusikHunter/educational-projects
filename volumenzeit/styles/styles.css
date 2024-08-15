@@ -2581,14 +2581,19 @@ media - scss файл с миксинами медиа-запросов desktop,
   padding-top: 93px;
 }
 .error__title, .error__image, .error__link {
+  display: block;
   margin-inline: auto;
+}
+.error__content {
+  display: flex;
+  flex-direction: column;
 }
 .error__title {
   text-align: center;
   font-family: var(--font-family-spaceage);
   font-size: clamp(28px, 2.9166666667vw, 42px);
-  line-height: 100%;
-  color: --color-black;
+  line-height: 86%;
+  color: var(--color-black);
   max-width: 510px;
 }
 .error__image {
@@ -2600,5 +2605,11 @@ media - scss файл с миксинами медиа-запросов desktop,
 @media (max-width: 1440px) {
   .error__row {
     padding-inline: 48px;
+  }
+  .error__content {
+    height: 440px;
+  }
+  .error__title {
+    max-width: 440px;
   }
 }
