@@ -1,0 +1,94 @@
+.item {
+
+    &__row {
+        padding-top: 67px;
+        padding-inline: var(--padding-inline-default);
+        column-gap: 30px;
+    }
+
+    &__column--first {
+        justify-content: space-between;
+        flex: 1;
+        display: flex;
+        flex-flow: row wrap;
+        row-gap: 28px;
+    }
+
+    &__column--second {
+        width: 350px;
+    }
+
+    &__watch-info {
+        padding-bottom: 34px;
+        border-bottom: var(--border-gray);
+    }
+
+    &__title {
+        @include text-poppins(30, 26, 100%, var(--color-black));
+    }
+
+    &__model {
+        @include text-poppins(14, 14, 100%, var(--color-gray));
+        margin-block: 7px 17px;
+    }
+
+    &__description {
+        @include text-poppins(12, 12, 217%, var(--color-gray));
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding-block: 25px 40px;
+        row-gap: 20px;
+        border-bottom: var(--border-gray);
+    }
+
+    &__list-item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list-title {
+        @include text-poppins(10, 10, 100%, var(--color-gray));
+    }
+
+    &__list-details {
+        @include text-poppins(10, 10, 100%, var(--color-gray));
+    }
+
+    &__order-wrap {
+        display: flex;
+        margin-top: 22px;
+        align-items: center;
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: 22px;
+    }
+
+    &__button--small {
+        width: 208px;
+        margin-top: 0;
+    }
+
+    &__button--decoration {
+        padding-left: 40px;
+        background-image: url(../images/products/item/decoration.svg);
+        background-repeat: no-repeat;
+        background-position: 27% center;
+
+        &:hover {
+            background-image: url(../images/products/item/decoration-hover.svg);
+            background-repeat: no-repeat;
+            background-position: 27% center;
+        }
+    }
+
+    &__price {
+        @include text-poppins(20, 20, 100%, var(--color-black));
+        margin-left: 40px;
+    }
+}

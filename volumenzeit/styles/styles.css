@@ -2143,6 +2143,100 @@ media - scss файл с миксинами медиа-запросов desktop,
   }
 }
 
+.item__row {
+  padding-top: 67px;
+  padding-inline: var(--padding-inline-default);
+  column-gap: 30px;
+}
+.item__column--first {
+  justify-content: space-between;
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 28px;
+}
+.item__column--second {
+  width: 350px;
+}
+.item__watch-info {
+  padding-bottom: 34px;
+  border-bottom: var(--border-gray);
+}
+.item__title {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(26px, 2.0833333333vw, 30px);
+  line-height: 100%;
+  color: var(--color-black);
+}
+.item__model {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(14px, 0.9722222222vw, 14px);
+  line-height: 100%;
+  color: var(--color-gray);
+  margin-block: 7px 17px;
+}
+.item__description {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(12px, 0.8333333333vw, 12px);
+  line-height: 217%;
+  color: var(--color-gray);
+  width: 100%;
+}
+.item__list {
+  display: flex;
+  flex-direction: column;
+  padding-block: 25px 40px;
+  row-gap: 20px;
+  border-bottom: var(--border-gray);
+}
+.item__list-item {
+  display: flex;
+  justify-content: space-between;
+}
+.item__list-title {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(10px, 0.6944444444vw, 10px);
+  line-height: 100%;
+  color: var(--color-gray);
+}
+.item__list-details {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(10px, 0.6944444444vw, 10px);
+  line-height: 100%;
+  color: var(--color-gray);
+}
+.item__order-wrap {
+  display: flex;
+  margin-top: 22px;
+  align-items: center;
+}
+.item__button {
+  width: 100%;
+  margin-top: 22px;
+}
+.item__button--small {
+  width: 208px;
+  margin-top: 0;
+}
+.item__button--decoration {
+  padding-left: 40px;
+  background-image: url(../images/products/item/decoration.svg);
+  background-repeat: no-repeat;
+  background-position: 27% center;
+}
+.item__button--decoration:hover {
+  background-image: url(../images/products/item/decoration-hover.svg);
+  background-repeat: no-repeat;
+  background-position: 27% center;
+}
+.item__price {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(20px, 1.3888888889vw, 20px);
+  line-height: 100%;
+  color: var(--color-black);
+  margin-left: 40px;
+}
+
 /* contact us - стили для секций страницы contact us */
 .contactus {
   background: var(--color-lightgray);
