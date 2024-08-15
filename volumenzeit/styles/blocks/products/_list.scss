@@ -206,6 +206,7 @@
 
     &__watch-image {
         cursor: pointer;
+        border-radius: var(--border-radius-image);
     }
 
     &__watch-span {

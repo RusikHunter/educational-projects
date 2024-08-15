@@ -1942,6 +1942,7 @@ media - scss файл с миксинами медиа-запросов desktop,
 }
 .list__watch-image {
   cursor: pointer;
+  border-radius: var(--border-radius-image);
 }
 .list__watch-span {
   display: none;
