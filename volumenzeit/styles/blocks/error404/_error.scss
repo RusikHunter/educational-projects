@@ -23,4 +23,10 @@
     &__button {
         width: 208px;
     }
+
+    @include tablet {
+        &__row {
+            padding-inline: 48px;
+        }
+    }
 }

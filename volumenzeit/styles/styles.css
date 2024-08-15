@@ -2597,3 +2597,8 @@ media - scss файл с миксинами медиа-запросов desktop,
 .error__button {
   width: 208px;
 }
+@media (max-width: 1440px) {
+  .error__row {
+    padding-inline: 48px;
+  }
+}
