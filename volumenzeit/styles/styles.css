@@ -2613,3 +2613,8 @@ media - scss файл с миксинами медиа-запросов desktop,
     max-width: 440px;
   }
 }
+@media (max-width: 480px) {
+  .error__content {
+    height: 390px;
+  }
+}

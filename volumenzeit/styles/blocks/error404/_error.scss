@@ -43,4 +43,10 @@
             max-width: 440px;
         }
     }
+
+    @include mobile-small {
+        &__content {
+            height: 390px;
+        }
+    }
 }
