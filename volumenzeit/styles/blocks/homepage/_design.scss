@@ -10,6 +10,8 @@
     }
 
     &__decoration {
+        user-select: none;
+        pointer-events: none;
         position: relative;
         top: -5px;
         margin-inline: auto;

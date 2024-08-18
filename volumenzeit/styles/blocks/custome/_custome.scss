@@ -1,0 +1,499 @@
+.custome {
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 593px;
+        grid-template-rows: 982px 436px;
+        grid-template-areas:
+            "a c"
+            "b c";
+    }
+
+    &__images {
+        grid-area: a;
+        padding-top: 50px;
+        padding-inline: var(--padding-inline-default) 47px;
+    }
+
+    &__title--main {
+        @include text-poppins(32, 28, 100%, var(--color-black));
+        font-weight: 500;
+        margin-bottom: 55px;
+    }
+
+    &__image-slider {
+        margin-top: 12px;
+    }
+
+    &__image-row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__image {
+        user-select: none;
+        pointer-events: none;
+    }
+
+    &__button-wrap {
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 33px;
+        margin-inline: auto;
+    }
+
+    &__button--arrow {
+        cursor: pointer;
+    }
+
+    &__border-decoration {
+        display: block;
+        width: 47px;
+        height: 1px;
+        background: var(--color-gray-alt);
+    }
+
+    &__about {
+        grid-area: b;
+        padding-top: 15px;
+        padding-inline: var(--padding-inline-default) 47px;
+    }
+
+    &__title {
+        @include text-poppins(18, 12, 100%, var(--color-black));
+        font-weight: 600;
+    }
+
+    &__description {
+        @include text-poppins(14, 10, 200%, var(--color-gray));
+        margin-top: 26px;
+    }
+
+    &__styles {
+        display: flex;
+        flex-direction: column;
+        grid-area: c;
+        background: var(--color-lightgray);
+
+    }
+
+    &__style-order-wrap {
+        padding-inline: 47px var(--padding-inline-default);
+    }
+
+    &__button-home-wrap {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-block: 19px 47px;
+        padding-right: var(--padding-inline-default);
+    }
+
+    &__button--home {
+        width: 208px;
+        background: var(--color-white);
+        @include text-poppins(14, 14, 100%, var(--color-gray));
+        padding-block: 22px;
+        padding-left: 33px;
+        cursor: pointer;
+        border-radius: var(--border-radius);
+        background-image: url(../images/custome/custome/arrow-gray.svg);
+        background-repeat: no-repeat;
+        background-position: 16% center;
+    }
+
+    &__style-wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: var(--color-white);
+        padding-block: 8px 13px;
+        padding-left: 30px;
+        margin-bottom: 8px;
+        border-radius: var(--border-radius);
+    }
+
+    &__style-title {
+        @include text-poppins(10, 10, 100%, var(--color-black));
+        font-weight: 400;
+    }
+
+    &__form {
+        display: flex;
+        margin-top: 10px;
+        width: 100%;
+        column-gap: 12px;
+    }
+
+    &__input--radio {
+        &#customeCaseColorInput1+label {
+            background: var(--gradient-black);
+        }
+
+        &#customeCaseColorInput2+label {
+            background: var(--gradient-lightgray);
+        }
+
+        &#customeCaseColorInput3+label {
+            background: var(--gradient-blue);
+        }
+
+        &#customeDialDesignInput1+label {
+            background-image: url(../images/custome/custome/design-1.png);
+        }
+
+        &#customeDialDesignInput2+label {
+            background-image: url(../images/custome/custome/design-2.png);
+        }
+
+        &#customeDialDesignInput3+label {
+            background-image: url(../images/custome/custome/design-3.png);
+        }
+
+        &#customeDialDesignInput4+label {
+            background-image: url(../images/custome/custome/design-4.png);
+        }
+
+        &#customeDialColorInput1+label {
+            background: var(--gradient-orange);
+        }
+
+        &#customeDialColorInput2+label {
+            background: var(--gradient-tropical);
+        }
+
+        &#customeDialColorInput3+label {
+            background: var(--gradient-sky);
+        }
+
+        &#customeDialColorInput4+label {
+            background: var(--gradient-gray);
+        }
+
+        &#customeStrapDesignInputFirst1+label {
+            background-image: url(../images/custome/custome/strap-1.png);
+        }
+
+        &#customeStrapDesignInputFirst2+label {
+            background-image: url(../images/custome/custome/strap-2.png);
+        }
+
+        &#customeStrapDesignInputFirst3+label {
+            background-image: url(../images/custome/custome/strap-3.png);
+        }
+
+        &#customeStrapDesignInputFirst4+label {
+            background-image: url(../images/custome/custome/strap-4.png);
+        }
+
+        &#customeStrapDesignInputFirst5+label {
+            background-image: url(../images/custome/custome/strap-5.png);
+        }
+
+        &#customeStrapDesignInputSecond1+label {
+            background-image: url(../images/custome/custome/strap-6.png);
+        }
+
+        &#customeStrapDesignInputSecond2+label {
+            background-image: url(../images/custome/custome/strap-7.png);
+        }
+
+        &#customeStrapDesignInputSecond3+label {
+            background-image: url(../images/custome/custome/strap-8.png);
+        }
+
+        &#customeStrapDesignInputSecond4+label {
+            background-image: url(../images/custome/custome/strap-9.png);
+        }
+
+        &#customeStrapDesignInputThird1+label {
+            background-image: url(../images/custome/custome/strap-10.png);
+        }
+
+        &#customeStrapDesignInputThird2+label {
+            background-image: url(../images/custome/custome/strap-11.png);
+        }
+
+        &#customeStrapDesignInputThird3+label {
+            background-image: url(../images/custome/custome/strap-12.png);
+        }
+
+        &#customeStrapDesignInputThird4+label {
+            background-image: url(../images/custome/custome/strap-13.png);
+        }
+    }
+
+    &__input--radio+label {
+        display: block;
+        width: 36px;
+        height: 36px;
+        border-radius: 7px;
+        background: black;
+        cursor: pointer;
+    }
+
+    &__input--radio:checked+label {
+        transform: scale(1.05);
+    }
+
+    &__form--checkbox {
+        flex-direction: column;
+        row-gap: 11px;
+        width: 100%;
+    }
+
+    &__input--checkbox+label {
+        position: relative;
+        cursor: pointer;
+        display: block;
+        background-image: url(../images/custome/custome/checkbox.svg);
+        width: 20px;
+        height: 20px;
+        border-radius: var(--border-radius);
+
+        &::after {
+            position: absolute;
+            top: 5px;
+            left: 32px;
+            width: 200px;
+            @include text-poppins(10, 10, 100%, var(--color-black));
+        }
+    }
+
+    &__input--checkbox:checked+label {
+        background-image: url(../images/custome/custome/checkbox-checked.svg);
+    }
+
+    #customeFeaturesInput1+label::after {
+        content: "Extra Strap";
+    }
+
+    #customeFeaturesInput2+label::after {
+        content: "Laser Engraving";
+    }
+
+    &__order-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 12px;
+        margin-left: 30px;
+    }
+
+    &__price {
+        @include text-poppins(20, 14, 100%, var(--color-black));
+    }
+
+    &__button {
+        width: 208px;
+    }
+
+    &__button--ar {
+        width: 351px;
+        margin-top: 9px;
+        margin-left: 30px;
+        padding-left: 40px;
+        background-image: url(../images/custome/custome/decoration.svg);
+        background-repeat: no-repeat;
+        background-position: 29% center;
+
+        &:hover {
+            background-image: url(../images/custome/custome/decoration-hover.svg);
+            background-repeat: no-repeat;
+            background-position: 29% center;
+        }
+    }
+
+    &__specification {
+        border-top: var(--border-gray);
+        margin-top: 37px;
+        padding-top: 33px;
+    }
+
+    &__title-specifications {
+        margin-bottom: 29px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        width: 350px;
+        margin-left: 77px;
+    }
+
+    &__list-item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list-title {
+        @include text-poppins(10, 10, 100%, var(--color-gray));
+    }
+
+    &__list-details {
+        @include text-poppins(10, 10, 100%, var(--color-gray));
+    }
+
+    @include tablet {
+        &__grid {
+            grid-template-columns: 1fr 520px;
+            grid-template-rows: minmax(580px, auto) auto;
+        }
+
+        &__images {
+            padding-left: 100px;
+            padding-right: 0;
+        }
+
+        &__image--main {
+            width: 100%;
+            height: auto;
+        }
+
+        &__image {
+            width: 31%;
+            height: auto;
+        }
+
+        &__about {
+            padding-left: 100px;
+        }
+
+        &__button-home-wrap {
+            padding-right: 100px;
+        }
+
+        &__style-order-wrap {
+            padding-right: 100px;
+        }
+
+        &__button--ar {
+            width: 341px;
+        }
+
+        &__list {
+            padding-bottom: 99px;
+        }
+    }
+
+    @include tablet-small {
+        &__grid {
+            grid-template-columns: 1fr 370px;
+            grid-template-rows: minmax(580px, auto) auto;
+        }
+
+        &__button-home-wrap {
+            padding-right: 48px;
+        }
+
+        &__style-order-wrap {
+            padding-inline: 20px 48px;
+        }
+
+        &__button--ar {
+            width: 272px;
+        }
+
+        &__list {
+            margin-left: 50px;
+            width: 272px;
+        }
+
+        &__button--ar {
+            background-position: 20% center;
+        }
+    }
+
+    @include mobile {
+        &__grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: "a" "c" "b";
+        }
+
+        &__images {
+            padding-inline: 48px;
+            padding-block: 30px 26px;
+        }
+
+        &__title--main {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        &__button-home-wrap {
+            order: 9;
+            padding: 0;
+            margin-bottom: 19px;
+        }
+
+        &__link--home {
+            display: block;
+            margin-inline: auto;
+        }
+
+        &__style-order-wrap {
+            padding-inline: 48px;
+        }
+
+        &__button--ar {
+            width: calc(100% - 60px);
+            background-position: 25% center;
+        }
+
+        &__list {
+            margin-inline: auto 48px;
+            padding-bottom: 10px;
+        }
+
+        &__button--home {
+            margin-inline: auto;
+        }
+
+        &__about {
+            padding-inline: 48px;
+            padding-block: 50px;
+        }
+    }
+
+    @include mobile-small {
+        &__images {
+            padding-inline: 20px;
+        }
+
+        &__order-wrap {
+            flex-direction: column;
+            padding-right: 30px;
+            row-gap: 9px;
+        }
+
+        &__button {
+            width: 100%;
+        }
+
+        &__style-order-wrap {
+            padding-inline: 20px;
+        }
+
+        &__specification {
+            padding-inline: 20px;
+        }
+
+        &__list {
+            margin: 0;
+            width: 100%;
+        }
+
+        &__about {
+            padding-inline: 20px;
+        }
+
+        &__button--ar {
+            background-position: 12% center;
+        }
+    }
+}

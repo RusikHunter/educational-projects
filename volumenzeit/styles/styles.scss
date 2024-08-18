@@ -55,6 +55,10 @@ powered by: github pages
 @import "blocks/delivery/delivery",
 "blocks/delivery/answer";
 
+/* custome - стили для секций страницы custome */
+
+@import "blocks/custome/custome";
+
 /* error404 - стили для сексий страницы error404 */
 
 @import "blocks/error404/error";
