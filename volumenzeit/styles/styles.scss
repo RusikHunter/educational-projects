@@ -57,7 +57,8 @@ powered by: github pages
 
 /* custome - стили для секций страницы custome */
 
-@import "blocks/custome/custome";
+@import "blocks/custome/custome",
+"blocks/custome/conditions";
 
 /* error404 - стили для сексий страницы error404 */
 

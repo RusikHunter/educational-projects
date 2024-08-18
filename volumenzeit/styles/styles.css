@@ -3003,6 +3003,83 @@ media - scss файл с миксинами медиа-запросов desktop,
   }
 }
 
+.conditions {
+  background: var(--color-black);
+}
+.conditions__column {
+  width: 33%;
+  border-right: var(--border-gray);
+  padding-block: 50px;
+  margin-block: 80px;
+  flex-direction: row;
+  justify-content: center;
+}
+.conditions__column--last {
+  border: none;
+}
+.conditions__textbox {
+  margin-left: 30px;
+}
+.conditions__title {
+  font-family: var(--font-family-poppins);
+  font-size: clamp(12px, 1.25vw, 18px);
+  line-height: 100%;
+  color: var(--color-white);
+  font-weight: 500;
+}
+.conditions__description {
+  margin-top: 15px;
+  font-family: var(--font-family-poppins);
+  font-size: clamp(10px, 0.9722222222vw, 14px);
+  line-height: 200%;
+  color: #dedede;
+  max-width: 222px;
+}
+@media (max-width: 1440px) {
+  .conditions__row {
+    padding-inline: 20px;
+  }
+  .conditions__textbox {
+    margin-left: 15px;
+  }
+  .conditions__description {
+    max-width: 160px;
+  }
+}
+@media (max-width: 920px) {
+  .conditions__image {
+    width: 50px;
+    height: auto;
+  }
+  .conditions__description {
+    max-width: 140px;
+  }
+}
+@media (max-width: 768px) {
+  .conditions__row {
+    flex-direction: column;
+  }
+  .conditions__column {
+    border-right: none;
+    border-bottom: var(--border-gray);
+    width: 50%;
+    margin-inline: auto;
+    margin-block: 0;
+  }
+}
+@media (max-width: 480px) {
+  .conditions__column {
+    width: 100%;
+    padding-inline: 35px;
+  }
+  .conditions__textbox {
+    margin-left: 30px;
+  }
+  .conditions__description {
+    max-width: 222px;
+  }
+}
+
 /* error404 - стили для сексий страницы error404 */
 .error__row {
   flex-direction: column;
