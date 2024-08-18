@@ -1,0 +1,218 @@
+.section--cart {
+    z-index: 111;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+}
+
+.cart {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: calc(100% - 366px);
+    width: 366px;
+    height: 200%;
+    padding: 0;
+    display: flex;
+    background-color: var(--color-white);
+
+    &__wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    &__header-wrap {
+        background-color: var(--color-lightgray);
+        padding: 19px 20px 19px 20px;
+    }
+
+    &__title {
+        @include text-spaceage(20, 20, 125%, var(--color-black));
+        text-align: center;
+    }
+
+    &__button--close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 28px;
+        cursor: pointer;
+    }
+
+    &__added-items-wrap {
+        max-height: 250px;
+        overflow-y: scroll;
+        padding-inline: 20px;
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__added-item {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        padding-block: 18px 14px;
+        border-bottom: var(--border-gray);
+    }
+
+    .added-item {
+        &__info {
+            margin-left: 15px;
+        }
+
+        &__delete-button {
+            position: absolute;
+            top: 9px;
+            right: 0;
+            cursor: pointer;
+        }
+
+        &__title {
+            @include text-poppins(12, 12, 76%, var(--color-black));
+            font-weight: 500;
+        }
+
+        &__description {
+            @include text-poppins(10, 10, 91%, var(--color-gray));
+            margin-top: 5px;
+        }
+
+        &__price {
+            display: block;
+            @include text-poppins(20, 20, 95%, var(--color-black));
+            margin-top: 13px;
+        }
+
+        &__colors {
+            display: flex;
+            column-gap: 90px;
+            margin-top: 10px;
+        }
+
+        &__color {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border-radius: 7px;
+
+            &::after {
+                position: absolute;
+                width: 70px;
+                top: 5px;
+                left: 25px;
+                @include text-poppins(10, 10, 100%, var(--color-gray));
+            }
+        }
+
+        &__case-color {
+            background: var(--gradient-black);
+
+            &::after {
+                content: "Case Color";
+            }
+        }
+
+        &__strap-color {
+            background: var(--gradient-orange);
+
+            &::after {
+                content: "Strap Color";
+            }
+        }
+    }
+
+    &__matched-items-wrap {
+        margin-top: 30px;
+        padding-inline: 20px;
+        padding-bottom: 35px;
+    }
+
+    &__matched-items-button {
+        width: 100%;
+    }
+
+    &__matched-items-list {
+        margin-top: 22px;
+        display: none;
+        justify-content: space-between;
+    }
+
+    &__matched-item {
+        width: 150px;
+        display: flex;
+    }
+
+    .matched-item {
+
+        &__textbox {
+            margin-left: 8px;
+            display: flex;
+            flex-direction: column
+        }
+
+        &__title {
+            @include text-poppins(10, 10, 100%, var(--color-gray));
+            font-weight: 400;
+        }
+
+        &__price {
+            display: block;
+            @include text-poppins(20, 20, 95%, var(--color-black));
+            margin-top: 8px;
+        }
+
+        &__add-button {
+            width: 70px;
+            margin-top: 10px;
+            padding-left: 15px;
+            @include text-poppins(10, 10, 100%, var(--color-gray));
+            background-image: url(../images/globals/cart/plus.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            cursor: pointer;
+        }
+    }
+
+    &__sum-wrap {
+        padding-block: 25px;
+        padding-inline: 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-lightgray);
+    }
+
+    &__sum {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: var(--border-gray);
+        padding-block: 4px 12px;
+        align-items: center;
+    }
+
+    &__sum--total {
+        border: none;
+    }
+
+    &__sum-title {
+        @include text-poppins(10, 10, 100%, var(--color-gray));
+    }
+
+    &__sum-value {
+        @include text-poppins(20, 20, 95%, var(--color-black));
+    }
+
+    &__link {
+        display: block;
+    }
+
+    &__button {
+        width: 100%;
+    }
+}

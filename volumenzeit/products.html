@@ -50,9 +50,8 @@
                 <div class="header__column header__column--fourth column">
                     <button class="header__icon-button header__icon-button--profile" id="headerProfileButton"></button>
 
-                    <a href="#" class="header__icon-link header__icon-link--cart">
-                        <img src="images/globals/header/cart-icon.svg" alt="Cart" width="23" height="20"
-                            class="header__icon-image">
+                    <button class="header__icon-button header__icon-button--cart" id="headerCartButton"></button>
+
                     </a>
                 </div>
 
@@ -555,10 +554,137 @@
         </div>
     </footer>
 
+    <dialog open class="dialog section section--cart">
+        <div class="cart">
+            <div class="cart__wrapper">
+                <div class="cart__header-wrap">
+                    <h5 class="cart__title">your cart</h5>
+
+                    <button class="cart__button--close" id="cartButtonClose">
+                        <img src="images/globals/cart/close.svg" alt="X" width=12" height="12">
+                    </button>
+                </div>
+
+                <div class="cart__added-items-wrap">
+                    <div class="cart__added-item added-item">
+                        <img src="images/globals/cart/watch-1.png" alt="Watch" width="88" height="103"
+                            class="added-item__image">
+
+                        <div class="added-item__info">
+                            <button class="added-item__delete-button">
+                                <img src="images/globals/cart/delete.svg" alt="X" width="11" height="12">
+                            </button>
+                            <h6 class="added-item__title">Urban Eagle</h6>
+                            <p class="added-item__description">Volumenzeit S 7</p>
+                            <span class="added-item__price">$15,588</span>
+                            <div class="added-item__colors">
+                                <span class="added-item__case-color added-item__color"></span>
+                                <span class="added-item__strap-color added-item__color"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__added-item added-item">
+                        <img src="images/globals/cart/watch-1.png" alt="Watch" width="88" height="103"
+                            class="added-item__image">
+
+                        <div class="added-item__info">
+                            <button class="added-item__delete-button">
+                                <img src="images/globals/cart/delete.svg" alt="X" width="11" height="12">
+                            </button>
+                            <h6 class="added-item__title">Urban Eagle</h6>
+                            <p class="added-item__description">Volumenzeit S 7</p>
+                            <span class="added-item__price">$15,588</span>
+                            <div class="added-item__colors">
+                                <span class="added-item__case-color added-item__color"></span>
+                                <span class="added-item__strap-color added-item__color"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__added-item added-item">
+                        <img src="images/globals/cart/watch-1.png" alt="Watch" width="88" height="103"
+                            class="added-item__image">
+
+                        <div class="added-item__info">
+                            <button class="added-item__delete-button">
+                                <img src="images/globals/cart/delete.svg" alt="X" width="11" height="12">
+                            </button>
+                            <h6 class="added-item__title">Urban Eagle</h6>
+                            <p class="added-item__description">Volumenzeit S 7</p>
+                            <span class="added-item__price">$15,588</span>
+                            <div class="added-item__colors">
+                                <span class="added-item__case-color added-item__color"></span>
+                                <span class="added-item__strap-color added-item__color"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart__matched-items-wrap">
+                    <button class="cart__matched-items-button button" id="cartMatchedItemsButton">Add A Matching
+                        Item</button>
+
+                    <div class="cart__matched-items-list">
+                        <div class="cart__matched-item matched-item">
+                            <img src="images/globals/cart/watch-2.png" alt="Watch" width="61" height="71"
+                                class="matched-item__image">
+
+                            <div class="matched-item__textbox">
+                                <h6 class="matched-item__title">Volumenzeit S 7</h6>
+                                <span class="matched-item__price">$15,588</span>
+
+                                <button class="matched-item__add-button">Add item</button>
+                            </div>
+                        </div>
+
+                        <div class="cart__matched-item matched-item">
+                            <img src="images/globals/cart/watch-2.png" alt="Watch" width="61" height="71"
+                                class="matched-item__image">
+
+                            <div class="matched-item__textbox">
+                                <h6 class="matched-item__title">Volumenzeit S 7</h6>
+                                <span class="matched-item__price">$15,588</span>
+
+                                <button class="matched-item__add-button">Add item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart__sum-wrap">
+                    <div class="cart__sum">
+                        <div class="cart__sum-title">Shupping UPS Standard</div>
+
+                        <span class="cart__sum-value">$12</span>
+                    </div>
+
+                    <div class="cart__sum">
+                        <div class="cart__sum-title">Discount 15% Off</div>
+
+                        <span class="cart__sum-value">$1250</span>
+                    </div>
+
+                    <div class="cart__sum cart__sum--total">
+                        <div class="cart__sum-title">Grand Total</div>
+
+                        <span class="cart__sum-value">$24,588</span>
+                    </div>
+
+                    <a href="#" class="cart__link">
+                        <button class="cart__button button">Go To Checkout</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
     <script src="scripts/dropdown.js"></script>
     <script src="scripts/dropdownCountry.js"></script>
     <script src="scripts/showModalWindowHeader.js"></script>
     <script src="scripts/showFilters.js"></script>
+    <script src="scripts/showCartMatches.js"></script>
+    <script src="scripts/showCart.js"></script>
 </body>
 
 </html>

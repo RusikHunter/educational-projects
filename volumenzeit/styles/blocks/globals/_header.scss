@@ -88,8 +88,14 @@
         background-image: url(../images/globals/header/profile-icon.svg);
     }
 
-    &__icon-link--cart {
+    &__icon-button--cart {
         position: relative;
+        cursor: pointer;
+        width: 23px;
+        height: 20px;
+        border: none;
+        background: 0;
+        background-image: url(../images/globals/header/cart-icon.svg);
 
         &::after {
             content: "3";
