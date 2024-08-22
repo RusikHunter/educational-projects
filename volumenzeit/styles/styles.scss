@@ -64,3 +64,8 @@ powered by: github pages
 /* error404 - стили для сексий страницы error404 */
 
 @import "blocks/error404/error";
+
+/* checkout - стили для сексий страницы checkout */
+
+@import "blocks/checkout/checkout",
+"blocks/checkout/buy";

@@ -1,10 +1,6 @@
 .conditions {
     background: var(--color-black);
 
-    &__inner {}
-
-    &__row {}
-
     &__column {
         width: 33%;
         border-right: var(--border-gray);

@@ -265,7 +265,7 @@ input[type="checkbox"]:checked+label.select-button {
 
     &__decoration {
         display: none;
-        border: var(--border-gray);
+        border-top: var(--border-gray);
         margin-block: 16px;
         margin-inline: 20px;
     }

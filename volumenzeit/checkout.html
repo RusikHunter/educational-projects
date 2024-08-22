@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Volumenzeit - Checkout</title>
+    <meta name="author" content="dmfshove">
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim facilisi elementum commodo ipsum. Aenean aenean adipiscing lect.">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner container">
+            <div class="header__row header__row--first row">
+                <div class="header__column header__column--first column">
+                    <a href="#" class="header__logo">
+                        <img src="images/globals/header/logo.png" alt="Volumenzeit Volumetric Wrist Watches" width="255"
+                            height="32" class="header__logo-image">
+                    </a>
+                </div>
+                <div class="header__column header__column--second column">
+                    <nav class="header__navigation">
+                        <ul class="header__navigation-list">
+                            <li class="header__list-item">
+                                <a href="#" class="header__link">Home</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="products.html" class="header__link">Products</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="contactus.html" class="header__link">Contact Us</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="delivery.html" class="header__link">Delivery</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="custome.html" class="header__link">Custome</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__column header__column--third column">
+                    <button class="header__button button">Design you watch</button>
+                </div>
+                <div class="header__column header__column--fourth column">
+                    <button class="header__icon-button header__icon-button--profile" id="headerProfileButton"></button>
+
+                    <button class="header__icon-button header__icon-button--cart" id="headerCartButton"></button>
+                </div>
+
+                <button class="header__burger-button" id="burgerButtonOpen">
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="28" height="4" fill="#735CFF" />
+                        <rect y="10" width="28" height="4" />
+                        <rect y="20" width="28" height="4" />
+                    </svg>
+                </button>
+            </div>
+
+            <dialog open class="header__modal-window modal-window">
+                <div class="header__modal-window-wrap">
+                    <button class="header__modal-window-button button button--black">Login</button>
+                    <button class="header__modal-window-button button button--black">Sign Up</button>
+                </div>
+            </dialog>
+
+            <dialog open class="header__burger burger modal-window">
+                <div class="burger__wrap">
+                    <div class="burger__row burger__row--first row">
+                        <a href="#" class="burger__logo">
+                            <img src="images/globals/header/logo.png" alt="Volumenzeit Volumetric Wrist Watches"
+                                width="170" height="32" class="burger__logo-image">
+                        </a>
+
+                        <nav class="burger__navigation">
+                            <ul class="burger__navigation-list">
+                                <li class="burger__item">
+                                    <a href="#" class="burger__link">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="products.html" class="burger__link">
+                                        Products
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="contactus.html" class="burger__link">
+                                        Contact Us
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="delivery.html" class="burger__link">
+                                        Delivery
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="custome.html" class="burger__link">
+                                        Custome
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="#" class="burger__link burger__link--profile">
+                                        My Account
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="#" class="burger__link burger__link--cart">
+                                        Cart
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <button class="burger__button button">Design Your Watch</button>
+                        <button class="burger__button burger__button--transparent button">Sign In / Register</button>
+
+                        <button class="burger__close-button" id="burgerButtonClose">
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.3282 8.5L2.82818 0L-0.000244141 2.82843L8.49976 11.3284L0.0291934 19.799L2.85762 22.6274L11.3282 14.1569L19.7987 22.6274L22.6272 19.799L14.1566 11.3284L22.6566 2.82843L19.8282 0L11.3282 8.5Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </dialog>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="checkout">
+                <div class="checkout__inner container">
+                    <div class="checkout__row row">
+                        <h2 class="checkout__title">checkout</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="buy">
+                <div class="buy__inner container">
+                    <div class="buy__grid">
+                        <article class="buy__params">
+                            <div class="buy__param">
+                                <div class="buy__param-header">
+                                    <h4 class="buy__title">Basic Info</h4>
+
+                                    <button class="buy__button-arrow">
+                                        <img src="images/checkout/buy/arrow.svg" alt="V" width="13" height="13">
+                                    </button>
+                                </div>
+
+                                <form class="buy__form">
+                                    <input type="email" name="buyPersonInfoInput" id="buyPersonInfoInputEmail"
+                                        class="buy__input--text input" placeholder="Email">
+
+                                    <input type="text" name="buyPersonInfoInput" id="buyPersonInfoInputFirstName"
+                                        class="buy__input--text input" placeholder="First Name">
+
+                                    <input type="text" name="buyPersonInfoInput" id="buyPersonInfoInputLastName"
+                                        class="buy__input--text input" placeholder="Last Name">
+
+                                    <input type="tel" name="buyPersonInfoInput" id="buyPersonInfoInputPhone"
+                                        class="buy__input--text input" placeholder="Phone Number">
+
+                                    <input type="text" name="buyPersonInfoInput" id="buyPersonInfoInputAddress1"
+                                        class="buy__input--text input" placeholder="Address 1">
+
+                                    <input type="text" name="buyPersonInfoInput" id="buyPersonInfoInputAddress2"
+                                        class="buy__input--text input" placeholder="Address 2">
+
+                                    <div class="buy__form-city-wrap">
+                                        <input type="text" name="buyPersonInfoInput" id="buyPersonInfoInputCity"
+                                            class="buy__input--text input" placeholder="City">
+
+                                        <input type="text" name="buyPersonInfoInput" id="buyPersonInfoInputZipCode"
+                                            class="buy__input--text input" placeholder="Zip Code">
+                                    </div>
+                                </form>
+
+                                <div class="buy__country-dropdown-wrap">
+                                    <div class="buy__country-dropdown country">
+                                        <div class="country__wrap">
+                                            <h6 class="country__title">Sort By</h6>
+
+                                            <button class="country__button">
+                                                <img src="images/checkout/buy/arrow.svg" alt="V" width="13" height="13">
+                                            </button>
+                                        </div>
+
+                                        <div class="country__decoration"></div>
+
+                                        <form class="country__form">
+                                            <input type="radio" name="countryInputRadio" id="countryInputRadio1"
+                                                class="country__input">
+                                            <label for="countryInputRadio1" class="country__label">a</label>
+
+                                            <input type="radio" name="countryInputRadio" id="countryInputRadio2"
+                                                class="country__input">
+                                            <label for="countryInputRadio2" class="country__label">a</label>
+
+                                            <input type="radio" name="countryInputRadio" id="countryInputRadio3"
+                                                class="country__input">
+                                            <label for="countryInputRadio3" class="country__label">a</label>
+
+                                            <input type="radio" name="countryInputRadio" id="countryInputRadio4"
+                                                class="country__input">
+                                            <label for="countryInputRadio4" class="country__label">a</label>
+
+                                            <input type="radio" name="countryInputRadio" id="countryInputRadio5"
+                                                class="country__input">
+                                            <label for="countryInputRadio5" class="country__label">a</label>
+
+                                            <input type="radio" name="countryInputRadio" id="countryInputRadio6"
+                                                class="country__input">
+                                            <label for="countryInputRadio6" class="country__label">a</label>
+
+                                            <input type="radio" name="countryInputRadio" id="countryInputRadio7"
+                                                class="country__input">
+                                            <label for="countryInputRadio7" class="country__label">a</label>
+
+                                            <input type="radio" name="countryInputRadio" id="countryInputRadio8"
+                                                class="country__input">
+                                            <label for="countryInputRadio8" class="country__label">a</label>
+
+                                            <input type="radio" name="countryInputRadio" id="countryInputRadio9"
+                                                class="country__input">
+                                            <label for="countryInputRadio9" class="country__label">a</label>
+
+                                            <input type="radio" name="countryInputRadio" id="countryInputRadio10"
+                                                class="country__input">
+                                            <label for="countryInputRadio10" class="country__label">a</label>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                                <input type="submit" name="buyPersonInfoInput" id="buyPersonInfoSubmit"
+                                    value="Countiniue" class="buy__submit button">
+                            </div>
+
+                            <div class="buy__param">
+                                <div class="buy__param-header">
+                                    <h4 class="buy__title">Shipping</h4>
+
+                                    <button class="buy__button-arrow">
+                                        <img src="images/checkout/buy/arrow.svg" alt="V" width="13" height="13">
+                                    </button>
+                                </div>
+
+                                <form class="buy__form">
+                                    <input type="radio" name="buyShippingTypeRadio" id="buyShippingTypeRadio1"
+                                        clas="buy__input--radio">
+                                    <label for="buyShippingTypeRadio1" class="buy__shipping-type-wrap">
+                                        <div class="buy__button-select"></div>
+
+                                        <div class="buy__form-textbox">
+                                            <h6 class="buy__form-title">UPS Express</h6>
+
+                                            <p class="buy__form-description">UPS Express 2-3 working days</p>
+                                        </div>
+
+                                        <span class="buy__form-price">$49.99</span>
+                                    </label>
+
+                                    <input type="radio" name="buyShippingTypeRadio" id="buyShippingTypeRadio2"
+                                        clas="buy__input--radio">
+                                    <label for="buyShippingTypeRadio2" class="buy__shipping-type-wrap">
+                                        <div class="buy__button-select"></div>
+
+                                        <div class="buy__form-textbox">
+                                            <h6 class="buy__form-title">UPS Standard</h6>
+
+                                            <p class="buy__form-description">UPS Standart 7-14 working days</p>
+                                        </div>
+
+                                        <span class="buy__form-price">Free</span>
+                                    </label>
+
+                                    <input type="submit" name="buyShippingTypeRadio" id="buyShippingTypeSubmit"
+                                        value="Countiniue" class="buy__submit button">
+                                </form>
+                            </div>
+
+                            <div class="buy__param">
+                                <div class="buy__param-header">
+                                    <h4 class="buy__title">Payment</h4>
+
+                                    <button class="buy__button-arrow">
+                                        <img src="images/checkout/buy/arrow.svg" alt="V" width="13" height="13">
+                                    </button>
+                                </div>
+
+                                <form class="buy__form">
+                                    <input type="radio" name="buyPaymentRadio" id="buyPaymentRadio1"
+                                        class="buy__input--radio">
+                                    <label class="buy__payment-type-wrap" for="buyPaymentRadio1">
+                                        <div class="buy__button-select--circle"></div>
+
+                                        <div class="buy__payment-textbox">
+                                            <h6 class="buy__payment-description">Credit Card</h6>
+
+                                            <div class="buy__images-wrap">
+                                                <img src="images/checkout/buy/visa.svg" alt="Visa" width="35"
+                                                    height="22" class="buy__image-cart">
+                                                <img src="images/checkout/buy/mastercard.svg" alt="Mastercard"
+                                                    width="35" height="22" class="buy__image-cart">
+                                                <img src="images/checkout/buy/maestro.svg" alt="Maestro" width="35"
+                                                    height="22" class="buy__image-cart">
+                                                <img src="images/checkout/buy/american-express.svg"
+                                                    alt="American Express" width="35" height="22"
+                                                    class="buy__image-cart">
+                                                <img src="images/checkout/buy/discover.svg" alt="Discover" width="35"
+                                                    height="22" class="buy__image-cart">
+                                                <img src="images/checkout/buy/diners-club-international.svg"
+                                                    alt="Diners Club International" width="35" height="22"
+                                                    class="buy__image-cart">
+                                                <img src="images/checkout/buy/jcb.svg" alt="JCB" width="35" height="22"
+                                                    class="buy__image-cart">
+                                                <img src="images/checkout/buy/troy.svg" alt="Troy" width="35"
+                                                    height="22" class="buy__image-cart">
+                                                <img src="images/checkout/buy/cb.svg" alt="CB" width="35" height="22"
+                                                    class="buy__image-cart">
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <input type="radio" name="buyPaymentRadio" id="buyPaymentRadio2"
+                                        class="buy__input--radio">
+                                    <label class="buy__payment-type-wrap" for="buyPaymentRadio2">
+                                        <div class="buy__button-select--circle"></div>
+
+                                        <div class="buy__payment-textbox">
+                                            <h6 class="buy__payment-description">PayPal</h6>
+
+                                            <div class="buy__images-wrap">
+                                                <img src="images/checkout/buy/paypal.svg" alt="PayPal" width="35"
+                                                    height="22" class="buy__image-cart">
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <input type="number" name="buyPaymentInput" id="buyPaymentCardNumber"
+                                        class="buy__input--text input" placeholder="Card Number">
+
+                                    <div class="buy__payment-wrap">
+                                        <input type="text" name="buyPaymentInput" id="buyPaymentDate"
+                                            class="buy__input--text input" placeholder="Expiry Date">
+
+                                        <input type="number" name="buyPaymentInput" id="buyPaymentCVV"
+                                            class="buy__input--text input" placeholder="CVC / CVV">
+                                    </div>
+
+                                    <span class="buy__info-text">
+                                        Non-EU countries are subject to certain VAT and customs duties.
+                                    </span>
+
+                                    <input type="submit" name="buyPaymentInput" id="buyPaymentSubmit"
+                                        value="Complete Payment" class="buy__submit button">
+
+                                    <span class="buy__conditions">
+                                        By placing your order you agree to our <a href="#"
+                                            class="buy__conditions-link">Terms &
+                                            Conditions</a> and you
+                                        understand
+                                        that we will
+                                        process your personal data on the basis of our <a href="#"
+                                            class="buy__conditions-link">Privacy Policy</a>.
+                                    </span>
+                                </form>
+                            </div>
+                        </article>
+                        <article class="buy__purchase">
+                            <div class="buy__purchase-wrap">
+                                <div class="buy__purchase-item purchase-item">
+                                    <img src="images/globals/cart/watch-1.png" alt="Watch" width="88" height="103"
+                                        class="purchase-item__image">
+
+                                    <div class="purchase-item__info">
+                                        <h6 class="purchase-item__title">Urban Eagle</h6>
+                                        <p class="purchase-item__description">Volumenzeit S 7</p>
+                                        <span class="purchase-item__price">$15,588</span>
+                                        <div class="purchase-item__colors">
+                                            <span class="purchase-item__case-color purchase-item__color"></span>
+                                            <span class="purchase-item__strap-color purchase-item__color"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="buy__purchase-item purchase-item">
+                                    <img src="images/globals/cart/watch-1.png" alt="Watch" width="88" height="103"
+                                        class="purchase-item__image">
+
+                                    <div class="purchase-item__info">
+                                        <h6 class="purchase-item__title">Urban Eagle</h6>
+                                        <p class="purchase-item__description">Volumenzeit S 7</p>
+                                        <span class="purchase-item__price">$15,588</span>
+                                        <div class="purchase-item__colors">
+                                            <span class="purchase-item__case-color purchase-item__color"></span>
+                                            <span class="purchase-item__strap-color purchase-item__color"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="buy__purchase-item purchase-item purchase-item-without-content">
+                                    <img src="images/checkout/buy/delivery.svg" alt="Delivery"
+                                        class="purchase-item__image purchase-item__image--padding">
+
+                                    <div class="purchase-item__info">
+                                        <h6 class="purchase-item__description">Shipping & handling
+                                        </h6>
+
+                                        <span class="purchase-item__price">$25.00</span>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="buy__purchase-item purchase-item purchase-item-last purchase-item-without-content">
+                                    <img src="images/checkout/buy/delivery.svg" alt="Delivery"
+                                        class="purchase-item__image purchase-item__image--padding">
+
+                                    <div class="purchase-item__info">
+                                        <h6 class="purchase-item__description">TAX
+                                        </h6>
+
+                                        <span class="purchase-item__price">$0.00</span>
+                                    </div>
+                                </div>
+
+                                <div class="buy__purchase-sum-wrap">
+                                    <span class="purchase-item__price purchase-item__price--white">$24,588</span>
+                                    <p class="buy__purchase-text">Grand Total</p>
+                                </div>
+                            </div>
+
+                            <div class="buy__purchase-coupon">
+                                <h4 class="buy__title">Apply Coupon</h4>
+
+                                <input type="text" name="buyPurchaseCoupon" id="buyPurchaseCoupon"
+                                    class="buy__input--text input" placeholder="Coupon Code">
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner container">
+            <div class="footer__row footer__row--first row">
+                <a href="#" class="footer__logo">
+                    <img src="images/globals/footer/logo.svg" alt="Volumenzeit Volumetric Wrist Watches" width="384"
+                        height="48" class="footer__logo-image">
+                </a>
+            </div>
+            <div class="footer__row footer__row--second row">
+                <p class="footer__rights">© Copyright 2022 Volumenzeit - All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <dialog open class="dialog section section--cart">
+        <div class="cart">
+            <div class="cart__wrapper">
+                <div class="cart__header-wrap">
+                    <h5 class="cart__title">your cart</h5>
+
+                    <button class="cart__button--close" id="cartButtonClose">
+                        <img src="images/globals/cart/close.svg" alt="X" width=12" height="12">
+                    </button>
+                </div>
+
+                <div class="cart__added-items-wrap">
+                    <div class="cart__added-item added-item">
+                        <img src="images/globals/cart/watch-1.png" alt="Watch" width="88" height="103"
+                            class="added-item__image">
+
+                        <div class="added-item__info">
+                            <button class="added-item__delete-button">
+                                <img src="images/globals/cart/delete.svg" alt="X" width="11" height="12">
+                            </button>
+                            <h6 class="added-item__title">Urban Eagle</h6>
+                            <p class="added-item__description">Volumenzeit S 7</p>
+                            <span class="added-item__price">$15,588</span>
+                            <div class="added-item__colors">
+                                <span class="added-item__case-color added-item__color"></span>
+                                <span class="added-item__strap-color added-item__color"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__added-item added-item">
+                        <img src="images/globals/cart/watch-1.png" alt="Watch" width="88" height="103"
+                            class="added-item__image">
+
+                        <div class="added-item__info">
+                            <button class="added-item__delete-button">
+                                <img src="images/globals/cart/delete.svg" alt="X" width="11" height="12">
+                            </button>
+                            <h6 class="added-item__title">Urban Eagle</h6>
+                            <p class="added-item__description">Volumenzeit S 7</p>
+                            <span class="added-item__price">$15,588</span>
+                            <div class="added-item__colors">
+                                <span class="added-item__case-color added-item__color"></span>
+                                <span class="added-item__strap-color added-item__color"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__added-item added-item">
+                        <img src="images/globals/cart/watch-1.png" alt="Watch" width="88" height="103"
+                            class="added-item__image">
+
+                        <div class="added-item__info">
+                            <button class="added-item__delete-button">
+                                <img src="images/globals/cart/delete.svg" alt="X" width="11" height="12">
+                            </button>
+                            <h6 class="added-item__title">Urban Eagle</h6>
+                            <p class="added-item__description">Volumenzeit S 7</p>
+                            <span class="added-item__price">$15,588</span>
+                            <div class="added-item__colors">
+                                <span class="added-item__case-color added-item__color"></span>
+                                <span class="added-item__strap-color added-item__color"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart__matched-items-wrap">
+                    <button class="cart__matched-items-button button" id="cartMatchedItemsButton">Add A Matching
+                        Item</button>
+
+                    <div class="cart__matched-items-list">
+                        <div class="cart__matched-item matched-item">
+                            <img src="images/globals/cart/watch-2.png" alt="Watch" width="61" height="71"
+                                class="matched-item__image">
+
+                            <div class="matched-item__textbox">
+                                <h6 class="matched-item__title">Volumenzeit S 7</h6>
+                                <span class="matched-item__price">$15,588</span>
+
+                                <button class="matched-item__add-button">Add item</button>
+                            </div>
+                        </div>
+
+                        <div class="cart__matched-item matched-item">
+                            <img src="images/globals/cart/watch-2.png" alt="Watch" width="61" height="71"
+                                class="matched-item__image">
+
+                            <div class="matched-item__textbox">
+                                <h6 class="matched-item__title">Volumenzeit S 7</h6>
+                                <span class="matched-item__price">$15,588</span>
+
+                                <button class="matched-item__add-button">Add item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart__sum-wrap">
+                    <div class="cart__sum">
+                        <div class="cart__sum-title">Shupping UPS Standard</div>
+
+                        <span class="cart__sum-value">$12</span>
+                    </div>
+
+                    <div class="cart__sum">
+                        <div class="cart__sum-title">Discount 15% Off</div>
+
+                        <span class="cart__sum-value">$1250</span>
+                    </div>
+
+                    <div class="cart__sum cart__sum--total">
+                        <div class="cart__sum-title">Grand Total</div>
+
+                        <span class="cart__sum-value">$24,588</span>
+                    </div>
+
+                    <a href="#" class="cart__link">
+                        <button class="cart__button button">Go To Checkout</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="scripts/showModalWindowHeader.js"></script>
+    <script src="scripts/showCartMatches.js"></script>
+    <script src="scripts/showCart.js"></script>
+    <script src="scripts/dropdownCountry.js"></script>
+</body>
+
+</html>

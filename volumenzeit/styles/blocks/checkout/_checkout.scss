@@ -1,0 +1,38 @@
+.checkout {
+    background-color: var(--color-violet);
+
+    &__row {
+        padding-block: 89px;
+    }
+
+    &__title {
+        @include title-h2(var(--color-white));
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    @include tablet-small {
+        &__row {
+            padding-block: 69px;
+        }
+    }
+
+    @include mobile {
+        &__row {
+            padding-block: 33px 60px;
+            padding-inline: 48px;
+        }
+
+        &__title {
+            text-align: left;
+            margin: 0;
+        }
+    }
+
+    @include mobile-small {
+        &__row {
+            padding-block: 25px 53px;
+            padding-inline: 20px;
+        }
+    }
+}
