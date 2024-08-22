@@ -154,12 +154,12 @@
                                 <div class="buy__param-header">
                                     <h4 class="buy__title">Basic Info</h4>
 
-                                    <button class="buy__button-arrow">
+                                    <button class="buy__button-arrow" id="buyButtonArrowFirst">
                                         <img src="images/checkout/buy/arrow.svg" alt="V" width="13" height="13">
                                     </button>
                                 </div>
 
-                                <form class="buy__form">
+                                <form class="buy__form" id="buyFormFirst" style="display: none;">
                                     <input type="email" name="buyPersonInfoInput" id="buyPersonInfoInputEmail"
                                         class="buy__input--text input" placeholder="Email">
 
@@ -187,7 +187,7 @@
                                     </div>
                                 </form>
 
-                                <div class="buy__country-dropdown-wrap">
+                                <div class="buy__country-dropdown-wrap" style="display: none;">
                                     <div class="buy__country-dropdown country">
                                         <div class="country__wrap">
                                             <h6 class="country__title">Sort By</h6>
@@ -245,19 +245,19 @@
 
 
                                 <input type="submit" name="buyPersonInfoInput" id="buyPersonInfoSubmit"
-                                    value="Countiniue" class="buy__submit button">
+                                    value="Countiniue" class="buy__submit button" style="display: none;">
                             </div>
 
                             <div class="buy__param">
                                 <div class="buy__param-header">
                                     <h4 class="buy__title">Shipping</h4>
 
-                                    <button class="buy__button-arrow">
+                                    <button class="buy__button-arrow" id="buyButtonArrowSecond">
                                         <img src="images/checkout/buy/arrow.svg" alt="V" width="13" height="13">
                                     </button>
                                 </div>
 
-                                <form class="buy__form">
+                                <form class="buy__form" id="buyFormSecond" style="display: none;">
                                     <input type="radio" name="buyShippingTypeRadio" id="buyShippingTypeRadio1"
                                         clas="buy__input--radio">
                                     <label for="buyShippingTypeRadio1" class="buy__shipping-type-wrap">
@@ -295,12 +295,12 @@
                                 <div class="buy__param-header">
                                     <h4 class="buy__title">Payment</h4>
 
-                                    <button class="buy__button-arrow">
+                                    <button class="buy__button-arrow" id="buyButtonArrowThird">
                                         <img src="images/checkout/buy/arrow.svg" alt="V" width="13" height="13">
                                     </button>
                                 </div>
 
-                                <form class="buy__form">
+                                <form class="buy__form" id="buyFormThird" style="display: none;">
                                     <input type="radio" name="buyPaymentRadio" id="buyPaymentRadio1"
                                         class="buy__input--radio">
                                     <label class="buy__payment-type-wrap" for="buyPaymentRadio1">
@@ -598,6 +598,7 @@
     <script src="scripts/showCartMatches.js"></script>
     <script src="scripts/showCart.js"></script>
     <script src="scripts/dropdownCountry.js"></script>
+    <script src="scripts/showCheckoutParams.js"></script>
 </body>
 
 </html>
