@@ -159,7 +159,7 @@
                                     </button>
                                 </div>
 
-                                <form class="buy__form" id="buyFormFirst" style="display: none;">
+                                <form class="buy__form" id="buyFormFirst" style="display: flex;">
                                     <input type="email" name="buyPersonInfoInput" id="buyPersonInfoInputEmail"
                                         class="buy__input--text input" placeholder="Email">
 
@@ -187,7 +187,7 @@
                                     </div>
                                 </form>
 
-                                <div class="buy__country-dropdown-wrap" style="display: none;">
+                                <div class="buy__country-dropdown-wrap" style="display: block;">
                                     <div class="buy__country-dropdown country">
                                         <div class="country__wrap">
                                             <h6 class="country__title">Sort By</h6>
@@ -245,7 +245,7 @@
 
 
                                 <input type="submit" name="buyPersonInfoInput" id="buyPersonInfoSubmit"
-                                    value="Countiniue" class="buy__submit button" style="display: none;">
+                                    value="Countiniue" class="buy__submit button" style="display: block;">
                             </div>
 
                             <div class="buy__param">
@@ -257,11 +257,13 @@
                                     </button>
                                 </div>
 
-                                <form class="buy__form" id="buyFormSecond" style="display: none;">
+                                <form class="buy__form" id="buyFormSecond" style="display: flex;">
                                     <input type="radio" name="buyShippingTypeRadio" id="buyShippingTypeRadio1"
                                         clas="buy__input--radio">
                                     <label for="buyShippingTypeRadio1" class="buy__shipping-type-wrap">
-                                        <div class="buy__button-select"></div>
+                                        <div class="buy__button-select-wrap">
+                                            <div class="buy__button-select"></div>
+                                        </div>
 
                                         <div class="buy__form-textbox">
                                             <h6 class="buy__form-title">UPS Express</h6>
@@ -275,7 +277,9 @@
                                     <input type="radio" name="buyShippingTypeRadio" id="buyShippingTypeRadio2"
                                         clas="buy__input--radio">
                                     <label for="buyShippingTypeRadio2" class="buy__shipping-type-wrap">
-                                        <div class="buy__button-select"></div>
+                                        <div class="buy__button-select-wrap">
+                                            <div class="buy__button-select"></div>
+                                        </div>
 
                                         <div class="buy__form-textbox">
                                             <h6 class="buy__form-title">UPS Standard</h6>
@@ -300,11 +304,13 @@
                                     </button>
                                 </div>
 
-                                <form class="buy__form" id="buyFormThird" style="display: none;">
+                                <form class="buy__form" id="buyFormThird" style="display: flex;">
                                     <input type="radio" name="buyPaymentRadio" id="buyPaymentRadio1"
                                         class="buy__input--radio">
                                     <label class="buy__payment-type-wrap" for="buyPaymentRadio1">
-                                        <div class="buy__button-select--circle"></div>
+                                        <div class="buy__button-select--circle-wrap">
+                                            <div class="buy__button-select--circle"></div>
+                                        </div>
 
                                         <div class="buy__payment-textbox">
                                             <h6 class="buy__payment-description">Credit Card</h6>
@@ -337,7 +343,9 @@
                                     <input type="radio" name="buyPaymentRadio" id="buyPaymentRadio2"
                                         class="buy__input--radio">
                                     <label class="buy__payment-type-wrap" for="buyPaymentRadio2">
-                                        <div class="buy__button-select--circle"></div>
+                                        <div class="buy__button-select--circle-wrap">
+                                            <div class="buy__button-select--circle"></div>
+                                        </div>
 
                                         <div class="buy__payment-textbox">
                                             <h6 class="buy__payment-description">PayPal</h6>

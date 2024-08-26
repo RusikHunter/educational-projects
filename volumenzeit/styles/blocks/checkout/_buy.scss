@@ -250,86 +250,155 @@
             margin-top: 12px;
         }
     }
-}
 
-.purchase-item {
-    &-without-content {
-        align-items: center;
-    }
+    .purchase-item {
+        &-without-content {
+            align-items: center;
+        }
 
-    &-last {
-        border: none;
-    }
+        &-last {
+            border: none;
+        }
 
-    &__image--padding {
-        padding: 28px 24px;
-        background-color: var(--color-lightgray);
-        border-radius: 8px;
-    }
+        &__image--padding {
+            padding: 28px 24px;
+            background-color: var(--color-lightgray);
+            border-radius: 8px;
+        }
 
-    &__info {
-        margin-left: 15px;
-    }
+        &__info {
+            margin-left: 15px;
+        }
 
-    &__title {
-        @include text-poppins(12, 12, 76%, var(--color-black));
-        font-weight: 500;
-    }
+        &__title {
+            @include text-poppins(12, 12, 76%, var(--color-black));
+            font-weight: 500;
+        }
 
-    &__description {
-        @include text-poppins(10, 10, 91%, var(--color-gray));
-        margin-top: 5px;
-    }
+        &__description {
+            @include text-poppins(10, 10, 91%, var(--color-gray));
+            margin-top: 5px;
+        }
 
-    h6.purchase-item__description {
-        font-weight: 400;
-    }
+        h6.purchase-item__description {
+            font-weight: 400;
+        }
 
-    &__price {
-        display: block;
-        @include text-poppins(20, 20, 95%, var(--color-black));
-        margin-top: 13px;
-    }
+        &__price {
+            display: block;
+            @include text-poppins(20, 20, 95%, var(--color-black));
+            margin-top: 13px;
+        }
 
-    &__price--white {
-        color: var(--color-white);
-        margin-top: 0;
-    }
+        &__price--white {
+            color: var(--color-white);
+            margin-top: 0;
+        }
 
-    &__colors {
-        display: flex;
-        column-gap: 90px;
-        margin-top: 10px;
-    }
+        &__colors {
+            display: flex;
+            column-gap: 90px;
+            margin-top: 10px;
+        }
 
-    &__color {
-        position: relative;
-        width: 20px;
-        height: 20px;
-        border-radius: 7px;
+        &__color {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border-radius: 7px;
 
-        &::after {
-            position: absolute;
-            width: 70px;
-            top: 5px;
-            left: 25px;
-            @include text-poppins(10, 10, 100%, var(--color-gray));
+            &::after {
+                position: absolute;
+                width: 70px;
+                top: 5px;
+                left: 25px;
+                @include text-poppins(10, 10, 100%, var(--color-gray));
+            }
+        }
+
+        &__case-color {
+            background: var(--gradient-black);
+
+            &::after {
+                content: "Case Color";
+            }
+        }
+
+        &__strap-color {
+            background: var(--gradient-orange);
+
+            &::after {
+                content: "Strap Color";
+            }
         }
     }
 
-    &__case-color {
-        background: var(--gradient-black);
+    @include tablet {
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+        }
 
-        &::after {
-            content: "Case Color";
+        &__params {
+            padding-left: 48px;
+        }
+
+        &__param {
+            width: 100%;
+        }
+
+        &__country-dropdown {
+            width: 100%;
+        }
+
+        &__images-wrap {
+            width: 100%;
+            flex-wrap: wrap;
+            row-gap: 10px;
+        }
+
+        &__button-select--circle {
+            margin-left: 0;
         }
     }
 
-    &__strap-color {
-        background: var(--gradient-orange);
+    @include tablet-small {
+        &__grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: "b" "a";
+        }
 
-        &::after {
-            content: "Strap Color";
+        &__purchase {
+            margin-top: 40px;
+            margin-inline: auto;
+            width: 75%;
+        }
+
+        &__purchase-wrap {
+            width: 100%;
+        }
+
+        &__purchase-wrap {
+            padding-top: 0;
+        }
+
+        &__params {
+            padding-inline: 48px;
+        }
+    }
+
+    @include mobile-small {
+        &__purchase {
+            width: 90%;
+        }
+
+        &__params {
+            padding-inline: 20px;
+        }
+
+        .purchase-item__colors {
+            flex-direction: column;
+            row-gap: 10px;
         }
     }
 }
