@@ -41,6 +41,10 @@
         @include text-poppins(12, 12, 100%, var(--color-white));
     }
 
+    &__link {
+        margin-inline: auto;
+    }
+
     &__button {
         margin-top: 56px;
         width: 208px;

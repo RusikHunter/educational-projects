@@ -11,6 +11,7 @@
     <meta name="description"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim facilisi elementum commodo ipsum. Aenean aenean adipiscing lect.">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="icon" href="images/globals/logo/logo.png" type="image/png">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                     <nav class="header__navigation">
                         <ul class="header__navigation-list">
                             <li class="header__list-item">
-                                <a href="#" class="header__link">Home</a>
+                                <a href="index.html" class="header__link">Home</a>
                             </li>
                             <li class="header__list-item">
                                 <a href="products.html" class="header__link">Products</a>
@@ -46,7 +47,9 @@
                     </nav>
                 </div>
                 <div class="header__column header__column--third column">
-                    <button class="header__button button">Design you watch</button>
+                    <a href="custome.html" class="header__link">
+                        <button class="header__button button">Design you watch</button>
+                    </a>
                 </div>
                 <div class="header__column header__column--fourth column">
                     <button class="header__icon-button header__icon-button--profile" id="headerProfileButton"></button>
@@ -87,7 +90,7 @@
                         <nav class="burger__navigation">
                             <ul class="burger__navigation-list">
                                 <li class="burger__item">
-                                    <a href="#" class="burger__link">
+                                    <a href="index.html" class="burger__link">
                                         Home
                                     </a>
                                 </li>
@@ -124,8 +127,14 @@
                             </ul>
                         </nav>
 
-                        <button class="burger__button button">Design Your Watch</button>
-                        <button class="burger__button burger__button--transparent button">Sign In / Register</button>
+                        <a href="custome.html" class="burger__link--alt">
+                            <button class="burger__button button">Design Your Watch</button>
+                        </a>
+
+                        <a href="login.html" class="burger__link--alt">
+                            <button class="burger__button burger__button--transparent button">Sign In /
+                                Register</button>
+                        </a>
 
                         <button class="burger__close-button" id="burgerButtonClose">
                             <svg width="23" height="23" viewBox="0 0 23 23" fill="currentColor"
@@ -179,7 +188,9 @@
                             <h1 class="dream__title">Find your dream watch</h1>
                             <p class="dream__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
                                 facilisi elementum commodo ipsum. Aenean aenean adipiscing lect</p>
-                            <button class="dream__button button">Design Your Watch</button>
+                            <a href="custome.html" class="dream__link">
+                                <button class="dream__button button">Design Your Watch</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -272,7 +283,9 @@
                                 <li class="design__item">Strap Design</li>
                             </ul>
 
-                            <button class="design__button button--black">Design Your Watch</button>
+                            <a href="custome.html" class="design__link">
+                                <button class="design__button button--black">Design Your Watch</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -295,7 +308,9 @@
                             </p>
                             <p class="mission__description">We love Out-of-the-box designs and believe there are many
                                 people who thinks the same.</p>
-                            <button class="mission__button button">Design Your Watch</button>
+                            <a href="custome.html" class="mission__button">
+                                <button class="mission__button button">Design Your Watch</button>
+                            </a>
                         </div>
                     </div>
 
@@ -364,7 +379,9 @@
                             </button>
                         </div>
 
-                        <button class="watches__button button">Design Your Watch</button>
+                        <a href="custome.html" class="watches__link" style="width: 208px;">
+                            <button class="watches__button button">Design Your Watch</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -410,9 +427,10 @@
                             <input type="email" id="registrationInputEmail" name="registrationInput"
                                 class="registration__input--text" placeholder="Email">
                         </div>
-                        <a href="r"></a>
-                        <input class="registration__input--button button--black" type="submit" name="registrationInput"
-                            id="registrationInputSubmit" value="Sign up">
+                        <a href="login.html" class="registration__link">
+                            <input class="registration__input--button button--black" type="submit"
+                                name="registrationInput" id="registrationInputSubmit" value="Sign up">
+                        </a>
                         <span class="registration__condition">You agree to our Terms and Conditions</span>
                     </div>
                 </div>
@@ -551,7 +569,7 @@
                         <span class="cart__sum-value">$24,588</span>
                     </div>
 
-                    <a href="#" class="cart__link">
+                    <a href="checkout.html" class="cart__link">
                         <button class="cart__button button">Go To Checkout</button>
                     </a>
                 </div>

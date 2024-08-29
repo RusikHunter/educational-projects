@@ -60,6 +60,14 @@
         justify-content: space-between;
     }
 
+    &__link {
+        width: 208px;
+    }
+
+    &__button {
+        width: 208px;
+    }
+
     @include tablet {
         &__row {
             padding-left: 100px;
@@ -112,6 +120,10 @@
             margin-inline: auto;
             margin-top: 25px;
             width: 230px;
+        }
+
+        &__link {
+            margin-inline: auto;
         }
 
         &__button {

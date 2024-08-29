@@ -11,6 +11,7 @@
     <meta name="description"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim facilisi elementum commodo ipsum. Aenean aenean adipiscing lect.">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="icon" href="images/globals/logo/logo.png" type="image/png">
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                     <nav class="header__navigation">
                         <ul class="header__navigation-list">
                             <li class="header__list-item">
-                                <a href="#" class="header__link">Home</a>
+                                <a href="index.html" class="header__link">Home</a>
                             </li>
                             <li class="header__list-item">
                                 <a href="products.html" class="header__link">Products</a>
@@ -45,7 +46,9 @@
                     </nav>
                 </div>
                 <div class="header__column header__column--third column">
-                    <button class="header__button button">Design you watch</button>
+                    <a href="custome.html" class="header__link">
+                        <button class="header__button button">Design you watch</button>
+                    </a>
                 </div>
                 <div class="header__column header__column--fourth column">
                     <button class="header__icon-button header__icon-button--profile" id="headerProfileButton"></button>
@@ -65,8 +68,13 @@
 
             <dialog open class="header__modal-window modal-window">
                 <div class="header__modal-window-wrap">
-                    <button class="header__modal-window-button button button--black">Login</button>
-                    <button class="header__modal-window-button button button--black">Sign Up</button>
+                    <a href="login.html" class="header__modal-window-link">
+                        <button class="header__modal-window-button button button--black">Login</button>
+                    </a>
+
+                    <a href="login.html" class="header__modal-window-link">
+                        <button class="header__modal-window-button button button--black">Sign Up</button>
+                    </a>
                 </div>
             </dialog>
 
@@ -81,7 +89,7 @@
                         <nav class="burger__navigation">
                             <ul class="burger__navigation-list">
                                 <li class="burger__item">
-                                    <a href="#" class="burger__link">
+                                    <a href="index.html" class="burger__link">
                                         Home
                                     </a>
                                 </li>
@@ -111,15 +119,21 @@
                                     </a>
                                 </li>
                                 <li class="burger__item">
-                                    <a href="#" class="burger__link burger__link--cart">
+                                    <a href="checkout.html" class="burger__link burger__link--cart">
                                         Cart
                                     </a>
                                 </li>
                             </ul>
                         </nav>
 
-                        <button class="burger__button button">Design Your Watch</button>
-                        <button class="burger__button burger__button--transparent button">Sign In / Register</button>
+                        <a href="custome.html" class="burger__link--alt">
+                            <button class="burger__button button">Design Your Watch</button>
+                        </a>
+
+                        <a href="login.html" class="burger__link--alt">
+                            <button class="burger__button burger__button--transparent button">Sign In /
+                                Register</button>
+                        </a>
 
                         <button class="burger__close-button" id="burgerButtonClose">
                             <svg width="23" height="23" viewBox="0 0 23 23" fill="currentColor"
@@ -607,7 +621,7 @@
                         <span class="cart__sum-value">$24,588</span>
                     </div>
 
-                    <a href="#" class="cart__link">
+                    <a href="checkout.html" class="cart__link">
                         <button class="cart__button button">Go To Checkout</button>
                     </a>
                 </div>

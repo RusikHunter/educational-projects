@@ -11,6 +11,7 @@
     <meta name="description"
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim facilisi elementum commodo ipsum. Aenean aenean adipiscing lect.">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="icon" href="images/globals/logo/logo.png" type="image/png">
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                     <nav class="header__navigation">
                         <ul class="header__navigation-list">
                             <li class="header__list-item">
-                                <a href="#" class="header__link">Home</a>
+                                <a href="index.html" class="header__link">Home</a>
                             </li>
                             <li class="header__list-item">
                                 <a href="products.html" class="header__link">Products</a>
@@ -45,7 +46,9 @@
                     </nav>
                 </div>
                 <div class="header__column header__column--third column">
-                    <button class="header__button button">Design you watch</button>
+                    <a href="custome.html" class="header__link">
+                        <button class="header__button button">Design you watch</button>
+                    </a>
                 </div>
                 <div class="header__column header__column--fourth column">
                     <button class="header__icon-button header__icon-button--profile" id="headerProfileButton"></button>
@@ -86,7 +89,7 @@
                         <nav class="burger__navigation">
                             <ul class="burger__navigation-list">
                                 <li class="burger__item">
-                                    <a href="#" class="burger__link">
+                                    <a href="index.html" class="burger__link">
                                         Home
                                     </a>
                                 </li>
@@ -123,8 +126,14 @@
                             </ul>
                         </nav>
 
-                        <button class="burger__button button">Design Your Watch</button>
-                        <button class="burger__button burger__button--transparent button">Sign In / Register</button>
+                        <a href="custome.html" class="burger__link--alt">
+                            <button class="burger__button button">Design Your Watch</button>
+                        </a>
+
+                        <a href="login.html" class="burger__link--alt">
+                            <button class="burger__button burger__button--transparent button">Sign In /
+                                Register</button>
+                        </a>
 
                         <button class="burger__close-button" id="burgerButtonClose">
                             <svg width="23" height="23" viewBox="0 0 23 23" fill="currentColor"
@@ -251,6 +260,131 @@
             </div>
         </div>
     </footer>
+
+    <dialog open class="dialog section section--cart">
+        <div class="cart">
+            <div class="cart__wrapper">
+                <div class="cart__header-wrap">
+                    <h5 class="cart__title">your cart</h5>
+
+                    <button class="cart__button--close" id="cartButtonClose">
+                        <img src="images/globals/cart/close.svg" alt="X" width=12" height="12">
+                    </button>
+                </div>
+
+                <div class="cart__added-items-wrap">
+                    <div class="cart__added-item added-item">
+                        <img src="images/globals/cart/watch-1.png" alt="Watch" width="88" height="103"
+                            class="added-item__image">
+
+                        <div class="added-item__info">
+                            <button class="added-item__delete-button">
+                                <img src="images/globals/cart/delete.svg" alt="X" width="11" height="12">
+                            </button>
+                            <h6 class="added-item__title">Urban Eagle</h6>
+                            <p class="added-item__description">Volumenzeit S 7</p>
+                            <span class="added-item__price">$15,588</span>
+                            <div class="added-item__colors">
+                                <span class="added-item__case-color added-item__color"></span>
+                                <span class="added-item__strap-color added-item__color"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__added-item added-item">
+                        <img src="images/globals/cart/watch-1.png" alt="Watch" width="88" height="103"
+                            class="added-item__image">
+
+                        <div class="added-item__info">
+                            <button class="added-item__delete-button">
+                                <img src="images/globals/cart/delete.svg" alt="X" width="11" height="12">
+                            </button>
+                            <h6 class="added-item__title">Urban Eagle</h6>
+                            <p class="added-item__description">Volumenzeit S 7</p>
+                            <span class="added-item__price">$15,588</span>
+                            <div class="added-item__colors">
+                                <span class="added-item__case-color added-item__color"></span>
+                                <span class="added-item__strap-color added-item__color"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__added-item added-item">
+                        <img src="images/globals/cart/watch-1.png" alt="Watch" width="88" height="103"
+                            class="added-item__image">
+
+                        <div class="added-item__info">
+                            <button class="added-item__delete-button">
+                                <img src="images/globals/cart/delete.svg" alt="X" width="11" height="12">
+                            </button>
+                            <h6 class="added-item__title">Urban Eagle</h6>
+                            <p class="added-item__description">Volumenzeit S 7</p>
+                            <span class="added-item__price">$15,588</span>
+                            <div class="added-item__colors">
+                                <span class="added-item__case-color added-item__color"></span>
+                                <span class="added-item__strap-color added-item__color"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart__matched-items-wrap">
+                    <button class="cart__matched-items-button button" id="cartMatchedItemsButton">Add A Matching
+                        Item</button>
+
+                    <div class="cart__matched-items-list">
+                        <div class="cart__matched-item matched-item">
+                            <img src="images/globals/cart/watch-2.png" alt="Watch" width="61" height="71"
+                                class="matched-item__image">
+
+                            <div class="matched-item__textbox">
+                                <h6 class="matched-item__title">Volumenzeit S 7</h6>
+                                <span class="matched-item__price">$15,588</span>
+
+                                <button class="matched-item__add-button">Add item</button>
+                            </div>
+                        </div>
+
+                        <div class="cart__matched-item matched-item">
+                            <img src="images/globals/cart/watch-2.png" alt="Watch" width="61" height="71"
+                                class="matched-item__image">
+
+                            <div class="matched-item__textbox">
+                                <h6 class="matched-item__title">Volumenzeit S 7</h6>
+                                <span class="matched-item__price">$15,588</span>
+
+                                <button class="matched-item__add-button">Add item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart__sum-wrap">
+                    <div class="cart__sum">
+                        <div class="cart__sum-title">Shupping UPS Standard</div>
+
+                        <span class="cart__sum-value">$12</span>
+                    </div>
+
+                    <div class="cart__sum">
+                        <div class="cart__sum-title">Discount 15% Off</div>
+
+                        <span class="cart__sum-value">$1250</span>
+                    </div>
+
+                    <div class="cart__sum cart__sum--total">
+                        <div class="cart__sum-title">Grand Total</div>
+
+                        <span class="cart__sum-value">$24,588</span>
+                    </div>
+
+                    <a href="checkout.html" class="cart__link">
+                        <button class="cart__button button">Go To Checkout</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </dialog>
 </body>
 
 </html>
