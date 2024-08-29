@@ -30,7 +30,8 @@ powered by: github pages
 @import "blocks/globals/header",
 "blocks/globals/registration",
 "blocks/globals/footer",
-"blocks/globals/cart";
+"blocks/globals/cart",
+"blocks/globals/title-wrap";
 
 /* homepage - стили для секций страницы homepage */
 
@@ -67,11 +68,14 @@ powered by: github pages
 
 /* checkout - стили для сексий страницы checkout */
 
-@import "blocks/checkout/checkout",
-"blocks/checkout/buy",
+@import "blocks/checkout/buy",
 "blocks/checkout/popup";
 
 /* login - стили для сексий страницы login */
 
 @import "blocks/login/login",
 "blocks/login/decoration";
+
+/* account - стили для сексий страницы account */
+
+@import "blocks/account/account";
