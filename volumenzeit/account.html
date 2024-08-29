@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Volumenzeit - Account</title>
+    <meta name="author" content="dmfshove">
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim facilisi elementum commodo ipsum. Aenean aenean adipiscing lect.">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner container">
+            <div class="header__row header__row--first row">
+                <div class="header__column header__column--first column">
+                    <a href="#" class="header__logo">
+                        <img src="images/globals/header/logo.png" alt="Volumenzeit Volumetric Wrist Watches" width="255"
+                            height="32" class="header__logo-image">
+                    </a>
+                </div>
+                <div class="header__column header__column--second column">
+                    <nav class="header__navigation">
+                        <ul class="header__navigation-list">
+                            <li class="header__list-item">
+                                <a href="#" class="header__link">Home</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="products.html" class="header__link">Products</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="contactus.html" class="header__link">Contact Us</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="delivery.html" class="header__link">Delivery</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="custome.html" class="header__link">Custome</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__column header__column--third column">
+                    <button class="header__button button">Design you watch</button>
+                </div>
+                <div class="header__column header__column--fourth column">
+                    <button class="header__icon-button header__icon-button--profile" id="headerProfileButton"></button>
+
+                    <button class="header__icon-button header__icon-button--cart" id="headerCartButton"></button>
+                </div>
+
+                <button class="header__burger-button" id="burgerButtonOpen">
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="28" height="4" fill="#735CFF" />
+                        <rect y="10" width="28" height="4" />
+                        <rect y="20" width="28" height="4" />
+                    </svg>
+                </button>
+            </div>
+
+            <dialog open class="header__modal-window modal-window">
+                <div class="header__modal-window-wrap">
+                    <a href="login.html" class="header__modal-window-link">
+                        <button class="header__modal-window-button button button--black">Login</button>
+                    </a>
+
+                    <a href="login.html" class="header__modal-window-link">
+                        <button class="header__modal-window-button button button--black">Sign Up</button>
+                    </a>
+                </div>
+            </dialog>
+
+            <dialog open class="header__burger burger modal-window">
+                <div class="burger__wrap">
+                    <div class="burger__row burger__row--first row">
+                        <a href="#" class="burger__logo">
+                            <img src="images/globals/header/logo.png" alt="Volumenzeit Volumetric Wrist Watches"
+                                width="170" height="32" class="burger__logo-image">
+                        </a>
+
+                        <nav class="burger__navigation">
+                            <ul class="burger__navigation-list">
+                                <li class="burger__item">
+                                    <a href="#" class="burger__link">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="products.html" class="burger__link">
+                                        Products
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="contactus.html" class="burger__link">
+                                        Contact Us
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="delivery.html" class="burger__link">
+                                        Delivery
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="custome.html" class="burger__link">
+                                        Custome
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="#" class="burger__link burger__link--profile">
+                                        My Account
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="checkout.html" class="burger__link burger__link--cart">
+                                        Cart
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <button class="burger__button button">Design Your Watch</button>
+                        <button class="burger__button burger__button--transparent button">Sign In / Register</button>
+
+                        <button class="burger__close-button" id="burgerButtonClose">
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.3282 8.5L2.82818 0L-0.000244141 2.82843L8.49976 11.3284L0.0291934 19.799L2.85762 22.6274L11.3282 14.1569L19.7987 22.6274L22.6272 19.799L14.1566 11.3284L22.6566 2.82843L19.8282 0L11.3282 8.5Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </dialog>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="account">
+                <div class="account__inner container">
+                    <div class="account__row">
+                        <div class="account__content">
+                            <div class="account__navigation">
+                                <form class="account__form">
+                                    <input type="radio" class="account__input--radio" name="accountNavigationInput"
+                                        id="accountNavigationInput1">
+                                    <label for="accountNavigationInput1">Dashboard</label>
+
+                                    <input type="radio" class="account__input--radio" name="accountNavigationInput"
+                                        id="accountNavigationInput1">
+                                    <label for="accountNavigationInput1">Order History</label>
+
+                                    <input type="radio" class="account__input--radio" name="accountNavigationInput"
+                                        id="accountNavigationInput1">
+                                    <label for="accountNavigationInput1">Contact Us</label>
+                                </form>
+                            </div>
+
+                            <h1 class="account__title">Hey, John Smith</h1>
+                            <p class="account__description">Welcome to your dashboard, your one-stop-shop for all your
+                                recent Volumenzeit account activity.</p>
+
+                            <div class="account__information information">
+                                <div class="information__wrap">
+                                    <a href="checkout.html" class="information__link">View All orders</a>
+                                    <h3 class="information__title">Recent Orders</h3>
+                                    <p class="information__description">You haven’t placed any order yet.</p>
+                                </div>
+
+                                <div class="information__wrap">
+                                    <a href="#" class="information__link">Manage Info</a>
+                                    <h3 class="information__title">My Info</h3>
+                                    <p class="information__description">Personal Information</p>
+
+                                    <dl class="information__list">
+                                        <dt class="information__term">Name:</dt>
+                                        <dd class="information__definition">John Smith</dd>
+
+                                        <dt class="information__term">Email:</dt>
+                                        <dd class="information__definition">johnsmith@gmail.com</dd>
+                                    </dl>
+                                </div>
+
+                                <div class="information__wrap">
+                                    <a href="#" class="information__link">Manage Addresses(0)</a>
+                                    <h3 class="information__title">Address Book</h3>
+                                    <p class="information__description">You have not yet added address.</p>
+                                </div>
+                            </div>
+
+                            <button class="account__button button">Add New</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
