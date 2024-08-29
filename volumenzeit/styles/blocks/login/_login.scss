@@ -2,8 +2,6 @@
     background: gray;
     padding-bottom: 1000px;
 
-    &__inner {}
-
     &__wrap {
         display: flex;
         padding: 60px;
@@ -48,6 +46,8 @@
         }
 
         .login__input--radio:checked+label {
+            color: var(--color-black);
+
             &::after {
                 content: "";
                 position: absolute;
@@ -66,7 +66,7 @@
     }
 
     &__title {
-        @include text-spaceage(48, 40, 104%, var(--color-black));
+        @include text-spaceage(48, 36, 104%, var(--color-black));
         font-weight: 400;
         margin-top: 40px;
         margin-inline: auto;
@@ -98,9 +98,8 @@
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
-
-    &__form-login-function {}
 
     &__input--checkbox {
         &+label {
@@ -116,9 +115,9 @@
             &::after {
                 position: absolute;
                 content: "Remember me";
-                @include text-poppins(14, 14, 100%, var(--color-gray));
+                @include text-poppins(14, 12, 100%, var(--color-gray));
                 width: 200px;
-                top: 0;
+                top: 2px;
                 left: 27px;
             }
 
@@ -139,7 +138,7 @@
         &:visited,
         &:hover,
         &:active {
-            @include text-poppins(14, 14, 100%, var(--color-gray));
+            @include text-poppins(14, 12, 100%, var(--color-gray));
         }
     }
 
@@ -238,6 +237,10 @@
         width: 49%;
     }
 
+    &__dropdown--first {
+        z-index: 999999;
+    }
+
     &__dropdown--second {
         left: 51%;
     }
@@ -267,12 +270,143 @@
         }
 
         &__button {
-            background-repeat: no-repeat;
             background-position: 35% center;
 
             &:hover {
-                background-repeat: no-repeat;
                 background-position: 35% center;
+            }
+        }
+    }
+
+    @include tablet-small {
+        &__button {
+            background-position: 30% center;
+
+            &:hover {
+                background-position: 30% center;
+            }
+        }
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__dropdown-wrap {
+            margin-bottom: 120px;
+        }
+
+        &__dropdown {
+            width: 100%;
+        }
+
+        &__dropdown--second {
+            left: 0;
+            top: 65px;
+        }
+
+        &__input--checkbox {
+            &+label {
+                &::after {
+                    width: 300px !important;
+                }
+
+                &[for="loginInputCheckboxSquareOther1"]::after {
+                    line-height: 200%;
+                    top: -5px;
+                }
+            }
+        }
+
+        &__email-wrap,
+        &__password-wrap {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            margin-top: 10px;
+        }
+
+        &__input--confirm {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        #loginInputSubmitSignup {
+            margin-top: 50px;
+        }
+    }
+
+    @include mobile {
+        &__row {
+            padding-inline: 20px;
+        }
+
+        &__wrap {
+            padding-inline: 20px;
+            padding-block: 80px 24px;
+            width: 100%;
+        }
+
+        &__content {
+            padding-inline: 30px;
+        }
+
+        &__form--navigation {
+            margin-top: 30px;
+            flex-direction: column;
+
+            .login__input--radio+label {
+                width: 100%;
+                margin-bottom: 45px;
+            }
+        }
+
+        &__title {
+            margin-top: 0;
+            width: 100%;
+            font-size: 28px;
+            left: 0;
+        }
+
+        &__social-networks {
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        &__input--checkbox {
+            &+label {
+                &[for="loginInputCheckboxSquareOther1"]::after {
+                    width: 600px !important;
+                }
+            }
+        }
+
+        #loginInputSubmitSignup {
+            margin-bottom: 24px;
+        }
+    }
+
+    @include mobile-small {
+        &__title {
+            font-size: 18px;
+        }
+
+        &__form-login-functions {
+            flex-direction: column;
+        }
+
+        #loginInputCheckboxSquare1+label {
+            left: -50px;
+        }
+
+        &__input--submit {
+            width: 170px;
+        }
+
+        &__input--checkbox {
+            &+label {
+                &[for="loginInputCheckboxSquareOther1"]::after {
+                    width: 200px !important;
+                }
             }
         }
     }

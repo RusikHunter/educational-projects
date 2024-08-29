@@ -3860,6 +3860,9 @@ media - scss файл с миксинами медиа-запросов desktop,
   top: 28px;
   left: 0;
 }
+.login__form--navigation .login__input--radio:checked + label {
+  color: var(--color-black);
+}
 .login__form--navigation .login__input--radio:checked + label::after {
   content: "";
   position: absolute;
@@ -3875,7 +3878,7 @@ media - scss файл с миксинами медиа-запросов desktop,
 }
 .login__title {
   font-family: var(--font-family-spaceage);
-  font-size: clamp(40px, 3.3333333333vw, 48px);
+  font-size: clamp(36px, 3.3333333333vw, 48px);
   line-height: 104%;
   color: var(--color-black);
   font-weight: 400;
@@ -3908,6 +3911,7 @@ media - scss файл с миксинами медиа-запросов desktop,
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .login__input--checkbox + label {
   position: relative;
@@ -3923,11 +3927,11 @@ media - scss файл с миксинами медиа-запросов desktop,
   position: absolute;
   content: "Remember me";
   font-family: var(--font-family-poppins);
-  font-size: clamp(14px, 0.9722222222vw, 14px);
+  font-size: clamp(12px, 0.9722222222vw, 14px);
   line-height: 100%;
   color: var(--color-gray);
   width: 200px;
-  top: 0;
+  top: 2px;
   left: 27px;
 }
 .login__input--checkbox + label[for=loginInputCheckboxSquareOther1]::after {
@@ -3939,7 +3943,7 @@ media - scss файл с миксинами медиа-запросов desktop,
 }
 .login__link:link, .login__link:visited, .login__link:hover, .login__link:active {
   font-family: var(--font-family-poppins);
-  font-size: clamp(14px, 0.9722222222vw, 14px);
+  font-size: clamp(12px, 0.9722222222vw, 14px);
   line-height: 100%;
   color: var(--color-gray);
 }
@@ -4027,6 +4031,9 @@ media - scss файл с миксинами медиа-запросов desktop,
   left: 0;
   width: 49%;
 }
+.login__dropdown--first {
+  z-index: 999999;
+}
 .login__dropdown--second {
   left: 51%;
 }
@@ -4049,11 +4056,104 @@ media - scss файл с миксинами медиа-запросов desktop,
     padding-inline: 72px;
   }
   .login__button {
-    background-repeat: no-repeat;
     background-position: 35% center;
   }
   .login__button:hover {
-    background-repeat: no-repeat;
     background-position: 35% center;
+  }
+}
+@media (max-width: 920px) {
+  .login__button {
+    background-position: 30% center;
+  }
+  .login__button:hover {
+    background-position: 30% center;
+  }
+  .login__title {
+    font-size: 32px;
+  }
+  .login__dropdown-wrap {
+    margin-bottom: 120px;
+  }
+  .login__dropdown {
+    width: 100%;
+  }
+  .login__dropdown--second {
+    left: 0;
+    top: 65px;
+  }
+  .login__input--checkbox + label::after {
+    width: 300px !important;
+  }
+  .login__input--checkbox + label[for=loginInputCheckboxSquareOther1]::after {
+    line-height: 200%;
+    top: -5px;
+  }
+  .login__email-wrap, .login__password-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 10px;
+  }
+  .login__input--confirm {
+    width: 100%;
+    margin-top: 0;
+  }
+  .login #loginInputSubmitSignup {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .login__row {
+    padding-inline: 20px;
+  }
+  .login__wrap {
+    padding-inline: 20px;
+    padding-block: 80px 24px;
+    width: 100%;
+  }
+  .login__content {
+    padding-inline: 30px;
+  }
+  .login__form--navigation {
+    margin-top: 30px;
+    flex-direction: column;
+  }
+  .login__form--navigation .login__input--radio + label {
+    width: 100%;
+    margin-bottom: 45px;
+  }
+  .login__title {
+    margin-top: 0;
+    width: 100%;
+    font-size: 28px;
+    left: 0;
+  }
+  .login__social-networks {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .login__input--checkbox + label[for=loginInputCheckboxSquareOther1]::after {
+    width: 600px !important;
+  }
+  .login #loginInputSubmitSignup {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .login__title {
+    font-size: 18px;
+  }
+  .login__form-login-functions {
+    flex-direction: column;
+  }
+  .login #loginInputCheckboxSquare1 + label {
+    left: -50px;
+  }
+  .login__input--submit {
+    width: 170px;
+  }
+  .login__input--checkbox + label[for=loginInputCheckboxSquareOther1]::after {
+    width: 200px !important;
   }
 }
