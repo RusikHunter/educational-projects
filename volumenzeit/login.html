@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Volumenzeit - Login</title>
+    <meta name="author" content="dmfshove">
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim facilisi elementum commodo ipsum. Aenean aenean adipiscing lect.">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner container">
+            <div class="header__row header__row--first row">
+                <div class="header__column header__column--first column">
+                    <a href="#" class="header__logo">
+                        <img src="images/globals/header/logo.png" alt="Volumenzeit Volumetric Wrist Watches" width="255"
+                            height="32" class="header__logo-image">
+                    </a>
+                </div>
+                <div class="header__column header__column--second column">
+                    <nav class="header__navigation">
+                        <ul class="header__navigation-list">
+                            <li class="header__list-item">
+                                <a href="#" class="header__link">Home</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="products.html" class="header__link">Products</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="contactus.html" class="header__link">Contact Us</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="delivery.html" class="header__link">Delivery</a>
+                            </li>
+                            <li class="header__list-item">
+                                <a href="custome.html" class="header__link">Custome</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__column header__column--third column">
+                    <button class="header__button button">Design you watch</button>
+                </div>
+                <div class="header__column header__column--fourth column">
+                    <button class="header__icon-button header__icon-button--profile" id="headerProfileButton"></button>
+
+                    <button class="header__icon-button header__icon-button--cart" id="headerCartButton"></button>
+                </div>
+
+                <button class="header__burger-button" id="burgerButtonOpen">
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="28" height="4" fill="#735CFF" />
+                        <rect y="10" width="28" height="4" />
+                        <rect y="20" width="28" height="4" />
+                    </svg>
+                </button>
+            </div>
+
+            <dialog open class="header__modal-window modal-window">
+                <div class="header__modal-window-wrap">
+                    <button class="header__modal-window-button button button--black">Login</button>
+                    <button class="header__modal-window-button button button--black">Sign Up</button>
+                </div>
+            </dialog>
+
+            <dialog open class="header__burger burger modal-window">
+                <div class="burger__wrap">
+                    <div class="burger__row burger__row--first row">
+                        <a href="#" class="burger__logo">
+                            <img src="images/globals/header/logo.png" alt="Volumenzeit Volumetric Wrist Watches"
+                                width="170" height="32" class="burger__logo-image">
+                        </a>
+
+                        <nav class="burger__navigation">
+                            <ul class="burger__navigation-list">
+                                <li class="burger__item">
+                                    <a href="#" class="burger__link">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="products.html" class="burger__link">
+                                        Products
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="contactus.html" class="burger__link">
+                                        Contact Us
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="delivery.html" class="burger__link">
+                                        Delivery
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="custome.html" class="burger__link">
+                                        Custome
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="#" class="burger__link burger__link--profile">
+                                        My Account
+                                    </a>
+                                </li>
+                                <li class="burger__item">
+                                    <a href="checkout.html" class="burger__link burger__link--cart">
+                                        Cart
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <button class="burger__button button">Design Your Watch</button>
+                        <button class="burger__button burger__button--transparent button">Sign In / Register</button>
+
+                        <button class="burger__close-button" id="burgerButtonClose">
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.3282 8.5L2.82818 0L-0.000244141 2.82843L8.49976 11.3284L0.0291934 19.799L2.85762 22.6274L11.3282 14.1569L19.7987 22.6274L22.6272 19.799L14.1566 11.3284L22.6566 2.82843L19.8282 0L11.3282 8.5Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </dialog>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="login">
+                <div class="login__inner container">
+                    <div class="login__wrap">
+                        <div class="login__content">
+                            <form class="login__form--navigation">
+                                <input type="radio" class="login__input--radio" name="loginInputRadio"
+                                    id="loginInputRadio1">
+                                <label for="loginInputRadio1">Login</label>
+
+                                <input type="radio" class="login__input--radio" name="loginInputRadio"
+                                    id="loginInputRadio2">
+                                <label for="loginInputRadio2">Create Account</label>
+                            </form>
+
+                            <div class="login__login-content">
+                                <h2 class="login__title">WELCOME BACK</h2>
+                                <p class="login__description">Sign into your existing account to earn rewards, check
+                                    existing orders and more</p>
+
+                                <form class="login__form-login">
+                                    <input type="email" class="login__input--text input" placeholder="Email">
+
+                                    <input type="password" class="login__input--text input" placeholder="Password">
+
+                                    <div class="login__form-login-functions">
+                                        <div class="login__form-login-function">
+                                            <input type="radio" id="loginInputRadioSquare1" name="loginInputRadioSquare"
+                                                class="login__input--radio-square">
+                                            <label for="loginInputRadioSquare1">Remember me</label>
+                                        </div>
+
+                                        <div class="login__form-login-function">
+                                            <a href="#" class="login__link">Forgot Password</a>
+                                        </div>
+                                    </div>
+
+                                    <input type="submit" id="loginInputSubmit" class="login__input--submit button"
+                                        value="Sign In">
+                                </form>
+
+                                <div class="login__express">
+                                    <h3 class="login__title--bold">Express sign in</h3>
+
+                                    <div class="login__social-networks">
+                                        <a href="#" class="login__social-network">
+                                            <button class="login__button button--black">Sign in</button>
+                                        </a>
+
+                                        <a href="#" class="login__social-network">
+                                            <button class="login__button button--black">Sign in</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="login__signup-content">
+                                <h2 class="login__title">NEW TO VOLUMENZEIT?</h2>
+                                <p class="login__description">Create a new account</p>
+
+                                <form class="login__form-singup">
+                                    <input type="text" class="login__input--text input" placeholder="First Name">
+
+                                    <input type="text" class="login__input--text input" placeholder="Last Name">
+
+                                    <span class="login__text-info">Date of birth</span>
+
+                                    <div class="login__dropdown-wrap">
+                                        <div class="login__country-dropdown-wrap">
+                                            <div class="login__country-dropdown country">
+                                                <div class="country__wrap">
+                                                    <h6 class="country__title">Sort By</h6>
+
+                                                    <button class="country__button">
+                                                        <img src="images/checkout/buy/arrow.svg" alt="V" width="13"
+                                                            height="13">
+                                                    </button>
+                                                </div>
+
+                                                <div class="country__decoration"></div>
+
+                                                <form class="country__form">
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio1"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio1"
+                                                        class="country__label">Januar</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio2"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio2"
+                                                        class="country__label">Februar</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio3"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio3" class="country__label">March</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio4"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio4" class="country__label">April</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio5"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio5" class="country__label">May</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio6"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio6" class="country__label">Juni</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio7"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio7" class="country__label">July</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio8"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio8"
+                                                        class="country__label">August</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio9"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio9"
+                                                        class="country__label">September</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio10" class="country__input">
+                                                    <label for="countryInputRadio10"
+                                                        class="country__label">October</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio11" class="country__input">
+                                                    <label for="countryInputRadio10"
+                                                        class="country__label">November</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio12" class="country__input">
+                                                    <label for="countryInputRadio10"
+                                                        class="country__label">December</label>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="login__country-dropdown-wrap">
+                                            <div class="login__country-dropdown country">
+                                                <div class="country__wrap">
+                                                    <h6 class="country__title">Sort By</h6>
+
+                                                    <button class="country__button">
+                                                        <img src="images/checkout/buy/arrow.svg" alt="V" width="13"
+                                                            height="13">
+                                                    </button>
+                                                </div>
+
+                                                <div class="country__decoration"></div>
+
+                                                <form class="country__form">
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio1"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio1" class="country__label">1</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio2"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio2" class="country__label">2</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio3"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio3" class="country__label">3</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio4"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio4" class="country__label">4</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio5"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio5" class="country__label">5</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio6"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio6" class="country__label">6</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio7"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio7" class="country__label">7</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio8"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio8" class="country__label">8</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio9"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio9" class="country__label">9</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio10" class="country__input">
+                                                    <label for="countryInputRadio10" class="country__label">10</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio11" class="country__input">
+                                                    <label for="countryInputRadio11" class="country__label">11</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio12" class="country__input">
+                                                    <label for="countryInputRadio12" class="country__label">12</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio1"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio13" class="country__label">13</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio2"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio14" class="country__label">14</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio3"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio15" class="country__label">15</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio4"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio16" class="country__label">16</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio5"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio17" class="country__label">17</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio6"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio18" class="country__label">18</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio7"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio19" class="country__label">19</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio8"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio20" class="country__label">20</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio9"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio21" class="country__label">21</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio10" class="country__input">
+                                                    <label for="countryInputRadio22" class="country__label">22</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio11" class="country__input">
+                                                    <label for="countryInputRadio23" class="country__label">23</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio12" class="country__input">
+                                                    <label for="countryInputRadio24" class="country__label">24</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio8"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio20" class="country__label">25</label>
+
+                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio9"
+                                                        class="country__input">
+                                                    <label for="countryInputRadio21" class="country__label">26</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio10" class="country__input">
+                                                    <label for="countryInputRadio22" class="country__label">27</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio11" class="country__input">
+                                                    <label for="countryInputRadio23" class="country__label">28</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio12" class="country__input">
+                                                    <label for="countryInputRadio24" class="country__label">29</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio11" class="country__input">
+                                                    <label for="countryInputRadio23" class="country__label">31</label>
+
+                                                    <input type="radio" name="countryInputRadio"
+                                                        id="countryInputRadio12" class="country__input">
+                                                    <label for="countryInputRadio24" class="country__label">32</label>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <input type="text" class="login__input--text input" placeholder="Phone Number">
+
+                                    <div class="login__email-wrap">
+                                        <input type="text" class="login__input--text login__input--confirm input"
+                                            placeholder="Email">
+
+                                        <input type="text" class="login__input--text login__input--confirm input"
+                                            placeholder="Confirm Email">
+                                    </div>
+
+                                    <div class="login__password-wrap">
+                                        <input type="text" class="login__input--text login__input--confirm input"
+                                            placeholder="Password">
+
+                                        <input type="text" class="login__input--text login__input--confirm input"
+                                            placeholder="Confirm Password">
+                                    </div>
+
+                                    <div class="login__form-signup-functions">
+                                        <div class="login__form-signup-function">
+                                            <input type="radio" id="loginInputRadioSquare2"
+                                                name="loginInputRadioSquareSignup" class="login__input--radio-square">
+                                            <label for="loginInputRadioSquare2">Sign-up to receive the latest updates
+                                                and promotions</label>
+                                        </div>
+                                    </div>
+
+                                    <input type="submit" id="loginInputSubmitSignup" class="login__input--submit button"
+                                        value="Create Account">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
