@@ -1,0 +1,12 @@
+.decoration {
+    &__wrap {
+        background: var(--color-violet) url(../images/login/decoration/background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 5;
+        margin-top: -325px;
+        height: 500px;
+    }
+}

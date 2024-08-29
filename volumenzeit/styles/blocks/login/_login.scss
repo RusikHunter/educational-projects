@@ -1,8 +1,8 @@
 .login {
-    background: gray;
-    padding-bottom: 1000px;
+    height: 980px;
 
     &__wrap {
+        position: relative;
         display: flex;
         padding: 60px;
         border-radius: 10px;
@@ -10,6 +10,7 @@
         margin-top: 25px;
         width: 970px;
         margin-inline: auto;
+        z-index: 8;
     }
 
     &__content {
@@ -257,6 +258,7 @@
     }
 
     @include tablet {
+
         &__row {
             padding-inline: 32px;
         }
@@ -279,6 +281,10 @@
     }
 
     @include tablet-small {
+        & {
+            height: auto;
+        }
+
         &__button {
             background-position: 30% center;
 

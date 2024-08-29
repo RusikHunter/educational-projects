@@ -3815,10 +3815,10 @@ media - scss файл с миксинами медиа-запросов desktop,
 
 /* login - стили для сексий страницы login */
 .login {
-  background: gray;
-  padding-bottom: 1000px;
+  height: 980px;
 }
 .login__wrap {
+  position: relative;
   display: flex;
   padding: 60px;
   border-radius: 10px;
@@ -3826,6 +3826,7 @@ media - scss файл с миксинами медиа-запросов desktop,
   margin-top: 25px;
   width: 970px;
   margin-inline: auto;
+  z-index: 8;
 }
 .login__content {
   display: flex;
@@ -4063,6 +4064,9 @@ media - scss файл с миксинами медиа-запросов desktop,
   }
 }
 @media (max-width: 920px) {
+  .login {
+    height: auto;
+  }
   .login__button {
     background-position: 30% center;
   }
@@ -4156,4 +4160,15 @@ media - scss файл с миксинами медиа-запросов desktop,
   .login__input--checkbox + label[for=loginInputCheckboxSquareOther1]::after {
     width: 200px !important;
   }
+}
+
+.decoration__wrap {
+  background: var(--color-violet) url(../images/login/decoration/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 5;
+  margin-top: -325px;
+  height: 500px;
 }
