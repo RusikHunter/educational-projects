@@ -1,0 +1,279 @@
+.login {
+    background: gray;
+    padding-bottom: 1000px;
+
+    &__inner {}
+
+    &__wrap {
+        display: flex;
+        padding: 60px;
+        border-radius: 10px;
+        background: white;
+        margin-top: 25px;
+        width: 970px;
+        margin-inline: auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: var((--border-gray));
+        border-radius: 10px;
+        padding-inline: 110px;
+    }
+
+    &__form--navigation {
+        display: flex;
+        width: 100%;
+        margin-top: 60px;
+
+        .login__input--radio+label {
+            cursor: pointer;
+            position: relative;
+            width: 50%;
+            @include text-poppins(20, 16, 100%, var(--color-gray));
+            font-weight: 600;
+            text-align: center;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: #eaecf5;
+                top: 28px;
+                left: 0;
+            }
+        }
+
+        .login__input--radio:checked+label {
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 5px;
+                background-color: var(--color-violet);
+                top: 26px;
+                left: 0;
+            }
+        }
+    }
+
+    &__login-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include text-spaceage(48, 40, 104%, var(--color-black));
+        font-weight: 400;
+        margin-top: 40px;
+        margin-inline: auto;
+        text-align: center;
+        width: 120%;
+        position: relative;
+        left: -10%;
+    }
+
+    &__description {
+        @include text-poppins(14, 14, 200%, var(--color-gray));
+        margin-block: 20px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    &__form-login {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input--text {
+        width: 100%;
+        padding: 22px 20px;
+        margin-top: 10px;
+    }
+
+    &__form-login-functions {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__form-login-function {}
+
+    &__input--checkbox {
+        &+label {
+            position: relative;
+            display: block;
+            width: 19px;
+            height: 19px;
+            outline: 1px solid var(--color-gray-alt);
+            border: 3px solid var(--color-white);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+
+            &::after {
+                position: absolute;
+                content: "Remember me";
+                @include text-poppins(14, 14, 100%, var(--color-gray));
+                width: 200px;
+                top: 0;
+                left: 27px;
+            }
+
+            &[for="loginInputCheckboxSquareOther1"]::after {
+                content: "Sign-up to receive the latest updates and promotions";
+                width: 400px;
+            }
+        }
+
+        &:checked+label {
+            background-color: var(--color-gray-alt);
+        }
+    }
+
+    &__link {
+
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+            @include text-poppins(14, 14, 100%, var(--color-gray));
+        }
+    }
+
+    &__input--submit {
+        width: 208px;
+        margin-inline: auto;
+        margin-top: 20px;
+
+        &#loginInputSubmitSignup {
+            margin-bottom: 56px;
+        }
+    }
+
+    &__express {
+        display: flex;
+        flex-direction: column;
+        margin-block: 40px 56px;
+        width: 100%;
+    }
+
+    &__title--bold {
+        @include text-poppins(20, 16, 100%, var(--color-black));
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    &__social-networks {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 10px;
+        margin-top: 15px;
+    }
+
+    &__social-network {
+        width: 100%;
+    }
+
+    &__button {
+        width: 100%;
+        background-color: var(--color-black);
+        color: var(--color-white);
+        background-repeat: no-repeat;
+        background-position: 40% center;
+
+        &:hover {
+            background-repeat: no-repeat;
+            background-position: 40% center;
+        }
+    }
+
+    &__button--facebook {
+        background-image: url(../images/login/login/facebook.svg);
+        padding-left: 23px;
+
+        &:hover {
+            background-image: url(../images/login/login/facebook.svg);
+        }
+    }
+
+    &__button--google {
+        background-image: url(../images/login/login/google.svg);
+        padding-left: 35px;
+
+        &:hover {
+            background-image: url(../images/login/login/google.svg);
+        }
+    }
+
+    &__signup-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-singup {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text-info {
+        display: block;
+        @include text-poppins(14, 14, 100%, var(--color-gray));
+        margin-top: 20px;
+    }
+
+    &__dropdown-wrap {
+        display: flex;
+        position: relative;
+        margin-block: 10px 56px;
+    }
+
+    &__dropdown {
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 49%;
+    }
+
+    &__dropdown--second {
+        left: 51%;
+    }
+
+    &__email-wrap,
+    &__password-wrap {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 10px;
+    }
+
+    &__form-signup-functions {
+        margin-top: 20px;
+    }
+
+    @include tablet {
+        &__row {
+            padding-inline: 32px;
+        }
+
+        &__wrap {
+            width: 80%;
+        }
+
+        &__content {
+            padding-inline: 72px;
+        }
+
+        &__button {
+            background-repeat: no-repeat;
+            background-position: 35% center;
+
+            &:hover {
+                background-repeat: no-repeat;
+                background-position: 35% center;
+            }
+        }
+    }
+}

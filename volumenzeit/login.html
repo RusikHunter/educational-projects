@@ -138,73 +138,76 @@
         <section class="section">
             <div class="login">
                 <div class="login__inner container">
-                    <div class="login__wrap">
-                        <div class="login__content">
-                            <form class="login__form--navigation">
-                                <input type="radio" class="login__input--radio" name="loginInputRadio"
-                                    id="loginInputRadio1">
-                                <label for="loginInputRadio1">Login</label>
+                    <div class="login__row">
+                        <div class="login__wrap">
+                            <div class="login__content">
+                                <form class="login__form--navigation">
+                                    <input checked type="radio" class="login__input--radio" name="loginInputRadio"
+                                        id="loginInputRadio1">
+                                    <label for="loginInputRadio1">Login</label>
 
-                                <input type="radio" class="login__input--radio" name="loginInputRadio"
-                                    id="loginInputRadio2">
-                                <label for="loginInputRadio2">Create Account</label>
-                            </form>
-
-                            <div class="login__login-content">
-                                <h2 class="login__title">WELCOME BACK</h2>
-                                <p class="login__description">Sign into your existing account to earn rewards, check
-                                    existing orders and more</p>
-
-                                <form class="login__form-login">
-                                    <input type="email" class="login__input--text input" placeholder="Email">
-
-                                    <input type="password" class="login__input--text input" placeholder="Password">
-
-                                    <div class="login__form-login-functions">
-                                        <div class="login__form-login-function">
-                                            <input type="radio" id="loginInputRadioSquare1" name="loginInputRadioSquare"
-                                                class="login__input--radio-square">
-                                            <label for="loginInputRadioSquare1">Remember me</label>
-                                        </div>
-
-                                        <div class="login__form-login-function">
-                                            <a href="#" class="login__link">Forgot Password</a>
-                                        </div>
-                                    </div>
-
-                                    <input type="submit" id="loginInputSubmit" class="login__input--submit button"
-                                        value="Sign In">
+                                    <input type="radio" class="login__input--radio" name="loginInputRadio"
+                                        id="loginInputRadio2">
+                                    <label for="loginInputRadio2">Create Account</label>
                                 </form>
 
-                                <div class="login__express">
-                                    <h3 class="login__title--bold">Express sign in</h3>
+                                <div class="login__login-content" style="display: block;">
+                                    <h2 class="login__title">WELCOME BACK</h2>
+                                    <p class="login__description">Sign into your existing account to earn rewards, check
+                                        existing orders and more</p>
 
-                                    <div class="login__social-networks">
-                                        <a href="#" class="login__social-network">
-                                            <button class="login__button button--black">Sign in</button>
-                                        </a>
+                                    <form class="login__form-login">
+                                        <input type="email" class="login__input--text input" placeholder="Email">
 
-                                        <a href="#" class="login__social-network">
-                                            <button class="login__button button--black">Sign in</button>
-                                        </a>
+                                        <input type="password" class="login__input--text input" placeholder="Password">
+
+                                        <div class="login__form-login-functions">
+                                            <div class="login__form-login-function">
+                                                <input type="checkbox" id="loginInputCheckboxSquare1"
+                                                    name="loginInputCheckboxSquare" class="login__input--checkbox">
+                                                <label for="loginInputCheckboxSquare1"></label>
+                                            </div>
+
+                                            <div class="login__form-login-function">
+                                                <a href="#" class="login__link">Forgot Password</a>
+                                            </div>
+                                        </div>
+
+                                        <input type="submit" id="loginInputSubmit" class="login__input--submit button"
+                                            value="Sign In">
+                                    </form>
+
+                                    <div class="login__express">
+                                        <h3 class="login__title--bold">Express sign in</h3>
+
+                                        <div class="login__social-networks">
+                                            <a href="#" class="login__social-network">
+                                                <button
+                                                    class="login__button login__button--facebook button--black ">Sign
+                                                    in</button>
+                                            </a>
+
+                                            <a href="#" class="login__social-network">
+                                                <button class="login__button login__button--google button--black">Sign
+                                                    in</button>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="login__signup-content">
-                                <h2 class="login__title">NEW TO VOLUMENZEIT?</h2>
-                                <p class="login__description">Create a new account</p>
+                                <div class="login__signup-content" style="display: block;">
+                                    <h2 class="login__title">NEW TO VOLUMENZEIT?</h2>
+                                    <p class="login__description">Create a new account</p>
 
-                                <form class="login__form-singup">
-                                    <input type="text" class="login__input--text input" placeholder="First Name">
+                                    <form class="login__form-singup">
+                                        <input type="text" class="login__input--text input" placeholder="First Name">
 
-                                    <input type="text" class="login__input--text input" placeholder="Last Name">
+                                        <input type="text" class="login__input--text input" placeholder="Last Name">
 
-                                    <span class="login__text-info">Date of birth</span>
+                                        <span class="login__text-info">Date of birth</span>
 
-                                    <div class="login__dropdown-wrap">
-                                        <div class="login__country-dropdown-wrap">
-                                            <div class="login__country-dropdown country">
+                                        <div class="login__dropdown-wrap">
+                                            <div class="login__dropdown country">
                                                 <div class="country__wrap">
                                                     <h6 class="country__title">Sort By</h6>
 
@@ -216,7 +219,7 @@
 
                                                 <div class="country__decoration"></div>
 
-                                                <form class="country__form">
+                                                <div class="country__form">
                                                     <input type="radio" name="countryInputRadio" id="countryInputRadio1"
                                                         class="country__input">
                                                     <label for="countryInputRadio1"
@@ -271,13 +274,11 @@
                                                         id="countryInputRadio12" class="country__input">
                                                     <label for="countryInputRadio10"
                                                         class="country__label">December</label>
-                                                </form>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="login__country-dropdown-wrap">
-                                            <div class="login__country-dropdown country">
-                                                <div class="country__wrap">
+                                            <div class="login__dropdown login__dropdown--second country">
+                                                <div class="country__wrap country__wrap--second">
                                                     <h6 class="country__title">Sort By</h6>
 
                                                     <button class="country__button">
@@ -286,167 +287,97 @@
                                                     </button>
                                                 </div>
 
-                                                <div class="country__decoration"></div>
+                                                <div class="country__decoration country__decoration--second"></div>
 
-                                                <form class="country__form">
+                                                <div class="country__form country__form--second">
                                                     <input type="radio" name="countryInputRadio" id="countryInputRadio1"
                                                         class="country__input">
-                                                    <label for="countryInputRadio1" class="country__label">1</label>
+                                                    <label for="countryInputRadio1"
+                                                        class="country__label">Januar</label>
 
                                                     <input type="radio" name="countryInputRadio" id="countryInputRadio2"
                                                         class="country__input">
-                                                    <label for="countryInputRadio2" class="country__label">2</label>
+                                                    <label for="countryInputRadio2"
+                                                        class="country__label">Februar</label>
 
                                                     <input type="radio" name="countryInputRadio" id="countryInputRadio3"
                                                         class="country__input">
-                                                    <label for="countryInputRadio3" class="country__label">3</label>
+                                                    <label for="countryInputRadio3" class="country__label">March</label>
 
                                                     <input type="radio" name="countryInputRadio" id="countryInputRadio4"
                                                         class="country__input">
-                                                    <label for="countryInputRadio4" class="country__label">4</label>
+                                                    <label for="countryInputRadio4" class="country__label">April</label>
 
                                                     <input type="radio" name="countryInputRadio" id="countryInputRadio5"
                                                         class="country__input">
-                                                    <label for="countryInputRadio5" class="country__label">5</label>
+                                                    <label for="countryInputRadio5" class="country__label">May</label>
 
                                                     <input type="radio" name="countryInputRadio" id="countryInputRadio6"
                                                         class="country__input">
-                                                    <label for="countryInputRadio6" class="country__label">6</label>
+                                                    <label for="countryInputRadio6" class="country__label">Juni</label>
 
                                                     <input type="radio" name="countryInputRadio" id="countryInputRadio7"
                                                         class="country__input">
-                                                    <label for="countryInputRadio7" class="country__label">7</label>
+                                                    <label for="countryInputRadio7" class="country__label">July</label>
 
                                                     <input type="radio" name="countryInputRadio" id="countryInputRadio8"
                                                         class="country__input">
-                                                    <label for="countryInputRadio8" class="country__label">8</label>
+                                                    <label for="countryInputRadio8"
+                                                        class="country__label">August</label>
 
                                                     <input type="radio" name="countryInputRadio" id="countryInputRadio9"
                                                         class="country__input">
-                                                    <label for="countryInputRadio9" class="country__label">9</label>
+                                                    <label for="countryInputRadio9"
+                                                        class="country__label">September</label>
 
                                                     <input type="radio" name="countryInputRadio"
                                                         id="countryInputRadio10" class="country__input">
-                                                    <label for="countryInputRadio10" class="country__label">10</label>
+                                                    <label for="countryInputRadio10"
+                                                        class="country__label">October</label>
 
                                                     <input type="radio" name="countryInputRadio"
                                                         id="countryInputRadio11" class="country__input">
-                                                    <label for="countryInputRadio11" class="country__label">11</label>
+                                                    <label for="countryInputRadio10"
+                                                        class="country__label">November</label>
 
                                                     <input type="radio" name="countryInputRadio"
                                                         id="countryInputRadio12" class="country__input">
-                                                    <label for="countryInputRadio12" class="country__label">12</label>
-
-                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio1"
-                                                        class="country__input">
-                                                    <label for="countryInputRadio13" class="country__label">13</label>
-
-                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio2"
-                                                        class="country__input">
-                                                    <label for="countryInputRadio14" class="country__label">14</label>
-
-                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio3"
-                                                        class="country__input">
-                                                    <label for="countryInputRadio15" class="country__label">15</label>
-
-                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio4"
-                                                        class="country__input">
-                                                    <label for="countryInputRadio16" class="country__label">16</label>
-
-                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio5"
-                                                        class="country__input">
-                                                    <label for="countryInputRadio17" class="country__label">17</label>
-
-                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio6"
-                                                        class="country__input">
-                                                    <label for="countryInputRadio18" class="country__label">18</label>
-
-                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio7"
-                                                        class="country__input">
-                                                    <label for="countryInputRadio19" class="country__label">19</label>
-
-                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio8"
-                                                        class="country__input">
-                                                    <label for="countryInputRadio20" class="country__label">20</label>
-
-                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio9"
-                                                        class="country__input">
-                                                    <label for="countryInputRadio21" class="country__label">21</label>
-
-                                                    <input type="radio" name="countryInputRadio"
-                                                        id="countryInputRadio10" class="country__input">
-                                                    <label for="countryInputRadio22" class="country__label">22</label>
-
-                                                    <input type="radio" name="countryInputRadio"
-                                                        id="countryInputRadio11" class="country__input">
-                                                    <label for="countryInputRadio23" class="country__label">23</label>
-
-                                                    <input type="radio" name="countryInputRadio"
-                                                        id="countryInputRadio12" class="country__input">
-                                                    <label for="countryInputRadio24" class="country__label">24</label>
-
-                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio8"
-                                                        class="country__input">
-                                                    <label for="countryInputRadio20" class="country__label">25</label>
-
-                                                    <input type="radio" name="countryInputRadio" id="countryInputRadio9"
-                                                        class="country__input">
-                                                    <label for="countryInputRadio21" class="country__label">26</label>
-
-                                                    <input type="radio" name="countryInputRadio"
-                                                        id="countryInputRadio10" class="country__input">
-                                                    <label for="countryInputRadio22" class="country__label">27</label>
-
-                                                    <input type="radio" name="countryInputRadio"
-                                                        id="countryInputRadio11" class="country__input">
-                                                    <label for="countryInputRadio23" class="country__label">28</label>
-
-                                                    <input type="radio" name="countryInputRadio"
-                                                        id="countryInputRadio12" class="country__input">
-                                                    <label for="countryInputRadio24" class="country__label">29</label>
-
-                                                    <input type="radio" name="countryInputRadio"
-                                                        id="countryInputRadio11" class="country__input">
-                                                    <label for="countryInputRadio23" class="country__label">31</label>
-
-                                                    <input type="radio" name="countryInputRadio"
-                                                        id="countryInputRadio12" class="country__input">
-                                                    <label for="countryInputRadio24" class="country__label">32</label>
-                                                </form>
+                                                    <label for="countryInputRadio10"
+                                                        class="country__label">December</label>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <input type="text" class="login__input--text input" placeholder="Phone Number">
+                                        <input type="text" class="login__input--text input" placeholder="Phone Number">
 
-                                    <div class="login__email-wrap">
-                                        <input type="text" class="login__input--text login__input--confirm input"
-                                            placeholder="Email">
+                                        <div class="login__email-wrap">
+                                            <input type="text" class="login__input--text login__input--confirm input"
+                                                placeholder="Email">
 
-                                        <input type="text" class="login__input--text login__input--confirm input"
-                                            placeholder="Confirm Email">
-                                    </div>
-
-                                    <div class="login__password-wrap">
-                                        <input type="text" class="login__input--text login__input--confirm input"
-                                            placeholder="Password">
-
-                                        <input type="text" class="login__input--text login__input--confirm input"
-                                            placeholder="Confirm Password">
-                                    </div>
-
-                                    <div class="login__form-signup-functions">
-                                        <div class="login__form-signup-function">
-                                            <input type="radio" id="loginInputRadioSquare2"
-                                                name="loginInputRadioSquareSignup" class="login__input--radio-square">
-                                            <label for="loginInputRadioSquare2">Sign-up to receive the latest updates
-                                                and promotions</label>
+                                            <input type="text" class="login__input--text login__input--confirm input"
+                                                placeholder="Confirm Email">
                                         </div>
-                                    </div>
 
-                                    <input type="submit" id="loginInputSubmitSignup" class="login__input--submit button"
-                                        value="Create Account">
-                                </form>
+                                        <div class="login__password-wrap">
+                                            <input type="text" class="login__input--text login__input--confirm input"
+                                                placeholder="Password">
+
+                                            <input type="text" class="login__input--text login__input--confirm input"
+                                                placeholder="Confirm Password">
+                                        </div>
+
+                                        <div class="login__form-signup-functions">
+                                            <div class="login__form-signup-function">
+                                                <input type="checkbox" id="loginInputCheckboxSquareOther1"
+                                                    name="loginInputCheckboxSquareOther" class="login__input--checkbox">
+                                                <label for="loginInputCheckboxSquareOther1"></label>
+                                            </div>
+                                        </div>
+
+                                        <input type="submit" id="loginInputSubmitSignup"
+                                            class="login__input--submit button" value="Create Account">
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -454,6 +385,8 @@
             </div>
         </section>
     </main>
+
+    <script src="scripts/dropdownCountry.js"></script>
 </body>
 
 </html>
