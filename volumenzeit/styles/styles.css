@@ -4247,6 +4247,53 @@ media - scss файл с миксинами медиа-запросов desktop,
     padding-inline: 100px;
   }
 }
+@media (max-width: 768px) {
+  .account__row {
+    padding-inline: 48px;
+  }
+  .account .information__wrap {
+    padding: 25px 25px;
+  }
+  .account .information__link {
+    top: 20px;
+    right: 35px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .account__row {
+    padding: 48px 20px 60px 20px;
+  }
+  .account__form {
+    flex-direction: column;
+    row-gap: 45px;
+  }
+  .account__input--radio + label {
+    width: 100%;
+  }
+  .account__title {
+    margin-top: 50px;
+  }
+  .account__description {
+    max-width: 270px;
+  }
+  .account__button {
+    margin-top: 40px;
+  }
+  .account .information {
+    row-gap: 15px;
+    margin-top: 45px;
+  }
+  .account .information__link {
+    top: 25px;
+    right: 20px;
+    font-size: 10px !important;
+    max-width: 75px;
+  }
+  .account .information__wrap {
+    padding: 40px 30px;
+  }
+}
 
 .information {
   display: flex;

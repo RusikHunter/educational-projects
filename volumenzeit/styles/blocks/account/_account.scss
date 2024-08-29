@@ -8,10 +8,6 @@
         padding-block: 67px 115px;
     }
 
-    &__content {}
-
-    &__navigation {}
-
     &__form {
         display: flex;
         width: 100%;
@@ -79,6 +75,67 @@
     @include tablet-small {
         &__row {
             padding-inline: 100px;
+        }
+    }
+
+    @include mobile {
+        &__row {
+            padding-inline: 48px;
+        }
+
+        .information {
+            &__wrap {
+                padding: 25px 25px;
+            }
+
+            &__link {
+                top: 20px;
+                right: 35px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    @include mobile-small {
+        &__row {
+            padding: 48px 20px 60px 20px;
+        }
+
+        &__form {
+            flex-direction: column;
+            row-gap: 45px;
+        }
+
+        &__input--radio+label {
+            width: 100%;
+        }
+
+        &__title {
+            margin-top: 50px;
+        }
+
+        &__description {
+            max-width: 270px;
+        }
+
+        &__button {
+            margin-top: 40px;
+        }
+
+        .information {
+            row-gap: 15px;
+            margin-top: 45px;
+
+            &__link {
+                top: 25px;
+                right: 20px;
+                font-size: 10px !important;
+                max-width: 75px;
+            }
+
+            &__wrap {
+                padding: 40px 30px;
+            }
         }
     }
 }
