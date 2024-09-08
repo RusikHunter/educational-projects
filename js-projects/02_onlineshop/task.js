@@ -39,7 +39,7 @@ const removeOrder = (id) => {
     const removableOrderID = orders.findIndex((order) => order.id === id)
 
     if (removableOrderID !== -1) {
-        orders.splice(id, 1)
+        orders.splice(removableOrderID, 1)
 
         console.log('Order ' + removableOrderID + ' removed')
 
@@ -68,7 +68,7 @@ const updateOrderQuantity = (id, newQuantity) => {
 // calculate total price
 
 const calculateTotalPrice = () => {
-    let totalPrice = orders.reduce((sum, order) => { return sum + order.price }, 0)
+    let totalPrice = orders.reduce((sum, order) => { return sum + (order.price * order.quantity) }, 0)
 
     totalPrice = Number(totalPrice.toFixed(2))
 
@@ -81,6 +81,7 @@ addOrder('Apple', 1, 0.31)
 
 removeOrder(1)
 
+// debugger
 updateOrderQuantity(0, 19)
 
 calculateTotalPrice()
