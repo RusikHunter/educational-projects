@@ -1,4 +1,5 @@
-const library = []
+let library = []
+let globalID = 0
 
 const isStringCorrect = (s) => {
     return typeof s === 'string' && s.trim().length !== 0
@@ -13,7 +14,7 @@ const addBook = (t, a, y, g) => {
         return console.log('Incorrect data')
     }
 
-    const newID = library.length; // 0
+    newID = globalID++
 
     library.push({
         id: newID,
@@ -24,12 +25,14 @@ const addBook = (t, a, y, g) => {
         isRead: false
     })
 
-    return // console.log('Added book with ID: ' + newID)
+    return console.log('Added book with ID: ' + newID)
 }
 
 const removeBook = (id) => {
     if (isNumberCorrect(id)) {
-        library.splice(id, 1);
+        const updatedLibrary = library.filter(book => book.id !== id)
+
+        library = [...updatedLibrary]
 
         return console.log('Removed book with ID: ' + id)
     }
@@ -107,7 +110,8 @@ const formatBooks = (b = library) => {
             + '; Title: ' + book.title
             + '; Author: ' + book.author
             + '; Year: ' + book.year
-            + '; Genre: ' + book.genre + ';')
+            + '; Genre: ' + book.genre
+            + '; Is read: ' + book.isRead + ';')
     })
 }
 
@@ -148,6 +152,8 @@ const formatStat = () => {
         }
     }, 0)
 
+    formatBooks()
+
     console.log('Total count of books: ' + library.length)
     console.log('Readed books: ' + readedBooksCount)
     console.log('Not readed books: ' + notReadedBooksCount)
@@ -159,6 +165,64 @@ addBook('Book 1', 'Dolorrr', 1488, 'Amet')
 addBook('Book 4', 'Dolorqq', 1337, 'Amet')
 addBook('Book 5', 'Dolor', 2001, 'Amet')
 
-formatStat()
-setBookRead('Book 1')
-formatStat()
+// formatStat()
+// setBookRead('Book 1')
+// formatStat()
+
+const menu = () => {
+
+    while (true) {
+        let command = prompt(
+            `Select action:
+          1 - Add book
+          2 - Delete book
+          3 - Find book
+          4 - Set book read
+          5 - Sort books
+          6 - Show stats
+          0 - Exit`
+        );
+
+        switch (command) {
+            case '0':
+                return
+            case '1':
+                let title = prompt('Title: ')
+                let author = prompt('Author: ')
+                let year = +prompt('Year: ')
+                let genre = prompt('Genre: ')
+
+                addBook(title, author, year, genre)
+
+                break;
+            case '2':
+                const id = +prompt('ID: ')
+
+                removeBook(id)
+
+                break;
+            case '3':
+                let searchedBookTitle = prompt('Title: ')
+
+                searchBooks(searchedBookTitle, searchByGenre)
+
+                break;
+            case '4':
+                let readedBookTitle = prompt('Title: ')
+
+                setBookRead(readedBookTitle)
+
+                break;
+            case '5':
+                sortBooks()
+                break;
+            case '6':
+                formatStat()
+                break;
+            default:
+                console.log('Incorrect command');
+        }
+    }
+};
+
+menu();
