@@ -14,7 +14,11 @@ class Student {
     }
 
     countAverageGrade() {
-        const sumOfGrades = Number(this.grades.reduce((sum, grade) => sum + grade))
+        if (this.grades.length === 0) {
+            return 0
+        }
+
+        const sumOfGrades = this.grades.reduce((sum, grade) => sum + grade, 0)
 
         const averageGrade = (sumOfGrades / this.grades.length).toFixed(1)
 
@@ -22,7 +26,7 @@ class Student {
     }
 
     logInfo() {
-        console.log('Student: ' + this.name + '; Group: ' + this.group + '; Average grade: ' + this.countAverageGrade() + ';')
+        return ('Student: ' + this.name + '; Group: ' + this.group + '; Average grade: ' + this.countAverageGrade() + ';')
     }
 
     ifBadStudent() {
