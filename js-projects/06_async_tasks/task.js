@@ -1,95 +1,95 @@
-// async function doubleAfterDelay(value) {
-//     return new Promise((resolve, reject) => {
-//         if (typeof value === 'number') {
-//             resolve(value * 2)
-//         } else {
-//             reject('Error! Value is not a number!')
-//         }
-//     })
-// }
+async function doubleAfterDelay(value) {
+    return new Promise((resolve, reject) => {
+        if (typeof value === 'number') {
+            resolve(value * 2)
+        } else {
+            reject('Error! Value is not a number!')
+        }
+    })
+}
 
-// console.log(1)
-// doubleAfterDelay(5)
-//     .then(result => {
-//         console.log(result);
-//     })
-//     .catch(result => {
-//         console.log(result)
-//     })
-// console.log(2)
+console.log(1)
+doubleAfterDelay(5)
+    .then(result => {
+        console.log(result);
+    })
+    .catch(result => {
+        console.log(result)
+    })
+console.log(2)
 
-// class OperationTools {
-//     static async doubleArray(arr) {
-//         const promises = arr.map(value => {
-//             return new Promise((resolve) => {
-//                 setTimeout(() => {
-//                     resolve(value * 2)
-//                 }, 1000)
-//             })
-//         })
+class OperationTools {
+    static async doubleArray(arr) {
+        const promises = arr.map(value => {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(value * 2)
+                }, 1000)
+            })
+        })
 
-//         return Promise.all(promises)
-//     }
-// }
+        return Promise.all(promises)
+    }
+}
 
-// new OperationTools()
+new OperationTools()
 
-// console.log(1)
-// OperationTools.doubleArray([1, 2, 3]).then(result => {
-//     result.forEach(value => {
-//         console.log(value)
-//     })
-// })
-// console.log(2)
+console.log(1)
+OperationTools.doubleArray([1, 2, 3]).then(result => {
+    result.forEach(value => {
+        console.log(value)
+    })
+})
+console.log(2)
 
-// class TaskError extends Error {
-//     constructor(error) {
-//         super(error)
-//         this.name = 'TaskError'
-//     }
-// }
+class TaskError extends Error {
+    constructor(error) {
+        super(error)
+        this.name = 'TaskError'
+    }
+}
 
-// function fetchUser(value) {
-//     return new Promise((resolve, reject) => {
-//         const random = Math.random()
-//         let result = null
+function fetchUser(value) {
+    return new Promise((resolve, reject) => {
+        const random = Math.random()
+        let result = null
 
-//         if (random > 0.5) {
-//             result = { id: value, name: 'Nikita' }
+        if (random > 0.5) {
+            result = { id: value, name: 'Nikita' }
 
-//             resolve(result)
-//         } else {
-//             result = 'Error'
+            resolve(result)
+        } else {
+            result = 'Error'
 
-//             reject(new Error(result))
-//         }
-//     })
-// }
+            reject(new Error(result))
+        }
+    })
+}
 
-// function getName(user) {
-//     return user.name;
-// }
+function getName(user) {
+    return user.name;
+}
 
-// function run() {
-//     console.log('Start code...')
+function run() {
+    console.log('Start code...')
 
-//     fetchUser(91)
-//         .then((result) => {
-//             console.log(result)
+    fetchUser(91)
+        .then((result) => {
+            console.log(result)
 
-//             return (result)
-//         })
-//         .then((user) => {
-//             const userName = getName(user)
+            return (result)
+        })
+        .then((user) => {
+            const userName = getName(user)
 
-//             console.log(userName)
-//         })
-//         .catch((error) => {
-//             console.log(error)
-//         })
-// }
+            console.log(userName)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+}
 
-// run()
+run()
 
 // 1. запросить все видео
 // 2. запросить описание первого видео
@@ -98,49 +98,49 @@
 
 // callback hell
 
-// function fetchVideos(callback) {
-//     const videos = [1, 2, 3]
+function fetchVideos(callback) {
+    const videos = [1, 2, 3]
 
-//     callback(videos[0])
-// }
+    callback(videos[0])
+}
 
-// function fetchVideoDescription(id, callback) {
-//     const decription = 'Abc ' + id
+function fetchVideoDescription(id, callback) {
+    const decription = 'Abc ' + id
 
-//     callback(decription)
-// }
+    callback(decription)
+}
 
-// function fetchAuthor(id, callback) {
-//     const author = 'Some author with ID ' + id
+function fetchAuthor(id, callback) {
+    const author = 'Some author with ID ' + id
 
-//     callback(author)
-// }
+    callback(author)
+}
 
-// function fetchShorts(data) {
-//     console.log(data)
-// }
+function fetchShorts(data) {
+    console.log(data)
+}
 
-// function run() {
-//     fetchVideos((id) => {
-//         const newID = id
+function run() {
+    fetchVideos((id) => {
+        const newID = id
 
-//         console.log(newID)
+        console.log(newID)
 
-//         fetchVideoDescription(newID, (decription) => {
-//             const authorID = 901
+        fetchVideoDescription(newID, (decription) => {
+            const authorID = 901
 
-//             console.log(decription)
+            console.log(decription)
 
-//             fetchAuthor(authorID, (author) => {
-//                 const shortsInfo = author + ' and his shorts... some data'
+            fetchAuthor(authorID, (author) => {
+                const shortsInfo = author + ' and his shorts... some data'
 
-//                 console.log(author)
+                console.log(author)
 
-//                 fetchShorts(shortsInfo)
-//             })
-//         })
-//     })
-// }
+                fetchShorts(shortsInfo)
+            })
+        })
+    })
+}
 
 // 1. запросить все видео
 // 2. запросить описание первого видео
@@ -208,3 +208,140 @@ fetchVideo()
     .then((result) => {
         console.log(result)
     })
+
+const loadVideos = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Videos loaded')
+
+            const randomResult = Math.random()
+
+            if (randomResult > 0.5) {
+                resolve('Videos were successfully loaded')
+            } else {
+                reject(new Error('Something went wrong...'))
+            }
+        }, 1000)
+    })
+}
+
+const loadShorts = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Shorts loaded')
+
+            const randomResult = Math.random()
+
+            if (randomResult > 0.5) {
+                resolve('Shorts were successfully loaded')
+            } else {
+                reject(new Error('Something went wrong...'))
+            }
+        }, 3000)
+    })
+}
+
+Promise.allSettled([loadVideos(), loadShorts()])
+    .then(result => {
+        console.log(result)
+    })
+    .catch(error => {
+        console.log(error)
+    })
+
+async function getSomething() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Hello!')
+        }, 3000)
+    })
+}
+
+console.log(1)
+
+const something = await getSomething()
+
+console.log(something)
+
+console.log(2)
+
+class TaskQueue {
+    taskQueue = []
+
+    addTask(callback) {
+        const task = callback()
+
+        this.taskQueue.push(task)
+    }
+
+    start(maxCount = 1) {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                let tasksToDo = []
+
+                for (let i = 0; i < maxCount; ++i) {
+                    tasksToDo.push(this.taskQueue[i])
+                }
+
+                Promise.allSettled(tasksToDo)
+                    .then(result => console.log(result))
+
+                this.taskQueue.splice(0, maxCount)
+            }, 3000)
+        })
+    }
+}
+
+const queue = new TaskQueue()
+
+queue.addTask(() => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log('task1 --->')
+
+            resolve('Task1 done')
+        }, 1000)
+    })
+})
+
+queue.addTask(() => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log('task2 --->')
+
+            resolve('Task2 done')
+        }, 1000)
+    })
+})
+
+queue.addTask(() => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log('task3 --->')
+
+            resolve('Task3 done')
+        }, 1000)
+    })
+})
+
+queue.addTask(() => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log('task4 --->')
+
+            resolve('Task4 done')
+        }, 1000)
+    })
+})
+
+queue.addTask(() => {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log('task5 --->')
+
+            resolve('Task5 done')
+        }, 1000)
+    })
+})
+
+queue.start(2)
