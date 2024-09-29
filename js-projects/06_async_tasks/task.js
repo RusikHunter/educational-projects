@@ -42,49 +42,169 @@
 // })
 // console.log(2)
 
-class TaskError extends Error {
-    constructor(error) {
-        super(error)
-        this.name = 'TaskError'
-    }
+// class TaskError extends Error {
+//     constructor(error) {
+//         super(error)
+//         this.name = 'TaskError'
+//     }
+// }
+
+// function fetchUser(value) {
+//     return new Promise((resolve, reject) => {
+//         const random = Math.random()
+//         let result = null
+
+//         if (random > 0.5) {
+//             result = { id: value, name: 'Nikita' }
+
+//             resolve(result)
+//         } else {
+//             result = 'Error'
+
+//             reject(new Error(result))
+//         }
+//     })
+// }
+
+// function getName(user) {
+//     return user.name;
+// }
+
+// function run() {
+//     console.log('Start code...')
+
+//     fetchUser(91)
+//         .then((result) => {
+//             console.log(result)
+
+//             return (result)
+//         })
+//         .then((user) => {
+//             const userName = getName(user)
+
+//             console.log(userName)
+//         })
+//         .catch((error) => {
+//             console.log(error)
+//         })
+// }
+
+// run()
+
+// 1. запросить все видео
+// 2. запросить описание первого видео
+// 3. в описании указан автор, нужно запросить информацию по нему
+// 4. пытаемся получить шортсы автора
+
+// callback hell
+
+// function fetchVideos(callback) {
+//     const videos = [1, 2, 3]
+
+//     callback(videos[0])
+// }
+
+// function fetchVideoDescription(id, callback) {
+//     const decription = 'Abc ' + id
+
+//     callback(decription)
+// }
+
+// function fetchAuthor(id, callback) {
+//     const author = 'Some author with ID ' + id
+
+//     callback(author)
+// }
+
+// function fetchShorts(data) {
+//     console.log(data)
+// }
+
+// function run() {
+//     fetchVideos((id) => {
+//         const newID = id
+
+//         console.log(newID)
+
+//         fetchVideoDescription(newID, (decription) => {
+//             const authorID = 901
+
+//             console.log(decription)
+
+//             fetchAuthor(authorID, (author) => {
+//                 const shortsInfo = author + ' and his shorts... some data'
+
+//                 console.log(author)
+
+//                 fetchShorts(shortsInfo)
+//             })
+//         })
+//     })
+// }
+
+// 1. запросить все видео
+// 2. запросить описание первого видео
+// 3. в описании указан автор, нужно запросить информацию по нему
+// 4. пытаемся получить шортсы автора
+
+function fetchVideo() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const someDataFromServer = [1, 2, 3]
+
+            console.log('Videos array is fetched')
+
+            resolve(someDataFromServer[0])
+        }, 1000)
+    })
 }
 
-class TaskQueue {
-    static queue = []
+function fetchDescription(video) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const descriptionOfFirstMovie = 'to video ' + video
 
-    static async addTask(task) {
-        return new Promise((resolve, reject) => {
-            try {
-                setTimeout(() => {
-                    if (typeof task !== 'string') {
-                        throw new TaskError('Type of task is not a task')
-                    }
+            console.log('Description of video is fetched')
 
-                    resolve(this.queue.push(task))
-                }, 1000)
-            } catch (error) {
-                reject(error)
-            }
-        })
-    }
-
-    static async logQueue() {
-        return new Promise(resolve => {
-            this.queue.forEach(element => {
-                console.log('abc')
-                console.log(element)
-            });
-
-            resolve('Ok')
-        })
-    }
+            resolve(descriptionOfFirstMovie)
+        }, 1000)
+    })
 }
 
-new TaskQueue()
+function fetchAuthor(description) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const author = 'Description ' + description + ' has some info about author'
 
-console.log(1)
-TaskQueue.addTask('Some task...')
-TaskQueue.logQueue().then(result => {
-    console.log(result)
-})
-console.log(2)
+            console.log('Author is fetched')
+
+            resolve(author)
+        }, 3000)
+    })
+}
+
+function fetchShorts(author) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const shorts = author + ', but this author has also some shorts...'
+
+            console.log('Shorts is fetched')
+
+            resolve(shorts)
+        }, 1500)
+    })
+}
+
+fetchVideo()
+    .then((result) => {
+        return fetchDescription(result)
+    })
+    .then((result) => {
+        return fetchAuthor(result)
+    })
+    .then((result) => {
+        return fetchShorts(result)
+    })
+    .then((result) => {
+        console.log(result)
+    })
