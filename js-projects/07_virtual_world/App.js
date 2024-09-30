@@ -17,7 +17,8 @@ class World {
     // changable values
     listOfEntities = []
     currentValueOfWorldYears = 0
-    IDOfNextEntity = 0
+    IDOfNextEntity = -1
+    stateOfWorld = 'default'
 
     // функция, которая начинает жизнь мира, раз в минуту проходит один виртуальный год
     startWorldLife() {
@@ -39,36 +40,97 @@ class World {
         })
     }
 
-    createEntity(n, m, lC) {
-        return new Promise((resolve, reject) => {
-            let newEntity = []
+    makeCrysis() {
+        return new Promise(resolve => {
+            this.stateOfWorld = 'crysis'
 
-            if (Tools.isStringCorrect(n) && Tools.isStringCorrect(m) && Tools.isNumberCorrect(lC)) {
-                newEntity = {
-                    id: this.IDOfNextEntity++,
-                    name: n,
-                    model: m,
-                    lifeCycle: lC
+            this.listOfEntities.forEach(entity => {
+                entity.hp -= 10;
+            })
+
+            resolve('Crysis came... Everyone is f***ed')
+        })
+    }
+
+    createEntity(n, m, lC, hp) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (Tools.isStringCorrect(n) && Tools.isStringCorrect(m) && Tools.isNumberCorrect(lC) && Tools.isNumberCorrect(hp)) {
+                    let newEntity = {
+                        id: ++this.IDOfNextEntity,
+                        name: n,
+                        model: m,
+                        lifeCycle: lC,
+                        hp: hp,
+                        world: this
+                    }
+
+                    const entityToAdding = new Entity(newEntity)
+
+                    this.listOfEntities.push(entityToAdding)
+
+                    this.listOfEntities[this.listOfEntities.length - 1].startEntityLife().then(result => console.log(result))
+
+                    resolve('Entity ' + this.IDOfNextEntity + ' is created! Name: ' + n + '; Model: ' + m + '; Life cycle: ' + lC + '; HP: ' + hp + ';')
+                } else {
+                    reject('The entity could not be created because God messed something up.')
+                }
+            }, 12000)
+        })
+    }
+
+    removeEntity(id) {
+        return new Promise(resolve => {
+            try {
+                const entityToRemove = this.listOfEntities.findIndex(entity => entity.id === id)
+
+                if (entityToRemove === 'undefined') {
+                    throw new Error('Entity cannot be removed because not found')
                 }
 
-                const entityToAdding = new Entity(newEntity)
-
-                this.listOfEntities.push(entityToAdding)
+                this.listOfEntities.splice(entityToRemove)
+            } catch (error) {
+                console.log(error)
             }
+        })
+    }
+
+    abc() {
+        return new Promise(r => {
+            console.log(this.listOfEntities)
         })
     }
 }
 
 class Entity {
     constructor(entity) {
-        const { id, name, model, lifeCycle } = entity
+        const { id, name, model, lifeCycle, hp, world } = entity
 
         this.id = id
         this.name = name
         this.model = model
-        this.lifeCycle = lifeCycle
+        this.lifeCycle = lifeCycle * 6000
+        this.hp = hp
 
-        console.log('Entity ' + this.id + ' is created! Name: ' + this.name + '; Model: ' + this.model + '; Life cycle: ' + this.lifeCycle + ';')
+        this.world = world
+        this.currentValueOfEntityYears = 0
+    }
+
+    startEntityLife() {
+        return new Promise(resolve => {
+            const lifeCycle = setInterval(() => {
+                this.currentValueOfEntityYears++
+
+            }, this.world.LENGTH_OF_ONE_YEAR) // 6000
+
+            setTimeout(() => {
+                clearInterval(lifeCycle)
+
+                resolve('Entity ' + this.name + ' died :(')
+
+                this.world.removeEntity(this.id)
+            }, this.lifeCycle)
+        })
     }
 }
 
@@ -76,6 +138,24 @@ const virlualWorld = new World()
 
 virlualWorld.startWorldLife().then(result => console.log(result))
 
-virlualWorld.createEntity('Nikita', 'MON', 99)
+// через 2 года создать это
+virlualWorld.createEntity('Nikita', 'MON', 10, 20) // ожидаемо, что через 12 лет после старта мира оно подохнет
+    .then(result => console.log(result))
+    .catch(result => console.log(result))
 
+// через 3 года создать это
+
+setTimeout(() => {
+    virlualWorld.createEntity('Alex', 'MOA', 2, 20) // ожидаемо, что через 5 лет после старта мира оно подохнет
+        .then(result => console.log(result))
+        .catch(result => console.log(result))
+}, 6000)
+
+setTimeout(() => {
+    virlualWorld.abc()
+}, 24000)
+
+setTimeout(() => {
+    virlualWorld.abc()
+}, 120000)
 
