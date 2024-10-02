@@ -1,33 +1,6 @@
 class BinarySearchTree {
     root = null
 
-    #removeLeaf(node) {
-        const searchedNode = node
-
-        let nodeToCheck = this.root // изначально начинаем поиск с корневого узла - root
-
-        while (nodeToCheck !== null) {
-            // если ключ добавляемого узла меньше ключа текущего проверяемого узла, то тогда идём в левый подузел, если больше - в правый
-            if (searchedNode.key < nodeToCheck.key) {
-                if (nodeToCheck.left === searchedNode) {
-                    nodeToCheck.left = null
-
-                    return
-                }
-
-                nodeToCheck = nodeToCheck.left
-            } else {
-                if (nodeToCheck.right === searchedNode) {
-                    nodeToCheck.right = null
-
-                    return
-                }
-
-                nodeToCheck = nodeToCheck.right
-            }
-        }
-    }
-
     // метод search осуществляет поиск по дереву
     search(key) {
         // проверка на число
@@ -65,20 +38,20 @@ class BinarySearchTree {
     }
 
     // метод insert добавляет узел в дерево
-    insert(node) {
+    insert(key) {
         // если корневой узел пустой - добавить
         if (this.root === null) {
-            this.root = node
+            this.root = new Node(key)
 
             return
         }
 
         // проверка на число
-        if (!(node instanceof Node)) {
+        if (typeof key !== 'number') {
             throw new Error('Invalid node')
         }
 
-        const nodeToInsert = node // перезаписываем для удобства узел на добавление
+        const nodeToInsert = new Node(key) // перезаписываем для удобства узел на добавление
 
         let nodeToCheck = this.root // изначально начинаем поиск с корневого узла - root
 
@@ -112,13 +85,76 @@ class BinarySearchTree {
         }
     }
 
+    // удаление элемента
     delete(key) {
         const nodeToDelete = this.search(key)
 
         if (!nodeToDelete) return
 
+        // логика удаления, если элемент на удаление не имеет потомков
         if (nodeToDelete.right === null && nodeToDelete.left === null) {
             this.#removeLeaf(nodeToDelete)
+            // логика удаления, если элемент на удаление имеет одного потомка
+        } else if (nodeToDelete.right === null && nodeToDelete.left !== null || nodeToDelete.right !== null && nodeToDelete.left === null) {
+            this.#replaceNodeWithChild(nodeToDelete)
+        }
+    }
+
+    #removeLeaf(node) {
+        const nodeToDelete = node // искомый узел, который нужно удалить
+
+        let nodeToCheck = this.root // изначально начинаем поиск с корневого узла - root
+
+        while (nodeToCheck !== null) {
+            // если ключ добавляемого узла меньше ключа текущего проверяемого узла, то тогда идём в левый подузел, если больше - в правый
+            if (nodeToDelete.key < nodeToCheck.key) {
+                if (nodeToCheck.left === nodeToDelete) {
+                    nodeToCheck.left = null
+
+                    return
+                }
+
+                nodeToCheck = nodeToCheck.left
+            } else {
+                if (nodeToCheck.right === nodeToDelete) {
+                    nodeToCheck.right = null
+
+                    return
+                }
+
+                nodeToCheck = nodeToCheck.right
+            }
+        }
+    }
+
+    #replaceNodeWithChild(node) {
+        const nodeToDelete = node // искомый узел, который нужно удалить
+
+        let nodeToCheck = this.root // изначально начинаем поиск с корневого узла - root
+
+        while (nodeToCheck !== null) {
+            // если ключ добавляемого узла меньше ключа текущего проверяемого узла, то тогда идём в левый подузел, если больше - в правый
+            if (nodeToDelete.key < nodeToCheck.key) {
+                if (nodeToCheck.left === nodeToDelete) {
+                    if (nodeToCheck.left.right !== null && nodeToCheck.left.left === null) {
+                        nodeToCheck.left = nodeToCheck.left.right
+                    } else {
+                        nodeToCheck.left = nodeToCheck.left.left
+                    }
+                }
+
+                nodeToCheck = nodeToCheck.left
+            } else {
+                if (nodeToCheck.right === nodeToDelete) {
+                    if (nodeToCheck.right.right !== null && nodeToCheck.right.left === null) {
+                        nodeToCheck.right = nodeToCheck.right.right
+                    } else {
+                        nodeToCheck.right = nodeToCheck.right.left
+                    }
+                }
+
+                nodeToCheck = nodeToCheck.right
+            }
         }
     }
 }
@@ -135,22 +171,23 @@ class Node {
 
 const bst = new BinarySearchTree()
 
-const someNode1 = new Node(19)
-const someNode2 = new Node(21)
-const someNode3 = new Node(138)
-const someNode4 = new Node(8)
-const someNode5 = new Node(129, 'some value...')
-const someNode6 = new Node(7)
+bst.insert(50)
+bst.insert(100)
+bst.insert(120)
+bst.insert(130)
+bst.insert(125)
+bst.insert(10)
+bst.insert(80)
+bst.insert(70)
+bst.insert(69)
+bst.insert(71)
+bst.insert(119)
+bst.insert(90)
+bst.insert(200)
+
+bst.delete(80)
 
 
 
-bst.insert(someNode1)
-bst.insert(someNode2)
-bst.insert(someNode3)
-bst.insert(someNode4)
-bst.insert(someNode5)
-bst.insert(someNode6)
-
-bst.delete(129)
 
 console.log(bst.root)
