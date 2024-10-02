@@ -38,10 +38,10 @@ class BinarySearchTree {
     }
 
     // метод insert добавляет узел в дерево
-    insert(key) {
+    insert(key, value = 'default') {
         // если корневой узел пустой - добавить
         if (this.root === null) {
-            this.root = new Node(key)
+            this.root = new Node(key, value)
 
             return
         }
@@ -51,7 +51,7 @@ class BinarySearchTree {
             throw new Error('Invalid node')
         }
 
-        const nodeToInsert = new Node(key) // перезаписываем для удобства узел на добавление
+        const nodeToInsert = new Node(key, value) // перезаписываем для удобства узел на добавление
 
         let nodeToCheck = this.root // изначально начинаем поиск с корневого узла - root
 
@@ -205,7 +205,7 @@ class BinarySearchTree {
 }
 
 class Node {
-    constructor(key, value = 'default') {
+    constructor(key, value) {
         this.key = key
         this.value = value
 
@@ -227,15 +227,16 @@ bst.insert(70)
 bst.insert(69)
 bst.insert(71)
 bst.insert(119)
-bst.insert(90)
+bst.insert(90, 'Suchka')
 bst.insert(91)
 bst.insert(200)
 bst.insert(9)
 bst.insert(11)
 
 
-bst.delete(10)
+// bst.delete(10)
 
+console.log(bst.search(90).value)
 
 
 
