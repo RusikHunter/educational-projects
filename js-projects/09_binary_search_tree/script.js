@@ -1,6 +1,33 @@
 class BinarySearchTree {
     root = null
 
+    #removeLeaf(node) {
+        const searchedNode = node
+
+        let nodeToCheck = this.root // изначально начинаем поиск с корневого узла - root
+
+        while (nodeToCheck !== null) {
+            // если ключ добавляемого узла меньше ключа текущего проверяемого узла, то тогда идём в левый подузел, если больше - в правый
+            if (searchedNode.key < nodeToCheck.key) {
+                if (nodeToCheck.left === searchedNode) {
+                    nodeToCheck.left = null
+
+                    return
+                }
+
+                nodeToCheck = nodeToCheck.left
+            } else {
+                if (nodeToCheck.right === searchedNode) {
+                    nodeToCheck.right = null
+
+                    return
+                }
+
+                nodeToCheck = nodeToCheck.right
+            }
+        }
+    }
+
     // метод search осуществляет поиск по дереву
     search(key) {
         // проверка на число
@@ -88,7 +115,11 @@ class BinarySearchTree {
     delete(key) {
         const nodeToDelete = this.search(key)
 
-        console.log(nodeToDelete)
+        if (!nodeToDelete) return
+
+        if (nodeToDelete.right === null && nodeToDelete.left === null) {
+            this.#removeLeaf(nodeToDelete)
+        }
     }
 }
 
@@ -109,6 +140,8 @@ const someNode2 = new Node(21)
 const someNode3 = new Node(138)
 const someNode4 = new Node(8)
 const someNode5 = new Node(129, 'some value...')
+const someNode6 = new Node(7)
+
 
 
 bst.insert(someNode1)
@@ -116,9 +149,8 @@ bst.insert(someNode2)
 bst.insert(someNode3)
 bst.insert(someNode4)
 bst.insert(someNode5)
+bst.insert(someNode6)
 
 bst.delete(129)
 
-
-
-// console.log(bst.root)
+console.log(bst.root)
