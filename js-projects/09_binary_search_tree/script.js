@@ -97,6 +97,8 @@ class BinarySearchTree {
             // логика удаления, если элемент на удаление имеет одного потомка
         } else if (nodeToDelete.right === null && nodeToDelete.left !== null || nodeToDelete.right !== null && nodeToDelete.left === null) {
             this.#replaceNodeWithChild(nodeToDelete)
+        } else {
+            this.#replaceNodeWithTwoChild(nodeToDelete)
         }
     }
 
@@ -157,6 +159,49 @@ class BinarySearchTree {
             }
         }
     }
+
+    #replaceNodeWithTwoChild(node) {
+        const nodeToDelete = node // удаляемый узел = 100
+
+        const temporaryNode = nodeToDelete.right // временно копируем правый подузел удаляемого узла
+
+        let iterableNode = nodeToDelete.left // итерируемый узел для поиска наибольшего узла левого поддерева (изначально - это левый подузел удаляемого узла = 80) 
+
+        let nodeToCheck = this.root // изначально начинаем поиск с корневого узла - root 
+
+        let largestNodeOfLeftSubtree = null // наибольший узел левого поддерева (нужен для того, чтобы в его правый подузел вставить сохраняемый узел) = 91
+
+        while (largestNodeOfLeftSubtree === null) {
+            if (iterableNode.right === null) {
+                largestNodeOfLeftSubtree = iterableNode // 91
+
+                break
+            }
+
+            iterableNode = iterableNode.right
+        }
+
+        while (nodeToCheck !== null) {
+            // если ключ добавляемого узла меньше ключа текущего проверяемого узла, то тогда идём в левый подузел, если больше - в правый
+            if (nodeToDelete.key < nodeToCheck.key) {
+                if (nodeToCheck.left === nodeToDelete) {
+                    nodeToCheck.left = nodeToCheck.left.left
+                }
+
+                nodeToCheck = nodeToCheck.left
+            } else {
+                if (nodeToCheck.right === nodeToDelete) {
+                    // 
+
+                    nodeToCheck.right = nodeToCheck.right.left
+                }
+
+                nodeToCheck = nodeToCheck.right
+            }
+        }
+
+        largestNodeOfLeftSubtree.right = temporaryNode
+    }
 }
 
 class Node {
@@ -183,9 +228,13 @@ bst.insert(69)
 bst.insert(71)
 bst.insert(119)
 bst.insert(90)
+bst.insert(91)
 bst.insert(200)
+bst.insert(9)
+bst.insert(11)
 
-bst.delete(80)
+
+bst.delete(10)
 
 
 
