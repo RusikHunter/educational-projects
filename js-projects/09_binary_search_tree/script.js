@@ -102,6 +102,30 @@ class BinarySearchTree {
         }
     }
 
+    getNodesInOrder() {
+        const nodes = []
+
+        this.#inOrder(this.root, nodes)
+
+        return nodes
+    }
+
+    getNodesPreOrder() {
+        const nodes = []
+
+        this.#preOrder(this.root, nodes)
+
+        return nodes
+    }
+
+    getNodesPostOrder() {
+        const nodes = []
+
+        this.#postOrder(this.root, nodes)
+
+        return nodes
+    }
+
     #removeLeaf(node) {
         const nodeToDelete = node // искомый узел, который нужно удалить
 
@@ -202,6 +226,48 @@ class BinarySearchTree {
 
         largestNodeOfLeftSubtree.right = temporaryNode
     }
+
+    #inOrder(node, result) {
+        if (node.left !== null) {
+            this.#inOrder(node.left, result)
+        }
+
+        result.push(node.key)
+
+        if (node.right !== null) {
+            this.#inOrder(node.right, result)
+        }
+
+        return
+    }
+
+    #preOrder(node, result) {
+        result.push(node.key)
+
+        if (node.left !== null) {
+            this.#preOrder(node.left, result)
+        }
+
+        if (node.right !== null) {
+            this.#preOrder(node.right, result)
+        }
+
+        return
+    }
+
+    #postOrder(node, result) {
+        if (node.left !== null) {
+            this.#postOrder(node.left, result)
+        }
+
+        if (node.right !== null) {
+            this.#postOrder(node.right, result)
+        }
+
+        result.push(node.key)
+
+        return
+    }
 }
 
 class Node {
@@ -217,27 +283,13 @@ class Node {
 const bst = new BinarySearchTree()
 
 bst.insert(50)
-bst.insert(100)
-bst.insert(120)
-bst.insert(130)
-bst.insert(125)
-bst.insert(10)
-bst.insert(80)
+bst.insert(30)
 bst.insert(70)
-bst.insert(69)
-bst.insert(71)
-bst.insert(119)
-bst.insert(90, 'Suchka')
-bst.insert(91)
-bst.insert(200)
-bst.insert(9)
-bst.insert(11)
+bst.insert(20)
+bst.insert(40)
+bst.insert(60)
+bst.insert(80)
 
+const arr = bst.getNodesPostOrder()
 
-// bst.delete(10)
-
-console.log(bst.search(90).value)
-
-
-
-console.log(bst.root)
+console.log(arr)
