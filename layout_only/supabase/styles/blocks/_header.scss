@@ -1,26 +1,59 @@
 .header {
 
-    &__column {}
+    &__row {
+        padding-block: 20px;
+        align-items: center;
+    }
 
-    &__column--first {}
+    &__column--first {
+        margin-right: 24px;
+    }
 
-    &__logo {}
-
-    &__column--second {}
-
-    &__navigation {}
+    &__link--wrap {
+        cursor: pointer;
+    }
 
     &__ul {
         display: flex;
     }
 
-    &__list-item {}
+    &__list-item {
+        margin-inline: 24px 5px;
+    }
 
-    &__list-item--with-button {}
+    &__list-item--with-button {
+        margin-left: 20px;
+        padding-right: 32px;
+        cursor: pointer;
+    }
 
-    &__link {}
+    &__link {
+        @include text-description;
+    }
 
-    &__column--third {}
+    &__link--with-button {
+        position: relative;
+        @include text-description;
 
-    &__button {}
+        &::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 7px;
+            background-image: url(../img/header/arrow.svg);
+            top: 6px;
+            right: -20px;
+            cursor: pointer;
+        }
+    }
+
+    &__column--third {
+        margin-left: auto;
+        flex-direction: row;
+        column-gap: 7px;
+    }
+
+    &__button {
+        cursor: pointer;
+    }
 }
