@@ -1,0 +1,26 @@
+.header {
+
+    &__column {}
+
+    &__column--first {}
+
+    &__logo {}
+
+    &__column--second {}
+
+    &__navigation {}
+
+    &__ul {
+        display: flex;
+    }
+
+    &__list-item {}
+
+    &__list-item--with-button {}
+
+    &__link {}
+
+    &__column--third {}
+
+    &__button {}
+}
