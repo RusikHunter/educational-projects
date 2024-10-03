@@ -1,0 +1,85 @@
+.burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background);
+    border: 0;
+    outline: 0;
+    padding: 0;
+    overflow-y: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-inline: auto;
+        max-width: 768px;
+    }
+
+    &__navigation {
+        margin-block: 70px 18px;
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    &__link {
+        @include text-description;
+    }
+
+    &__link--with-button {
+        position: relative;
+        left: -5px;
+        @include text-description;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 7px;
+            background-image: url(../img/header/arrow.svg);
+            top: 6px;
+            right: -20px;
+            cursor: pointer;
+        }
+    }
+
+    &__button {
+        margin-bottom: 10px;
+    }
+
+    &__button-burger-close {
+        display: none;
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        background-image: url(../img/header/burger-close.png);
+        border: 0;
+        outline: 0;
+        top: 20px;
+        right: 40px;
+    }
+
+    @include mobile-small {
+        &__button-burger-close {
+            right: 20px;
+        }
+    }
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+}

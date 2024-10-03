@@ -10,6 +10,22 @@
     flex-direction: row;
     width: 100%;
     padding-inline: var(--padding-default);
+
+    @include tablet {
+        padding-inline: var(--padding-tablet);
+    }
+
+    @include tablet-small {
+        padding-inline: var(--padding-tablet-small);
+    }
+
+    @include mobile {
+        padding-inline: var(--padding-mobile);
+    }
+
+    @include mobile-small {
+        padding-inline: var(--padding-mobile-small);
+    }
 }
 
 .column {
@@ -35,4 +51,10 @@
 
 .button--gray {
     background-color: var(--color-darkgray);
+}
+
+@include mobile {
+    .mobile-visible {
+        display: block !important;
+    }
 }

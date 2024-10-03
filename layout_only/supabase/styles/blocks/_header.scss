@@ -3,6 +3,7 @@
     &__row {
         padding-block: 20px;
         align-items: center;
+        position: relative;
     }
 
     &__column--first {
@@ -55,5 +56,73 @@
 
     &__button {
         cursor: pointer;
+    }
+
+    &__button-burger-open {
+        display: none;
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        background-image: url(../img/header/burger-open.png);
+        border: 0;
+        outline: 0;
+    }
+
+    @include tablet {
+        &__container {
+            width: auto;
+            max-width: 1440px;
+        }
+
+        &__column--first {
+            margin-right: 0;
+        }
+
+        &__ &__list-item {
+            margin-inline: 20px 0px;
+        }
+
+        &__list-item--with-button {
+            padding-right: 24px;
+        }
+    }
+
+    @include tablet-small {
+        &__logo {
+            width: 100px;
+        }
+
+        &__ &__list-item {
+            margin-inline: 18px 0px;
+        }
+
+        &__list-item--with-button {
+            padding-right: 18px;
+        }
+    }
+
+    @include mobile {
+        &__column--second {
+            display: none;
+        }
+
+        &__column--third {
+            display: none;
+        }
+
+        &__logo {
+            width: 123px;
+        }
+
+        &__button-burger-open {
+            top: 20px;
+            right: 40px;
+        }
+    }
+
+    @include mobile-small {
+        &__button-burger-open {
+            right: 20px;
+        }
     }
 }

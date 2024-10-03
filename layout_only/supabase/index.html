@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body>
+<body id="body">
     <header class="header">
         <div class="header__container container">
             <div class="header__row row">
@@ -45,9 +45,45 @@
                         <button class="header__button button">Sign in</button>
                     </a>
                 </div>
+
+                <button class="header__button-burger-open mobile-visible" id="burgerButtonOpen"></button>
             </div>
         </div>
     </header>
+
+    <dialog open class="burger" id="burgerMenu">
+        <div class="burger__wrapper">
+            <div class="burger__row">
+                <button class="burger__button-burger-close mobile-visible" id="burgerButtonClose"></button>
+
+                <nav class="burger__navigation">
+                    <ul class="burger__ul">
+                        <li class="burger__list-item burger__list-item--with-button">
+                            <a href="#" class="burger__link--with-button">Product</a>
+                        </li>
+                        <li class="burger__list-item burger__list-item--with-button">
+                            <a href="#" class="burger__link--with-button">Developers</a>
+                        </li>
+                        <li class="burger__list-item">
+                            <a href="#" class="burger__link">Beta</a>
+                        </li>
+                        <li class="burger__list-item">
+                            <a href="#" class="burger__link">Pricing</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a href="#" class="burger__link--wrap">
+                    <button class="burger__button button button--green">Start your project</button>
+                </a>
+                <a href="#" class="burger__link--wrap">
+                    <button class="burger__button button">Sign in</button>
+                </a>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
