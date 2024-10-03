@@ -1,0 +1,27 @@
+/* 1140 - 921 */
+@mixin tablet {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+
+/* 920 - 769 */
+@mixin tablet-small {
+    @media (max-width: 920px) {
+        @content;
+    }
+}
+
+/* 768 - 481 */
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+/* 480 - 320 */
+@mixin mobile-small {
+    @media (max-width: 480px) {
+        @content;
+    }
+}

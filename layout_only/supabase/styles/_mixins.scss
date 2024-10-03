@@ -1,0 +1,39 @@
+@mixin text-h1 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: clamp(24px, #{$max / 1440 * 100}vw, 48px); // todo 
+    line-height: 120%;
+    color: var(--color-white);
+}
+
+@mixin text-h2 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(24px, #{$max / 1440 * 100}vw, 48px); // todo 
+    line-height: 120%;
+    color: var(--color-white);
+}
+
+@mixin text-h3 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(18px, #{$max / 1440 * 100}vw, 36px); // todo
+    line-height: 120%;
+    color: var(--color-white);
+}
+
+@mixin text-h6 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(12px, #{$max / 1440 * 100}vw, 18px); // todo
+    line-height: 156%;
+    color: var(--color-white);
+}
+
+@mixin text-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(10px, #{$max / 1440 * 100}vw, 14px); // todo
+    line-height: 140%;
+    color: var(--color-gray);
+}
