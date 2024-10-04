@@ -44,6 +44,10 @@
     font-size: 36px; // todo
     line-height: 120%;
     color: var(--color-white);
+
+    @include tablet {
+        font-size: 30px;
+    }
 }
 
 @mixin text-h6 {

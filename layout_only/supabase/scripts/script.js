@@ -31,3 +31,21 @@ for (let i = 0; i < menuButtons.length; ++i) {
         activeButton = menuButtons[i]
     })
 }
+
+// menu 2
+
+const menu2 = document.querySelector('simple__menu')
+
+const menuButtons2 = document.getElementsByClassName('simple__menu-button')
+
+let activeButton2 = menuButtons2[0]
+
+for (let i = 0; i < menuButtons2.length; ++i) {
+    menuButtons2[i].addEventListener('click', () => {
+        activeButton2.classList.remove('active')
+
+        menuButtons2[i].classList.add('active')
+
+        activeButton2 = menuButtons2[i]
+    })
+}
