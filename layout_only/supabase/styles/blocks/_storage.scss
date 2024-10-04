@@ -106,6 +106,7 @@
 
         &__image {
             height: auto;
+            margin-inline: auto;
         }
 
         &__column--third,
@@ -178,6 +179,7 @@
         &__row--second {
             flex-direction: column;
             align-items: center;
+            row-gap: 20px;
         }
 
         &__column--third,
