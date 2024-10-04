@@ -69,11 +69,6 @@
     }
 
     @include tablet {
-        &__container {
-            width: auto;
-            max-width: 1440px;
-        }
-
         &__column--first {
             margin-right: 0;
         }

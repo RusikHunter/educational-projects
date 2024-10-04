@@ -3,6 +3,11 @@
     flex-direction: column;
     width: 1440px;
     margin-inline: auto;
+
+    @include tablet {
+        width: auto;
+        max-width: 1440px;
+    }
 }
 
 .row {

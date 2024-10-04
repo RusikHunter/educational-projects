@@ -1,25 +1,14 @@
 .storage {
-
-    &__container {}
-
-    &__row {}
-
     &__row--first {
         padding-top: 130px;
         padding-left: 75px;
     }
-
-    &__column {}
-
-    &__column--first {}
 
     &__icon-wrap {
         display: flex;
         align-items: center;
         column-gap: 12px;
     }
-
-    &__icon {}
 
     &__title--alt {
         @include text-h6;
@@ -53,8 +42,6 @@
         padding-left: 40px;
     }
 
-    &__image {}
-
     &__row--second {
         padding-top: 95px;
         padding-bottom: 400px;
@@ -75,6 +62,129 @@
     &__column--fifth {
         .storage__description {
             margin-left: 0;
+        }
+    }
+
+    @include tablet {
+        &__row--first {
+            padding-left: var(--padding-tablet);
+        }
+
+        &__description {
+            width: 360px;
+        }
+
+        &__image {
+            height: auto;
+        }
+
+        &__row--second {
+            column-gap: 20px;
+            justify-content: space-between;
+        }
+
+        &__column--fifth {
+            .storage__description {
+                width: 100%;
+            }
+        }
+    }
+
+    @include tablet-small {
+        &__row--first {
+            padding-left: var(--padding-tablet-small);
+        }
+
+        &__title {
+            margin-left: 0;
+            margin-top: 35px;
+        }
+
+        &__description {
+            margin-left: 0;
+            width: 300px;
+        }
+
+        &__image {
+            height: auto;
+        }
+
+        &__column--third,
+        &__column--fourth,
+        &__column--fifth {
+            width: 200px;
+        }
+    }
+
+    @include mobile {
+        &__row--first {
+            flex-direction: column;
+            padding-top: 70px;
+            padding-left: var(--padding-mobile);
+        }
+
+        & br {
+            display: none;
+        }
+
+        &__title {
+            width: 80%;
+            margin-bottom: 30px;
+        }
+
+        &__description {
+            width: 60%;
+        }
+
+        &__link--wrap {
+            margin-top: 40px;
+            margin-left: 0;
+        }
+
+        &__column--second {
+            padding-left: 0;
+            padding-top: 50px;
+        }
+
+        &__row--second {
+            .storage__icon {
+                width: 21px;
+                height: 21px;
+            }
+        }
+
+        &__column--third,
+        &__column--fourth,
+        &__column--fifth {
+            p.storage__title--alt {
+                @include text-description;
+                line-height: 200%;
+            }
+        }
+    }
+
+    @include mobile-small {
+        &__row--first {
+            padding-left: var(--padding-mobile-small);
+        }
+
+        &__title {
+            width: 100%;
+        }
+
+        &__description {
+            width: 100%;
+        }
+
+        &__row--second {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__column--third,
+        &__column--fourth,
+        &__column--fifth {
+            width: 80%;
         }
     }
 }
