@@ -1,0 +1,129 @@
+.dashboard {
+
+    &__inner {
+        padding-top: 205px;
+        padding-bottom: 205px;
+    }
+
+    &__row {}
+
+    &__row--first {
+        padding-bottom: 64px;
+    }
+
+    &__column--first {
+        row-gap: 16px;
+    }
+
+    &__title {
+        @include text-h2;
+    }
+
+    &__subtitle {
+        @include text-h6;
+    }
+
+    &__description {
+        @include text-description;
+    }
+
+    &__row--second {
+        justify-content: space-between;
+    }
+
+    &__column--second {
+        row-gap: 16px;
+        width: 560px;
+    }
+
+    &__menu {}
+
+    &__image {}
+
+    &__column--third {
+        row-gap: 16px;
+        width: 370px;
+
+        .dashboard__description {
+            width: 80%;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__example {
+        border-block: 1px solid #2A2A2A;
+    }
+
+    &__example-description {
+        background-color: #1F1F1F;
+        padding: 21px;
+        padding-bottom: 30px;
+
+        .dashboard__subtitle {
+            font-size: 16px;
+        }
+
+        .dashboard__description {
+            margin-block: 7px 13px;
+        }
+    }
+
+    &__by {
+        @include text-description;
+    }
+
+    &__supabase {
+        position: relative;
+        @include text-description;
+        font-size: 13px;
+        padding-left: 40px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-image: url(../img/dashboard/logo.svg);
+            left: 8px;
+            top: -3px;
+        }
+    }
+
+    &__example-deploy {
+        padding: 21px;
+    }
+
+    &__filename {
+        position: relative;
+        width: 175px;
+        @include text-description;
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-image: url(../img/dashboard/github-logo.svg);
+            width: 18px;
+            height: 18px;
+            right: -20px;
+            top: 2px;
+        }
+    }
+
+    &__button--deploy {
+        cursor: pointer;
+        position: relative;
+        background-color: #1374EF;
+        padding: 10px;
+        margin-top: 12px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 100%;
+            background-color: #1269D3;
+            top: 0;
+            left: 32px;
+        }
+    }
+}

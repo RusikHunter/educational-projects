@@ -751,3 +751,154 @@ svg * {
     width: 80%;
   }
 }
+
+.dashboard__inner {
+  padding-top: 205px;
+  padding-bottom: 205px;
+}
+.dashboard__row--first {
+  padding-bottom: 64px;
+}
+.dashboard__column--first {
+  row-gap: 16px;
+}
+.dashboard__title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  color: var(--color-white);
+}
+@media (max-width: 1440px) {
+  .dashboard__title {
+    font-size: 40px;
+  }
+}
+.dashboard__subtitle {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  color: var(--color-white);
+}
+.dashboard__description {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color-gray);
+}
+@media (max-width: 920px) {
+  .dashboard__description {
+    font-size: 12px;
+  }
+}
+.dashboard__row--second {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.dashboard__column--second {
+  row-gap: 16px;
+  width: 560px;
+}
+.dashboard__column--third {
+  row-gap: 16px;
+  width: 370px;
+}
+.dashboard__column--third .dashboard__description {
+  width: 80%;
+  margin-bottom: 32px;
+}
+.dashboard__example {
+  border-block: 1px solid #2A2A2A;
+}
+.dashboard__example-description {
+  background-color: #1F1F1F;
+  padding: 21px;
+  padding-bottom: 30px;
+}
+.dashboard__example-description .dashboard__subtitle {
+  font-size: 16px;
+}
+.dashboard__example-description .dashboard__description {
+  margin-block: 7px 13px;
+}
+.dashboard__by {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color-gray);
+}
+@media (max-width: 920px) {
+  .dashboard__by {
+    font-size: 12px;
+  }
+}
+.dashboard__supabase {
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color-gray);
+  font-size: 13px;
+  padding-left: 40px;
+}
+@media (max-width: 920px) {
+  .dashboard__supabase {
+    font-size: 12px;
+  }
+}
+.dashboard__supabase::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/dashboard/logo.svg);
+  left: 8px;
+  top: -3px;
+}
+.dashboard__example-deploy {
+  padding: 21px;
+}
+.dashboard__filename {
+  position: relative;
+  width: 175px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--color-gray);
+}
+@media (max-width: 920px) {
+  .dashboard__filename {
+    font-size: 12px;
+  }
+}
+.dashboard__filename::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/dashboard/github-logo.svg);
+  width: 18px;
+  height: 18px;
+  right: -20px;
+  top: 2px;
+}
+.dashboard__button--deploy {
+  cursor: pointer;
+  position: relative;
+  background-color: #1374EF;
+  padding: 10px;
+  margin-top: 12px;
+}
+.dashboard__button--deploy::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #1269D3;
+  top: 0;
+  left: 32px;
+}
