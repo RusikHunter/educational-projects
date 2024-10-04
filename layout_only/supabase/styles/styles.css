@@ -273,6 +273,26 @@ svg * {
   background-color: var(--color-darkgray);
 }
 
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 12px;
+     -moz-column-gap: 12px;
+          column-gap: 12px;
+}
+.menu__button {
+  color: var(--color-darkgray);
+  font-size: 11px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.active {
+  color: var(--color-white);
+  background-color: #2A2A2A;
+}
+
 @media (max-width: 768px) {
   .mobile-visible {
     display: block !important;
@@ -606,7 +626,6 @@ svg * {
 }
 .storage__row--second {
   padding-top: 95px;
-  padding-bottom: 400px;
   -webkit-column-gap: 95px;
      -moz-column-gap: 95px;
           column-gap: 95px;
