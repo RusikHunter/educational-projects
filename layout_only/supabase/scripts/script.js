@@ -1,17 +1,20 @@
 // burger
 
 const burgerMenu = document.getElementById('burgerMenu')
+const body = document.getElementById('body')
 const burgerButtonOpen = document.getElementById('burgerButtonOpen')
 const burgerButtonClose = document.getElementById('burgerButtonClose')
 
 burgerButtonOpen.addEventListener('click', () => {
     burgerMenu.classList.add('show');
 
-    console.log(1)
+    body.style.overflowY = 'hidden'
 })
 
 burgerButtonClose.addEventListener('click', () => {
     burgerMenu.classList.remove('show')
+
+    body.style.overflowY = 'scroll'
 })
 
 // menu

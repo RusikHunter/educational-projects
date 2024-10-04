@@ -104,5 +104,36 @@
             justify-content: start;
             column-gap: 50px;
         }
+
+        &__menu-button {
+            font-size: 11px;
+        }
+
+        &__image {
+            width: 100%;
+        }
+    }
+
+    @include mobile {
+        &__column--second {
+            flex-direction: row;
+            column-gap: 20px;
+            width: 100%;
+        }
+
+        &__image {
+            width: 70%;
+            height: auto;
+        }
+    }
+
+    @include mobile-small {
+        &__inner {
+            padding-top: 70px;
+        }
+
+        &__menu-button {
+            font-size: 6px;
+        }
     }
 }

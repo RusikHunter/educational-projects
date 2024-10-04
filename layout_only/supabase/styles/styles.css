@@ -1057,6 +1057,21 @@ svg * {
     font-size: 30px;
   }
 }
+@media (max-width: 920px) {
+  .simple__title {
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .simple__title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .simple__title {
+    font-size: 20px;
+  }
+}
 .simple__description {
   font-family: var(--font-family);
   font-weight: 400;
@@ -1175,5 +1190,35 @@ svg * {
     -webkit-column-gap: 50px;
        -moz-column-gap: 50px;
             column-gap: 50px;
+  }
+  .simple__menu-button {
+    font-size: 11px;
+  }
+  .simple__image {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .simple__column--second {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    width: 100%;
+  }
+  .simple__image {
+    width: 70%;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .simple__inner {
+    padding-top: 70px;
+  }
+  .simple__menu-button {
+    font-size: 6px;
   }
 }
