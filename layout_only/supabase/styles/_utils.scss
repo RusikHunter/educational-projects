@@ -84,6 +84,10 @@
     background-color: #2A2A2A;
 }
 
+.gray {
+    color: #BBBBBB;
+}
+
 @include mobile {
     .mobile-visible {
         display: block !important;

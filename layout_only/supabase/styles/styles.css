@@ -311,6 +311,10 @@ svg * {
   background-color: #2A2A2A;
 }
 
+.gray {
+  color: #BBBBBB;
+}
+
 @media (max-width: 768px) {
   .mobile-visible {
     display: block !important;
