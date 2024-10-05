@@ -52,3 +52,21 @@ for (let i = 0; i < menuButtons2.length; ++i) {
         activeButton2 = menuButtons2[i]
     })
 }
+
+// menu 3
+
+const menu3 = document.querySelector('integration__menu')
+
+const menuButtons3 = document.getElementsByClassName('integration__menu-button')
+
+let activeButton3 = menuButtons3[0]
+
+for (let i = 0; i < menuButtons3.length; ++i) {
+    menuButtons3[i].addEventListener('click', () => {
+        activeButton3.classList.remove('active')
+
+        menuButtons3[i].classList.add('active')
+
+        activeButton3 = menuButtons3[i]
+    })
+}

@@ -1,0 +1,52 @@
+.integration {
+
+    &__inner {
+        padding-top: 100px;
+        padding-bottom: 200px;
+    }
+
+    &__row {
+        justify-content: space-between;
+    }
+
+    &__column {}
+
+    &__column--first {
+        width: 430px;
+    }
+
+    &__title {
+        @include text-h3;
+        width: 80%;
+    }
+
+    &__description {
+        @include text-description;
+        margin-block: 21px 40px;
+    }
+
+    &__description--lower {
+        margin-bottom: 30px;
+    }
+
+    &__link--wrap {}
+
+    &__button {
+        background-color: #2A2A2A;
+        color: var(--color-gray);
+        font-weight: 400;
+        padding-inline: 40px 17px;
+        background-image: url(../img/integration/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 8% center;
+    }
+
+    &__column--second {
+        width: 530px;
+    }
+
+    &__image {
+        margin-top: 20px;
+        height: auto;
+    }
+}
