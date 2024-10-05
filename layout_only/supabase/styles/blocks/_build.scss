@@ -1,0 +1,42 @@
+.build {
+
+    &__inner {
+        padding-top: 220px;
+        padding-bottom: 500px;
+    }
+
+    &__row {
+        justify-content: center;
+    }
+
+    &__column {
+        align-items: center;
+    }
+
+    &__title {
+        @include text-h3;
+        text-align: center;
+    }
+
+    &__button {
+        margin-top: 35px;
+    }
+
+    @include tablet-small {
+        &__inner {
+            padding-top: 170px;
+        }
+    }
+
+    @include mobile {
+        &__inner {
+            padding-top: 100px;
+        }
+    }
+
+    @include mobile-small {
+        &__inner {
+            padding-top: 64px;
+        }
+    }
+}
