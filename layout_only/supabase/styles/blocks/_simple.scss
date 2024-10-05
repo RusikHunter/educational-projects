@@ -63,6 +63,10 @@
         row-gap: 16px;
     }
 
+    &__image {
+        height: auto;
+    }
+
     @media (max-width: 1170px) {
         &__column--first {
             width: 40%;
