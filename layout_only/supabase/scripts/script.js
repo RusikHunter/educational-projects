@@ -70,3 +70,11 @@ for (let i = 0; i < menuButtons3.length; ++i) {
         activeButton3 = menuButtons3[i]
     })
 }
+
+// toggle
+
+const toggleButton = document.getElementById('themeToggle');
+
+toggleButton.addEventListener('click', () => {
+    toggleButton.classList.toggle('toggle-active');
+});

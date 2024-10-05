@@ -88,6 +88,35 @@
     color: #BBBBBB;
 }
 
+.toggle {
+    width: 44px;
+    height: 24px;
+    background-color: #444444;
+    border-radius: 24px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-color: var(--color-background);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 2.5px;
+        transform: translateY(-50%);
+        transition: left 0.3s ease;
+    }
+}
+
+.toggle-active {
+    &::after {
+        left: 22px;
+    }
+}
+
 @include mobile {
     .mobile-visible {
         display: block !important;
