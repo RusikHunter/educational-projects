@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport'
+        content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Timer</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize-styles.css">
+    <script src="scripts/timer.js" defer></script>
+</head>
+
+<body>
+    <main class="main">
+        <section class="section">
+            <div class="window">
+                <div class="timer">
+                    <h1 class="timer__output--time">00:00</h1>
+
+                    <p class="timer__output--message">.</p>
+
+                    <div class="timer__input--setter">
+                        <input type="number" value="0" class="timer__minutes" min="0" max="59" placeholder="MM">
+                        :
+                        <input type="number" value="0" class="timer__seconds" min="0" max="59" placeholder="SS">
+
+                        <button class="timer__button--start">Start!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

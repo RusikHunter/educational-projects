@@ -1,0 +1,49 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.window {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 12vw;
+}
+
+.timer {
+    width: auto;
+}
+
+.timer__output--time {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.timer__output--message {
+    visibility: hidden;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+.timer__input--setter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.timer__input--setter input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.timer__button--start {
+    margin-left: 10px;
+    background-color: lightgreen;
+    padding: 6px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
