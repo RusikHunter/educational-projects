@@ -6,6 +6,7 @@ class Timer {
 
     // для рассчетов внутри скрипта
     time = null
+    countingEverySecondInterval = null
 
     // для кастомизации
     minutes = null
@@ -29,8 +30,8 @@ class Timer {
 
     // функция, которая забирает минуты и секунды из инпутов
     getMinutesAndSeconds() {
-        this.minutes = this.minutesInputElement.value
-        this.seconds = this.secondsInputElement.value
+        this.minutes = parseInt(this.minutesInputElement.value) || 0
+        this.seconds = parseInt(this.secondsInputElement.value) || 0
     }
 
     // функция, которая устанавливает те же минуты и секунды в заголовок для пользователя
@@ -57,9 +58,7 @@ class Timer {
     }
 
     startTimer() {
-        const countingEverySecondInterval = setInterval(() => {
-            // если минута прошла, и секунды равны нулю, то секунды возвращаем снова и убавляем минуту на 1
-            // если условие другое, то просто отнимаем по секунде
+        this.countingEverySecondInterval = setInterval(() => {
             if (this.seconds === 0) {
                 this.seconds = 59
 
@@ -68,12 +67,16 @@ class Timer {
                 --this.seconds
             }
 
+            if (this.minutes === 0 && this.seconds === 0) {
+                clearInterval(this.countingEverySecondInterval)
+                this.seconds = 0
+                this.showMinutesAndSeconds()
+                this.showMessage()
+                return
+            }
+
             this.showMinutesAndSeconds()
         }, this.SECOND)
-
-        setTimeout(() => {
-            clearInterval(countingEverySecondInterval)
-        }, this.time)
     }
 
     isEmpty() {
@@ -90,6 +93,9 @@ class Timer {
     }
 
     showMessageIfOutputEmpty() {
+        this.minutes = 0
+        this.seconds = 0
+        this.showMinutesAndSeconds()
         this.outputMessageElement.textContent = this.MESSAGE_IF_OUTPUT_EMPTY
         this.outputMessageElement.style.visibility = "visible"
     }
@@ -99,7 +105,14 @@ class Timer {
     }
 
     run() {
+        if (this.countingEverySecondInterval !== null) clearInterval(this.countingEverySecondInterval)
+
+        this.hideMessage()
+
         this.getMinutesAndSeconds()
+
+        if (this.isEmpty()) return
+
         this.showMinutesAndSeconds()
         this.convertTimeToMS()
         this.startTimer()
