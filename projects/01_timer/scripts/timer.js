@@ -17,10 +17,15 @@ class Timer {
         this.minutesInputElement = document.querySelector('.timer__minutes') // ввод минут
         this.secondsInputElement = document.querySelector('.timer__seconds') // ввод секунд
         this.startButtonElement = document.querySelector('.timer__button--start') // кнопка запуска таймера
+        this.stopButtonElement = document.querySelector('.timer__button--stop') // кнопка запуска таймера
 
         // обработчик событий на кнопку
         this.startButtonElement.addEventListener('click', () => {
             this.run()
+        })
+
+        this.stopButtonElement.addEventListener('click', () => {
+            this.stopTimer()
         })
 
         // output
@@ -77,6 +82,13 @@ class Timer {
 
             this.showMinutesAndSeconds()
         }, this.SECOND)
+    }
+
+    stopTimer() {
+        this.minutes = 0
+        this.seconds = 0
+        this.showMinutesAndSeconds()
+        clearInterval(this.countingEverySecondInterval)
     }
 
     isEmpty() {
