@@ -7,6 +7,7 @@ class Timer {
     // для рассчетов внутри скрипта
     time = null
     countingEverySecondInterval = null
+    isPaused = false
 
     // для кастомизации
     minutes = null
@@ -17,7 +18,8 @@ class Timer {
         this.minutesInputElement = document.querySelector('.timer__minutes') // ввод минут
         this.secondsInputElement = document.querySelector('.timer__seconds') // ввод секунд
         this.startButtonElement = document.querySelector('.timer__button--start') // кнопка запуска таймера
-        this.stopButtonElement = document.querySelector('.timer__button--stop') // кнопка запуска таймера
+        this.stopButtonElement = document.querySelector('.timer__button--stop') // кнопка остановки таймера
+        this.pauseButtonElement = document.querySelector('.timer__button--pause') // кнопка паузы таймера
 
         // обработчик событий на кнопку
         this.startButtonElement.addEventListener('click', () => {
@@ -28,6 +30,10 @@ class Timer {
             this.stopTimer()
         })
 
+        this.pauseButtonElement.addEventListener('click', () => {
+            this.pauseTimer()
+        })
+
         // output
         this.outputTimeElement = document.querySelector('.timer__output--time') // элемент заголовка, который нужен для вывода времени
         this.outputMessageElement = document.querySelector('.timer__output--message') // элемент параграфа, который нужен для вывода сообщения после окончания
@@ -35,8 +41,19 @@ class Timer {
 
     // функция, которая забирает минуты и секунды из инпутов
     getMinutesAndSeconds() {
-        this.minutes = parseInt(this.minutesInputElement.value) || 0
-        this.seconds = parseInt(this.secondsInputElement.value) || 0
+        if (!this.isPaused) {
+            const inputMinutes = parseInt(this.minutesInputElement.value) || 0
+            const inputSeconds = parseInt(this.secondsInputElement.value) || 0
+
+            if (inputMinutes === 0 && inputSeconds === 0) {
+                this.showMessageIfOutputEmpty()
+                return false // Не запускать таймер, если время не установлено
+            }
+
+            this.minutes = inputMinutes
+            this.seconds = inputSeconds
+        }
+        return true; // Продолжаем работу с таймером
     }
 
     // функция, которая устанавливает те же минуты и секунды в заголовок для пользователя
@@ -44,13 +61,8 @@ class Timer {
         let customeMinutes = this.minutes
         let customeSeconds = this.seconds
 
-        if (customeMinutes < 10) {
-            customeMinutes = `0${customeMinutes}`
-        }
-
-        if (customeSeconds < 10) {
-            customeSeconds = `0${customeSeconds}`
-        }
+        if (customeMinutes < 10) customeMinutes = `0${customeMinutes}`
+        if (customeSeconds < 10) customeSeconds = `0${customeSeconds}`
 
         this.outputTimeElement.textContent = `${customeMinutes}:${customeSeconds}`
     }
@@ -58,49 +70,57 @@ class Timer {
     // функция, которая конвертирует минуты и секунды в миллисекунды для работы setTimeout
     convertTimeToMS() {
         this.time = this.minutes * (60 * this.SECOND) + this.seconds * this.SECOND
-
-        console.log(this.time)
     }
 
     startTimer() {
-        this.countingEverySecondInterval = setInterval(() => {
-            if (this.seconds === 0) {
-                this.seconds = 59
+        // Убедитесь, что только один таймер работает
+        if (this.countingEverySecondInterval) clearInterval(this.countingEverySecondInterval)
 
+        this.countingEverySecondInterval = setInterval(() => {
+            if (this.seconds === 0 && this.minutes > 0) {
+                this.seconds = 59
                 --this.minutes
-            } else {
+            } else if (this.seconds > 0) {
                 --this.seconds
             }
 
             if (this.minutes === 0 && this.seconds === 0) {
                 clearInterval(this.countingEverySecondInterval)
-                this.seconds = 0
                 this.showMinutesAndSeconds()
                 this.showMessage()
-                return
+                return;
             }
 
             this.showMinutesAndSeconds()
-        }, this.SECOND)
+        }, this.SECOND);
+    }
+
+    pauseTimer() {
+        if (this.isPaused) {
+            // Возобновляем таймер
+            this.startTimer()
+        } else {
+            // Ставим на паузу
+            clearInterval(this.countingEverySecondInterval)
+        }
+
+        this.isPaused = !this.isPaused
     }
 
     stopTimer() {
+        clearInterval(this.countingEverySecondInterval)
         this.minutes = 0
         this.seconds = 0
         this.showMinutesAndSeconds()
-        clearInterval(this.countingEverySecondInterval)
+        this.isPaused = false
     }
 
     isEmpty() {
-        if (+this.minutes === 0 && +this.seconds === 0) {
-            this.showMessageIfOutputEmpty()
-
-            return true
-        }
+        return this.minutes === 0 && this.seconds === 0
     }
 
     showMessage() {
-        this.outputMessageElement.textContent = this.MESSAGE
+        this.outputMessageElement.textContent = this.MESSAGE_IF_OUTPUT_EMPTY
         this.outputMessageElement.style.visibility = "visible"
     }
 
@@ -117,16 +137,20 @@ class Timer {
     }
 
     run() {
-        if (this.countingEverySecondInterval !== null) clearInterval(this.countingEverySecondInterval)
+        this.isPaused = false
+        clearInterval(this.countingEverySecondInterval) // Очищаем предыдущий таймер
 
         this.hideMessage()
 
-        this.getMinutesAndSeconds()
-
-        if (this.isEmpty()) return
+        // Если таймер не на паузе, считываем новые значения из инпутов
+        if (!this.isPaused && !this.getMinutesAndSeconds()) {
+            return
+        }
 
         this.showMinutesAndSeconds()
         this.convertTimeToMS()
+
+        // Запускаем таймер
         this.startTimer()
     }
 }
