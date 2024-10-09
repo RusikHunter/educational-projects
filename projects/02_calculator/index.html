@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport'
+        content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize-styles.css">
+    <script src="scripts/App.js" defer></script>
+</head>
+
+<body>
+    <main class="main">
+        <section class="section">
+            <container class="container">
+                <div class="calculator">
+                    <div class="calculator__output-window">
+                        <span class="calculator__output" data-js-output>2+90+10</span>
+                    </div>
+
+                    <div class="calculator__buttons">
+                        <button class="calculator__button" data-js-operation="4">X<sup>2</sup>
+                        </button>
+                        <button class="calculator__button" data-js-operation="5">√</button>
+                        <button class="calculator__button calculator__button--remove" data-js-remove-all>C</button>
+                        <button class="calculator__button calculator__button--remove" data-js-remove>&#60;=</button>
+
+                        <button class="calculator__button" data-js-number="1">1</button>
+                        <button class="calculator__button" data-js-number="2">2</button>
+                        <button class="calculator__button" data-js-number="3">3</button>
+                        <button class="calculator__button" data-js-operation="0">+</button>
+
+                        <button class="calculator__button" data-js-number="4">4</button>
+                        <button class="calculator__button" data-js-number="5">5</button>
+                        <button class="calculator__button" data-js-number="6">6</button>
+                        <button class="calculator__button" data-js-operation="1">-</button>
+
+                        <button class="calculator__button" data-js-number="7">7</button>
+                        <button class="calculator__button" data-js-number="8">8</button>
+                        <button class="calculator__button" data-js-number="9">9</button>
+                        <button class="calculator__button" data-js-operation="2">*</button>
+
+                        <button class="calculator__button" data-js-change>+/-</button>
+                        <button class="calculator__button" data-js-number="0">0</button>
+                        <button class="calculator__button" data-js-change>,</button>
+                        <button class="calculator__button" data-js-operation="3">/</button>
+
+                        <button class="calculator__button calculator__button--result" data-js-result>=</button>
+                    </div>
+                </div>
+            </container>
+        </section>
+    </main>
+</body>
+
+</html>
