@@ -68,3 +68,37 @@
     border-radius: 3px;
     cursor: pointer;
 }
+
+.stopwatch__output {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.stopwatch__buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 10vw;
+    gap: 5px;
+}
+
+.stopwatch__button--start {
+    background-color: lightgreen;
+    padding: 6px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.stopwatch__button--pause {
+    background-color: lightgoldenrodyellow;
+    padding: 6px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.stopwatch__button--stop {
+    background-color: lightcoral;
+    padding: 6px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}

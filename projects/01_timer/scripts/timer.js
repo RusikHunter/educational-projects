@@ -53,7 +53,8 @@ class Timer {
             this.minutes = inputMinutes
             this.seconds = inputSeconds
         }
-        return true; // Продолжаем работу с таймером
+
+        return true // Продолжаем работу с таймером
     }
 
     // функция, которая устанавливает те же минуты и секунды в заголовок для пользователя
