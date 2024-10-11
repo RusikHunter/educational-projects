@@ -3,11 +3,11 @@ class Calculator {
     secondNumber = ""
     operator = ""
 
+    result = null
+
     constructor() {
         this.#getElements()
         this.#addEvents()
-
-        console.log(this.operationButtons)
     }
 
     #getElements() {
@@ -118,25 +118,17 @@ class Calculator {
                     if (this.firstNumber !== "" && this.secondNumber === "") {
                         const floatSymbolIndex = this.firstNumber.indexOf('.')
 
-                        console.log(floatSymbolIndex)
-
                         if (floatSymbolIndex === -1) {
-                            console.log('a')
                             this.firstNumber += '.'
                         } else {
-                            console.log('b')
                             this.firstNumber = this.firstNumber.slice(0, floatSymbolIndex)
                         }
                     } else {
                         const floatSymbolIndex = this.secondNumber.indexOf('.')
 
-                        console.log(floatSymbolIndex)
-
                         if (floatSymbolIndex === -1) {
-                            console.log('a')
                             this.secondNumber += '.'
                         } else {
-                            console.log('b')
                             this.secondNumber = this.secondNumber.slice(0, floatSymbolIndex)
                         }
                     }
@@ -159,10 +151,12 @@ class Calculator {
         })
 
         this.buttonRemoveAllElement.addEventListener('click', () => {
-            this.outputElement.textContent = ""
-            this.firstNumber = ""
-            this.secondNumber = ""
-            this.operator = ""
+            this.#removeAll()
+            this.result = null
+        })
+
+        this.buttonResultElement.addEventListener('click', () => {
+            this.#calcResult()
         })
     }
 
@@ -176,6 +170,41 @@ class Calculator {
         if (this.secondNumber !== "") {
             this.outputElement.textContent += this.secondNumber
         }
+    }
+
+    #removeAll() {
+        this.outputElement.textContent = ""
+        this.firstNumber = ""
+        this.secondNumber = ""
+        this.operator = ""
+    }
+
+    #calcResult() {
+        if (this.secondNumber === "") return
+
+        const firstOperand = Number(this.firstNumber)
+        const secondOperand = Number(this.secondNumber)
+
+        switch (this.operator) {
+            case "+":
+                this.result = firstOperand + secondOperand
+                break
+            case "-":
+                this.result = firstOperand - secondOperand
+                break
+            case "*":
+                this.result = firstOperand * secondOperand
+                break
+            case "/":
+                this.result = firstOperand / secondOperand
+                break
+        }
+
+        this.#removeAll()
+
+        this.outputElement.textContent = String(this.result)
+
+        this.firstNumber = String(this.result)
     }
 }
 
