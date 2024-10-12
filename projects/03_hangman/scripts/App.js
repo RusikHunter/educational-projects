@@ -1,6 +1,9 @@
+import * as words from './words.js'
+
 class HangmanGame {
     // gameplay
     word // загаданное слово
+    solvedLetters = "" // разгаданные буквы
     attempt // попытка
     frame // кадр (картинка)
     isShowed // переменная показывает, отображено ли слово (если да, то при нажатии на буквы ничего не происходит)
@@ -44,19 +47,19 @@ class HangmanGame {
         })
 
         // обработчики на кнопки с буквами
-        for (const button in this.elements.lettersElements) {
-            this.elements.lettersElements[button].addEventListener('click', () => {
-                if (this.isShowed) return
-
-                // ... todo
+        for (const key in this.elements.lettersElements) {
+            this.elements.lettersElements[key].addEventListener('click', () => {
+                this.#checkLetter(key)
             })
         }
     }
 
     // установить значения при новой игре (кадр (картинка) -1, попытка - 1)
     #initValues() {
+        this.#createNewWord()
         this.attempt = 1
         this.#renderFrame()
+        this.#setLettersEnabled()
         this.isShowed = false
     }
 
@@ -66,22 +69,84 @@ class HangmanGame {
         this.elements.imageWrapElement.innerHTML = this.frame
     }
 
-    // создать слово
-    #createNewWord() {
-        this.word = "Apple"
-        let wordElementContent = ""
+    #renderWord() {
+        this.elements.wordElement.textContent = this.solvedLetters
+    }
 
-        for (let i = 0; i < this.word.length; ++i) {
-            wordElementContent += "_"
+    #checkLetter(key) {
+        if (this.isShowed) return
+
+        const letter = key
+
+        if (this.#hasLetter(letter)) {
+            const indexes = this.#findAllOccurrences(letter)
+            console.log(indexes)
+
+            for (let i = 0; i < this.solvedLetters.length; ++i) {
+                if (indexes.includes(i)) {
+                    this.solvedLetters = this.#replaceCharAt(letter, i)
+                    console.log(this.solvedLetters)
+                }
+            }
+
+            this.#renderWord()
+        } else {
+            this.attempt++
+            this.#renderFrame()
+
+            if (this.attempt === 9) {
+                this.isShowed = true
+                this.elements.wordElement.textContent = this.word
+            }
         }
 
-        this.elements.wordElement.textContent = wordElementContent
+        this.elements.lettersElements[key].textContent = "X"
+        this.elements.lettersElements[key].disabled = true
+    }
+
+    #setLettersEnabled() {
+        for (const key in this.elements.lettersElements) {
+            this.elements.lettersElements[key].textContent = key.toUpperCase()
+            this.elements.lettersElements[key].disabled = false
+        }
+    }
+
+    // создать слово
+    #createNewWord() {
+        this.word = words.getRandomWord()
+
+        this.solvedLetters = ""
+        for (let i = 0; i < this.word.length; ++i) {
+            this.solvedLetters += "_"
+        }
+
+        this.#renderWord()
+        console.log(this.word)
+    }
+
+    #hasLetter(letter) {
+        return this.word.includes(letter)
+    }
+
+    #findAllOccurrences(char) {
+        const indices = []
+        let index = this.word.indexOf(char)
+
+        while (index !== -1) {
+            indices.push(index)
+            index = this.word.indexOf(char, index + 1)
+        }
+
+        return indices
+    }
+
+    #replaceCharAt(char, index) {
+        return this.solvedLetters.slice(0, index) + char + this.solvedLetters.slice(index + 1)
     }
 
     // запуск приложения
     run() {
         this.#initValues()
-        this.#createNewWord()
     }
 }
 
