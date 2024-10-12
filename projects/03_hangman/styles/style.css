@@ -1,0 +1,63 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+button {
+    cursor: pointer;
+    transition: transform ease 0.4s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.hangman__container {
+    display: flex;
+    width: 50%;
+    margin-inline: auto;
+    justify-content: space-between;
+    margin-top: 25vh;
+    gap: 5%;
+}
+
+.hangman__image-wrap {
+    width: 25%;
+}
+
+.hangman__image {
+    width: 100%;
+    height: auto;
+}
+
+.hangman__gameplay-wrap {
+    width: 70%;
+}
+
+.hangman__word {
+    text-align: center;
+    margin-top: 35px;
+    letter-spacing: 5px;
+}
+
+.hangman__letters {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hangman__letter {
+    padding: 5px 10px;
+    background-color: lightgray;
+    border-radius: 3px;
+}
+
+.hangman__button-start {
+    display: block;
+    padding: 5px 20px;
+    background-color: lightgray;
+    border-radius: 3px;
+    margin-inline: auto;
+    margin-top: 35px;
+}
