@@ -1,0 +1,605 @@
+[33mcommit ef480107f84ee7fd05d73ee78b41ef2bc56c5170[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Oct 13 22:23:14 2024 +0200
+
+    weather v4
+
+[33mcommit 5a112e3194b915f2f24a26c6688f3cd4730b8a25[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Oct 13 21:17:32 2024 +0200
+
+    weather v4
+
+[33mcommit a42a0f53415554aa39e19e8bd331e8178162bc3e[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Oct 13 17:03:54 2024 +0200
+
+    weather v3
+
+[33mcommit 97c5f3f5735ceb9ea2f979125e1d6687ed134313[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Oct 13 15:16:55 2024 +0200
+
+    weather v2
+
+[33mcommit 8468fac045925dfbf1bfec77165da03b04fe5919[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Oct 13 14:27:30 2024 +0200
+
+    weather v1
+
+[33mcommit 8b8123089a1f2354ed87a6fa99e018a6c526c2f7[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 12 21:50:52 2024 +0200
+
+    hangman v5
+
+[33mcommit 97b004177d1d91889f3db436b3797902a1fedeae[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 12 19:10:28 2024 +0200
+
+    hangman v4
+
+[33mcommit febadcc52f618c734610093f506568e71c5655e7[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 12 18:23:16 2024 +0200
+
+    hangman v3
+
+[33mcommit 6a40cf31ddafc6f9691178cc32a97e0e1b77be8d[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 12 17:58:44 2024 +0200
+
+    hangman v2
+
+[33mcommit ce29e9784d6834daac7af16f0d590056c0f3c3b6[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 12 17:56:34 2024 +0200
+
+    hangman v1
+
+[33mcommit 9cacb9dfa3f96975e16cd1ad30cd8a416ed3e875[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Fri Oct 11 20:20:16 2024 +0200
+
+    calculator v4
+
+[33mcommit c74fdb229fbc5922281d674b97bce2845fb6b2f3[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Fri Oct 11 20:08:00 2024 +0200
+
+    calculator v3
+
+[33mcommit 622a8222155f1cef45c6c7556e6e46e9fc6f25f7[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Fri Oct 11 19:30:49 2024 +0200
+
+    calculator v2
+
+[33mcommit 4251916329450eec47ac4022f949404848336d33[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Wed Oct 9 20:13:51 2024 +0200
+
+    calculator v1
+
+[33mcommit fb749320402ba32323f786c1c40d150e56a25b30[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Wed Oct 9 18:40:48 2024 +0200
+
+    timer v8
+
+[33mcommit 2daa9d8ba93cb88bfde44448335ef2acb70d933f[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Wed Oct 9 18:34:15 2024 +0200
+
+    timer v7
+
+[33mcommit ce4bac4e8e130325e2fe5829650d96571bfff09f[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Wed Oct 9 17:27:37 2024 +0200
+
+    timer v6
+
+[33mcommit 26d07a41d17fc658e0b3da8058a143a36145dc13[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Tue Oct 8 21:09:05 2024 +0200
+
+    timer v5
+
+[33mcommit 9d7bfcfec26ad219c80126e2dd446cbf921716d1[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Tue Oct 8 20:21:28 2024 +0200
+
+    timer v4
+
+[33mcommit 65e900671f2d1404c8ac24aa0a951b30ee47032d[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Tue Oct 8 20:02:21 2024 +0200
+
+    timer v3
+
+[33mcommit d4ea8da195d35f21aef21401a7f9ffcf18c2e75b[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Tue Oct 8 19:04:27 2024 +0200
+
+    timer v2
+
+[33mcommit d3b1b6eda07e6b51cb9778d1c4cbfeffef8d7b8e[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Mon Oct 7 22:57:06 2024 +0200
+
+    timer v1
+
+[33mcommit dbe78ed4b3f8ee5ea979be58475db51ac9a760ac[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 22:10:40 2024 +0200
+
+    supabase v7.2
+
+[33mcommit 7796c49732919157d51f3420d82ba80110e54067[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 20:58:05 2024 +0200
+
+    supabase v7.1
+
+[33mcommit 59116a86d9e507b82e01025c23a31ee354bcb7c7[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 20:32:21 2024 +0200
+
+    supabase v7.0
+
+[33mcommit 71241bf1d13f4cdbb21f3c4060c5db328c5a5f69[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 20:14:04 2024 +0200
+
+    supabase v6.2
+
+[33mcommit 35b4763ffafa40c03b6bf6ce8f79958a69872432[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 20:13:45 2024 +0200
+
+    supabase v6.1
+
+[33mcommit f6d9fa19d64f3e578106b6b4fca41fe50fa4ab96[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 19:53:40 2024 +0200
+
+    supabase v6.0
+
+[33mcommit f3cd2b98a8828ef04b107012f63d51ba774e18e9[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 19:44:21 2024 +0200
+
+    supabase v5.2
+
+[33mcommit c17f877be87689755c033aebf5be4fdf5dc9dcec[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 19:18:10 2024 +0200
+
+    supabase v5.1
+
+[33mcommit bc4316e09ae8ae25cf33d37d88471993ac2201e1[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 19:02:17 2024 +0200
+
+    supabase v5.0
+
+[33mcommit f1d8ccedc1b246883c47b518f571e2340a095b74[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 01:24:56 2024 +0200
+
+    supabase v4.2
+
+[33mcommit f44ad37a810eb66f8f3cef29a98d72353730dee0[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 01:14:50 2024 +0200
+
+    supabase v4.1
+
+[33mcommit 7f35739d71e0253310ece6e671927a3328a8f274[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Oct 5 00:26:36 2024 +0200
+
+    supabase v4.0
+
+[33mcommit fa764c0803d279aa2626a639aae6815ad9d3e9d4[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Fri Oct 4 23:59:03 2024 +0200
+
+    supabase v3.2
+
+[33mcommit a3d958706409631f5454adc7e7c7efb7cc9866f2[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Fri Oct 4 21:48:12 2024 +0200
+
+    supabase v3.1
+
+[33mcommit 9f4e900f68a6850d7200969a03c243d1fe80d186[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Fri Oct 4 20:38:46 2024 +0200
+
+    supabase v3.0
+
+[33mcommit d57d48af3fd6744a4456641a4ee775ae97f50e7a[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Fri Oct 4 19:44:29 2024 +0200
+
+    supabase v2.2
+
+[33mcommit 72ff1ed4f3675d2de87be389a509f91ce3702135[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Fri Oct 4 18:51:37 2024 +0200
+
+    supabase v2.1
+
+[33mcommit dfce67f20f29894e5ba4328c006dcad05411772f[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Fri Oct 4 18:28:22 2024 +0200
+
+    supabase v2.0
+
+[33mcommit 4ed616ec2a50e51e47c96f22e727062c6c4312b5[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Fri Oct 4 00:52:13 2024 +0200
+
+    supabase v1.2
+
+[33mcommit 12da28b54f192e3dcaf7a065cdaaf2c93e1812b4[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Thu Oct 3 22:35:45 2024 +0200
+
+    supabase v1.1
+
+[33mcommit c4e2104496fa576afe08c72f3eb3bcdff5cae20e[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Thu Oct 3 22:10:31 2024 +0200
+
+    supabase v1.0
+
+[33mcommit 337b873a9e5ea7f4c84802f6d3c984b7eeda5c28[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Thu Oct 3 21:42:41 2024 +0200
+
+    supabase v0.1
+
+[33mcommit 9d4f454088c1e33abfffb0155890e9baee47d126[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Thu Oct 3 19:57:18 2024 +0200
+
+    new struct
+
+[33mcommit a2c7b0ebdf0524ac6ff1959d376c725111a29b91[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Thu Oct 3 19:39:05 2024 +0200
+
+    js 09_binary_search_tree v8
+
+[33mcommit 3cb8cb8ddd6e87376aba2136c05ac22277d81402[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Thu Oct 3 19:36:39 2024 +0200
+
+    js 09_binary_search_tree v7
+
+[33mcommit b355834f14ed1fb076c2b1f6d4ba1d29da8ec338[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Thu Oct 3 01:24:15 2024 +0200
+
+    js 09_binary_search_tree v6
+
+[33mcommit afa373c79a1cfb11c591652310bb1e9aae44e907[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Thu Oct 3 01:06:09 2024 +0200
+
+    js 09_binary_search_tree v5
+
+[33mcommit 6435d5d3609e46d0f5b84e52a3e24e04859998a9[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Thu Oct 3 00:31:59 2024 +0200
+
+    js 09_binary_search_tree v4
+
+[33mcommit 4a0094c18557623cba76c655d4b6891392596517[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Wed Oct 2 12:25:31 2024 +0200
+
+    js 09_binary_search_tree v3
+
+[33mcommit 187ce671b1f8cfca7f059ec88a1cc1fd73c50d7f[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Wed Oct 2 11:40:22 2024 +0200
+
+    js 09_binary_search_tree v2
+
+[33mcommit a8177c4b34eec91887f4662fb1f1ab4411bbf974[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Wed Oct 2 00:30:13 2024 +0200
+
+    js 09_binary_search_tree v1
+
+[33mcommit 605bc1d8ffda73e95b1bf18a951f0f82dd8a4925[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Tue Oct 1 12:17:59 2024 +0200
+
+    js 08_sort v2
+
+[33mcommit bf206b5d3df324f4b0fd40ba80aed29236e96306[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Tue Oct 1 10:55:58 2024 +0200
+
+    js 08_sort v1
+
+[33mcommit bb0095f880f64308713e7bdc07cec577de150b57[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Tue Oct 1 00:58:26 2024 +0200
+
+    js 07_virtual_world v4
+
+[33mcommit 37ea2f19119fde29d650e47945f8bc06e5661ec7[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Mon Sep 30 22:25:50 2024 +0200
+
+    js 07_virtual_world v3
+
+[33mcommit e56e8511fd395cd1a8c2bef05ff132e318a7e85e[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Mon Sep 30 11:22:46 2024 +0200
+
+    js 07_virtual_world v2
+
+[33mcommit 406bb76fab0e09de41e94cbdaa9c3479da25e6b0[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Sep 29 23:15:19 2024 +0200
+
+    js 07_virtual_world v1
+
+[33mcommit a17bb6a4af4e7e18eb9afe4be06a49f44efbc782[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Sep 29 22:00:06 2024 +0200
+
+    js 06_async_tasks v3
+
+[33mcommit a9228ded0f40ec8cb4fd73b0bb392d336aeca6b0[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Sep 29 18:59:00 2024 +0200
+
+    js 06_async_tasks v2
+
+[33mcommit 8cf56d9bdd7894bf26ed97699a7e194b39248b84[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Sep 29 09:09:47 2024 +0200
+
+    js 06_async_tasks v1
+
+[33mcommit f5311a20937edd4a98c1a20940db994f8fc2c920[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Tue Sep 24 10:48:59 2024 +0200
+
+    js 05_network v1
+
+[33mcommit 2fcffaa9fe89a1e6fd41cf0d907b50dddba90ab4[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Wed Sep 18 11:15:33 2024 +0200
+
+    js 04_university v2
+
+[33mcommit e8889b204aeeaff095537862ddc19b2b99a3a7d5[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Wed Sep 18 01:16:39 2024 +0200
+
+    js 04_university v1
+
+[33mcommit 90bc088191596687ddacfc25708e753f176df5c9[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Sep 15 19:26:09 2024 +0200
+
+    js 03_library_manager v3
+
+[33mcommit 37f6acaca409e8132cd70e4f6c4214ec0f67cc05[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Sep 15 18:39:11 2024 +0200
+
+    js 03_library_manager v2
+
+[33mcommit 1596d2aad691bc2415c0e299937cff41dd346adb[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Thu Sep 12 23:00:13 2024 +0200
+
+    js 03_library_manager v1
+
+[33mcommit afe5c468b8c88292c12b4483d650b60978bc7156[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Sep 8 20:25:35 2024 +0200
+
+    js 02_onlineshop v2
+
+[33mcommit 0cab1dab1d44306f4788f210ab498fcba3384923[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sun Sep 8 20:01:59 2024 +0200
+
+    js 02_onlineshop v1
+
+[33mcommit e86407799bbb71ec02e999cf1db0f471759cad53[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Sep 7 13:26:06 2024 +0200
+
+    js 01_todolist v2
+
+[33mcommit b0b45b9db2dc7d7d7f477b05ad973c8d2a9ed8b6[m
+Author: dmfshove <funnymoments610@gmail.com>
+Date:   Sat Sep 7 13:24:24 2024 +0200
+
+    js 01_todolist v1
+
+[33mcommit 82f308bc1e54a38830e9e4ce6dd997c6656f3b62[m
+Author: user <funnymoments610@gmail.com>
+Date:   Fri Aug 30 00:05:59 2024 +0200
+
+    volumenzeit v14.0 official release
+
+[33mcommit 18ae543c65372b68409df539c0c6966b239b7f8a[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 29 22:13:05 2024 +0200
+
+    volumenzeit v13.1.2
+
+[33mcommit 6b876f8dc8425f80b5347fa1d42561ba4307f119[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 29 21:59:22 2024 +0200
+
+    volumenzeit v13.1.1
+
+[33mcommit 4e7ef90b8a622586399e78a864a2dfff41d9aa87[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 29 21:30:15 2024 +0200
+
+    volumenzeit v13.1.0
+
+[33mcommit 11d725e8d1fdb7073236baf49d66b115b7a63104[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 29 20:57:09 2024 +0200
+
+    volumenzeit v12.2.2
+
+[33mcommit 4da17b458276cd9678f189173e33f32ceed289a4[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 29 20:04:32 2024 +0200
+
+    volumenzeit v.12.1.2
+
+[33mcommit 44db7723d309f543e9c0d6a895077bf4d74cc908[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 29 18:46:16 2024 +0200
+
+    volumenzeit v12.1.1
+
+[33mcommit 6c579965325064cf97bf5c05e01a3ca6665810af[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 29 17:11:34 2024 +0200
+
+    volumenzeit v12.1.0
+
+[33mcommit e20aa8a66020f3e86d6a3e637afbec25d9e186ef[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 29 16:08:20 2024 +0200
+
+    volumenzeit v11.3.2
+
+[33mcommit 1bcd9ab21136d6869418391ca3e4ba7a8d43176a[m
+Author: user <funnymoments610@gmail.com>
+Date:   Mon Aug 26 10:37:40 2024 +0200
+
+    volumenzeit v11.2.2
+
+[33mcommit 78f738a5d17a22524867d4bc23426236c2d0e98b[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 22 12:02:18 2024 +0200
+
+    volumenzeit v11.2.1.1
+
+[33mcommit a5418e2b98ccb0fad39de3b8ba2d43ebf6ebcb64[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 22 11:35:13 2024 +0200
+
+    volumenzeit v11.2.1
+
+[33mcommit 57acf8bd3fd506f76dd4f20e90398831b6b80909[m
+Author: user <funnymoments610@gmail.com>
+Date:   Sun Aug 18 20:47:33 2024 +0200
+
+    volumenzeit 10.1.2
+
+[33mcommit 1a39cad681cd62895b3807851e39c760fe112b71[m
+Author: user <funnymoments610@gmail.com>
+Date:   Sun Aug 18 18:03:55 2024 +0200
+
+    volumenzeit v8.2.2
+
+[33mcommit 50c98e9505a0eb953de5f0fabf088a8ef201f399[m
+Author: user <funnymoments610@gmail.com>
+Date:   Sun Aug 18 17:29:44 2024 +0200
+
+    volumenzeit v9.1.2
+
+[33mcommit 1c6491697c46f0d1fa5ccc5547b54d3043cc2e0b[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 15 11:48:03 2024 +0200
+
+    volumenzeit v8.1.2
+
+[33mcommit 8e488a5f4765be5bcad8e3731e1e5ec19073ca43[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 15 11:47:36 2024 +0200
+
+    volumenzeit v8.1.1
+
+[33mcommit e9e1569bdf200e19226da1ffa09ab498d5fa61ec[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 15 11:41:31 2024 +0200
+
+    volumenzeit v8.1.0
+
+[33mcommit 64adc1c88874e34daa16d25ee55f2b556341a4ae[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 15 11:38:44 2024 +0200
+
+    volumenzeit v7.1.2
+
+[33mcommit b0fe2a0c63f28a1adef14e870c10fcb44f121b43[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 15 09:57:22 2024 +0200
+
+    volumenzeit v7.1.1
+
+[33mcommit 5c0c832af3942509169cf2ab77011ecd2fa27e99[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 15 09:24:04 2024 +0200
+
+    volumenzeit v7.1.0
+
+[33mcommit c0d3534e46ac63d3edcf6cd296b15cdcac68def1[m
+Author: user <funnymoments610@gmail.com>
+Date:   Tue Aug 13 10:48:40 2024 +0200
+
+    volumenzeit v6.2.2
+
+[33mcommit ca40216ad56f906d0ab7af5b6b1870a5925a17c5[m
+Author: user <funnymoments610@gmail.com>
+Date:   Sun Aug 11 19:18:00 2024 +0200
+
+    volumenzeit v6.2.1
+
+[33mcommit d3c3e1891bc2f5dc83df3ce2db0ce89676036391[m
+Author: user <funnymoments610@gmail.com>
+Date:   Sun Aug 11 16:07:12 2024 +0200
+
+    volumenzeit v6.2.0
+
+[33mcommit 766534d21a3e348fc3fb6b1dffe6bf61690f4525[m
+Author: user <funnymoments610@gmail.com>
+Date:   Sun Aug 11 12:14:43 2024 +0200
+
+    volumenzeit v5.2.1
+
+[33mcommit e8002bd0b918d1bd2c6adf1024db422603a4a887[m
+Author: user <funnymoments610@gmail.com>
+Date:   Sat Aug 10 20:37:09 2024 +0200
+
+    volumenzeit v.4.1.1
+
+[33mcommit 5f2172e14d99e38c06ad9522c74d34420b0de8ed[m
+Author: user <funnymoments610@gmail.com>
+Date:   Fri Aug 9 11:56:20 2024 +0200
+
+    volumenzeit v3.4.1
+
+[33mcommit 1bbf98ff6ba790fc3bcb259db0478e6e0eab6a12[m
+Author: user <funnymoments610@gmail.com>
+Date:   Fri Aug 9 00:45:52 2024 +0200
+
+    volumenzeit v3.3
+
+[33mcommit a5324e935493b545e08e3262708c2a16d9b575ec[m
+Author: user <funnymoments610@gmail.com>
+Date:   Thu Aug 8 12:32:17 2024 +0200
+
+    volumenzeit v3.2
