@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    max-width: 1440px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    @include text;
+}
+
+.text--gray {
+    @include text-gray;
+}
+
+.text--medium {
+    @include text-medium;
+}

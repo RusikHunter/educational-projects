@@ -1,3 +1,12 @@
+/*
+
+normalize - файл с нормализацией стилей для стандартных селекторов
+
+ссылка на источник - https://github.com/aleksanderlamkov/positivus/blob/main/styles/_normalize.scss
+
+
+*/
+
 /**
   Нормализация блочной модели
  */
@@ -121,21 +130,6 @@ body {
     line-height: 1.5;
 }
 
-a {
-    /** 
-        Убираем подчеркивания для всех гиперссылок
-    */
-    text-decoration: none;
-}
-
-button {
-    /** 
-        Убираем все дефолтные стили у кнопки
-    */
-    border: none;
-    outline: none;
-}
-
 /**
    Приводим к единому цвету svg-элементы
   */
@@ -165,13 +159,4 @@ svg * {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
-}
-
-/* custome */
-
-/* Убираем стрелочки для Chrome, Edge, Safari */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
 }
