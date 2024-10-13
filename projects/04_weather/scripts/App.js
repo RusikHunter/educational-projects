@@ -8,12 +8,13 @@ class RequestError extends Error {
 
 class WeatherAPIFetcher {
     KEY = "03eb4efca24f3a815d445a3bfa3f1fc3"
-    city = "London"
+    city = "Kiev"
 
     elements = {}
 
     constructor() {
         this.#getElements()
+        this.#setEvents()
     }
 
     #getElements() {
@@ -21,6 +22,25 @@ class WeatherAPIFetcher {
         this.elements.cityTempElement = document.querySelector('[data-js-temp]')
         this.elements.dateElement = document.querySelector('[data-js-date]')
         this.elements.weatherIconElement = document.querySelector('[data-js-icon]')
+        this.elements.weatherDetailsElements = Array.from(document.querySelectorAll('[data-js-weather-details]'))
+
+        // form
+
+        this.elements.formElement = document.querySelector('[data-js-form]')
+        this.elements.inputTextElement = document.querySelector('[data-js-input-text]')
+        this.elements.inputSubmitElement = document.querySelector('[data-js-input-submit]')
+    }
+
+    #setEvents() {
+        this.elements.inputSubmitElement.addEventListener('click', (event) => {
+            event.preventDefault()
+
+            const formData = new FormData(this.elements.formElement)
+
+            this.city = formData.get('searchCityInput')
+
+            this.#searchCityWeatherData()
+        })
     }
 
     #setCityName(city) {
@@ -50,20 +70,26 @@ class WeatherAPIFetcher {
         this.elements.cityTempElement.textContent = `${Math.floor(weatherData.main.temp)}°`
         this.#setDate()
         this.elements.weatherIconElement.setAttribute('src', `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`)
+
+        this.elements.weatherDetailsElements[0].textContent = `${Math.floor(weatherData.main.temp_max)}°`
+        this.elements.weatherDetailsElements[1].textContent = `${Math.floor(weatherData.main.temp_min)}°`
+        this.elements.weatherDetailsElements[2].textContent = `${weatherData.humadity?.value ?? '-'}%`
+        this.elements.weatherDetailsElements[3].textContent = `${weatherData.clouds?.all ?? '-'}%`
+        this.elements.weatherDetailsElements[4].textContent = `${weatherData.wind?.speed ?? '-'} km/h`
     }
 
     // найти информацию о погоде в запрашиваемом городе
-    async searchCityWeatherData() {
+    async #searchCityWeatherData() {
         const cityRequestURL = `http://api.openweathermap.org/geo/1.0/direct?q=${this.city}&limit=5&appid=${this.KEY}`
-        const city = await this.makeRequest(cityRequestURL)
+        const city = await this.#makeRequest(cityRequestURL)
         this.#setCityName(city[0].name)
 
         const qeoRequestURL = `https://api.openweathermap.org/data/2.5/weather?lat=${city[0].lat}&lon=${city[0].lon}&appid=${this.KEY}&units=metric`
-        const weatherData = await this.makeRequest(qeoRequestURL)
+        const weatherData = await this.#makeRequest(qeoRequestURL)
         this.#setWeatherData(weatherData)
     }
 
-    async makeRequest(url) {
+    async #makeRequest(url) {
         try {
             const response = await fetch(url)
 
@@ -87,4 +113,3 @@ class WeatherAPIFetcher {
 }
 
 const weatherAPIFetcher = new WeatherAPIFetcher()
-weatherAPIFetcher.searchCityWeatherData()
