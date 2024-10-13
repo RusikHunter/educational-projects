@@ -4,15 +4,3 @@
     font-size: 18px;
     font-weight: 400;
 }
-
-@mixin text-gray {
-    color: var(--color-gray);
-}
-
-@mixin text-medium {
-    font-weight: 500;
-}
-
-@mixin text-uppercase {
-    text-transform: uppercase;
-}

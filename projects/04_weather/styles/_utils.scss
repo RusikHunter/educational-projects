@@ -19,11 +19,3 @@
 .text {
     @include text;
 }
-
-.text--gray {
-    @include text-gray;
-}
-
-.text--medium {
-    @include text-medium;
-}

@@ -1,0 +1,180 @@
+.weather {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background-image: url(../images/background-snow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__column {}
+
+    &__column--first {
+        padding-left: 116px;
+    }
+
+    &__link--wrap {
+        width: 89px;
+        margin-top: 37px;
+    }
+
+    &__logo {}
+
+    &__city-info-wrap {
+        display: flex;
+        margin-top: 55vh;
+    }
+
+    &__text-temp {
+        font-size: 143px;
+        letter-spacing: -0.08em;
+    }
+
+    &__title-wrap {
+        margin-top: 45px;
+        margin-left: 15px;
+    }
+
+    &__title {
+        font-size: 60px;
+    }
+
+    &__icon {
+        margin-top: 85px;
+        margin-left: 25px;
+    }
+
+    &__column--second {
+        position: absolute;
+        right: 0;
+        width: 525px;
+        height: 100vh;
+        border-left: var(--border-aside);
+        backdrop-filter: blur(19px);
+        background: rgba(255, 255, 255, 0.04);
+        padding: 40px 35px;
+    }
+
+    &__info-wrap {
+        width: 370px;
+    }
+
+    &__text-info {
+        margin-top: 41px;
+    }
+
+    &__weather-details {
+        margin-top: 52px;
+        padding-bottom: 86px;
+        border-bottom: var(--border);
+    }
+
+    &__text-details {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__descrption-list {
+        width: 315px;
+        margin-top: 31px;
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+    }
+
+    &__description-list-content-wrap {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &#definition1 {
+            &::after {
+                background-image: url(../images/temp-max.svg);
+                width: 14px;
+                height: 26px;
+                left: 340px;
+            }
+        }
+
+        &#definition2 {
+            &::after {
+                background-image: url(../images/temp-min.svg);
+                width: 14px;
+                height: 26px;
+                left: 340px;
+            }
+        }
+
+        &#definition3 {
+            &::after {
+                background-image: url(../images/humadity.svg);
+                width: 18px;
+                height: 24px;
+                left: 336px;
+            }
+        }
+
+        &#definition4 {
+            &::after {
+                background-image: url(../images/cloudy.svg);
+                width: 22px;
+                height: 22px;
+                left: 332px;
+            }
+        }
+
+        &#definition5 {
+            &::after {
+                background-image: url(../images/wind.svg);
+                width: 24px;
+                height: 19px;
+                left: 330px;
+            }
+        }
+    }
+
+    &__description-term {
+        color: var(--color-gray);
+    }
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--border);
+
+    &__input {
+        background-color: transparent;
+        border: 0;
+    }
+
+    &__input--text {
+        padding-block: 13px;
+        width: 100%;
+        @include text;
+        color: var(--color-gray);
+        font-size: 20px;
+
+        &::placeholder {
+            @include text;
+            color: var(--color-gray);
+            font-size: 20px;
+        }
+    }
+
+    &__input--submit {
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        margin-top: 9px;
+        background-image: url(../images/search.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

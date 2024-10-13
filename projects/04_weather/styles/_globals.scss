@@ -1,0 +1,8 @@
+input:focus {
+    outline: 0;
+    caret-color: var(--color-gray);
+
+    &::placeholder {
+        color: transparent;
+    }
+}
