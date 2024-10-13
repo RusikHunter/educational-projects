@@ -246,7 +246,6 @@ input:focus::placeholder {
 
 .weather {
   position: relative;
-  overflow: hidden;
   height: 100vh;
   background-image: url(../images/background-snow.png);
   background-repeat: no-repeat;
@@ -366,6 +365,142 @@ input:focus::placeholder {
 .weather__description-term {
   color: var(--color-gray);
 }
+@media (max-width: 1439px) {
+  .weather__column--first {
+    padding-left: 50px;
+  }
+  .weather__text-temp {
+    font-size: 90px;
+  }
+  .weather__title-wrap {
+    margin-top: 25px;
+  }
+  .weather__title {
+    font-size: 36px;
+  }
+  .weather__icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 52px;
+  }
+  .weather__column--second {
+    padding-left: 60px;
+  }
+}
+@media (max-width: 1023px) {
+  .weather {
+    height: auto;
+    background-image: url(../images/background-lightning.png);
+  }
+  .weather__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+  }
+  .weather__column--first {
+    padding: 25px 40px;
+  }
+  .weather__link--wrap, .weather__logo {
+    width: 60px;
+    height: 32px;
+    margin-top: 0;
+  }
+  .weather__city-info-wrap {
+    margin-top: 210px;
+  }
+  .weather__text-temp {
+    font-size: 120px;
+  }
+  .weather__title-wrap {
+    margin-top: 40px;
+  }
+  .weather__title {
+    font-size: 48px;
+  }
+  .weather__text-date {
+    font-size: 16px;
+  }
+  .weather__icon {
+    width: 55px;
+    height: 55px;
+    margin-top: 77px;
+  }
+  .weather__column--second {
+    position: static;
+    height: auto;
+    width: 100%;
+    border-left: none;
+    border-top: var(--border-aside);
+    padding-inline: 45px;
+  }
+  .weather__info-wrap {
+    margin-inline: auto;
+    position: static;
+  }
+  .weather__text-info {
+    text-align: center;
+  }
+  .weather__text-details {
+    text-align: center;
+  }
+}
+@media (max-width: 599px) {
+  .weather__text-temp {
+    font-size: 64px;
+  }
+  .weather__title-wrap {
+    margin-top: 30px;
+  }
+  .weather__title {
+    font-size: 30px;
+    line-height: 100%;
+  }
+  .weather__text-date {
+    font-size: 10px;
+  }
+  .weather__icon {
+    width: 40px;
+    height: 40px;
+    margin-top: 33px;
+  }
+}
+@media (max-width: 479px) {
+  .weather__column--first {
+    padding: 22px 19px;
+  }
+  .weather__info-wrap {
+    width: 100%;
+  }
+  .weather__link--wrap, .weather__logo {
+    width: 39px;
+    height: 20px;
+  }
+  .weather__city-info-wrap {
+    margin-top: 140px;
+  }
+  .weather__text-info {
+    margin-top: 15px;
+    font-size: 14px;
+    width: 100%;
+  }
+  .weather__weather-details {
+    width: 80%;
+    margin-top: 37px;
+    margin-inline: auto;
+  }
+  .weather__text-details {
+    font-size: 14px;
+  }
+  .weather__descrption-list {
+    width: 100%;
+    margin-left: -10%;
+  }
+  .weather__description-list-content-wrap::after {
+    left: 110% !important;
+  }
+}
 
 .form {
   display: -webkit-box;
@@ -438,4 +573,48 @@ input:focus::placeholder {
   background-image: url(../images/search.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (max-width: 1023px) {
+  .form {
+    width: 305px;
+    position: absolute;
+    top: -460px;
+    right: 40px;
+  }
+}
+@media (max-width: 599px) {
+  .form {
+    top: -390px;
+  }
+}
+@media (max-width: 479px) {
+  .form {
+    width: 205px;
+    top: -290px;
+    right: 19px;
+  }
+  .form__input--text {
+    padding-block: 4px;
+    font-size: 12px;
+  }
+  .form__input--text::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+  .form__input--text::-moz-placeholder {
+    font-size: 12px;
+  }
+  .form__input--text:-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .form__input--text::-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .form__input--text::placeholder {
+    font-size: 12px;
+  }
+  .form__input--submit {
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+  }
 }
