@@ -24,76 +24,34 @@
                                         <img src="images/logo.svg" alt="y6Chat" class="chat__logo" width="175"
                                             height="50">
                                     </a>
-                                    <h6 class="chat__username">dmfshove</h6>
+
+                                    <h6 class="chat__username" data-js-username>dmfshove</h6>
+
+                                    <img src="images/remove.png" alt="X" class="chat__remove-button" width="22"
+                                        height="22" data-js-remove-button>
                                 </div>
 
-                                <div class="chat__messages">
-                                    <div class="chat__message message">
+                                <div class="chat__messages" data-js-messages>
+                                    <div class="chat__message message" data-js-message>
                                         <div class="message__info-wrap">
-                                            <img src="images/icon-1.png" alt="UserIcon" class="message__user-icon">
+                                            <img src="images/icon-1.png" alt="UserIcon" class="message__user-icon"
+                                                data-js-usericon>
                                             <p class="message__username">Steve</p>
                                             <span class="message__time">22.10.2024 18:16</span>
                                         </div>
-                                        <p class="message__value">Hello</p>
-                                    </div>
-
-                                    <div class="chat__message message">
-                                        <div class="message__info-wrap">
-                                            <img src="images/icon-2.png" alt="UserIcon" class="message__user-icon">
-                                            <p class="message__username">Steve</p>
-                                            <span class="message__time">22.10.2024 18:16</span>
-                                        </div>
-                                        <p class="message__value">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                            elit. Magnam autem modi voluptatum minima? Mollitia maxime tempore sit
-                                            provident, id, dolorum nemo sequi vitae amet illo nam enim, ipsum quas
-                                            itaque!</p>
-                                    </div>
-
-                                    <div class="chat__message message">
-                                        <div class="message__info-wrap">
-                                            <img src="images/icon-3.png" alt="UserIcon" class="message__user-icon">
-                                            <p class="message__username">Steve</p>
-                                            <span class="message__time">22.10.2024 18:16</span>
-                                        </div>
-                                        <p class="message__value">Hello</p>
-                                    </div>
-
-                                    <div class="chat__message message">
-                                        <div class="message__info-wrap">
-                                            <img src="images/icon-1.png" alt="UserIcon" class="message__user-icon">
-                                            <p class="message__username">Steve</p>
-                                            <span class="message__time">22.10.2024 18:16</span>
-                                        </div>
-                                        <p class="message__value">Hello</p>
-                                    </div>
-
-                                    <div class="chat__message message">
-                                        <div class="message__info-wrap">
-                                            <img src="images/icon-2.png" alt="UserIcon" class="message__user-icon">
-                                            <p class="message__username">Steve</p>
-                                            <span class="message__time">22.10.2024 18:16</span>
-                                        </div>
-                                        <p class="message__value">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                            elit. Magnam autem modi voluptatum minima? Mollitia maxime tempore sit
-                                            provident, id, dolorum nemo sequi vitae amet illo nam enim, ipsum quas
-                                            itaque!</p>
-                                    </div>
-
-                                    <div class="chat__message message">
-                                        <div class="message__info-wrap">
-                                            <img src="images/icon-3.png" alt="UserIcon" class="message__user-icon">
-                                            <p class="message__username">Steve</p>
-                                            <span class="message__time">22.10.2024 18:16</span>
-                                        </div>
-                                        <p class="message__value">Hello</p>
+                                        <p class="message__value">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Dolore nemo natus nam quo incidunt labore voluptatem, recusandae ab
+                                            laboriosam molestias aperiam laborum? Nobis minima iusto perferendis,
+                                            laboriosam velit aperiam placeat.</p>
                                     </div>
                                 </div>
 
-                                <form class="chat__form form" name="form" id="formMessage">
-                                    <input type="text" class="form__input" name="form" placeholder="Message"
-                                        id="inputMessage" autocomplete="off">
+                                <form class="chat__form form" name="form" id="formMessage" data-js-form>
+                                    <input type="text" class="form__input" name="message" placeholder="Message"
+                                        id="inputMessage" autocomplete="off" data-js-input>
 
-                                    <button class="form__button">Send</button>
+                                    <input type="submit" name="submit" id="inputSubmit" class="form__button"
+                                        value="Send" data-js-send-button></input>
                                 </form>
                             </div>
                         </div>

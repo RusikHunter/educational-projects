@@ -77,15 +77,12 @@
     }
 
     &__info {
+        position: relative;
         padding: 30px 15px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
-    &__link-wrap {}
-
-    &__logo {}
 
     &__username {
         color: var(--text-color);
@@ -99,6 +96,13 @@
         overflow-y: scroll;
     }
 
+    &__remove-button {
+        position: absolute;
+        bottom: -40px;
+        right: 15px;
+        cursor: pointer;
+    }
+
     &__message {}
 
     &__form {}
@@ -108,6 +112,7 @@
     color: var(--text-color);
     display: flex;
     flex-direction: column;
+    max-width: 80%;
 
     &__info-wrap {
         display: flex;
@@ -123,12 +128,12 @@
     &__time {
         margin-inline: 30px;
         font-size: 12px;
+        margin-left: auto;
     }
 
     &__value {
         margin-block: 25px;
         margin-left: 20px;
-        max-width: 80%;
     }
 }
 
