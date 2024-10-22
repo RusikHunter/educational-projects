@@ -1,0 +1,303 @@
+@charset "UTF-8";
+/*
+
+normalize - файл с нормализацией стилей для стандартных селекторов
+
+ссылка на источник - https://github.com/aleksanderlamkov/positivus/blob/main/styles/_normalize.scss
+
+
+*/
+/**
+  Нормализация блочной модели
+ */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/**
+   Убираем внутренние отступы слева тегам списков,
+   у которых есть атрибут class
+  */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+   Убираем внешние отступы body и двум другим тегам,
+   у которых есть атрибут class
+  */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+   Убираем внешние отступы вертикали нужным тегам,
+   у которых есть атрибут class
+  */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+   Убираем стандартный маркер маркированному списку,
+   у которого есть атрибут class
+  */
+:where(ul[class]) {
+  list-style: none;
+}
+
+/**
+   Обнуляем вертикальные внешние отступы параграфа,
+   объявляем локальную переменную для внешнего отступа вниз,
+   чтобы избежать взаимодействие с более сложным селектором
+  */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+   Внешний отступ вниз для параграфа без атрибута class,
+   который расположен не последним среди своих соседних элементов
+  */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+   Упрощаем работу с изображениями
+  */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+   Наследуем свойства шрифт для полей ввода
+  */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+   Пригодится в большинстве ситуаций
+   (когда, например, нужно будет "прижать" футер к низу сайта)
+  */
+  height: 100%;
+  /**
+   Плавный скролл
+  */
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+   Пригодится в большинстве ситуаций
+   (когда, например, нужно будет "прижать" футер к низу сайта)
+  */
+  min-height: 100%;
+  /**
+   Унифицированный интерлиньяж
+  */
+  line-height: 1.5;
+}
+
+/**
+   Приводим к единому цвету svg-элементы
+  */
+svg *[fill] {
+  fill: currentColor;
+}
+
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+/**
+   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+  */
+svg * {
+  -webkit-transition-property: fill, stroke;
+  transition-property: fill, stroke;
+}
+
+/**
+   Удаляем все анимации и переходы для людей,
+   которые предпочитают их не использовать
+  */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --background-color: linear-gradient(90deg, rgba(98, 160, 255, 1) 0%, rgba(64, 135, 153, 1) 100%);
+  --window-color: #62a0ff;
+  --chat-color: #5095ff;
+  --text-color: #FFFFFF;
+  --scrollbar-color: #448cff;
+}
+
+/* Общее для скроллбара */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Ширина вертикального скроллбара */
+  height: 12px;
+  /* Высота горизонтального скроллбара */
+}
+
+/* Фон скроллбара */
+::-webkit-scrollbar-track {
+  background: transparent;
+  /* Фон трека скроллбара */
+}
+
+/* Ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  /* Цвет ползунка */
+  border-radius: 10px;
+  /* Скругление ползунка */
+}
+
+/* Убираем кнопки скроллбара */
+::-webkit-scrollbar-button {
+  display: none;
+  /* Убираем кнопки скроллбара */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  /* Устанавливаем тонкий скроллбар для Firefox */
+  scrollbar-color: var(--scrollbar-color) transparent;
+  /* Цвет ползунка и фона в Firefox */
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.chat {
+  background: var(--background-color);
+}
+.chat__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1440px;
+  height: 100vh;
+  margin-inline: auto;
+}
+.chat__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.chat__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+}
+.chat__window {
+  background: var(--window-color);
+  margin-top: 5vh;
+  border-radius: 25px;
+}
+.chat__info {
+  padding: 30px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.chat__username {
+  color: var(--text-color);
+  font-size: 24px;
+}
+.chat__messages {
+  background-color: var(--chat-color);
+  padding: 15px 15px;
+  height: 60vh;
+  overflow-y: scroll;
+}
+.message {
+  color: var(--text-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.message__info-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.message__user-icon {
+  clip-path: circle(50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.message__time {
+  margin-inline: 30px;
+  font-size: 12px;
+}
+.message__value {
+  margin-block: 25px;
+  margin-left: 20px;
+  max-width: 80%;
+}

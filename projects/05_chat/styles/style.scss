@@ -1,0 +1,138 @@
+@import "normalize";
+
+:root {
+    --background-color: linear-gradient(90deg, rgba(98, 160, 255, 1) 0%, rgba(64, 135, 153, 1) 100%);
+    --window-color: #62a0ff;
+    --chat-color: #5095ff;
+    --text-color: #FFFFFF;
+    --scrollbar-color: #448cff;
+}
+
+/* Общее для скроллбара */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Ширина вертикального скроллбара */
+    height: 12px;
+    /* Высота горизонтального скроллбара */
+}
+
+/* Фон скроллбара */
+::-webkit-scrollbar-track {
+    background: transparent;
+    /* Фон трека скроллбара */
+}
+
+/* Ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    /* Цвет ползунка */
+    border-radius: 10px;
+    /* Скругление ползунка */
+}
+
+/* Убираем кнопки скроллбара */
+::-webkit-scrollbar-button {
+    display: none;
+    /* Убираем кнопки скроллбара */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    /* Устанавливаем тонкий скроллбар для Firefox */
+    scrollbar-color: var(--scrollbar-color) transparent;
+    /* Цвет ползунка и фона в Firefox */
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.chat {
+    background: var(--background-color);
+
+    &__container {
+        display: flex;
+        width: 1440px;
+        height: 100vh;
+        margin-inline: auto;
+    }
+
+    &__row {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    &__window {
+        background: var(--window-color);
+        margin-top: 5vh;
+        border-radius: 25px;
+    }
+
+    &__info {
+        padding: 30px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link-wrap {}
+
+    &__logo {}
+
+    &__username {
+        color: var(--text-color);
+        font-size: 24px;
+    }
+
+    &__messages {
+        background-color: var(--chat-color);
+        padding: 15px 15px;
+        height: 60vh;
+        overflow-y: scroll;
+    }
+
+    &__message {}
+
+    &__form {}
+}
+
+.message {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+
+    &__info-wrap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__user-icon {
+        clip-path: circle(50%);
+        object-fit: cover;
+    }
+
+    &__time {
+        margin-inline: 30px;
+        font-size: 12px;
+    }
+
+    &__value {
+        margin-block: 25px;
+        margin-left: 20px;
+        max-width: 80%;
+    }
+}
+
+.form {
+
+    &__input {}
+}
