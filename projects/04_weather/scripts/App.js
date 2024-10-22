@@ -115,28 +115,28 @@ class WeatherAPIFetcher {
 class AnimationsHandler {
     constructor() {
         this.backgroundElement = document.querySelector('[data-js-background]')
+        this.iteration = 1
+        this.imageUrls = [
+            './images/background-snow.png',
+            './images/background-night.png',
+            './images/background-hills.png'
+        ]
         this.#changeBackgroundImage()
     }
 
     async #changeBackgroundImage() {
-        let iteration = 0
-
         setInterval(() => {
-            switch (iteration) {
-                case 0:
-                    iteration++
-                    this.backgroundElement.style.backgroundImage = "url('./images/background-snow.png')"
-                    break
-                case 1:
-                    iteration++
-                    this.backgroundElement.style.backgroundImage = "url('./images/background-night.png')"
-                    break
-                case 2:
-                    iteration = 0
-                    this.backgroundElement.style.backgroundImage = "url('./images/background-hills.png')"
-                    break
-            }
-        }, 3000)
+            this.backgroundElement.classList.add('fade-out')
+            this.backgroundElement.classList.remove('fade-in')
+
+            setTimeout(() => {
+                this.backgroundElement.style.backgroundImage = `url(${this.imageUrls[this.iteration]})`
+                this.iteration = (this.iteration + 1) % this.imageUrls.length
+
+                this.backgroundElement.classList.remove('fade-out')
+                this.backgroundElement.classList.add('fade-in')
+            }, 300)
+        }, 10000)
     }
 }
 

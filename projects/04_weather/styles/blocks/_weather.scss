@@ -4,9 +4,7 @@
     background-image: url(../images/background-snow.png);
     background-repeat: no-repeat;
     background-size: cover;
-    transition: background;
-
-    &__column {}
+    transition: opacity 0.3s ease-in-out;
 
     &__column--first {
         padding-left: 116px;
@@ -16,8 +14,6 @@
         width: 89px;
         margin-top: 37px;
     }
-
-    &__logo {}
 
     &__city-info-wrap {
         display: flex;

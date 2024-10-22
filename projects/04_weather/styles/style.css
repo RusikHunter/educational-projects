@@ -236,6 +236,14 @@ input:focus::placeholder {
   font-weight: 400;
 }
 
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0.7;
+}
+
 :root {
   --color-white: #FFFFFF;
   --color-gray: rgba(255, 255, 255, 0.7);
@@ -250,6 +258,8 @@ input:focus::placeholder {
   background-image: url(../images/background-snow.png);
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .weather__column--first {
   padding-left: 116px;
