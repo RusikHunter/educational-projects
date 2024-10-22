@@ -1,5 +1,5 @@
 class ChatHandler {
-    STRING_MAX_LENGTH = 5
+    STRING_MAX_LENGTH = 55
 
     userName = "dmfshove"
     userIcon = "images/icon-2.png"
@@ -52,11 +52,15 @@ class ChatHandler {
         return `${day}.${month}.${year} ${hours}:${minutes}`
     }
 
+    #insertLineBreaks(text) {
+        const regex = new RegExp(`(.{1,${this.STRING_MAX_LENGTH}})(\\s|$)`, 'g');
+        return text.match(regex).join('\n');
+    }
+
     #sendMessage() {
         const formData = new FormData(this.elements.formElement)
 
         const message = formData.get('message')
-        console.log(message)
 
         const messageHTML = `<div class="chat__message message" data-js-message>
           <div class="message__info-wrap">
@@ -64,7 +68,7 @@ class ChatHandler {
               <p class="message__username">${this.userName}</p>
                 <span class="message__time">${this.#getCurrentTime()}</span>
           </div>
-            <p class="message__value">${message}</p>
+            <p class="message__value">${this.#insertLineBreaks(message)}</p>
         </div>`
 
         this.elements.messagesElement.insertAdjacentHTML('beforeend', messageHTML)
