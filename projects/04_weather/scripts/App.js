@@ -112,4 +112,33 @@ class WeatherAPIFetcher {
     }
 }
 
+class AnimationsHandler {
+    constructor() {
+        this.backgroundElement = document.querySelector('[data-js-background]')
+        this.#changeBackgroundImage()
+    }
+
+    async #changeBackgroundImage() {
+        let iteration = 0
+
+        setInterval(() => {
+            switch (iteration) {
+                case 0:
+                    iteration++
+                    this.backgroundElement.style.backgroundImage = "url('./images/background-snow.png')"
+                    break
+                case 1:
+                    iteration++
+                    this.backgroundElement.style.backgroundImage = "url('./images/background-night.png')"
+                    break
+                case 2:
+                    iteration = 0
+                    this.backgroundElement.style.backgroundImage = "url('./images/background-hills.png')"
+                    break
+            }
+        }, 3000)
+    }
+}
+
 const weatherAPIFetcher = new WeatherAPIFetcher()
+const animationsHandler = new AnimationsHandler()
