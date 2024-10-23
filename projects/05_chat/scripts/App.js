@@ -1,8 +1,8 @@
 class ChatHandler {
     STRING_MAX_LENGTH = 30
 
-    userName = "YF-1092"
-    userIcon = "images/icon-1.png"
+    userName = "third"
+    userIcon = "images/icon-2.png"
     elements = {}
 
     constructor() {
@@ -81,6 +81,18 @@ class ChatHandler {
         return formattedMessage.join(' ')
     }
 
+    #changeOwnMessages() {
+        const messages = document.querySelectorAll('[data-js-message]')
+
+        if (messages) {
+            for (const message of messages) {
+                if (message.getAttribute('data-js-message') === this.userName) {
+                    message.classList.add('own')
+                }
+            }
+        }
+    }
+
     #addMessageToLocalStorage(message) {
         localStorage.setItem(`${Date.now()}`, message)
     }
@@ -104,6 +116,8 @@ class ChatHandler {
 
             this.elements.messagesElement.insertAdjacentHTML('beforeend', message)
         }
+
+        this.#changeOwnMessages()
     }
 
     async #sendMessage() {
@@ -112,10 +126,10 @@ class ChatHandler {
 
             const messageText = formData.get('message')
 
-            const messageHTML = `<div class="chat__message message" data-js-message>
+            const messageHTML = `<div class="chat__message message" data-js-message="${this.userName}">
           <div class="message__info-wrap">
-               <img src="${this.userIcon}" alt="UserIcon" class="message__user-icon" data-js-usericon>
-              <p class="message__username">${this.userName}</p>
+               <img src="${this.userIcon}" alt="UserIcon" class="message__user-icon">
+              <p class="message__username" data-js-message-username>${this.userName}</p>
                 <span class="message__time">${this.#getCurrentTime()}</span>
           </div>
             <p class="message__value">${this.#insertLineBreaks(messageText)}</p>
@@ -126,7 +140,7 @@ class ChatHandler {
             this.#loadMessagesFromLocalStorage()
 
             this.elements.inputElement.value = ''
-        }, 0)
+        }, 100)
     }
 }
 
