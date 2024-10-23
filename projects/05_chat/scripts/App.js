@@ -1,8 +1,8 @@
 class ChatHandler {
-    STRING_MAX_LENGTH = 55
+    STRING_MAX_LENGTH = 30
 
-    userName = "dmfshove"
-    userIcon = "images/icon-2.png"
+    userName = "YF-1092"
+    userIcon = "images/icon-1.png"
     elements = {}
 
     constructor() {
@@ -12,7 +12,6 @@ class ChatHandler {
 
     #getElements() {
         this.elements.usernameElement = document.querySelector("[data-js-username]")
-        this.elements.usericonElement = document.querySelector("[data-js-usericon]")
         this.elements.messagesElement = document.querySelector("[data-js-messages]")
         this.elements.removeButtonElement = document.querySelector("[data-js-remove-button]")
         this.elements.formElement = document.querySelector("[data-js-form]")
@@ -21,21 +20,27 @@ class ChatHandler {
     }
 
     #setValuesAndEvents() {
+        this.#loadMessagesFromLocalStorage()
+
         this.elements.usernameElement.textContent = this.userName
-        this.elements.usericonElement.textContent = this.userIcon
 
         this.elements.sendButtonElement.addEventListener("click", (event) => {
             event.preventDefault()
 
             this.#sendMessage()
-
-            this.elements.inputElement.value = ''
         })
 
         this.elements.removeButtonElement.addEventListener("click", (event) => {
             const elementsToRemove = document.querySelectorAll('[data-js-message]')
 
             elementsToRemove.forEach(element => element.remove())
+
+            localStorage.clear()
+        })
+
+        window.addEventListener('storage', () => {
+            console.log('Storage updated!')
+            this.#loadMessagesFromLocalStorage()
         })
     }
 
@@ -52,26 +57,76 @@ class ChatHandler {
         return `${day}.${month}.${year} ${hours}:${minutes}`
     }
 
-    #insertLineBreaks(text) {
-        const regex = new RegExp(`(.{1,${this.STRING_MAX_LENGTH}})(\\s|$)`, 'g');
-        return text.match(regex).join('\n');
+    #insertLineBreaks(message) {
+        let arrayOfWords = message.split(' ')
+        let formattedMessage = []
+
+        for (const word of arrayOfWords) {
+            if (word.length + 1 > this.STRING_MAX_LENGTH) {
+                // если слово длиннее максимума
+                const iterationsToInsert = Math.floor(word.length / this.STRING_MAX_LENGTH)
+
+                let formattedWord = word.split('')
+
+                for (let i = 1; i <= iterationsToInsert; ++i) {
+                    formattedWord.splice(i === 1 ? this.STRING_MAX_LENGTH * i : this.STRING_MAX_LENGTH * i + (i - 1), 0, ' ')
+                }
+
+                formattedMessage.push(formattedWord.join(''))
+            } else {
+                formattedMessage.push(word)
+            }
+        }
+
+        return formattedMessage.join(' ')
     }
 
-    #sendMessage() {
-        const formData = new FormData(this.elements.formElement)
+    #addMessageToLocalStorage(message) {
+        localStorage.setItem(`${Date.now()}`, message)
+    }
 
-        const message = formData.get('message')
+    #loadMessagesFromLocalStorage() {
+        this.elements.messagesElement.innerHTML = ''
 
-        const messageHTML = `<div class="chat__message message" data-js-message>
+        const messages = []
+
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i)
+            const value = localStorage.getItem(key)
+
+            messages.push(key)
+        }
+
+        messages.sort()
+
+        for (const key of messages) {
+            const message = localStorage.getItem(key)
+
+            this.elements.messagesElement.insertAdjacentHTML('beforeend', message)
+        }
+    }
+
+    async #sendMessage() {
+        setTimeout(() => {
+            const formData = new FormData(this.elements.formElement)
+
+            const messageText = formData.get('message')
+
+            const messageHTML = `<div class="chat__message message" data-js-message>
           <div class="message__info-wrap">
                <img src="${this.userIcon}" alt="UserIcon" class="message__user-icon" data-js-usericon>
               <p class="message__username">${this.userName}</p>
                 <span class="message__time">${this.#getCurrentTime()}</span>
           </div>
-            <p class="message__value">${this.#insertLineBreaks(message)}</p>
+            <p class="message__value">${this.#insertLineBreaks(messageText)}</p>
         </div>`
 
-        this.elements.messagesElement.insertAdjacentHTML('beforeend', messageHTML)
+            this.#addMessageToLocalStorage(messageHTML)
+
+            this.#loadMessagesFromLocalStorage()
+
+            this.elements.inputElement.value = ''
+        }, 0)
     }
 }
 

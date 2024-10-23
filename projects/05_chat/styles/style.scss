@@ -102,17 +102,13 @@
         right: 15px;
         cursor: pointer;
     }
-
-    &__message {}
-
-    &__form {}
 }
 
 .message {
     color: var(--text-color);
     display: flex;
     flex-direction: column;
-    max-width: 80%;
+    max-width: 60%;
 
     &__info-wrap {
         display: flex;
@@ -166,4 +162,8 @@
         color: var(--text-color);
         cursor: pointer;
     }
+}
+
+.own {
+    margin-left: auto;
 }

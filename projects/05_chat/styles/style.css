@@ -275,6 +275,7 @@ svg * {
   right: 15px;
   cursor: pointer;
 }
+
 .message {
   color: var(--text-color);
   display: -webkit-box;
@@ -284,7 +285,7 @@ svg * {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 80%;
+  max-width: 60%;
 }
 .message__info-wrap {
   display: -webkit-box;
@@ -352,4 +353,8 @@ svg * {
   border-radius: 7px;
   color: var(--text-color);
   cursor: pointer;
+}
+
+.own {
+  margin-left: auto;
 }
