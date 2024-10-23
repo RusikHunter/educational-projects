@@ -11,6 +11,7 @@ class ChatHandler {
     }
 
     #getElements() {
+        this.elements.toggleButtonElement = document.querySelector("[data-js-toggle]")
         this.elements.usernameElement = document.querySelector("[data-js-username]")
         this.elements.messagesElement = document.querySelector("[data-js-messages]")
         this.elements.removeButtonElement = document.querySelector("[data-js-remove-button]")
@@ -23,6 +24,17 @@ class ChatHandler {
         this.#loadMessagesFromLocalStorage()
 
         this.elements.usernameElement.textContent = this.userName
+
+        this.elements.toggleButtonElement.addEventListener('click', (event) => {
+            console.log(event.target)
+            event.target.classList.toggle('toggle-active')
+
+            if (event.target.classList.contains('toggle-active')) {
+                this.#setDarkTheme()
+            } else {
+                this.#setLightTheme()
+            }
+        })
 
         this.elements.sendButtonElement.addEventListener("click", (event) => {
             event.preventDefault()
@@ -42,6 +54,22 @@ class ChatHandler {
             console.log('Storage updated!')
             this.#loadMessagesFromLocalStorage()
         })
+    }
+
+    #setLightTheme() {
+        document.documentElement.style.setProperty('--background-color', 'linear-gradient(90deg, rgba(98, 160, 255, 1) 0%, rgba(64, 135, 153, 1) 100%)')
+        document.documentElement.style.setProperty('--window-color', '#62a0ff')
+        document.documentElement.style.setProperty('--chat-color', '#5095ff')
+        document.documentElement.style.setProperty('--text-color', '#FFFFFF')
+        document.documentElement.style.setProperty('--element-color', '#448cff')
+    }
+
+    #setDarkTheme() {
+        document.documentElement.style.setProperty('--background-color', 'linear-gradient(90deg, rgba(16,37,68,1) 0%, rgba(21,8,42,1) 100%)')
+        document.documentElement.style.setProperty('--window-color', '#183057')
+        document.documentElement.style.setProperty('--chat-color', '#10223e')
+        document.documentElement.style.setProperty('--text-color', '#FFFFFF')
+        document.documentElement.style.setProperty('--element-color', '#07152a')
     }
 
     #getCurrentTime() {
@@ -69,7 +97,7 @@ class ChatHandler {
                 let formattedWord = word.split('')
 
                 for (let i = 1; i <= iterationsToInsert; ++i) {
-                    formattedWord.splice(i === 1 ? this.STRING_MAX_LENGTH * i : this.STRING_MAX_LENGTH * i + (i - 1), 0, ' ')
+                    formattedWord.splice(i === 1 ? this.STRING_MAX_LENGTH * i : this.STRING_MAX_LENGTH * i + (i - 1), 0, '\n')
                 }
 
                 formattedMessage.push(formattedWord.join(''))

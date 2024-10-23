@@ -213,6 +213,8 @@ svg * {
 
 .chat {
   background: var(--background-color);
+  -webkit-transition: background 1s;
+  transition: background 1s;
 }
 .chat__container {
   display: -webkit-box;
@@ -357,4 +359,34 @@ svg * {
 
 .own {
   margin-left: auto;
+}
+
+.toggle {
+  width: 44px;
+  height: 24px;
+  background-color: var(--element-color);
+  border-radius: 24px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  border: none;
+  cursor: pointer;
+}
+.toggle::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 2.5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
+}
+
+.toggle-active::after {
+  left: 22px;
 }
