@@ -1,0 +1,85 @@
+@use "normalize.scss";
+
+:root {
+    --background-color: #3D3D3D;
+    --interface-color: #525252;
+    --text-color: #FFFFFF;
+    --placeholder-color: #969696;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.smart {
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 14px;
+
+    &__container {
+        display: flex;
+        width: 1440px;
+        margin-inline: auto;
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 10vh;
+    }
+
+    &__column {
+        display: flex;
+        width: 40%;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__text {}
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    &__textarea {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        resize: none;
+        background-color: var(--interface-color);
+        border-radius: 10px;
+        padding: 15px;
+        color: var(--text-color);
+
+        &::placeholder {
+            color: var(--placeholder-color);
+        }
+    }
+
+    &__input {
+        width: auto;
+        max-width: max-content;
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 30px;
+        background-color: var(--interface-color);
+        outline: 0;
+        border: 0;
+        border-radius: 10px;
+        color: var(--text-color);
+        cursor: pointer;
+    }
+}
+
+.text {
+
+    &__content {
+        width: 100%;
+        background-color: var(--interface-color);
+        border-radius: 10px;
+        padding: 15px;
+    }
+}
