@@ -213,8 +213,6 @@ svg * {
 
 .chat {
   background: var(--background-color);
-  -webkit-transition: background 1s;
-  transition: background 1s;
 }
 .chat__container {
   display: -webkit-box;

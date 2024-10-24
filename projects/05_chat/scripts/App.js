@@ -1,8 +1,10 @@
 class ChatHandler {
     STRING_MAX_LENGTH = 30
 
-    userName = "third"
-    userIcon = "images/icon-2.png"
+    users = []
+
+    userName = ""
+    userIcon = ""
     elements = {}
 
     constructor() {
@@ -21,6 +23,35 @@ class ChatHandler {
     }
 
     #setValuesAndEvents() {
+        this.users = [
+            {
+                name: 'dmfshove',
+                icon: 'images/icon-1.png'
+            },
+            {
+                name: 'ayebasota228',
+                icon: 'images/icon-2.png'
+            },
+            {
+                name: 'walterwhite',
+                icon: 'images/icon-3.png'
+            },
+            {
+                name: 'pinkman',
+                icon: 'images/icon-1.png'
+            },
+            {
+                name: 'mike',
+                icon: 'images/icon-2.png'
+            },
+            {
+                name: 'gus',
+                icon: 'images/icon-3.png'
+            }
+        ]
+
+        this.#setRandowUserData()
+
         this.#loadMessagesFromLocalStorage()
 
         this.elements.usernameElement.textContent = this.userName
@@ -70,6 +101,13 @@ class ChatHandler {
         document.documentElement.style.setProperty('--chat-color', '#10223e')
         document.documentElement.style.setProperty('--text-color', '#FFFFFF')
         document.documentElement.style.setProperty('--element-color', '#07152a')
+    }
+
+    #setRandowUserData() {
+        const index = Math.floor(Math.random() * this.users.length)
+
+        this.userName = this.users[index].name
+        this.userIcon = this.users[index].icon
     }
 
     #getCurrentTime() {
