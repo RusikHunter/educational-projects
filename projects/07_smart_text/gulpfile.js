@@ -3,16 +3,21 @@ const sass = require('gulp-sass')(require('sass')) // плагин для ком
 const cleanCSS = require('gulp-clean-css') // плагин для минификации CSS
 const uglify = require('gulp-uglify') // плагин для минификации JavaScript
 const rename = require('gulp-rename') // плагин для переименования файлов (например, добавления суффикса .min)
+const browserSync = require('browser-sync').create() // плагин для запуска локального сервера
 
-// Путь к исходным файлам
+// Пути к исходным файлам
 const paths = {
     scss: 'src/styles/style.scss',
-    js: 'src/scripts/App.js',
+    js: 'src/scripts/**/*.js',
     cssDest: 'dist/css',
-    jsDest: 'dist/js'
+    jsDest: 'dist/js',
+    baseDir: 'src/'
 };
 
-// Задача для компиляции SCSS
+// ---------------------------------------------------------------------------------------
+// gulp default
+
+// Задача для минификации css
 gulp.task('scss', function () {
     return gulp.src(paths.scss)
         .pipe(sass().on('error', sass.logError))
@@ -21,7 +26,7 @@ gulp.task('scss', function () {
         .pipe(gulp.dest(paths.cssDest))
 })
 
-// Задача для минификации JS
+// Задача для минификации js
 gulp.task('js', function () {
     return gulp.src(paths.js)
         .pipe(uglify())
@@ -29,19 +34,32 @@ gulp.task('js', function () {
         .pipe(gulp.dest(paths.jsDest))
 })
 
-// temp
+gulp.task('default', gulp.series('scss', 'js'))
 
-// временная задача для компиляции sass в css
-gulp.task('temp-scss', function () {
+// ---------------------------------------------------------------------------------------
+// gulp developing
+
+// задача для компиляции scss в css
+gulp.task('css', function () {
     return gulp.src(paths.scss)
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('src/styles'))
 })
 
-gulp.task('watch', function () {
-    gulp.watch(paths.scss, gulp.series('temp-scss'));  // Следим за SCSS файлами
+// Задача для запуска локального сервера
+gulp.task('server', function () {
+    // Инициализация локального сервера
+    browserSync.init({
+        server: {
+            baseDir: paths.baseDir, // Укажите папку вашего проекта, например, './dist' для скомпилированных файлов
+        },
+        port: 3000, // Порт сервера (по умолчанию 3000)
+    })
+
+    // Наблюдение за изменениями в HTML/CSS/JS-файлах и их автоматическое обновление
+    gulp.watch(paths.scss, gulp.series('css'));  // Следим за SCSS файлами
+
+    gulp.watch('src/**/*.html').on('change', browserSync.reload)
+    gulp.watch('src/**/*.css').on('change', browserSync.reload)
+    gulp.watch('src/**/*.js').on('change', browserSync.reload)
 })
-
-// default
-
-gulp.task('default', gulp.series('scss', 'js'))

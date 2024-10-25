@@ -1,2 +1,3 @@
-// gulp - all
-// watch - scss to css
+import TextHandler from "./components/TextHandler.js"
+
+const textHandler = new TextHandler()
