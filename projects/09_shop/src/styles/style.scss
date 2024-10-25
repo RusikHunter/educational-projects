@@ -1,5 +1,125 @@
 @use 'normalize.scss';
 
 * {
-    background-color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --background-color: #F0F0F0;
+    --interface-color: #C4C4C4;
+    --element-color: #ABABAB;
+    --text-color: #000000;
+}
+
+.shop {
+    background-color: var(--background-color);
+
+    &__container {
+        width: 1440px;
+        display: flex;
+        margin-inline: auto;
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__column {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__shop {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5vh;
+        background-color: var(--interface-color);
+        border-radius: 20px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--element-color);
+        padding: 30px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    &__dropdown {}
+
+    &__list {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__product {}
+
+    &__control {}
+
+    &__footer {}
+}
+
+.dropdown {}
+
+.list {}
+
+.product {
+
+    &__button--delete {}
+
+    &__title {}
+
+    &__description {}
+
+    &__category {}
+
+    &__count {}
+
+    &__price {}
+}
+
+.control {
+
+    &__form {}
+
+    &__button--total {}
+}
+
+.form {
+
+    &__input--title {}
+
+    &__input--description {}
+
+    &__select--category {}
+
+    &__input--count {}
+
+    &__input--submit {}
+}
+
+.footer {}
+
+.toggle {}
+
+.dialog {
+
+    &__total {}
+}
+
+.total {
+
+    &__wrap {}
+
+    &__button--close {}
+
+    &__count {}
+
+    &__price {}
 }
