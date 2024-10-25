@@ -2,39 +2,48 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: './src/scripts/index.js', // Входной файл
+    entry: './src/scripts/index.js',
     output: {
-        filename: 'bundle.js', // Выходной файл
-        path: path.resolve(__dirname, 'dist'), // Папка для выходного файла
-        clean: true, // Очищает папку dist перед каждой сборкой
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true,
     },
-    devtool: 'inline-source-map', // Используйте для отладки
+    devtool: 'inline-source-map',
     devServer: {
         static: {
-            directory: path.join(__dirname, 'src'), // Папка с вашими статическими файлами
-        }, // Отдавать файлы из папки dist
-        port: 8080
+            directory: path.join(__dirname, 'src'),
+        },
+        port: 8080,
+        hot: true
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html', // Шаблон HTML
+            template: './src/index.html',
         }),
     ],
     module: {
         rules: [
             {
-                test: /\.css$/, // Для файлов CSS
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ],
+            },
+            {
+                test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.(png|jpe?g|gif|svg)$/, // Для изображений
+                test: /\.(png|jpe?g|gif|svg)$/,
                 type: 'asset/resource',
             },
             {
-                test: /\.js$/, // Для JavaScript
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader', // Необходимо установить babel-loader и @babel/core, если вы используете Babel
+                    loader: 'babel-loader',
                     options: {
                         presets: ['@babel/preset-env'],
                     },
@@ -42,5 +51,5 @@ module.exports = {
             },
         ],
     },
-    mode: 'development', // Режим разработки
+    mode: 'development',
 };
