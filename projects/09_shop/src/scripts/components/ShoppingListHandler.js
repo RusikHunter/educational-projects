@@ -4,15 +4,7 @@ class ShoppingListHandler {
     constructor() {
         this.elements = []
 
-        this.sortingTypes = {
-            nothing: 'nothing',
-            category: 'category',
-            purchased: 'purchased',
-            notPurchased: 'not_purchased'
-        }
-
-        this.sortingType = this.sortingTypes.nothing
-        console.log(this.sortingType)
+        this.sortingType = 'nothing'
 
         this.#_getElements()
         this.#_setEvents()
@@ -60,7 +52,7 @@ class ShoppingListHandler {
 
             this.sortingType = sortingType
 
-            console.log(this.sortingType)
+            this.#_renderProductsList()
         })
     }
 
@@ -86,12 +78,7 @@ class ShoppingListHandler {
                 throw new Error(`Cant add product without full data`)
             }
 
-            // console.log(price)
-            // console.log(title, description, category, price, count, totalPrice)
-
             const product = new Product(ID, title, description, category, price, count)
-
-            console.log(product) // temp
 
             window.localStorage.setItem(ID, JSON.stringify(product)) // adding product to localStorage
 
@@ -104,17 +91,87 @@ class ShoppingListHandler {
     // method renders all product elements list (based on the sort type)
 
     #_renderProductsList() {
+        // at first cleaning previous list of products
         this.#_clearProductsList()
 
-        const keys = Object.keys(window.localStorage).sort()
+        // rendering products ...
 
-        for (const key of keys) {
-            const value = localStorage.getItem(key)
+        switch (this.sortingType) {
+            case 'nothing':
+                const keys = Object.keys(window.localStorage).sort()
 
-            const product = JSON.parse(value)
+                for (const key of keys) {
+                    const value = localStorage.getItem(key)
 
-            this.elements.listElement.insertAdjacentHTML('beforeend', product.html)
+                    const product = JSON.parse(value)
+
+                    this.elements.listElement.insertAdjacentHTML('beforeend', product.html)
+                }
+                break
+            case 'category':
+                const items = Object.keys(window.localStorage)
+                    .map(key => {
+                        const parsedObject = JSON.parse(window.localStorage.getItem(key))
+
+                        return {
+                            key: key,
+                            category: parsedObject.category
+                        }
+                    })
+
+                items.sort((a, b) => {
+                    if (a.category < b.category) return -1
+                    if (a.category > b.category) return 1
+                    return 0
+                })
+
+                for (let i = 0; i < window.localStorage.length; ++i) {
+                    const value = localStorage.getItem(items[i].key)
+
+                    const product = JSON.parse(value)
+
+                    this.elements.listElement.insertAdjacentHTML('beforeend', product.html)
+                }
+                break
+            case 'purchased':
+                break
+            case 'notPurchased':
+                break
         }
+
+        // adding event listeners to all rendered remove-buttons
+        const removeButtons = document.querySelectorAll('[data-js-button-remove]')
+        removeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const id = button.getAttribute('data-js-button-remove')
+
+                window.localStorage.removeItem(id)
+
+                this.#_renderProductsList()
+            })
+        })
+
+        //  todo todo todo todo todo => => =>
+        // adding event listeners to all rendered remove-buttons
+        const checkboxes = document.querySelectorAll('[data-js-checkbox-is-purchased]')
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', (event) => {
+                const id = checkbox.getAttribute('data-js-checkbox-is-purchased')
+
+                const product = JSON.parse(window.localStorage.getItem(id))
+                product.isPurchased = !product.isPurchased
+
+                if (product.isPurchased) {
+                    event.target.checked = true
+                } else {
+                    event.target.checked = false
+                }
+
+                window.localStorage.setItem(id, JSON.stringify(product))
+
+                this.#_renderProductsList()
+            })
+        })
     }
 
     // method removes all product elements list

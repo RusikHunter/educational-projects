@@ -41,7 +41,7 @@
                                 <div class="shop__list list" data-js-list>
                                     <button class="list__button--clear" data-js-button-clear></button>
 
-                                    <!-- <div class="shop__product product" data-js-product>
+                                    <div class="shop__product product" data-js-product>
                                         <span class="product__id">ID: 394846483939</span>
                                         <h6 class="product__title">Apple</h6>
                                         <p class="product__description">Description of product apple</p>
@@ -60,54 +60,56 @@
 
                                         <div class="product__wrap--buttons">
                                             <button class="product__button--edit">Edit product</button>
-                                            <button class="product__button--remove">Remove product</button>
+                                            <button class="product__button--remove"">Remove product</button>
                                         </div>
-                                    </div> -->
+                                    </div>
                                 </div>
 
-                                <div class="shop__control control">
-                                    <h5 class="control__title">Add new product</h5>
-                                    <form class="control__form form" name="form" id="formControl" data-js-form-add>
-                                        <div class="form__wrap-content">
-                                            <label for="inputTitleControl">Title:</label>
-                                            <input type="text" class="form__input--title" name="title"
-                                                id="inputTitleControl" required>
+                                <div class=" shop__control control">
+                                                <h5 class="control__title">Add new product</h5>
+                                                <form class="control__form form" name="form" id="formControl"
+                                                    data-js-form-add>
+                                                    <div class="form__wrap-content">
+                                                        <label for="inputTitleControl">Title:</label>
+                                                        <input type="text" class="form__input--title" name="title"
+                                                            id="inputTitleControl" required>
+                                                    </div>
+
+                                                    <div class="form__wrap-content">
+                                                        <label for="inputDescriptionControl">Description:</label>
+                                                        <input type="text" class="form__input--description"
+                                                            name="description" id="inputDescriptionControl" required>
+                                                    </div>
+
+                                                    <div class="form__wrap-content">
+                                                        <label for="selectCategoryControl">Category:</label>
+                                                        <select class="form__select--category" name="category"
+                                                            id="selectCategoryControl">
+                                                            <option value="eat">Eat</option>
+                                                            <option value="home">Home</option>
+                                                            <option value="drugs">Drugs</option>
+                                                            <option value="weapon">Weapon</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form__wrap-content">
+                                                        <label for="inputCountControl">Count:</label>
+                                                        <input type="number" class="form__input--count" name="count"
+                                                            id="inputCountControl" min="0" max="100" required>
+                                                    </div>
+
+                                                    <input type="submit" class="form__input--submit" name="submit"
+                                                        id="inputSubmitControl" value="Add product"
+                                                        data-js-form-add-submit>
+                                                </form>
+
+                                                <button class="control__button--total">Count total</button>
                                         </div>
-
-                                        <div class="form__wrap-content">
-                                            <label for="inputDescriptionControl">Description:</label>
-                                            <input type="text" class="form__input--description" name="description"
-                                                id="inputDescriptionControl" required>
-                                        </div>
-
-                                        <div class="form__wrap-content">
-                                            <label for="selectCategoryControl">Category:</label>
-                                            <select class="form__select--category" name="category"
-                                                id="selectCategoryControl">
-                                                <option value="eat">Eat</option>
-                                                <option value="home">Home</option>
-                                                <option value="drugs">Drugs</option>
-                                                <option value="weapon">Weapon</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="form__wrap-content">
-                                            <label for="inputCountControl">Count:</label>
-                                            <input type="number" class="form__input--count" name="count"
-                                                id="inputCountControl" min="0" max="100" required>
-                                        </div>
-
-                                        <input type="submit" class="form__input--submit" name="submit"
-                                            id="inputSubmitControl" value="Add product" data-js-form-add-submit>
-                                    </form>
-
-                                    <button class="control__button--total">Count total</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
         </section>
     </main>
 

@@ -21,14 +21,12 @@ class Product {
 
         <div class="product__wrap--is-purchased">
             <label for="product123">Purchased:</label>
-            <input type="checkbox" id="${this.id}"
+            <input type="checkbox" data-js-checkbox-is-purchased="${this.id}"
                 class="product__checkbox--is-purchased">
         </div>
-
-
         <div class="product__wrap--buttons">
-            <button class="product__button--edit">Edit product</button>
-            <button class="product__button--remove">Remove product</button>
+            <button class="product__button--edit" data-js-button-edit="${this.id}">Edit product</button>
+            <button class="product__button--remove" data-js-button-remove="${this.id}">Remove product</button>
         </div>
         </div>`
     }
