@@ -28,7 +28,8 @@
 
                                     <div class="shop__wrap--sort">
                                         <label for="sortBySelect">Sort by:</label>
-                                        <select name="sort" id="sortBySelect" class="shop__dropdown dropdown">
+                                        <select name="sort" id="sortBySelect" class="shop__dropdown dropdown"
+                                            data-js-select-sort-type>
                                             <option value="nothing">Nothing</option>
                                             <option value="category">Category</option>
                                             <option value="purchased">Purchased</option>
@@ -37,8 +38,10 @@
                                     </div>
                                 </header>
 
-                                <div class="shop__list list">
-                                    <div class="shop__product product">
+                                <div class="shop__list list" data-js-list>
+                                    <button class="list__button--clear" data-js-button-clear></button>
+
+                                    <!-- <div class="shop__product product" data-js-product>
                                         <span class="product__id">ID: 394846483939</span>
                                         <h6 class="product__title">Apple</h6>
                                         <p class="product__description">Description of product apple</p>
@@ -59,22 +62,22 @@
                                             <button class="product__button--edit">Edit product</button>
                                             <button class="product__button--remove">Remove product</button>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <div class="shop__control control">
                                     <h5 class="control__title">Add new product</h5>
-                                    <form class="control__form form" name="form" id="formControl">
+                                    <form class="control__form form" name="form" id="formControl" data-js-form-add>
                                         <div class="form__wrap-content">
                                             <label for="inputTitleControl">Title:</label>
                                             <input type="text" class="form__input--title" name="title"
-                                                id="inputTitleControl">
+                                                id="inputTitleControl" required>
                                         </div>
 
                                         <div class="form__wrap-content">
                                             <label for="inputDescriptionControl">Description:</label>
                                             <input type="text" class="form__input--description" name="description"
-                                                id="inputDescriptionControl">
+                                                id="inputDescriptionControl" required>
                                         </div>
 
                                         <div class="form__wrap-content">
@@ -91,11 +94,11 @@
                                         <div class="form__wrap-content">
                                             <label for="inputCountControl">Count:</label>
                                             <input type="number" class="form__input--count" name="count"
-                                                id="inputCountControl" min="0" max="100">
+                                                id="inputCountControl" min="0" max="100" required>
                                         </div>
 
                                         <input type="submit" class="form__input--submit" name="submit"
-                                            id="inputSubmitControl" value="Add product">
+                                            id="inputSubmitControl" value="Add product" data-js-form-add-submit>
                                     </form>
 
                                     <button class="control__button--total">Count total</button>
@@ -130,13 +133,13 @@
                 <form class="change__form form" name="form" id="formChange">
                     <div class="form__wrap-content">
                         <label for="inputTitleChange">Title:</label>
-                        <input type="text" class="form__input--title" name="title" id="inputTitleChange">
+                        <input type="text" class="form__input--title" name="title" id="inputTitleChange" required>
                     </div>
 
                     <div class="form__wrap-content">
                         <label for="inputDescriptionChange">Description:</label>
                         <input type="text" class="form__input--description" name="description"
-                            id="inputDescriptionChange">
+                            id="inputDescriptionChange" required>
                     </div>
 
                     <div class="form__wrap-content">
@@ -152,7 +155,13 @@
                     <div class="form__wrap-content">
                         <label for="inputCountChange">Count:</label>
                         <input type="number" class="form__input--count" name="count" id="inputCountChange" min="0"
-                            max="100">
+                            max="100" required>
+                    </div>
+
+                    <div class="form__wrap-content">
+                        <label for="inputPriceChange">Price:</label>
+                        <input type="number" class="form__input--price" name="count" id="inputPriceChange" min="0"
+                            max="100" required>
                     </div>
 
                     <input type="submit" class="form__input--submit" name="submit" id="inputSubmitChange"
