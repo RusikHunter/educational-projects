@@ -26,54 +26,79 @@
                                             class="shop__logo">
                                     </a>
 
-                                    <select name="sort" id="sortBySelect" class="shop__dropdown dropdown">
-                                        <option value="nothing">Nothing</option>
-                                        <option value="category">Category</option>
-                                        <option value="available">First available</option>
-                                        <option value="notAbailable">First not available</option>
-                                    </select>
+                                    <div class="shop__wrap--sort">
+                                        <label for="sortBySelect">Sort by:</label>
+                                        <select name="sort" id="sortBySelect" class="shop__dropdown dropdown">
+                                            <option value="nothing">Nothing</option>
+                                            <option value="category">Category</option>
+                                            <option value="purchased">Purchased</option>
+                                            <option value="notPurchased">Not purchased</option>
+                                        </select>
+                                    </div>
                                 </header>
 
                                 <div class="shop__list list">
                                     <div class="shop__product product">
-                                        <button class="product__button--delete"></button>
+                                        <span class="product__id">ID: 394846483939</span>
                                         <h6 class="product__title">Apple</h6>
                                         <p class="product__description">Description of product apple</p>
-                                        <span class="product__category">Eat</span>
-                                        <span class="product__count">Count: 3</span>
-                                        <span class="product__price">12.99$</span>
-                                    </div>
+                                        <span class="product__category">Category: Eat</span>
 
-                                    <div class="shop__product product">
-                                        <button class="product__button--delete"></button>
-                                        <h6 class="product__title">Apple</h6>
-                                        <p class="product__description">Description of product apple</p>
-                                        <span class="product__category">Eat</span>
+                                        <span class="product__price">Price: 10.00$</span>
                                         <span class="product__count">Count: 3</span>
-                                        <span class="product__price">12.99$</span>
+                                        <span class="product__price--total">Total price: 30.00$</span>
+
+                                        <div class="product__wrap--is-purchased">
+                                            <label for="product123">Purchased:</label>
+                                            <input type="checkbox" id="product123"
+                                                class="product__checkbox--is-purchased">
+                                        </div>
+
+
+                                        <div class="product__wrap--buttons">
+                                            <button class="product__button--edit">Edit product</button>
+                                            <button class="product__button--remove">Remove product</button>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="shop__control control">
-                                    <form class="control__form form" name="form" id="form1">
-                                        <input type="text" class="form__input--title" name="title" id="inputTitle">
-                                        <input type="text" class="form__input--description" name="description"
-                                            id="inputDescription">
-                                        <select class="form__select--category" name="category" id="selectCategory">
-                                            <option value="eat">Eat</option>
-                                            <option value="home">Home</option>
-                                            <option value="drugs">Drugs</option>
-                                            <option value="weapon">Weapon</option>
-                                        </select>
-                                        <input type="number" class="form__input--count" name="count" id="inputCount">
-                                        <input type="submit" class="form__input--submit" name="submit" id="inputSubmit">
+                                    <h5 class="control__title">Add new product</h5>
+                                    <form class="control__form form" name="form" id="formControl">
+                                        <div class="form__wrap-content">
+                                            <label for="inputTitleControl">Title:</label>
+                                            <input type="text" class="form__input--title" name="title"
+                                                id="inputTitleControl">
+                                        </div>
+
+                                        <div class="form__wrap-content">
+                                            <label for="inputDescriptionControl">Description:</label>
+                                            <input type="text" class="form__input--description" name="description"
+                                                id="inputDescriptionControl">
+                                        </div>
+
+                                        <div class="form__wrap-content">
+                                            <label for="selectCategoryControl">Category:</label>
+                                            <select class="form__select--category" name="category"
+                                                id="selectCategoryControl">
+                                                <option value="eat">Eat</option>
+                                                <option value="home">Home</option>
+                                                <option value="drugs">Drugs</option>
+                                                <option value="weapon">Weapon</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form__wrap-content">
+                                            <label for="inputCountControl">Count:</label>
+                                            <input type="number" class="form__input--count" name="count"
+                                                id="inputCountControl" min="0" max="100">
+                                        </div>
+
+                                        <input type="submit" class="form__input--submit" name="submit"
+                                            id="inputSubmitControl" value="Add product">
                                     </form>
 
                                     <button class="control__button--total">Count total</button>
-                                </div>
-
-                                <div class="shop__footer">
-                                    <button class="toggle"></button>
                                 </div>
                             </div>
                         </div>
@@ -83,13 +108,56 @@
         </section>
     </main>
 
-    <dialog open class="dialog">
+    <dialog class="dialog">
         <div class="dialog__total total">
             <div class="total__wrap">
                 <button class="total__button--close"></button>
 
                 <span class="total__count">Total count: 14</span>
                 <span class="total__price">Total price: 149.97$</span>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="dialog dialog--wide">
+        <div class="dialog__change change">
+            <div class="change__wrap">
+                <button class="change__button--close"></button>
+
+                <span class="change__id">ID: 394846483939</span>
+                <h6 class="change__title">Apple</h6>
+
+                <form class="change__form form" name="form" id="formChange">
+                    <div class="form__wrap-content">
+                        <label for="inputTitleChange">Title:</label>
+                        <input type="text" class="form__input--title" name="title" id="inputTitleChange">
+                    </div>
+
+                    <div class="form__wrap-content">
+                        <label for="inputDescriptionChange">Description:</label>
+                        <input type="text" class="form__input--description" name="description"
+                            id="inputDescriptionChange">
+                    </div>
+
+                    <div class="form__wrap-content">
+                        <label for="selectCategoryChange">Category:</label>
+                        <select class="form__select--category" name="category" id="selectCategoryChange">
+                            <option value="eat">Eat</option>
+                            <option value="home">Home</option>
+                            <option value="drugs">Drugs</option>
+                            <option value="weapon">Weapon</option>
+                        </select>
+                    </div>
+
+                    <div class="form__wrap-content">
+                        <label for="inputCountChange">Count:</label>
+                        <input type="number" class="form__input--count" name="count" id="inputCountChange" min="0"
+                            max="100">
+                    </div>
+
+                    <input type="submit" class="form__input--submit" name="submit" id="inputSubmitChange"
+                        value="Change product">
+                </form>
             </div>
         </div>
     </dialog>

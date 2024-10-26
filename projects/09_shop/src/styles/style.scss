@@ -9,6 +9,7 @@
     --interface-color: #C4C4C4;
     --element-color: #ABABAB;
     --text-color: #000000;
+    --border-color: #000000;
 }
 
 .shop {
@@ -16,6 +17,7 @@
 
     &__container {
         width: 1440px;
+        height: 100vh;
         display: flex;
         margin-inline: auto;
     }
@@ -35,7 +37,7 @@
     &__shop {
         display: flex;
         flex-direction: column;
-        margin-top: 5vh;
+        margin-top: 3vh;
         background-color: var(--interface-color);
         border-radius: 20px;
     }
@@ -48,78 +50,182 @@
         padding: 30px;
         border-radius: 20px 20px 0 0;
     }
-
-    &__dropdown {}
-
-    &__list {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    &__product {}
-
-    &__control {}
-
-    &__footer {}
 }
 
-.dropdown {}
-
-.list {}
+.list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 34vh;
+    overflow-y: auto;
+}
 
 .product {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--element-color);
+    padding: 7px;
+    border-radius: 5px;
 
-    &__button--delete {}
+    &__title {
+        font-size: 24px;
+    }
 
-    &__title {}
+    &__description {
+        font-size: 12px;
+    }
 
-    &__description {}
+    &__category {
+        font-size: 12px;
+    }
 
-    &__category {}
+    &__price {
+        font-size: 12px;
+    }
 
-    &__count {}
+    &__count {
+        font-size: 12px;
+    }
 
-    &__price {}
+    &__price--total {
+        font-size: 12px;
+    }
+
+    &__wrap--is-purchased {
+        display: flex;
+        align-items: center;
+
+        label {
+            font-size: 12px;
+        }
+    }
+
+    &__checkbox--is-purchased {
+        display: inline;
+        width: 12px;
+    }
+
+    &__wrap--buttons {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+    }
+
+    &__button--edit {
+        width: 50%;
+    }
+
+    &__button--remove {
+        width: 50%;
+    }
 }
 
+
 .control {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--element-color);
 
-    &__form {}
-
-    &__button--total {}
+    &__title {
+        font-size: 18px;
+    }
 }
 
 .form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    gap: 10px;
 
-    &__input--title {}
+    input {
+        width: 50%;
+    }
 
-    &__input--description {}
+    &__wrap-content {
+        position: relative;
 
-    &__select--category {}
+        & input,
+        select {
+            position: absolute;
+            left: 100px;
+        }
+    }
 
-    &__input--count {}
-
-    &__input--submit {}
+    &__input--submit {
+        margin-inline: auto;
+        width: 100% !important;
+    }
 }
 
-.footer {}
-
-.toggle {}
-
 .dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-inline: auto;
+    margin-top: 30vh;
+    background-color: var(--background-color);
+    border: 3px solid var(--border-color);
+    width: 20%;
 
     &__total {}
+
+    &__change {}
+}
+
+.dialog--wide {
+    width: 30%;
 }
 
 .total {
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
 
-    &__wrap {}
+    &__button--close {
+        width: 16px;
+        height: 16px;
+        background-color: var(--background-color);
+        background-image: url(../images/cross.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
 
-    &__button--close {}
+.change {
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
 
-    &__count {}
+    &__title {
+        font-size: 24px;
+    }
 
-    &__price {}
+    &__button--close {
+        width: 16px;
+        height: 16px;
+        background-color: var(--background-color);
+        background-image: url(../images/cross.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
