@@ -134,8 +134,28 @@ class ShoppingListHandler {
                 }
                 break
             case 'purchased':
+                const purchasedKeys = Object.keys(window.localStorage)
+                    .map(key => {
+                        return JSON.parse(window.localStorage.getItem(key))
+                    }).sort()
+
+                const purchasedProducts = purchasedKeys.filter(item => item.isPurchased === true)
+
+                for (const product of purchasedProducts) {
+                    this.elements.listElement.insertAdjacentHTML('beforeend', product.html)
+                }
                 break
             case 'notPurchased':
+                const notPurchasedKeys = Object.keys(window.localStorage)
+                    .map(key => {
+                        return JSON.parse(window.localStorage.getItem(key))
+                    }).sort()
+
+                const notPurchasedProducts = notPurchasedKeys.filter(item => item.isPurchased === false)
+
+                for (const product of notPurchasedProducts) {
+                    this.elements.listElement.insertAdjacentHTML('beforeend', product.html)
+                }
                 break
         }
 
@@ -159,18 +179,18 @@ class ShoppingListHandler {
                 const id = checkbox.getAttribute('data-js-checkbox-is-purchased')
 
                 const product = JSON.parse(window.localStorage.getItem(id))
+                console.log(product)
                 product.isPurchased = !product.isPurchased
-
-                if (product.isPurchased) {
-                    event.target.checked = true
-                } else {
-                    event.target.checked = false
-                }
 
                 window.localStorage.setItem(id, JSON.stringify(product))
 
                 this.#_renderProductsList()
             })
+
+            const updatedId = checkbox.getAttribute('data-js-checkbox-is-purchased')
+            const updatedProduct = JSON.parse(window.localStorage.getItem(updatedId))
+
+            checkbox.checked = updatedProduct?.isPurchased || false
         })
     }
 

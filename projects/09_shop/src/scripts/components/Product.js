@@ -7,9 +7,9 @@ class Product {
             this.price = price,
             this.count = count,
             this.totalPrice = price * count,
-            this.isPurchased = false
+            this.isPurchased = false,
 
-        this.html = `<div class="shop__product product" data-js-product>
+            this.html = `<div class="shop__product product" data-js-product>
         <span class="product__id">ID: ${this.id}</span>
         <h6 class="product__title">${this.title}</h6>
         <p class="product__description">Description: ${this.description}</p>
