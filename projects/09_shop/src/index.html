@@ -124,15 +124,15 @@
         </div>
     </dialog>
 
-    <dialog class="dialog dialog--wide">
+    <dialog class="dialog dialog--wide" data-js-dialog-edit-product>
         <div class="dialog__change change">
             <div class="change__wrap">
-                <button class="change__button--close"></button>
+                <button class="change__button--close" data-js-button-change-close></button>
 
-                <span class="change__id">ID: 394846483939</span>
-                <h6 class="change__title">Apple</h6>
+                <span class="change__id" data-js-form-edit-id></span>
+                <h6 class="change__title" data-js-form-edit-title>Apple</h6>
 
-                <form class="change__form form" name="form" id="formChange">
+                <form class="change__form form" name="form" id="formChange" data-js-form-edit-product>
                     <div class="form__wrap-content">
                         <label for="inputTitleChange">Title:</label>
                         <input type="text" class="form__input--title" name="title" id="inputTitleChange" required>
@@ -162,12 +162,12 @@
 
                     <div class="form__wrap-content">
                         <label for="inputPriceChange">Price:</label>
-                        <input type="number" class="form__input--price" name="count" id="inputPriceChange" min="0"
+                        <input type="number" class="form__input--price" name="price" id="inputPriceChange" min="0"
                             max="100" required>
                     </div>
 
                     <input type="submit" class="form__input--submit" name="submit" id="inputSubmitChange"
-                        value="Change product">
+                        value="Change product" data-js-form-edit-submit>
                 </form>
             </div>
         </div>
