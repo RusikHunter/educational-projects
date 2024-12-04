@@ -1,7 +1,7 @@
-export default function Description() {
+export default function Header() {
     return (
         <>
-            <header class="header">
+            <header className="header">
                 <div className="header__container">
                     <div className="header__row">
                         <div className="header__column">
