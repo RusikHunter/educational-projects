@@ -1,0 +1,14 @@
+[
+    {
+        "title": "List item 1",
+        "description": "Some lorem ipsum description"
+    },
+    {
+        "title": "List item 2",
+        "description": "Lorem ipsum dolor sit amet"
+    },
+    {
+        "title": "List item 3",
+        "description": "Consectetur lorem ipsum dolor"
+    }
+]
