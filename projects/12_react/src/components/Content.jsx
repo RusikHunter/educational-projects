@@ -3,6 +3,8 @@ import data from '../assets/data.json'
 import Button from './Button/Button.jsx'
 import ImportantTitle from './ImportantTitle.jsx'
 import Block from './Block/Block.jsx'
+import FruitsList from './FruitsList.jsx'
+import UsersList from './UsersList.jsx'
 
 const logoPath = logo
 const altText = 'Illusion'
@@ -41,6 +43,10 @@ export default function Content() {
                             <ImportantTitle isVeryImportant={false} />
 
                             <Block isActive={true} />
+
+                            <FruitsList />
+
+                            <UsersList />
                         </div>
                     </div>
                 </div>
