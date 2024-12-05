@@ -1,5 +1,6 @@
 import logo from '../assets/logo.png'
 import data from '../assets/data.json'
+import Button from './Button/Button.jsx'
 
 const logoPath = logo
 const altText = 'Illusion'
@@ -31,6 +32,9 @@ export default function Content() {
                                 <ListItem title={data[1].title} description={data[1].description} />
                                 <ListItem title={data[2].title} description={data[2].description} />
                             </ul>
+
+                            <Button text={'Click'} />
+                            <Button text={'Double click'} />
                         </div>
                     </div>
                 </div>
