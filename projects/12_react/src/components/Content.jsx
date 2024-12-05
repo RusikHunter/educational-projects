@@ -1,6 +1,8 @@
 import logo from '../assets/logo.png'
 import data from '../assets/data.json'
 import Button from './Button/Button.jsx'
+import ImportantTitle from './ImportantTitle.jsx'
+import Block from './Block/Block.jsx'
 
 const logoPath = logo
 const altText = 'Illusion'
@@ -35,6 +37,10 @@ export default function Content() {
 
                             <Button text={'Click'} />
                             <Button text={'Double click'} />
+
+                            <ImportantTitle isVeryImportant={false} />
+
+                            <Block isActive={true} />
                         </div>
                     </div>
                 </div>
