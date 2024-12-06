@@ -5,6 +5,9 @@ import ImportantTitle from './ImportantTitle.jsx'
 import Block from './Block/Block.jsx'
 import FruitsList from './FruitsList.jsx'
 import UsersList from './UsersList.jsx'
+import { useState } from 'react'
+import Counter from './Counter.jsx'
+import Timer from './Timer.jsx'
 
 const logoPath = logo
 const altText = 'Illusion'
@@ -47,6 +50,10 @@ export default function Content() {
                             <FruitsList />
 
                             <UsersList />
+
+                            <Counter />
+
+                            <Timer />
                         </div>
                     </div>
                 </div>
