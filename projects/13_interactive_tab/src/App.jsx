@@ -1,5 +1,6 @@
-import SectionDescription from './components/SectionDescription/SectionDescription.jsx'
 import SectionTitle from './components/SectionTitle/SectionTitle.jsx'
+import SectionDescription from './components/SectionDescription/SectionDescription.jsx'
+import SectionFeedback from './components/SectionFeedback/SectionFeedback.jsx'
 import { useState } from 'react'
 
 export default function App() {
@@ -10,6 +11,8 @@ export default function App() {
       <SectionTitle isVisible={tab} onChange={setTab} />
 
       {tab === 1 && <SectionDescription />}
+
+      <SectionFeedback />
     </main>
   )
 }
