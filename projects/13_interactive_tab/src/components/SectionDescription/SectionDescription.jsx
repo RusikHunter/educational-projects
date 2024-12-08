@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import Button from "../Button/Button"
 import { styled } from 'styled-components'
 
@@ -6,6 +7,12 @@ const SectionDescriptionStyledComponent = styled.section`
 `
 
 export default function SectionDescription() {
+    useEffect(() => {
+        console.log('Showed')
+
+        return () => console.log('Hidden')
+    }, [])
+
     return (
         <>
             <SectionDescriptionStyledComponent>

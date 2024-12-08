@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const FormStyledComponent = styled.form`
     display: flex;
@@ -11,6 +11,15 @@ export default function SectionFeedback() {
     const [name, setName] = useState('')
     const [reason, setReason] = useState('help')
     const [isError, setIsError] = useState(false)
+    const [feedbackCount, setFeedbackCount] = useState(0)
+
+    const handleClickForm = () => {
+        setFeedbackCount(feedbackCount + 1)
+    }
+
+    useEffect(() => {
+        if (feedbackCount > 10) console.log('More than 10');
+    }, [feedbackCount])
 
     return (
         <section className="feedback">
@@ -38,6 +47,9 @@ export default function SectionFeedback() {
                     Reason: {reason}
                 </pre>
             </FormStyledComponent>
+
+            <button onClick={handleClickForm}>Add feedback count</button>
+            <p>Feedback count: {feedbackCount}</p>
         </section>
     )
 }

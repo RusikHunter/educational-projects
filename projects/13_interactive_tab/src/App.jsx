@@ -4,13 +4,13 @@ import SectionFeedback from './components/SectionFeedback/SectionFeedback.jsx'
 import { useState } from 'react'
 
 export default function App() {
-  const [tab, setTab] = useState(0)
+  const [tab, setTab] = useState(false)
 
   return (
     <main>
       <SectionTitle isVisible={tab} onChange={setTab} />
 
-      {tab === 1 && <SectionDescription />}
+      {tab && <SectionDescription />}
 
       <SectionFeedback />
     </main>
