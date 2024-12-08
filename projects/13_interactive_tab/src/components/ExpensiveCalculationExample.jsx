@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react"
 
 export default function ExpensiveCalculationExample() {
     const [count, setCount] = useState(0)
