@@ -1,6 +1,7 @@
 import SectionTitle from './components/SectionTitle/SectionTitle.jsx'
 import SectionDescription from './components/SectionDescription/SectionDescription.jsx'
 import SectionFeedback from './components/SectionFeedback/SectionFeedback.jsx'
+import ExpensiveCalculationExample from './components/ExpensiveCalculationExample.jsx'
 import { useState } from 'react'
 
 export default function App() {
@@ -8,11 +9,12 @@ export default function App() {
 
   return (
     <main>
-      <SectionTitle isVisible={tab} onChange={setTab} />
+      {/* <SectionTitle isVisible={tab} onChange={setTab} />
 
       {tab && <SectionDescription />}
 
-      <SectionFeedback />
+      <SectionFeedback /> */}
+      <ExpensiveCalculationExample />
     </main>
   )
 }
