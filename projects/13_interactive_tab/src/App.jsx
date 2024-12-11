@@ -3,6 +3,7 @@ import SectionDescription from './components/SectionDescription/SectionDescripti
 import SectionFeedback from './components/SectionFeedback/SectionFeedback.jsx'
 import ExpensiveCalculationExample from './components/ExpensiveCalculationExample.jsx'
 import UseCallbackExample from './components/UseCallbackExample.jsx'
+import Timer from './components/Timer'
 import { useState } from 'react'
 
 export default function App() {
@@ -16,7 +17,8 @@ export default function App() {
 
       <SectionFeedback /> */}
       {/* <ExpensiveCalculationExample /> */}
-      <UseCallbackExample />
+      {/* <UseCallbackExample /> */}
+      <Timer />
     </main>
   )
 }
