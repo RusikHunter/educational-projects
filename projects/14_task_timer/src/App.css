@@ -1,0 +1,10 @@
+.wrap {
+    border: 1px solid black;
+    padding: 25px;
+    width: 33%;
+}
+
+.task {
+    border: 1px solid black;
+    padding: 10px;
+}
