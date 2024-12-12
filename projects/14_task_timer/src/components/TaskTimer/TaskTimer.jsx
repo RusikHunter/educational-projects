@@ -5,8 +5,12 @@ export default function TaskTimer() {
         <>
             <h1>Task Timer</h1>
             <div className="wrap">
-                <Task name={'some todo'} status={'In progress...'} />
+                <Task name={'some todo'} />
+                <Task name={'شاذ شاذ شاذ أحمق الثدي سلة القرف'} />
+                <Task name={'عاهرة وقحة عاهرات شاذة'} />
             </div>
         </>
     )
 }
+
+// الله أكبر
