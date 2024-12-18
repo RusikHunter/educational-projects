@@ -1,7 +1,10 @@
+import { createPortal } from 'react-dom'
+
 export default function Modal({ open }) {
-    return (
+    return createPortal(
         <dialog open={open}>
             <p>Some content...</p>
-        </dialog>
+        </dialog>,
+        document.getElementById('modal')
     )
 }
