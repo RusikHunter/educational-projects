@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "./ThemeContext";
+import React, { useContext } from "react"
+import { ThemeContext } from "./ThemeContext"
 
 function ThemedButton() {
-    const { theme, toggleTheme } = useContext(ThemeContext);
+    const { theme, toggleTheme } = useContext(ThemeContext)
 
     return (
         <button
@@ -14,7 +14,7 @@ function ThemedButton() {
         >
             Переключить тему
         </button>
-    );
+    )
 }
 
-export default ThemedButton;
+export default ThemedButton
