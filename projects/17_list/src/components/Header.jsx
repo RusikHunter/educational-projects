@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom'
+import ThemedButton from './ThemedButton'
+import { ThemeContext } from "../context/ThemeContext"
+import { useContext } from 'react'
 
 export default function Header() {
+    const { theme, toggleTheme } = useContext(ThemeContext)
+
     return (
-        <header style={{ backgroundColor: 'lightgray' }}>
+        <header style={theme === 'light' ? { backgroundColor: 'lightgray' } : { backgroundColor: 'gray' }}>
             <h2>list :&#9002;</h2>
 
             <nav>
@@ -15,6 +20,8 @@ export default function Header() {
                     </li>
                 </ul>
             </nav>
+
+            <ThemedButton />
         </header>
     )
 }
