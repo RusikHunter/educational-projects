@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef, useMemo } from "react"
+import { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import ProductItem from "./ProductItem"
 
 export default function ProductList() {
     const [products, setProducts] = useState([])
-    const [productName, setProductName] = useState('')
 
     const inputRefContainer = useRef(null)
 
@@ -21,10 +20,16 @@ export default function ProductList() {
         fetchProducts()
     }, [])
 
+    const handleDeleteProduct = useCallback((productName) => {
+        setProducts((prevProducts) =>
+            prevProducts.filter((product) => product.name !== productName)
+        );
+    }, [])
+
     const renderedProducts = useMemo(() => {
         return products.map((product, index) => (
             <li key={index}>
-                <ProductItem name={product.name} />
+                <ProductItem name={product.name} onDelete={() => handleDeleteProduct(product.name)} />
             </li>
         ));
     }, [products])
@@ -39,10 +44,14 @@ export default function ProductList() {
                 <label htmlFor="nameInput">Product name:</label>
                 <input ref={inputRefContainer} type="text" id="nameInput" />
 
-                <button type="button" onClick={() => setProductName(inputRefContainer.current.value)}>Add product</button>
-            </form>
+                <button type="button" onClick={() => {
+                    const newProduct = {
+                        name: `${inputRefContainer.current.value}`
+                    }
 
-            <p>Result: {productName}</p>
+                    setProducts([...products, newProduct])
+                }}>Add product</button>
+            </form>
         </div>
     )
 }
