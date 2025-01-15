@@ -1,4 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { addCashAction, getCashAction } from './store/cashReducer';
+import { addCustomerAction, getCustomerAction } from './store/customerReducer';
 
 function App() {
     const dispatch = useDispatch()
@@ -7,19 +9,19 @@ function App() {
 
 
     const addCash = () => {
-        dispatch({ type: "ADD_CASH", payload: 5 })
+        dispatch(addCashAction(5))
     }
 
     const getCash = () => {
-        dispatch({ type: "GET_CASH", payload: 5 })
+        dispatch(getCashAction(5))
     }
 
     const addCustomer = () => {
-        dispatch({ type: "ADD_CUSTOMER", payload: "Alex" })
+        dispatch(addCustomerAction("Alex"))
     }
 
     const getCustomer = () => {
-        dispatch({ type: "GET_CUSTOMER", payload: "Alex" })
+        dispatch(getCustomerAction())
     }
 
     return (
