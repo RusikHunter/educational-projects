@@ -1,13 +1,19 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import cashReducer from './cashReducer.js'
 import customerReducer from './customerReducer.js'
-import { thunk } from 'redux-thunk'
+import countReducer from './countReducer.js'
+// import { thunk } from 'redux-thunk'
+import createSagaMiddleware from 'redux-saga'
+import { countWatcher } from '../saga/countSaga.js'
+
+const sagaNiddleware = createSagaMiddleware()
 
 const rootReducer = combineReducers({
-    cash: cashReducer,
-    customers: customerReducer
+    count: countReducer
 })
 
-const store = createStore(rootReducer, applyMiddleware(thunk))
+const store = createStore(rootReducer, applyMiddleware(sagaNiddleware))
+
+sagaNiddleware.run(countWatcher)
 
 export default store
