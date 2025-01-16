@@ -3,6 +3,7 @@ import { addCashAction, getCashAction } from './store/cashReducer';
 import { addCustomerAction, getCustomerAction } from './store/customerReducer';
 import { fetchCustomers } from './asyncActions/fetchCustomers';
 import { valueUpAction, valueUpAsyncAction, valueDownAction, valueDownAsyncAction } from './store/countReducer'
+import { fetchUsersAction } from './store/userReducer';
 
 function App() {
     const dispatch = useDispatch()
@@ -10,6 +11,8 @@ function App() {
     // const customers = useSelector(state => state.customers.customers)
 
     const count = useSelector(state => state.count.value)
+
+    const users = useSelector(state => state.users.users)
 
 
     // const addCash = () => {
@@ -34,6 +37,11 @@ function App() {
 
     const downValue = () => {
         dispatch(valueDownAsyncAction())
+    }
+
+    const fetchUsers = () => {
+        console.log("Dispatching FETCH_USERS")
+        dispatch(fetchUsersAction())
     }
 
     return (
@@ -63,6 +71,13 @@ function App() {
             <p>Count: {count}</p>
             <button onClick={upValue}>+</button>
             <button onClick={downValue}>-</button>
+
+            <p>{users.length > 0 ? (
+                users.map(user => <div key={user.id}>{user.name}</div>)
+            ) : (
+                "No users found"
+            )}</p>
+            <button onClick={fetchUsers}>fetch</button>
         </>
     )
 }
