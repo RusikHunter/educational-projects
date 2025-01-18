@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
 import axios from 'axios'
 
 const queryClient = new QueryClient()
@@ -27,10 +28,36 @@ function Todos() {
     );
 }
 
+function AddTodo() {
+    const queryClient = useQueryClient()
+
+    const mutation = useMutation({
+        mutationFn: (newTodo) =>
+            axios.post('https://jsonplaceholder.typicode.com/todos', newTodo),
+        onSuccess: () => {
+            queryClient.invalidateQueries(['todos'])
+        },
+    })
+
+    const handleAddTodo = () => {
+        mutation.mutate({ title: 'Новая задача', completed: false })
+    }
+
+    return (
+        <div>
+            <button onClick={handleAddTodo}>Добавить задачу</button>
+            {mutation.isLoading && <p>Добавление...</p>}
+            {mutation.isError && <p>Ошибка: {mutation.error.message}</p>}
+            {mutation.isSuccess && <p>Задача добавлена!</p>}
+        </div>
+    )
+}
+
 export default function App() {
     return (
         <QueryClientProvider client={queryClient}>
             <Todos />
+            <AddTodo />
         </QueryClientProvider>
     );
 }
