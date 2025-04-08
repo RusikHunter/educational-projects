@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 export default function Users() {
     const [users, setUsers] = useState([])
@@ -15,7 +16,7 @@ export default function Users() {
 
     return (
         <>
-            {users.map(user => <p key={user.id} data-testid="user-item">{user.name}</p>)}
+            {users.map(user => <Link to={`/users/${user.id}`} key={user.id} data-testid="user-item">{user.name}</Link>)}
         </>
     )
 }
