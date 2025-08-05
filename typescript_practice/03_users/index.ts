@@ -1,9 +1,33 @@
-async function fetchUserss(ids) {
-    const users: any[] = []
+type User = {
+    id: number
+    name: string
+    username: string
+    email: string
+    address: {
+        street: string
+        suite: string
+        city: string
+        zipcode: string
+        geo: {
+            lat: string
+            lng: string
+        }
+    }
+    phone: string
+    website: string
+    company: {
+        name: string
+        catchPhrase: string
+        bs: string
+    }
+}
+
+async function fetchUserss(ids): Promise<User[]> {
+    const users: User[] = []
 
     for (let i = 0; i < ids.length; ++i) {
         const response = await fetch(`https://jsonplaceholder.typicode.com/users/${ids[i]}`)
-        const user = await response.json()
+        const user: User = await response.json()
 
         if ("name" in user) {
             users.push(user)
@@ -13,6 +37,6 @@ async function fetchUserss(ids) {
     return users
 }
 
-const idss = [1, 2, 178, 9, 91]
+const idss: number[] = [1, 2, 178, 9, 91]
 
-fetchUsers(ids).then(console.log)
+fetchUserss(idss).then(console.log)
