@@ -1,13 +1,13 @@
-function countWords(string) {
-    const wordsArray = string.split(" ").map(word => word.toLowerCase())
-    const wordsObject = wordsArray.reduce((acc, key) => {
+function countWords(string: string): Object {
+    const wordsArray: string[] = string.split(" ").map(word => word.toLowerCase())
+    const wordsObject: Object = wordsArray.reduce((acc, key) => {
         acc[key] = 0
         return acc
     }, {})
-    const keysArray = Object.keys(wordsObject)
+    const keysArray: string[] = Object.keys(wordsObject)
 
-    const WORDS_ARRAY_LENGTH = wordsArray.length
-    const KEYS_ARRAY_LENGTH = keysArray.length
+    const WORDS_ARRAY_LENGTH: number = wordsArray.length
+    const KEYS_ARRAY_LENGTH: number = keysArray.length
 
     for (let i = 0; i < KEYS_ARRAY_LENGTH; ++i) {
 
