@@ -1,44 +1,42 @@
 function getTextStats(text) {
-    const statsObject = {
-        sentencesCount: null,
-        mostCommonWords: null
+    const statsObject = {}
+
+    // data
+
+    let defaultWords = text.split(" ")
+    let words = []
+
+    for (let word of defaultWords) {
+        words.push(word.replace(/[^a-zA-Z]/g, ""))
     }
 
-    const words = text.split(" ")
+    const sentences = text.split(".")
 
-    // const sentences = text.split(".")
+    const MAX_COUNT_OF_MOST_COMMON_WORDS = 5
 
-    // statsObject[wordsCount] = words.length
+    // logic
 
-    // statsObject[averageWordLength] = words.reduce((acc, word) => {
-    //     return acc += word.length
-    // }, 0) / words.length
+    statsObject.wordsCount = words.length
 
-    // statsObject[sentencesCount] = sentences.length
+    statsObject.averageWordLength = Number((words.reduce((acc, word) => {
+        return acc += word.length
+    }, 0) / words.length).toFixed(1))
 
-    const objectOfWordCount = {}
-    let wordsWithOccurrencesCount = []
-    const mostCommonWords = []
+    statsObject.sentencesCount = sentences.length
+
+    const wordsWithCount = {}
 
     for (const word of words) {
-        const valueToAdding = objectOfWordCount[word] !== undefined ? objectOfWordCount[word] : 0
-
-        objectOfWordCount[word] = valueToAdding + 1
+        wordsWithCount[word] = wordsWithCount[word] !== undefined ? wordsWithCount[word] + 1 : 1
     }
 
-    wordsWithOccurrencesCount = Object.entries(objectOfWordCount)
+    statsObject.mostCommonWords = Object.entries(wordsWithCount).sort((a, b) => b[1] - a[1]).slice(0, 5)
 
-    for (const value of wordsWithOccurrencesCount) {
-        greatestNumberOfOccurrences = wordsWithOccurrencesCount.sort((a, b) => {
-            return a - b
-        })
-
-        mostCommonWords.push(wordsWithOccurrencesCount[greatestNumberOfOccurrences])
-
-        wordsWithOccurrencesCount.splice(wordsWithOccurrencesCount.indexOf(greatestNumberOfOccurrences), 1)
-    }
-
-    console.log(mostCommonWords)
+    return statsObject
 }
 
-getTextStats("apple banana apple banana zitrone apple apple mango mango mango mango mango mango mango aye aye ue ue ue i orange")
+const text = `JavaScript is a programming language that is widely used for building interactive web applications. JavaScript allows developers to handle events, update page content, and interact with users. Many developers choose JavaScript because it is flexible and supported by all modern browsers.`
+
+const statsOfText = getTextStats(text)
+
+console.log(statsOfText)
