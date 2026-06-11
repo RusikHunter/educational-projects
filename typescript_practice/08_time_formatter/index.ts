@@ -5,23 +5,23 @@ type FormattedTimeObjectType = {
     seconds: number
 }
 
-const SECONDS_OF_DAY = 86400
-const SECONDS_OF_HOUR = 3600
-const SECONDS_OF_MINUTE = 60
+const SECONDS_OF_DAY: number = 86400
+const SECONDS_OF_HOUR: number = 3600
+const SECONDS_OF_MINUTE: number = 60
 
 const formatTime = function (secondsValue: number): FormattedTimeObjectType {
-    let countOfSeconds = secondsValue
+    let countOfSeconds: number = secondsValue
 
-    const days = Math.floor(countOfSeconds / SECONDS_OF_DAY) // 2
-    countOfSeconds -= SECONDS_OF_DAY * days // 27 200
+    const days: number = Math.floor(countOfSeconds / SECONDS_OF_DAY)
+    countOfSeconds -= SECONDS_OF_DAY * days
 
-    const hours = Math.floor(countOfSeconds / SECONDS_OF_HOUR) // 7
-    countOfSeconds -= SECONDS_OF_HOUR * hours // 2000
+    const hours: number = Math.floor(countOfSeconds / SECONDS_OF_HOUR)
+    countOfSeconds -= SECONDS_OF_HOUR * hours
 
-    const minutes = Math.floor(countOfSeconds / SECONDS_OF_MINUTE) // 33
-    countOfSeconds -= SECONDS_OF_MINUTE * minutes // 1980
+    const minutes: number = Math.floor(countOfSeconds / SECONDS_OF_MINUTE)
+    countOfSeconds -= SECONDS_OF_MINUTE * minutes
 
-    const seconds = countOfSeconds // 20
+    const seconds: number = countOfSeconds
 
     return {
         days,
