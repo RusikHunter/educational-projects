@@ -41,7 +41,11 @@ function App() {
             </main>
 
             <footer className="mt-10 bg-emerald-100 border-4 rounded-lg">
-                Footer
+                <form>
+                    <input className="px-2 py-1 rounded border border-solid border-transparent duration-500 ease-linear transition-colors hover:border-green-500 focus:border-purple-500 outline-none shadow-none block mb-10" type="text" placeholder="Enter email:" />
+
+                    <button className="inline-block sm:inline-block"></button>
+                </form>
             </footer>
         </>
     )
