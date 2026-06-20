@@ -29,24 +29,16 @@
 // console.log(createApp());
 
 function createApp() {
-    let appName
-
-    if (!appName) {
-        appName = "My App"
-    }
+    let appName = "My App"
 
     console.log(appName)
 
     const config = loadConfig()
 
     function loadConfig() {
-        let config
-
-        if (!config) {
-            config = {
-                apiUrl: "/api",
-                version: "1.0"
-            }
+        let config = {
+            apiUrl: "/api",
+            version: "1.0"
         }
 
         return config
