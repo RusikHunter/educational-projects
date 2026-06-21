@@ -11,13 +11,11 @@ function groupBy(users, field) {
 
     for (let i = 0; i < users.length; ++i) {
 
-        const userFieldValue = users[i][field] // 20
+        const userFieldValue = users[i][field]
 
         if (!userFieldValue) return
 
-        const prevArray = groupedUsers[userFieldValue]
-
-        if (!prevArray) {
+        if (!groupedUsers[userFieldValue]) {
             groupedUsers[userFieldValue] = [users[i]]
         } else {
             groupedUsers[userFieldValue] = [...prevArray, users[i]]
